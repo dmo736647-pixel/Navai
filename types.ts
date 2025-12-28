@@ -1,0 +1,45 @@
+export enum ToolCategory {
+  ALL = 'All',
+  TEXT = 'Text & Writing',
+  IMAGE = 'Image Generation',
+  VIDEO = 'Video Creation',
+  AUDIO = 'Audio & Music',
+  CODING = 'Programming',
+  PRODUCTIVITY = 'Productivity',
+  BUSINESS = 'Business & Marketing'
+}
+
+export enum PricingModel {
+  FREE = 'Free',
+  FREEMIUM = 'Freemium',
+  PAID = 'Paid',
+  TRIAL = 'Free Trial'
+}
+
+export type Language = 'en' | 'zh' | 'ja' | 'es' | 'tk' | 'uz' | 'tg' | 'hy' | 'ro';
+
+export interface Tool {
+  id: string;
+  name: string;
+  description: string;
+  descriptions?: Record<string, string>; // Localized descriptions
+  category: ToolCategory | string; // Allow string for AI-discovered categories
+  pricing: PricingModel | string;
+  url: string;
+  tags: string[];
+  isAiDiscovered?: boolean; // To highlight tools found via dynamic search
+}
+
+export interface ChatMessage {
+  id: string;
+  role: 'user' | 'model';
+  text: string;
+  timestamp: Date;
+}
+
+export interface SearchState {
+  isSearching: boolean;
+  query: string;
+  results: Tool[];
+  error?: string;
+}
