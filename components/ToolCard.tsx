@@ -43,56 +43,56 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
 
   return (
     <div className={`
-      group relative flex flex-col h-full bg-slate-900 border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 hover:-translate-y-1
-      ${tool.isAiDiscovered ? 'border-primary-500/40 shadow-[0_0_15px_rgba(99,102,241,0.15)]' : 'border-slate-800 hover:border-slate-700'}
+      group relative flex flex-col h-full bg-[#151B2B] border rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1
+      ${tool.isAiDiscovered ? 'border-indigo-500/30 shadow-[0_0_20px_rgba(99,102,241,0.1)]' : 'border-white/5 hover:border-indigo-500/30'}
     `}>
       {tool.isAiDiscovered && (
-        <div className="absolute top-0 right-0 bg-primary-600 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg flex items-center gap-1 z-10">
+        <div className="absolute top-0 right-0 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl flex items-center gap-1 z-10 shadow-lg">
           <Sparkles size={10} /> {t.aiFound}
         </div>
       )}
 
-      <div className="p-5 flex-1 flex flex-col">
+      <div className="p-6 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-4">
-          <div className="flex-1">
-             <div className="flex items-center gap-2 mb-1">
-               <h3 className="text-lg font-bold text-slate-100 group-hover:text-primary-400 transition-colors">
+          <div className="flex-1 pr-2">
+             <div className="flex items-center gap-2 mb-2">
+               <h3 className="text-xl font-bold text-slate-100 group-hover:text-indigo-400 transition-colors line-clamp-1">
                  {tool.name}
                </h3>
              </div>
-             <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{tool.category}</p>
+             <p className="text-xs text-indigo-400/80 font-semibold uppercase tracking-wider">{tool.category}</p>
           </div>
-          <span className={`px-2 py-0.5 rounded-full text-xs font-medium border ${pricingColor} whitespace-nowrap ml-2`}>
+          <span className={`px-2.5 py-1 rounded-lg text-[10px] font-bold border uppercase tracking-wide ${pricingColor} whitespace-nowrap ml-2`}>
             {tool.pricing}
           </span>
         </div>
 
-        <p className="text-slate-400 text-sm leading-relaxed mb-4 flex-1">
+        <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
           {displayDescription}
         </p>
 
         {/* AI Quick Info Section */}
         {summary && (
-          <div className="mb-4 p-3 bg-slate-800/50 rounded-lg text-xs text-slate-300 border border-slate-700/50 animate-in fade-in duration-300">
-            <span className="font-semibold text-primary-400 block mb-1">⚡ {t.quickSummary}</span>
+          <div className="mb-4 p-3 bg-indigo-500/10 rounded-xl text-xs text-slate-300 border border-indigo-500/20 animate-in fade-in duration-300">
+            <span className="font-semibold text-indigo-400 block mb-1 flex items-center gap-1"><Zap size={12}/> {t.quickSummary}</span>
             {summary}
           </div>
         )}
 
         <div className="flex flex-wrap gap-2 mb-6">
           {tool.tags.slice(0, 3).map((tag, idx) => (
-            <span key={idx} className="flex items-center gap-1 text-[10px] text-slate-500 bg-slate-800 px-2 py-1 rounded border border-slate-700/50">
+            <span key={idx} className="flex items-center gap-1 text-[10px] font-medium text-slate-500 bg-slate-800/50 px-2.5 py-1 rounded-full border border-slate-700/30">
               <Tag size={10} /> {tag}
             </span>
           ))}
         </div>
       </div>
 
-      <div className="p-4 bg-slate-800/30 border-t border-slate-800 flex items-center justify-between gap-2">
+      <div className="px-6 py-4 bg-[#0B0F17]/30 border-t border-white/5 flex items-center justify-between gap-2 group-hover:bg-[#0B0F17]/50 transition-colors">
         <button 
           onClick={handleQuickInfo}
           disabled={loadingSummary}
-          className="text-xs font-medium text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors disabled:opacity-50"
+          className="text-xs font-medium text-slate-500 hover:text-indigo-400 flex items-center gap-1.5 transition-colors disabled:opacity-50"
         >
           {loadingSummary ? <Zap size={14} className="animate-spin" /> : <Zap size={14} />}
           {summary ? t.loaded : t.quickInfo}
@@ -102,9 +102,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
           href={tool.url} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-sm font-semibold text-primary-400 hover:text-primary-300 transition-colors"
+          className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 group-hover:text-white bg-slate-800 hover:bg-indigo-600 px-3 py-1.5 rounded-lg transition-all"
         >
-          {t.visitSite} <ExternalLink size={14} />
+          {t.visit} <ExternalLink size={12} />
         </a>
       </div>
     </div>

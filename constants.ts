@@ -387,6 +387,149 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['video', '3d', 'motion']
   },
   {
+    id: 'sora',
+    name: 'Sora',
+    description: 'OpenAI\'s text-to-video model capable of creating realistic and imaginative scenes.',
+    descriptions: {
+      en: 'OpenAI\'s text-to-video model capable of creating realistic and imaginative scenes.',
+      zh: 'OpenAI 的文本转视频模型，能够创建逼真且富有想象力的场景。',
+      ja: 'OpenAIのテキストから動画を生成するモデル。リアルで想像力豊かなシーンを作成可能。',
+      es: 'Modelo de texto a video de OpenAI capaz de crear escenas realistas e imaginativas.',
+      tk: 'OpenAI-nyň hakyky we hyýaly sahnalary döretmäge ukyply tekst-wideo modeli.',
+      uz: 'OpenAI-ning matndan videoga modeli, real va xayoliy sahnalarni yaratishga qodir.',
+      tg: 'Модели матн ба видеои OpenAI, ки қодир аст саҳнаҳои воқеӣ ва хаёлиро эҷод кунад.',
+      hy: 'OpenAI-ի տեքստից տեսանյութ մոդել, որն ունակ է ստեղծել իրատեսական և երևակայական տեսարաններ:',
+      ro: 'Modelul text-to-video al OpenAI capabil să creeze scene realiste și imaginative.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.PAID,
+    url: 'https://openai.com/sora',
+    tags: ['video', 'openai', 'realistic']
+  },
+  {
+    id: 'heygen',
+    name: 'HeyGen',
+    description: 'AI video generator platform to create videos with AI avatars and voices.',
+    descriptions: {
+      en: 'AI video generator platform to create videos with AI avatars and voices.',
+      zh: 'AI 视频生成平台，可使用 AI 头像和声音制作视频。',
+      ja: 'AIアバターと音声を使用して動画を作成するAI動画生成プラットフォーム。',
+      es: 'Plataforma generadora de videos con IA para crear videos con avatares y voces de IA.',
+      tk: 'AI awatarlary we sesleri bilen wideo döretmek üçin AI wideo generator platformasy.',
+      uz: 'AI avatarlari va ovozlari bilan videolar yaratish uchun AI video generator platformasi.',
+      tg: 'Платформаи генератори видеои AI барои эҷоди видеоҳо бо аватарҳо ва овозҳои AI.',
+      hy: 'AI վիդեո գեներատորի հարթակ՝ AI ավատարներով և ձայներով տեսանյութեր ստեղծելու համար:',
+      ro: 'Platformă de generare video AI pentru a crea videoclipuri cu avatare și voci AI.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.heygen.com',
+    tags: ['avatars', 'marketing', 'translation']
+  },
+
+  // --- Audio & Music ---
+  {
+    id: 'suno',
+    name: 'Suno',
+    description: 'Create realistic songs with vocals and instrumentation from simple text prompts.',
+    descriptions: {
+      en: 'Create realistic songs with vocals and instrumentation from simple text prompts.',
+      zh: '通过简单的文本提示创作包含人声和乐器的逼真歌曲。',
+      ja: 'シンプルなテキストプロンプトから、ボーカルと楽器を含むリアルな曲を作成。',
+      es: 'Crea canciones realistas con voces e instrumentación a partir de simples indicaciones de texto.',
+      tk: 'Ýönekeý tekst görkezmeleri bilen wokal we gurallar bilen hakyky aýdymlary dörediň.',
+      uz: 'Oddiy matn so\'rovlaridan vokal va cholg\'u asboblari bilan haqiqiy qo\'shiqlar yarating.',
+      tg: 'Бо дастурҳои оддии матнӣ сурудҳои воқеӣ бо овоз ва асбобҳо эҷод кунед.',
+      hy: 'Ստեղծեք իրատեսական երգեր վոկալով և գործիքավորմամբ՝ պարզ տեքստային հուշումներից:',
+      ro: 'Creați melodii realiste cu voce și instrumentație din prompturi text simple.'
+    },
+    category: ToolCategory.AUDIO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://suno.com',
+    tags: ['music', 'songs', 'generation']
+  },
+  {
+    id: 'elevenlabs',
+    name: 'ElevenLabs',
+    description: 'The most realistic and versatile AI speech software. Text to speech & voice cloning.',
+    descriptions: {
+      en: 'The most realistic and versatile AI speech software. Text to speech & voice cloning.',
+      zh: '最逼真、最通用的 AI 语音软件。文本转语音和语音克隆。',
+      ja: '最もリアルで多用途なAI音声ソフトウェア。テキスト読み上げと音声クローニング。',
+      es: 'El software de voz de IA más realista y versátil. Texto a voz y clonación de voz.',
+      tk: 'Iň hakyky we köp taraply AI sözleýiş programma üpjünçiligi. Tekstden söze we sesi klonlamak.',
+      uz: 'Eng haqiqiy va ko\'p qirrali AI nutq dasturi. Matndan nutqqa va ovozni klonlash.',
+      tg: 'Нармафзори воқеӣ ва ҳамаҷонибаи нутқи AI. Матн ба нутқ ва клони овоз.',
+      hy: 'Ամենաիրատեսական և բազմակողմանի AI խոսքի ծրագրակազմը: Տեքստից խոսք և ձայնի կլոնավորում:',
+      ro: 'Cel mai realist și versatil software de vorbire AI. Text în vorbire și clonare vocală.'
+    },
+    category: ToolCategory.AUDIO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://elevenlabs.io',
+    tags: ['voice', 'tts', 'cloning']
+  },
+
+  // --- Productivity & Business ---
+  {
+    id: 'notion-ai',
+    name: 'Notion AI',
+    description: 'Integrated AI assistant in Notion for writing, summarizing, and brainstorming.',
+    descriptions: {
+      en: 'Integrated AI assistant in Notion for writing, summarizing, and brainstorming.',
+      zh: 'Notion 中集成的 AI 助手，用于写作、总结和头脑风暴。',
+      ja: '執筆、要約、ブレインストーミングのためのNotion統合AIアシスタント。',
+      es: 'Asistente de IA integrado en Notion para escribir, resumir y hacer lluvia de ideas.',
+      tk: 'Ýazmak, jemlemek we pikir alyşmak üçin Notion-da integrirlenen AI kömekçisi.',
+      uz: 'Yozish, xulosa qilish va aqliy hujum uchun Notion-da integratsiyalangan AI yordamchisi.',
+      tg: 'Ёрдамчии ҳамгирошудаи AI дар Notion барои навиштан, ҷамъбаст кардан ва ҳамлаи ақлӣ.',
+      hy: 'Ինտեգրված AI օգնական Notion-ում՝ գրելու, ամփոփելու և մտագրոհի համար:',
+      ro: 'Asistent AI integrat în Notion pentru scriere, rezumare și brainstorming.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.PAID,
+    url: 'https://www.notion.so/product/ai',
+    tags: ['notes', 'writing', 'workspace']
+  },
+  {
+    id: 'perplexity',
+    name: 'Perplexity',
+    description: 'AI-powered search engine that provides direct answers with citations.',
+    descriptions: {
+      en: 'AI-powered search engine that provides direct answers with citations.',
+      zh: 'AI 驱动的搜索引擎，提供带有引用的直接答案。',
+      ja: '引用付きで直接回答を提供するAI搭載検索エンジン。',
+      es: 'Motor de búsqueda impulsado por IA que proporciona respuestas directas con citas.',
+      tk: 'Sitatalar bilen gönüden-göni jogap berýän AI bilen işleýän gözleg motory.',
+      uz: 'Iqtiboslar bilan to\'g\'ridan-to\'g\'ri javob beradigan AI asosidagi qidiruv tizimi.',
+      tg: 'Муҳаррики ҷустуҷӯии бо AI асосёфта, ки ҷавобҳои мустақимро бо иқтибосҳо таъмин мекунад.',
+      hy: 'AI-ով աշխատող որոնողական համակարգ, որը տալիս է ուղղակի պատասխաններ մեջբերումներով:',
+      ro: 'Motor de căutare bazat pe AI care oferă răspunsuri directe cu citate.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.perplexity.ai',
+    tags: ['search', 'research', 'answers']
+  },
+  {
+    id: 'gamma',
+    name: 'Gamma',
+    description: 'A new medium for presenting ideas. Create beautiful presentations, docs, and webpages.',
+    descriptions: {
+      en: 'A new medium for presenting ideas. Create beautiful presentations, docs, and webpages.',
+      zh: '展示创意的新媒介。创建精美的演示文稿、文档和网页。',
+      ja: 'アイデアを提示するための新しい媒体。美しいプレゼンテーション、ドキュメント、ウェブページを作成。',
+      es: 'Un nuevo medio para presentar ideas. Crea hermosas presentaciones, documentos y páginas web.',
+      tk: 'Pikirleri hödürlemek üçin täze serişde. Owadan prezentasiýalary, resminamalary we web sahypalaryny dörediň.',
+      uz: 'G\'oyalarni taqdim etish uchun yangi vosita. Chiroyli taqdimotlar, hujjatlar va veb-sahifalarni yarating.',
+      tg: 'Воситаи нав барои пешниҳоди ғояҳо. Презентатсияҳо, ҳуҷҷатҳо ва вебсайтҳои зебо эҷод кунед.',
+      hy: 'Գաղափարներ ներկայացնելու նոր միջոց: Ստեղծեք գեղեցիկ շնորհանդեսներ, փաստաթղթեր և վեբ էջեր:',
+      ro: 'Un nou mediu pentru prezentarea ideilor. Creați prezentări, documente și pagini web frumoase.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://gamma.app',
+    tags: ['presentation', 'slides', 'design']
+  },
     id: 'descript',
     name: 'Descript',
     description: 'All-in-one video and audio editor that works like a doc (edit video by editing text).',

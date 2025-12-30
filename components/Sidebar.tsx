@@ -54,18 +54,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Sidebar Container */}
       <aside 
         className={`
-          fixed top-0 left-0 z-50 h-full w-64 bg-slate-900 border-r border-slate-800 
+          fixed top-0 left-0 z-50 h-full w-64 bg-[#0B0F17] border-r border-slate-800/50 
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}
           md:relative md:translate-x-0
         `}
       >
-        <div className="p-6 border-b border-slate-800 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="bg-primary-600 p-1.5 rounded-lg">
-              <LayoutGrid className="text-white" size={24} />
+        <div className="p-6 border-b border-slate-800/50 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="bg-indigo-600 p-2 rounded-xl shadow-lg shadow-indigo-600/20">
+              <LayoutGrid className="text-white" size={20} />
             </div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            <h1 className="text-lg font-bold text-slate-100 tracking-tight">
               {t.title}
             </h1>
           </div>
@@ -74,8 +74,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </button>
         </div>
 
-        <nav className="p-4 space-y-2 overflow-y-auto h-[calc(100vh-80px)]">
-          <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4 px-2">
+        <nav className="p-4 space-y-1 overflow-y-auto h-[calc(100vh-80px)]">
+          <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4 px-3 mt-2">
             {t.directory}
           </div>
           {Object.values(ToolCategory).map((category) => (
@@ -86,25 +86,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 if (window.innerWidth < 768) setIsOpen(false);
               }}
               className={`
-                w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-left
+                w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all text-left
                 ${selectedCategory === category 
-                  ? 'bg-primary-600/10 text-primary-500 border border-primary-600/20' 
-                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/50'}
+                  ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-sm' 
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30 border border-transparent'}
               `}
             >
-              <span className={selectedCategory === category ? 'text-primary-500' : 'text-slate-400'}>
+              <span className={selectedCategory === category ? 'text-indigo-400' : 'text-slate-500 group-hover:text-slate-300'}>
                 {CATEGORY_ICONS[category]}
               </span>
               {t.categories[category]}
             </button>
           ))}
-          
-          <div className="mt-8 p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
-            <h3 className="text-sm font-semibold text-slate-200 mb-2">Need Help?</h3>
-            <p className="text-xs text-slate-400 mb-3">
-              Ask our AI assistant to find the perfect tool for your use case.
-            </p>
-          </div>
         </nav>
       </aside>
     </>

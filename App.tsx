@@ -81,7 +81,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-slate-950 text-slate-100 font-sans">
+    <div className="flex h-screen bg-[#0B0F17] text-slate-100 font-sans selection:bg-indigo-500/30">
       <Sidebar 
         selectedCategory={selectedCategory} 
         onSelectCategory={setSelectedCategory}
@@ -91,47 +91,14 @@ const App: React.FC = () => {
       />
 
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
-        {/* Header / Search Bar */}
-        <header className="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-30 px-4 py-4 md:px-8">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            
-            <div className="flex items-center gap-4 w-full md:w-auto">
-              <button onClick={() => setIsSidebarOpen(true)} className="md:hidden text-slate-400 hover:text-white">
+        {/* Top Navigation (Logo Mobile + Language) */}
+        <header className="absolute top-0 left-0 right-0 z-30 px-4 py-4 md:px-8 flex justify-between items-center pointer-events-none">
+          <div className="pointer-events-auto md:hidden">
+             <button onClick={() => setIsSidebarOpen(true)} className="text-slate-400 hover:text-white bg-slate-800/50 p-2 rounded-lg backdrop-blur-sm">
                 <Menu size={24} />
               </button>
-              <h2 className="text-xl font-semibold hidden md:block">
-                {t.categories[selectedCategory]}
-                <span className="text-slate-500 text-sm font-normal ml-3">
-                  {displayedTools.length} tools
-                </span>
-              </h2>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
-              {/* Search Form */}
-              <form onSubmit={handleAiSearch} className="w-full md:w-[400px] relative group">
-                <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                  <Search size={18} className="text-slate-500 group-focus-within:text-primary-500 transition-colors" />
-                </div>
-                <input
-                  type="text"
-                  placeholder={t.searchPlaceholder}
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-xl py-3 pl-10 pr-32 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all shadow-sm"
-                />
-                <div className="absolute inset-y-0 right-2 flex items-center">
-                  <button 
-                    type="submit" 
-                    disabled={!searchQuery.trim() || isAiSearching}
-                    className="bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-slate-600 flex items-center gap-1.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isAiSearching ? <Loader2 size={12} className="animate-spin" /> : <Sparkles size={12} />}
-                    {t.aiFind}
-                  </button>
-                </div>
-              </form>
-
+          </div>
+          <div className="ml-auto pointer-events-auto">
               {/* Language Selector */}
               <div className="relative min-w-[120px]">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -140,7 +107,7 @@ const App: React.FC = () => {
                 <select 
                   value={currentLanguage}
                   onChange={(e) => setCurrentLanguage(e.target.value as Language)}
-                  className="w-full h-full bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-xl py-3 pl-10 pr-4 appearance-none focus:outline-none focus:border-primary-500 cursor-pointer hover:bg-slate-750"
+                  className="w-full h-full bg-slate-800/50 backdrop-blur-md border border-slate-700/50 text-slate-200 text-sm rounded-xl py-2 pl-10 pr-4 appearance-none focus:outline-none focus:border-indigo-500 cursor-pointer hover:bg-slate-700/50 transition-colors"
                 >
                   <option value="en">English</option>
                   <option value="zh">中文</option>
@@ -153,56 +120,121 @@ const App: React.FC = () => {
                   <option value="ro">Română</option>
                 </select>
               </div>
-            </div>
-
           </div>
         </header>
 
-        {/* Content Area */}
-        <div className="flex-1 overflow-y-auto p-4 md:p-8">
-          <div className="max-w-7xl mx-auto">
-            
-            {/* Error Banner */}
-            {aiSearchError && (
-              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl flex items-center gap-3 text-red-400 text-sm animate-in fade-in slide-in-from-top-2">
-                <AlertCircle size={18} />
-                {aiSearchError}
-              </div>
-            )}
-
-            {/* Discovery Stats (if active) */}
-            {discoveredTools.length > 0 && searchQuery && !isAiSearching && (
-              <div className="mb-6 flex items-center gap-2 text-sm text-slate-400">
-                <Sparkles size={14} className="text-primary-500" />
-                <span>Including {discoveredTools.length} AI-discovered tools related to your searches.</span>
-              </div>
-            )}
-
-            {/* Grid */}
-            {displayedTools.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {displayedTools.map((tool) => (
-                  <ToolCard key={tool.id} tool={tool} currentLanguage={currentLanguage} />
-                ))}
-              </div>
-            ) : (
-              <div className="flex flex-col items-center justify-center h-64 text-center">
-                <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
-                  <Search size={32} className="text-slate-600" />
-                </div>
-                <h3 className="text-lg font-medium text-slate-300 mb-1">{t.noTools}</h3>
-                <p className="text-slate-500 max-w-sm">
-                  {t.noToolsDesc} <br/>
-                  {t.clickToSearch}
-                </p>
-              </div>
-            )}
-          </div>
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto">
           
-          {/* Footer */}
-          <footer className="max-w-7xl mx-auto mt-12 py-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-            <p>© {new Date().getFullYear()} {t.title}. {t.footer}</p>
-          </footer>
+          {/* Hero Section */}
+          <div className="relative pt-32 pb-16 px-4 md:px-8 text-center max-w-5xl mx-auto">
+            {/* Background Gradients */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-transparent blur-3xl -z-10" />
+            
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-200">
+                Unlock the Power of AI
+              </span>
+            </h1>
+            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+              Discover, compare, and master the best AI tools to supercharge your workflow.
+            </p>
+
+            {/* Search Bar - Hero Style */}
+            <form onSubmit={handleAiSearch} className="relative max-w-2xl mx-auto group">
+                <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+                  <Search size={20} className="text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
+                </div>
+                <input
+                  type="text"
+                  placeholder={t.searchPlaceholder}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 text-slate-100 text-lg rounded-2xl py-4 pl-12 pr-36 focus:outline-none focus:border-indigo-500/50 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-2xl shadow-indigo-500/5"
+                />
+                <div className="absolute inset-y-2 right-2 flex items-center">
+                  <button 
+                    type="submit" 
+                    disabled={!searchQuery.trim() || isAiSearching}
+                    className="h-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm px-6 rounded-xl flex items-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-indigo-600/20"
+                  >
+                    {isAiSearching ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+                    <span className="hidden sm:inline">{t.aiFind}</span>
+                  </button>
+                </div>
+            </form>
+
+            {/* Trending Tags */}
+            <div className="mt-8 flex flex-wrap justify-center gap-2 text-sm text-slate-400">
+              <span className="text-slate-500 mr-2">Trending:</span>
+              {['ChatGPT', 'Midjourney', 'Video', 'Copywriting', 'Free'].map(tag => (
+                <button 
+                  key={tag}
+                  onClick={() => setSearchQuery(tag)}
+                  className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 hover:bg-slate-700/50 hover:text-indigo-300 transition-colors cursor-pointer"
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="px-4 md:px-8 pb-20">
+            <div className="max-w-7xl mx-auto">
+              
+              {/* Section Title */}
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-2xl font-semibold flex items-center gap-2">
+                  <span className="w-1 h-8 bg-indigo-500 rounded-full mr-2"></span>
+                  {selectedCategory === ToolCategory.ALL ? 'All Tools' : t.categories[selectedCategory]}
+                  <span className="text-slate-500 text-base font-normal ml-2">
+                    ({displayedTools.length})
+                  </span>
+                </h2>
+              </div>
+
+              {/* Error Banner */}
+              {aiSearchError && (
+                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl flex items-center gap-3 text-red-400 text-sm animate-in fade-in slide-in-from-top-2">
+                  <AlertCircle size={18} />
+                  {aiSearchError}
+                </div>
+              )}
+
+              {/* Discovery Stats (if active) */}
+              {discoveredTools.length > 0 && searchQuery && !isAiSearching && (
+                <div className="mb-6 flex items-center gap-2 text-sm text-slate-400 bg-indigo-500/10 border border-indigo-500/20 px-4 py-3 rounded-xl">
+                  <Sparkles size={16} className="text-indigo-400" />
+                  <span>Found {discoveredTools.length} new AI tools related to your search!</span>
+                </div>
+              )}
+
+              {/* Grid */}
+              {displayedTools.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {displayedTools.map((tool) => (
+                    <ToolCard key={tool.id} tool={tool} currentLanguage={currentLanguage} />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center h-64 text-center bg-slate-900/30 rounded-3xl border border-slate-800/50">
+                  <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+                    <Search size={32} className="text-slate-600" />
+                  </div>
+                  <h3 className="text-lg font-medium text-slate-300 mb-1">{t.noTools}</h3>
+                  <p className="text-slate-500 max-w-sm">
+                    {t.noToolsDesc} <br/>
+                    {t.clickToSearch}
+                  </p>
+                </div>
+              )}
+            </div>
+            
+            {/* Footer */}
+            <footer className="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-800/50 text-center text-slate-500 text-xs">
+              <p>© {new Date().getFullYear()} {t.title}. {t.footer}</p>
+            </footer>
+          </div>
         </div>
 
         {/* Floating Chat Bot */}
