@@ -51,6 +51,25 @@ const App: React.FC = () => {
     setDisplayedTools(filtered);
   }, [selectedCategory, searchQuery, staticTools, discoveredTools]);
 
+  useEffect(() => {
+    const run = async () => {
+      if (!searchQuery || discoveredTools.length === 0) return;
+      try {
+        setIsAiSearching(true);
+        const refreshed = await findNewTools(searchQuery, currentLanguage);
+        setDiscoveredTools(prev => {
+          const byUrl = new Map<string, Tool>();
+          [...prev].forEach(t => byUrl.set(t.url, t));
+          refreshed.forEach(t => byUrl.set(t.url, t));
+          return Array.from(byUrl.values());
+        });
+      } catch {
+      } finally {
+        setIsAiSearching(false);
+      }
+    };
+    run();
+  }, [currentLanguage]);
 
   const handleAiSearch = async (e: React.FormEvent) => {
     e.preventDefault();
