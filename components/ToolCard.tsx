@@ -60,7 +60,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
                  {tool.name}
                </h3>
              </div>
-             <p className="text-xs text-indigo-400/80 font-semibold uppercase tracking-wider">{tool.category}</p>
+             <p className="text-xs text-indigo-400/80 font-semibold uppercase tracking-wider">
+               {tool.isAiDiscovered ? tool.category : TRANSLATIONS[currentLanguage].categories[tool.category as any]}
+             </p>
           </div>
           <span className={`px-2.5 py-1 rounded-lg text-[10px] font-bold border uppercase tracking-wide ${pricingColor} whitespace-nowrap ml-2`}>
             {tool.pricing}
@@ -104,7 +106,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 group-hover:text-white bg-slate-800 hover:bg-indigo-600 px-3 py-1.5 rounded-lg transition-all"
         >
-          {t.visit} <ExternalLink size={12} />
+          {t.visitSite} <ExternalLink size={12} />
         </a>
       </div>
     </div>

@@ -1,16 +1,29 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Tool, ToolCategory, PricingModel } from '../types';
 
-// Ensure API Key exists
-const apiKey = process.env.API_KEY || '';
+const readApiKey = (): string => {
+  try {
+    const env = (import.meta as any).env || {};
+    return (
+      env.VITE_GEMINI_API_KEY ||
+      env.GEMINI_API_KEY ||
+      (typeof window !== 'undefined' && (window as any).GEMINI_API_KEY) ||
+      (typeof localStorage !== 'undefined' && localStorage.getItem('GEMINI_API_KEY')) ||
+      ''
+    );
+  } catch {
+    return '';
+  }
+};
 
 // Initialize client only if key is present to prevent immediate crashes, handle errors at call site
 const getAiClient = () => {
-  if (!apiKey) {
-    console.warn("API_KEY is missing from environment variables.");
+  const key = readApiKey();
+  if (!key) {
+    console.warn("GEMINI API KEY missing.");
     return null;
   }
-  return new GoogleGenAI({ apiKey });
+  return new GoogleGenAI({ apiKey: key });
 };
 
 /**

@@ -133,11 +133,11 @@ const App: React.FC = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-200">
-                Unlock the Power of AI
+                {t.title}
               </span>
             </h1>
             <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-              Discover, compare, and master the best AI tools to supercharge your workflow.
+              {t.searchPlaceholder}
             </p>
 
             {/* Search Bar - Hero Style */}
@@ -166,7 +166,6 @@ const App: React.FC = () => {
 
             {/* Trending Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-2 text-sm text-slate-400">
-              <span className="text-slate-500 mr-2">Trending:</span>
               {['ChatGPT', 'Midjourney', 'Video', 'Copywriting', 'Free'].map(tag => (
                 <button 
                   key={tag}
@@ -186,7 +185,7 @@ const App: React.FC = () => {
               <div className="flex items-center justify-between mb-8">
                 <h2 className="text-2xl font-semibold flex items-center gap-2">
                   <span className="w-1 h-8 bg-indigo-500 rounded-full mr-2"></span>
-                  {selectedCategory === ToolCategory.ALL ? 'All Tools' : t.categories[selectedCategory]}
+                  {t.categories[selectedCategory]}
                   <span className="text-slate-500 text-base font-normal ml-2">
                     ({displayedTools.length})
                   </span>
