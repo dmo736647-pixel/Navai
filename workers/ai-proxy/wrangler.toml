@@ -1,0 +1,7 @@
+name = "navai-ai-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-12-31"
+
+routes = [
+  { pattern = "api.navai.space/*", zone_name = "navai.space" }
+]
