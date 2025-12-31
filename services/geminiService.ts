@@ -16,6 +16,20 @@ const readApiKey = (): string => {
   }
 };
 
+const getProxyUrl = (): string => {
+  try {
+    const env = (import.meta as any).env || {};
+    return (
+      env.VITE_AI_PROXY_URL ||
+      (typeof window !== 'undefined' && (window as any).AI_PROXY_URL) ||
+      (typeof localStorage !== 'undefined' && localStorage.getItem('AI_PROXY_URL')) ||
+      ''
+    );
+  } catch {
+    return '';
+  }
+};
+
 // Initialize client only if key is present to prevent immediate crashes, handle errors at call site
 const getAiClient = () => {
   const key = readApiKey();
@@ -31,6 +45,30 @@ const getAiClient = () => {
  * Model: gemini-3-flash-preview (Speed + Search capability)
  */
 export const findNewTools = async (query: string, language: string = 'en'): Promise<Tool[]> => {
+  const proxy = getProxyUrl();
+  if (proxy) {
+    const res = await fetch(`${proxy.replace(/\/$/, '')}/v1/search`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ query, language }),
+    });
+    if (!res.ok) throw new Error(`Proxy error: ${await res.text()}`);
+    const data = await res.json();
+    if (data.tools && Array.isArray(data.tools)) {
+      return data.tools.map((t: any, index: number) => ({
+        id: `discovered-${Date.now()}-${index}`,
+        name: t.name,
+        description: t.description,
+        descriptions: { [language]: t.description }, // Populate current language
+        category: t.category,
+        pricing: t.pricing,
+        url: t.url,
+        tags: t.tags || [],
+        isAiDiscovered: true
+      }));
+    }
+    return [];
+  }
   const ai = getAiClient();
   if (!ai) throw new Error("API Key missing");
 
@@ -108,6 +146,17 @@ export const findNewTools = async (query: string, language: string = 'en'): Prom
  * Model: gemini-3-pro-preview (Complex reasoning for helpful advice)
  */
 export const chatWithBot = async (history: { role: string; parts: { text: string }[] }[], newMessage: string, language: string = 'en') => {
+  const proxy = getProxyUrl();
+  if (proxy) {
+    const res = await fetch(`${proxy.replace(/\/$/, '')}/v1/chat`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ history, message: newMessage, language }),
+    });
+    if (!res.ok) throw new Error(`Proxy error: ${await res.text()}`);
+    const data = await res.json();
+    return data.text;
+  }
   const ai = getAiClient();
   if (!ai) throw new Error("API Key missing");
 
@@ -128,6 +177,17 @@ export const chatWithBot = async (history: { role: string; parts: { text: string
  * Model: gemini-3-flash-preview (Standard fast model)
  */
 export const getFastToolSummary = async (toolName: string, language: string = 'en'): Promise<string> => {
+  const proxy = getProxyUrl();
+  if (proxy) {
+    const res = await fetch(`${proxy.replace(/\/$/, '')}/v1/summary`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ toolName, language }),
+    });
+    if (!res.ok) return "Could not load summary.";
+    const data = await res.json();
+    return data.summary || "No summary available.";
+  }
   const ai = getAiClient();
   if (!ai) throw new Error("API Key missing");
 
