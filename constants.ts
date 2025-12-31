@@ -530,6 +530,7 @@ export const INITIAL_TOOLS: Tool[] = [
     url: 'https://gamma.app',
     tags: ['presentation', 'slides', 'design']
   },
+  {
     id: 'descript',
     name: 'Descript',
     description: 'All-in-one video and audio editor that works like a doc (edit video by editing text).',
