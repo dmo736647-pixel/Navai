@@ -60,12 +60,30 @@ export default {
           return jsonResponse({ error: "Server API key missing" }, 500);
         }
         const prompt = `
-          Find 3 to 5 real, high-quality AI software tools related to this user query: "${query}".
-          Focus on practical, commonly used tools.
-          You must output a valid JSON object:
-          {"tools":[{"name":"","description":"(max 20 words in ${language})","category":"","pricing":"","url":"","tags":[""]}]}
-          If you cannot find exact matches, find the closest alternatives.
-          IMPORTANT: Return ONLY the JSON object. Do not wrap it in markdown.
+          You are an expert AI tool search engine.
+          User Query: "${query}"
+          Target Language: "${language}"
+
+          STRICT INSTRUCTIONS:
+          1. **Exact Match**: If the query is a specific tool name (e.g., "Suno", "Midjourney"), your response MUST contain ONLY that specific tool. Do NOT include competitors or alternatives unless the query explicitly asks for them (e.g. "alternatives to Suno").
+          2. **Language**: The 'description', 'category', and 'pricing' fields MUST be translated into ${language}.
+          3. **Relevance**: If the query is a category (e.g. "music generator"), return top 3-5 high-quality tools.
+          4. **Quality**: Do not invent tools. Only return real, existing tools.
+          
+          Output Format (JSON Only):
+          {
+            "tools": [
+              {
+                "name": "Exact Tool Name",
+                "description": "Concise description (max 20 words) in ${language}.",
+                "category": "The specific category translated to ${language}",
+                "pricing": "Pricing translated to ${language} (e.g. Free/Paid/Freemium)",
+                "url": "Official URL",
+                "tags": ["tag1", "tag2"]
+              }
+            ]
+          }
+          IMPORTANT: Return ONLY raw JSON. No markdown blocks.
         `;
         const text = await callGenerateContent(MODELS.search, prompt, env.GEMINI_API_KEY);
         let jsonText = text.replace(/```json/g, "").replace(/```/g, "").trim();

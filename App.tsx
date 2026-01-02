@@ -25,75 +25,125 @@ const App: React.FC = () => {
   // Translations
   const t = TRANSLATIONS[currentLanguage];
 
+  // Sort helpers
+  const getRelevanceScore = (tool: Tool, query: string): number => {
+    const q = query.toLowerCase();
+    const name = tool.name.toLowerCase();
+    
+    // Exact match gets highest score
+    if (name === q) return 100;
+    // Starts with query gets high score
+    if (name.startsWith(q)) return 80;
+    // Contains query in name gets medium score
+    if (name.includes(q)) return 60;
+    // Tag match
+    if (tool.tags.some(t => t.toLowerCase() === q)) return 50;
+    if (tool.tags.some(t => t.toLowerCase().includes(q))) return 40;
+    // Description match
+    if (tool.description.toLowerCase().includes(q)) return 20;
+    
+    return 0;
+  };
+  
+  const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
+
   // Filter tools based on category and local search query
   useEffect(() => {
     let filtered = [...staticTools, ...discoveredTools];
 
-    // Filter by category
+    // Filter by text search FIRST to narrow down
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      filtered = filtered.filter(tool =>
+        tool.name.toLowerCase().includes(q) ||
+        tool.description.toLowerCase().includes(q) ||
+        tool.tags.some(tag => tag.toLowerCase().includes(q))
+      );
+
+      // If the user typed an exact tool name that exists, show ONLY exact matches
+      const qExact = normalize(searchQuery.trim());
+      const pool = [...staticTools, ...discoveredTools];
+      const exactMatches = pool.filter(t => normalize(t.name) === qExact);
+      if (exactMatches.length > 0) {
+        // Prefer AI discovered matches if present
+        const aiExact = exactMatches.filter(t => t.isAiDiscovered);
+        const finalExact = aiExact.length > 0 ? aiExact : exactMatches;
+        // De-duplicate by URL and exit early
+        const exactMap = new Map<string, Tool>();
+        finalExact.forEach(t => {
+          if (!exactMap.has(t.url)) exactMap.set(t.url, t);
+        });
+        const uniqueExact = Array.from(exactMap.values());
+        setDisplayedTools(uniqueExact);
+        return;
+      }
+    }
+
+    // THEN filter by category (if selected)
+    // Note: If user is searching specifically, we might want to ignore category or apply it strictly.
+    // Here we apply it strictly if it's not ALL.
     if (selectedCategory !== ToolCategory.ALL) {
       filtered = filtered.filter(tool => 
-        // Allow fuzzy match for AI discovered categories or exact match for static enum
         tool.category === selectedCategory || 
         (tool.isAiDiscovered && tool.category.toLowerCase().includes(selectedCategory.split(' ')[0].toLowerCase()))
       );
     }
-
-    // Filter by text search
+    
+    // Sort by relevance only if there is a search query
     if (searchQuery) {
-      const q = searchQuery.toLowerCase();
-      filtered = filtered.filter(tool => 
-        tool.name.toLowerCase().includes(q) || 
-        tool.description.toLowerCase().includes(q) ||
-        tool.tags.some(tag => tag.toLowerCase().includes(q))
-      );
+      filtered.sort((a, b) => {
+        const scoreA = getRelevanceScore(a, searchQuery);
+        const scoreB = getRelevanceScore(b, searchQuery);
+        return scoreB - scoreA;
+      });
     }
 
-    setDisplayedTools(filtered);
+    // De-duplicate final displayed tools by URL to match the count
+    const uniqueMap = new Map();
+    filtered.forEach(tool => {
+        if (!uniqueMap.has(tool.url)) {
+            uniqueMap.set(tool.url, tool);
+        }
+    });
+    const uniqueFiltered = Array.from(uniqueMap.values());
+
+    setDisplayedTools(uniqueFiltered);
   }, [selectedCategory, searchQuery, staticTools, discoveredTools]);
 
-  useEffect(() => {
-    const run = async () => {
-      if (!searchQuery || discoveredTools.length === 0) return;
-      try {
-        setIsAiSearching(true);
-        const refreshed = await findNewTools(searchQuery, currentLanguage);
-        setDiscoveredTools(prev => {
-          const byUrl = new Map<string, Tool>();
-          [...prev].forEach(t => byUrl.set(t.url, t));
-          refreshed.forEach(t => byUrl.set(t.url, t));
-          return Array.from(byUrl.values());
-        });
-      } catch {
-      } finally {
-        setIsAiSearching(false);
-      }
-    };
-    run();
-  }, [currentLanguage]);
-
+  // Removed auto-AI search effect to respect user's request for local-first search
+  
   const handleAiSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
 
     setIsAiSearching(true);
     setAiSearchError(null);
-    setSelectedCategory(ToolCategory.ALL); // Reset category to show all results
+    // Note: We do NOT reset category here, to allow searching within a category if desired,
+    // or you can keep it if you prefer AI to search globally.
+    // setSelectedCategory(ToolCategory.ALL); 
 
     try {
       const newTools = await findNewTools(searchQuery, currentLanguage);
       if (newTools.length > 0) {
-        // Prepend new tools so they show up top
-        setDiscoveredTools(prev => {
+        setDiscoveredTools(refreshed => {
             // Avoid duplicates by URL
-            const existingUrls = new Set([...prev, ...staticTools].map(t => t.url));
+            const existingUrls = new Set([...refreshed, ...staticTools].map(t => t.url));
             const uniqueNew = newTools.filter(t => !existingUrls.has(t.url));
-            return [...uniqueNew, ...prev];
+            return [...uniqueNew, ...refreshed]; // Newest first
         });
       } else {
-        setAiSearchError(t.noToolsDesc);
+        // Only show error if NO local tools are found either
+        if (displayedTools.length === 0) {
+            setAiSearchError(t.noToolsDesc);
+        }
       }
     } catch (err) {
-      setAiSearchError("Failed to perform AI search. Check your API Key or connection.");
+      // Graceful degradation: If AI fails, we still have local results.
+      // Only show error if user sees nothing.
+      console.error("AI Search failed", err);
+      if (displayedTools.length === 0) {
+         setAiSearchError("AI search unavailable. Showing local matches only.");
+      }
     } finally {
       setIsAiSearching(false);
     }
