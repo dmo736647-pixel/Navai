@@ -12,11 +12,19 @@ const App: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<Language>('en');
+  const [sortMode, setSortMode] = useState<'default' | 'newest' | 'recent'>('default');
+  const [isSorting, setIsSorting] = useState(false);
   
   // Tools state
   const [staticTools] = useState<Tool[]>(INITIAL_TOOLS);
   const [discoveredTools, setDiscoveredTools] = useState<Tool[]>([]);
-  const [displayedTools, setDisplayedTools] = useState<Tool[]>(INITIAL_TOOLS);
+  const [displayedTools, setDisplayedTools] = useState<Tool[]>(() => {
+    const m = new Map<string, Tool>();
+    INITIAL_TOOLS.forEach(t => {
+      if (!m.has(t.url)) m.set(t.url, t);
+    });
+    return Array.from(m.values());
+  });
   
   // Search State
   const [isAiSearching, setIsAiSearching] = useState(false);
@@ -96,6 +104,17 @@ const App: React.FC = () => {
         const scoreB = getRelevanceScore(b, searchQuery);
         return scoreB - scoreA;
       });
+    }
+    
+    // Apply sort mode
+    if (sortMode !== 'default') {
+      setIsSorting(true);
+      filtered.sort((a, b) => {
+        const at = a.createdAt ?? (a.isAiDiscovered ? 0 : -Infinity);
+        const bt = b.createdAt ?? (b.isAiDiscovered ? 0 : -Infinity);
+        return (bt as number) - (at as number);
+      });
+      setTimeout(() => setIsSorting(false), 150);
     }
 
     // De-duplicate final displayed tools by URL to match the count
@@ -205,9 +224,10 @@ const App: React.FC = () => {
                 {t.title}
               </span>
             </h1>
-            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-              {t.searchPlaceholder}
-            </p>
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-indigo-600/20 border border-indigo-500/30 text-indigo-200 text-sm">
+              <Sparkles size={16} className="text-indigo-300" />
+              <span>{(TRANSLATIONS[currentLanguage]?.tagline) || 'NavAI helps you pick the right AI tools'}</span>
+            </div>
 
             {/* Search Bar - Hero Style */}
             <form onSubmit={handleAiSearch} className="relative max-w-2xl mx-auto group">
@@ -259,6 +279,34 @@ const App: React.FC = () => {
                     ({displayedTools.length})
                   </span>
                 </h2>
+                <div className="flex items-center gap-2">
+                  <div className="hidden md:flex bg-slate-800/50 border border-slate-700/50 rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => setSortMode('default')}
+                      className={`px-3 py-2 text-sm ${sortMode==='default'?'bg-indigo-600 text-white':'text-slate-300 hover:text-white'}`}
+                    >{t.sort?.default ?? 'Default'}</button>
+                    <button
+                      onClick={() => setSortMode('newest')}
+                      className={`px-3 py-2 text-sm ${sortMode==='newest'?'bg-indigo-600 text-white':'text-slate-300 hover:text-white'}`}
+                    >{t.sort?.newest ?? 'Newest'}</button>
+                    <button
+                      onClick={() => setSortMode('recent')}
+                      className={`px-3 py-2 text-sm ${sortMode==='recent'?'bg-indigo-600 text-white':'text-slate-300 hover:text-white'}`}
+                    >{t.sort?.recent ?? 'Recently added'}</button>
+                  </div>
+                  <div className="md:hidden">
+                    <select
+                      value={sortMode}
+                      onChange={(e)=>setSortMode(e.target.value as any)}
+                      className="bg-slate-800/50 border border-slate-700/50 text-slate-200 text-sm rounded-xl py-2 px-3"
+                    >
+                      <option value="default">{t.sort?.default ?? 'Default'}</option>
+                      <option value="newest">{t.sort?.newest ?? 'Newest'}</option>
+                      <option value="recent">{t.sort?.recent ?? 'Recently added'}</option>
+                    </select>
+                  </div>
+                  {isSorting && <Loader2 size={18} className="animate-spin text-slate-400" />}
+                </div>
               </div>
 
               {/* Error Banner */}
@@ -281,7 +329,7 @@ const App: React.FC = () => {
               {displayedTools.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {displayedTools.map((tool) => (
-                    <ToolCard key={tool.url} tool={tool} currentLanguage={currentLanguage} />
+                    <ToolCard key={tool.url} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
                   ))}
                 </div>
               ) : (

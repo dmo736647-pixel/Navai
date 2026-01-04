@@ -7,9 +7,31 @@ import { TRANSLATIONS } from '../constants';
 interface ToolCardProps {
   tool: Tool;
   currentLanguage: Language;
+  searchQuery?: string;
 }
 
-export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => {
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const highlightText = (text: string, query?: string) => {
+  if (!query || !query.trim()) return text;
+  const pattern = new RegExp(escapeRegExp(query), 'gi');
+  const parts = text.split(pattern);
+  const matches = text.match(pattern);
+  if (!matches) return text;
+  const result: React.ReactNode[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    result.push(parts[i]);
+    if (i < matches.length) {
+      result.push(
+        <span key={`hl-${i}`} className="bg-yellow-400/20 text-yellow-300 font-semibold px-0.5 rounded transition-all">
+          {matches[i]}
+        </span>
+      );
+    }
+  }
+  return result;
+};
+
+export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage, searchQuery }) => {
   const [summary, setSummary] = useState<string | null>(null);
   const [loadingSummary, setLoadingSummary] = useState(false);
   const t = TRANSLATIONS[currentLanguage].toolCard;
@@ -57,7 +79,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
           <div className="flex-1 pr-2">
              <div className="flex items-center gap-2 mb-2">
                <h3 className="text-xl font-bold text-slate-100 group-hover:text-indigo-400 transition-colors line-clamp-1">
-                 {tool.name}
+                 {highlightText(tool.name, searchQuery)}
                </h3>
              </div>
              <p className="text-xs text-indigo-400/80 font-semibold uppercase tracking-wider">
@@ -70,7 +92,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
         </div>
 
         <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
-          {displayDescription}
+          {highlightText(displayDescription, searchQuery)}
         </p>
 
         {/* AI Quick Info Section */}
@@ -84,7 +106,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage }) => 
         <div className="flex flex-wrap gap-2 mb-6">
           {tool.tags.slice(0, 3).map((tag, idx) => (
             <span key={idx} className="flex items-center gap-1 text-[10px] font-medium text-slate-500 bg-slate-800/50 px-2.5 py-1 rounded-full border border-slate-700/30">
-              <Tag size={10} /> {tag}
+              <Tag size={10} /> <span>{highlightText(tag, searchQuery)}</span>
             </span>
           ))}
         </div>

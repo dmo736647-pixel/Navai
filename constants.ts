@@ -183,6 +183,26 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['open-source', 'llama', 'mistral']
   },
   {
+    id: 'deepseek',
+    name: 'DeepSeek Chat',
+    description: 'Free, capable AI chat with strong reasoning and coding assistance.',
+    descriptions: {
+      en: 'Free, capable AI chat with strong reasoning and coding assistance.',
+      zh: '免费且强大的 AI 聊天，擅长推理与编程辅助。',
+      ja: '無料で高機能なAIチャット。推論とコーディング支援に強い。',
+      es: 'Chat de IA gratuito y potente, con gran razonamiento y asistencia de código.',
+      tk: 'Mugt, kuwwatly AI söhbetdeşlik; güýçli mantyk we kod kömegi.',
+      uz: 'Bepul va qudratli AI chat; kuchli mantiq va kodlash yordamchi.',
+      tg: 'Чати AI-и ройгон ва пурқудрат бо мантиқи қавӣ ва ёрии барномасозӣ.',
+      hy: 'Անվճար և հզոր AI զրույց՝ ուժեղ տրամաբանությամբ և կոդավորման աջակցությամբ։',
+      ro: 'Chat AI gratuit și capabil, cu raționament puternic și asistență la codare.'
+    },
+    category: ToolCategory.TEXT,
+    pricing: PricingModel.FREE,
+    url: 'https://chat.deepseek.com',
+    tags: ['chat', 'reasoning', 'coding']
+  },
+  {
     id: 'quillbot',
     name: 'QuillBot',
     description: 'AI-powered paraphrasing tool that helps you enhance your writing and vocabulary.',
@@ -468,6 +488,46 @@ export const INITIAL_TOOLS: Tool[] = [
     url: 'https://elevenlabs.io',
     tags: ['voice', 'tts', 'cloning']
   },
+  {
+    id: 'piper',
+    name: 'Piper TTS',
+    description: 'Open-source, fast neural TTS you can run locally for free.',
+    descriptions: {
+      en: 'Open-source, fast neural TTS you can run locally for free.',
+      zh: '开源且高速的神经 TTS，可在本地免费运行。',
+      ja: 'オープンソースで高速なニューラルTTS。ローカルで無料実行可能。',
+      es: 'TTS neuronal de código abierto y rápido, ejecutable localmente gratis.',
+      tk: 'Açyk çeşme, çalt nerw TTS; ýerli ýagdaýda mugt işledip bolar.',
+      uz: 'Ochiq manbali, tezkor neyron TTS; lokalda bepul ishlatish mumkin.',
+      tg: 'TTS-и нейронӣ ва тез бо коди кушода; маҳаллӣ ройгон иҷро мешавад.',
+      hy: 'Բաց կոդով, արագ նեյրոնային TTS՝ տեղային անվճար գործարկմամբ։',
+      ro: 'TTS neuronal open-source, rapid, rulabil local gratuit.'
+    },
+    category: ToolCategory.AUDIO,
+    pricing: PricingModel.FREE,
+    url: 'https://github.com/rhasspy/piper',
+    tags: ['tts', 'open-source', 'local']
+  },
+  {
+    id: 'openvoice',
+    name: 'OpenVoice',
+    description: 'Open-source voice cloning with instant style transfer; free to run.',
+    descriptions: {
+      en: 'Open-source voice cloning with instant style transfer; free to run.',
+      zh: '开源语音克隆，支持即时风格迁移；可免费运行。',
+      ja: 'オープンソースの音声クローン。即時スタイル転送に対応、無料で実行可能。',
+      es: 'Clonación de voz open-source con transferencia de estilo instantánea; ejecución gratuita.',
+      tk: 'Açyk çeşme ses klonlamak; dessine stil geçirişi bilen, mugt işledilýär.',
+      uz: 'Ochiq manbali ovoz klonlash; darhol uslub o‘tkazish bilan, bepul ishlaydi.',
+      tg: 'Клоникунии овози кушодаасос бо интиқоли фаврии услуб; ройгон иҷро мешавад.',
+      hy: 'Բաց կոդով ձայնի կլոնավորում՝ ակնթարթային ոճի փոխանցմամբ, անվճար գործարկում։',
+      ro: 'Clonare vocală open-source cu transfer instant de stil; rulare gratuită.'
+    },
+    category: ToolCategory.AUDIO,
+    pricing: PricingModel.FREE,
+    url: 'https://myshell.ai/openvoice',
+    tags: ['voice', 'cloning', 'open-source']
+  },
 
   // --- Productivity & Business ---
   {
@@ -531,6 +591,386 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['presentation', 'slides', 'design']
   },
   {
+    id: 'notebooklm',
+    name: 'NotebookLM',
+    description: 'AI research notebook by Google to study sources and generate insights.',
+    descriptions: {
+      en: 'AI research notebook by Google to study sources and generate insights.',
+      zh: 'Google 推出的 AI 研究笔记本，用于研读资料并生成洞见。',
+      ja: '資料を読み込み洞察を得るためのGoogleのAI研究ノート。',
+      es: 'Cuaderno de investigación con IA de Google para estudiar fuentes y generar insights.',
+      tk: 'Çeşmeleri öwrenip düşünjeler döretmek üçin Google-nyň AI barlag depderçesi.',
+      uz: 'Manbalarni o‘rganish va tushunchalar yaratish uchun Google AI tadqiqot daftari.',
+      tg: 'Дафтари таҳқиқоти AI аз Google барои омӯзиши сарчашмаҳо ва тавлиди дарунбинӣ.',
+      hy: 'Google-ի AI հետազոտական նոթատետր՝ աղբյուրներ ուսումնասիրելու և պատկերացումներ ստեղծելու համար։',
+      ro: 'Caiet de cercetare AI de la Google pentru a studia surse și a genera insight-uri.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREE,
+    url: 'https://notebooklm.google.com',
+    tags: ['research', 'notes', 'insights']
+  },
+  {
+    id: 'hf-spaces',
+    name: 'Hugging Face Spaces',
+    description: 'Free hosted apps for AI demos and community projects.',
+    descriptions: {
+      en: 'Free hosted apps for AI demos and community projects.',
+      zh: '面向 AI 演示与社区项目的免费托管应用。',
+      ja: 'AIデモやコミュニティプロジェクト向けの無料ホスト型アプリ。',
+      es: 'Aplicaciones alojadas gratuitas para demos de IA y proyectos comunitarios.',
+      tk: 'AI demo we jemgyýetçilik taslamalary üçin mugt ýerleşdirilen programmalar.',
+      uz: 'AI demo va jamoa loyihalari uchun bepul xost qilingan ilovalar.',
+      tg: 'Барномаҳои ройгони мизбон барои намоишҳои AI ва лоиҳаҳои ҷомеа.',
+      hy: 'Անվճար հոսթինգով հավելվածներ՝ AI ցուցադրությունների և համայնքային նախագծերի համար։',
+      ro: 'Aplicații găzduite gratuite pentru demo-uri AI și proiecte comunitare.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREE,
+    url: 'https://huggingface.co/spaces',
+    tags: ['community', 'apps', 'models']
+  },
+  {
+    id: 'canva',
+    name: 'Canva',
+    description: 'Design platform with AI tools for images, videos, and marketing.',
+    descriptions: {
+      en: 'Design platform with AI tools for images, videos, and marketing.',
+      zh: '集成 AI 工具的设计平台，支持图片、视频与营销素材。',
+      ja: '画像・動画・マーケ素材にAI機能を備えたデザインプラットフォーム。',
+      es: 'Plataforma de diseño con herramientas de IA para imágenes, videos y marketing.',
+      tk: 'Suratlar, wideolar we marketing üçin AI gurallary bilen dizaýn platformasy.',
+      uz: 'Rasmlar, videolar va marketing uchun AI vositalari bilan dizayn platformasi.',
+      tg: 'Платформаи тарҳрезӣ бо абзорҳои AI барои тасвирҳо, видео ва маркетинг.',
+      hy: 'Դիզայնի հարթակ՝ AI գործիքներով պատկերների, տեսանյութերի և մարքեթինգի համար։',
+      ro: 'Platformă de design cu instrumente AI pentru imagini, video și marketing.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.canva.com',
+    tags: ['design', 'templates', 'marketing']
+  },
+  {
+    id: 'writesonic',
+    name: 'Writesonic',
+    description: 'AI writing platform for marketing copy, blog posts, and social media.',
+    descriptions: {
+      en: 'AI writing platform for marketing copy, blog posts, and social media.',
+      zh: 'AI写作平台，用于营销文案、博客和社媒内容。',
+      ja: 'マーケティング文、ブログ、SNS向けのAIライティングプラットフォーム。',
+      es: 'Plataforma de escritura con IA para copy de marketing, blogs y redes sociales.',
+      tk: 'Marketing teksti, blog we sosial media üçin AI ýazuw platformasy.',
+      uz: 'Marketing matnlari, bloglar va ijtimoiy tarmoqlar uchun AI yozish platformasi.',
+      tg: 'Платформаи навиштани бо AI барои матни маркетинг, блог ва шабакаҳои иҷтимоӣ.',
+      hy: 'AI գրելու հարթակ՝ մարկետինգային տեքստերի, բլոգների և սոցիալական մեդիայի համար։',
+      ro: 'Platformă de scriere AI pentru copy de marketing, bloguri și social media.'
+    },
+    category: ToolCategory.BUSINESS,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://writesonic.com',
+    tags: ['marketing', 'writing', 'content']
+  },
+  {
+    id: 'rytr',
+    name: 'Rytr',
+    description: 'AI writing assistant to create content faster across various use cases.',
+    descriptions: {
+      en: 'AI writing assistant to create content faster across various use cases.',
+      zh: 'AI写作助手，快速生成多场景内容。',
+      ja: '多様な用途で素早くコンテンツを作るAIライティングアシスタント。',
+      es: 'Asistente de escritura con IA para crear contenido rápido en varios casos.',
+      tk: 'Köp ýagdaýlarda çalt mazmun döredýän AI ýazuw kömekçisi.',
+      uz: 'Turli holatlar uchun tez kontent yaratadigan AI yozish yordamchisi.',
+      tg: 'Ёрдамчии навиштани бо AI барои эҷоди зуд мундариҷа дар ҳолатҳои гуногун.',
+      hy: 'AI գրելու օգնական՝ արագ բովանդակություն ստեղծելու բազմաթիվ կիրառությունների համար։',
+      ro: 'Asistent de scriere AI pentru a crea rapid conținut în diverse cazuri.'
+    },
+    category: ToolCategory.TEXT,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://rytr.me',
+    tags: ['writing', 'assistant', 'content']
+  },
+  {
+    id: 'wordtune',
+    name: 'Wordtune',
+    description: 'Rewrite and improve your writing with AI suggestions.',
+    descriptions: {
+      en: 'Rewrite and improve your writing with AI suggestions.',
+      zh: '通过AI建议改写并提升你的写作。',
+      ja: 'AIの提案で文章をリライトし、品質を向上。',
+      es: 'Reescribe y mejora tu escritura con sugerencias de IA.',
+      tk: 'AI teklipleri bilen ýazgyňy gaýtadan ýaz we gowulaşdyr.',
+      uz: 'AI takliflari bilan yozishingizni qayta yozib yaxshilang.',
+      tg: 'Бо пешниҳодҳои AI навиштаатонро бознависӣ ва беҳтар кунед.',
+      hy: 'Վերագրեք և բարելավեք ձեր գրությունը՝ AI առաջարկներով։',
+      ro: 'Rescrie și îmbunătățește scrisul tău cu sugestii AI.'
+    },
+    category: ToolCategory.TEXT,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.wordtune.com',
+    tags: ['writing', 'rewrite', 'editor']
+  },
+  {
+    id: 'grammarly',
+    name: 'Grammarly',
+    description: 'AI-powered writing assistant for grammar, clarity, and tone.',
+    descriptions: {
+      en: 'AI-powered writing assistant for grammar, clarity, and tone.',
+      zh: 'AI写作助手，优化语法、清晰性和语气。',
+      ja: '文法、明瞭さ、トーンを改善するAIライティングアシスタント。',
+      es: 'Asistente de escritura con IA que mejora gramática, claridad y tono.',
+      tk: 'Grammatikany, durulygy we tonuny gowulandyrýan AI ýazuw kömekçisi.',
+      uz: 'Grammatika, ravshanlik va ohangni yaxshilovchi AI yozish yordamchisi.',
+      tg: 'Ёрдамчии навиштани бо AI барои беҳтар кардани грамматика, равшанӣ ва оҳанг.',
+      hy: 'AI գրելու օգնական՝ բարելավելու քերականությունը, հստակությունը և տոնը։',
+      ro: 'Asistent de scriere AI care îmbunătățește gramatica, claritatea și tonul.'
+    },
+    category: ToolCategory.TEXT,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.grammarly.com',
+    tags: ['writing', 'grammar', 'editor']
+  },
+  {
+    id: 'tabnine',
+    name: 'Tabnine',
+    description: 'AI code completion for multiple languages and IDEs.',
+    descriptions: {
+      en: 'AI code completion for multiple languages and IDEs.',
+      zh: '多语言与多IDE的AI代码补全。',
+      ja: '複数言語・複数IDE対応のAIコード補完。',
+      es: 'Autocompletado de código con IA para múltiples lenguajes e IDE.',
+      tk: 'Köp diller we IDE-lar üçin AI kod dolduryşy.',
+      uz: 'Bir nechta tillar va IDElar uchun AI kod to‘ldirish.',
+      tg: 'Пуркунии коди AI барои забонҳо ва IDE-ҳои гуногун.',
+      hy: 'AI կոդի լրացում՝ բազմալեզու և բազմակի IDE-ների համար։',
+      ro: 'Completare de cod cu AI pentru mai multe limbi și IDE-uri.'
+    },
+    category: ToolCategory.CODING,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.tabnine.com',
+    tags: ['coding', 'autocomplete', 'developer']
+  },
+  {
+    id: 'codeium',
+    name: 'Codeium',
+    description: 'Free AI code completion and chat for your IDE.',
+    descriptions: {
+      en: 'Free AI code completion and chat for your IDE.',
+      zh: '免费的AI代码补全与IDE聊天。',
+      ja: '無料のAIコード補完とIDE内チャット。',
+      es: 'Autocompletado de código y chat en tu IDE, gratis.',
+      tk: 'Mugt AI kod dolduryşy we IDE içinde chat.',
+      uz: 'Bepul AI kod to‘ldirish va IDE ichida chat.',
+      tg: 'Пуркунии ройгони коди AI ва чат дар IDE-и шумо.',
+      hy: 'Անվճար AI կոդի լրացում և IDE-ային չաթ։',
+      ro: 'Completare de cod AI și chat în IDE, gratuit.'
+    },
+    category: ToolCategory.CODING,
+    pricing: PricingModel.FREE,
+    url: 'https://www.codeium.com',
+    tags: ['coding', 'autocomplete', 'chat']
+  },
+  {
+    id: 'playht',
+    name: 'Play.ht',
+    description: 'High quality AI text-to-speech with natural voices.',
+    descriptions: {
+      en: 'High quality AI text-to-speech with natural voices.',
+      zh: '高质量AI文本转语音，声音自然。',
+      ja: '高品質なAIテキスト読み上げ。自然な音声。',
+      es: 'TTS con IA de alta calidad con voces naturales.',
+      tk: 'Naturaly sesler bilen ýokary hilli AI tekstden sese.',
+      uz: 'Yuksak sifatli AI matndan ovoz, tabiiy tovushlar bilan.',
+      tg: 'TTS-и AI бо сифати баланд ва садоҳои табиӣ.',
+      hy: 'Բարձրորակ AI տեքստից-խոսք՝ բնական ձայներով։',
+      ro: 'TTS AI de înaltă calitate, voci naturale.'
+    },
+    category: ToolCategory.AUDIO,
+    pricing: PricingModel.PAID,
+    url: 'https://play.ht',
+    tags: ['tts', 'voice', 'audio']
+  },
+  {
+    id: 'resemble',
+    name: 'Resemble AI',
+    description: 'AI voice cloning and generation with emotion control.',
+    descriptions: {
+      en: 'AI voice cloning and generation with emotion control.',
+      zh: 'AI语音克隆与生成，支持情感控制。',
+      ja: 'AI音声のクローン・生成。感情制御に対応。',
+      es: 'Clonado y generación de voz con IA con control de emoción.',
+      tk: 'Duygy dolandyryşy bilen AI ses klonlamak we döretmek.',
+      uz: 'Emotsiya nazorati bilan AI ovoz klonlash va yaratish.',
+      tg: 'Клоникунии садо ва тавлиди AI бо идораи эҳсосот.',
+      hy: 'AI ձայնի կլոնավորում և գեներացում՝ զգացմունքների կառավարմամբ։',
+      ro: 'Clonare și generare de voce AI cu control emoțional.'
+    },
+    category: ToolCategory.AUDIO,
+    pricing: PricingModel.PAID,
+    url: 'https://www.resemble.ai',
+    tags: ['voice', 'tts', 'cloning']
+  },
+  {
+    id: 'did',
+    name: 'D-ID',
+    description: 'Create talking avatars and digital humans from images and text.',
+    descriptions: {
+      en: 'Create talking avatars and digital humans from images and text.',
+      zh: '将图像与文本生成会说话的数字人。',
+      ja: '画像とテキストから話すアバター・デジタルヒューマンを生成。',
+      es: 'Crea avatares parlantes y humanos digitales desde imágenes y texto.',
+      tk: 'Suratlar we tekstden gürleýän awatarlar we sanly adamlar dörediň.',
+      uz: 'Tasvir va matndan gapiradigan avatarlar va raqamli odamlar yarating.',
+      tg: 'Аз тасвир ва матн аватарҳои гӯё ва инсонҳои рақамӣ эҷод кунед.',
+      hy: 'Ստեղծեք խոսող ավատարներ և թվային մարդիկ պատկերներից ու տեքստից։',
+      ro: 'Creează avatare vorbitoare și oameni digitali din imagini și text.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.PAID,
+    url: 'https://www.d-id.com',
+    tags: ['avatar', 'talking-head', 'video']
+  },
+  {
+    id: 'pika',
+    name: 'Pika',
+    description: 'AI video generation and editing platform for creators.',
+    descriptions: {
+      en: 'AI video generation and editing platform for creators.',
+      zh: '创作者用的AI视频生成与编辑平台。',
+      ja: 'クリエイター向けのAI動画生成・編集プラットフォーム。',
+      es: 'Plataforma de generación y edición de video con IA para creadores.',
+      tk: 'Döredijiler üçin AI wideo dörediş we redaktirleme platformasy.',
+      uz: 'Yaratuvchilar uchun AI video yaratish va tahrirlash platformasi.',
+      tg: 'Платформаи тавлид ва таҳрири видео бо AI барои эҷодкорон.',
+      hy: 'AI տեսանյութերի ստեղծման և խմբագրման հարթակ՝ ստեղծողների համար։',
+      ro: 'Platformă AI de generare și editare video pentru creatori.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://pika.art',
+    tags: ['video', 'generation', 'editing']
+  },
+  {
+    id: 'ideogram',
+    name: 'Ideogram',
+    description: 'AI image generation platform focused on typography and design.',
+    descriptions: {
+      en: 'AI image generation platform focused on typography and design.',
+      zh: '专注字体与设计的AI图像生成平台。',
+      ja: 'タイポグラフィとデザインに特化したAI画像生成プラットフォーム。',
+      es: 'Plataforma de generación de imágenes con IA centrada en tipografía y diseño.',
+      tk: 'Tipografiýa we dizaýna ünsi jemleýän AI şekil döretme platformasy.',
+      uz: 'Tipografiya va dizaynga yo‘naltirilgan AI tasvir yaratish platformasi.',
+      tg: 'Платформаи AI барои тавлиди тасвирҳо, тамаркуз ба типография ва дизайн.',
+      hy: 'Տիպոգրաֆիայի և դիզայնի վրա կենտրոնացած AI պատկերների հարթակ։',
+      ro: 'Platformă AI de generare imagini axată pe tipografie și design.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://ideogram.ai',
+    tags: ['image', 'typography', 'design']
+  },
+  {
+    id: 'playgroundai',
+    name: 'Playground AI',
+    description: 'Create and edit images with AI, offering various models and tools.',
+    descriptions: {
+      en: 'Create and edit images with AI, offering various models and tools.',
+      zh: '使用AI创建与编辑图像，提供多种模型与工具。',
+      ja: 'AIで画像を作成・編集。多様なモデルとツールを提供。',
+      es: 'Crea y edita imágenes con IA, con varios modelos y herramientas.',
+      tk: 'AI bilen surat döretmek we redaktirlemek; dürli modeller we gurallar.',
+      uz: 'AI yordamida tasvir yaratish va tahrirlash; turli modellar va asboblar.',
+      tg: 'Бо AI тасвир эҷод ва таҳрир кунед; моделҳо ва абзорҳои гуногун.',
+      hy: 'Ստեղծեք և խմբագրեք պատկերներ AI-ով՝ տարբեր մոդելներով ու գործիքներով։',
+      ro: 'Creează și editează imagini cu AI, cu diverse modele și instrumente.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://playgroundai.com',
+    tags: ['image', 'editor', 'models']
+  },
+  {
+    id: 'pixlr',
+    name: 'Pixlr',
+    description: 'Free online photo editor with AI tools for retouching and removal.',
+    descriptions: {
+      en: 'Free online photo editor with AI tools for retouching and removal.',
+      zh: '免费在线图片编辑器，提供抠图、修图等 AI 工具。',
+      ja: '無料のオンライン画像編集。AIで切り抜きやレタッチが可能。',
+      es: 'Editor de fotos online gratuito con herramientas de IA para recorte y retoque.',
+      tk: 'Mugt onlaýn surat redaktory; AI bilen kesmek we retuş.',
+      uz: 'Bepul onlayn foto muharriri; AI bilan kesish va retush.',
+      tg: 'Муҳаррири ройгони тасвирҳои онлайн бо AI барои буриш ва ретуш.',
+      hy: 'Անվճար առցանց լուսանկարների խմբագրիչ՝ AI-ով կտրում և ռետուշ։',
+      ro: 'Editor foto online gratuit cu instrumente AI pentru decupare și retuș.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://pixlr.com',
+    tags: ['image', 'editor', 'background']
+  },
+  {
+    id: 'removebg',
+    name: 'Remove.bg',
+    description: 'Remove image backgrounds automatically with AI.',
+    descriptions: {
+      en: 'Remove image backgrounds automatically with AI.',
+      zh: 'AI自动移除图像背景。',
+      ja: 'AIで画像の背景を自動削除。',
+      es: 'Elimina fondos de imágenes automáticamente con IA.',
+      tk: 'Suratlaryň fonuny AI bilen awtomatik aýyryň.',
+      uz: 'Tasvir fonini AI yordamida avtomatik olib tashlash.',
+      tg: 'Бо AI заминаи тасвирҳоро худкор ҳазф кунед.',
+      hy: 'AI-ով ինքն动 կերպով հեռացրեք պատկերի ֆոնը։',
+      ro: 'Elimină automat fundalul imaginilor cu AI.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.PAID,
+    url: 'https://www.remove.bg',
+    tags: ['image', 'background', 'editor']
+  },
+  {
+    id: 'clipdrop',
+    name: 'Clipdrop',
+    description: 'AI image tools for cleanup, relighting, upscaling, and more.',
+    descriptions: {
+      en: 'AI image tools for cleanup, relighting, upscaling, and more.',
+      zh: 'AI图像清理、重光照、超分等工具。',
+      ja: '画像のクリーンアップ、再ライティング、超解像などのAIツール。',
+      es: 'Herramientas de IA para limpieza, relighting, upscaling y más.',
+      tk: 'Arassalamak, ýagtylandyrmak, ulaltmak we başga işler üçin AI gurallary.',
+      uz: 'Tozalash, qayta yoritish, kattalashtirish va boshqalar uchun AI vositalari.',
+      tg: 'Абзорҳои AI барои поксозӣ, равшанӣ, бузургсозӣ ва бештар.',
+      hy: 'AI գործիքներ՝ մաքրում, վերալուսավորում, բարձրացում և ավելին։',
+      ro: 'Instrumente AI pentru curățare, relighting, upscaling și altele.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://clipdrop.co',
+    tags: ['image', 'cleanup', 'upscale']
+  },
+  {
+    id: 'civitai',
+    name: 'CivitAI',
+    description: 'Community hub for AI image models and resources.',
+    descriptions: {
+      en: 'Community hub for AI image models and resources.',
+      zh: 'AI图像模型与资源的社区平台。',
+      ja: 'AI画像モデルとリソースのコミュニティハブ。',
+      es: 'Centro comunitario para modelos y recursos de imágenes con IA.',
+      tk: 'AI şekil modelleri we serişdeleri üçin jemgyýetçilik merkezi.',
+      uz: 'AI tasvir modellari va resurslari uchun jamoa markazi.',
+      tg: 'Маркази ҷомеа барои моделҳо ва захираҳои тасвирҳои AI.',
+      hy: 'Համայնքային հաբ՝ AI պատկերների մոդելների և ռեսուրսների համար।',
+      ro: 'Hub comunitar pentru modele și resurse de imagini AI.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREE,
+    url: 'https://civitai.com',
+    tags: ['models', 'community', 'image']
+  },
+  {
     id: 'descript',
     name: 'Descript',
     description: 'All-in-one video and audio editor that works like a doc (edit video by editing text).',
@@ -569,6 +1009,46 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://www.synthesia.io',
     tags: ['avatar', 'presentation', 'business']
+  },
+  {
+    id: 'kapwing',
+    name: 'Kapwing',
+    description: 'Online video editor with AI tools for subtitles, resizing, and more.',
+    descriptions: {
+      en: 'Online video editor with AI tools for subtitles, resizing, and more.',
+      zh: '在线视频编辑器，提供字幕、尺寸调整等 AI 工具。',
+      ja: '字幕やサイズ変更などのAI機能を備えたオンライン動画エディター。',
+      es: 'Editor de video online con herramientas de IA para subtítulos, redimensionado y más.',
+      tk: 'Onlaýn wideo redaktory; subtitr, ölçeg üýtgetmek we başgalar üçin AI gurallary.',
+      uz: 'Onlayn video muharriri; subtitr, o‘lcham o‘zgartirish va boshqalar uchun AI vositalari.',
+      tg: 'Муҳаррири видеои онлайн бо абзорҳои AI барои зерунвон, тағйири андоза ва бештар.',
+      hy: 'Առցանց վիդեոխմբագիր՝ AI գործիքներով՝ ենթաշար, չափի փոփոխություն և այլն։',
+      ro: 'Editor video online cu instrumente AI pentru subtitrări, redimensionare și altele.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.kapwing.com',
+    tags: ['video', 'editor', 'subtitles']
+  },
+  {
+    id: 'luma',
+    name: 'Luma AI',
+    description: 'Create cinematic AI videos and 3D content from text and footage.',
+    descriptions: {
+      en: 'Create cinematic AI videos and 3D content from text and footage.',
+      zh: '从文本与素材生成电影感 AI 视频与 3D 内容。',
+      ja: 'テキストや映像から映画のようなAI動画や3Dコンテンツを作成。',
+      es: 'Crea videos cinematográficos con IA y contenido 3D a partir de texto y material.',
+      tk: 'Tekst we wideo materialdan kino stilindäki AI wideolar we 3D mazmun dörediň.',
+      uz: 'Matn va video materiallardan kinoya o‘xshash AI videolar va 3D kontent yarating.',
+      tg: 'Аз матн ва навор видеоҳои кинематографӣ ва мундариҷаи 3D бо AI эҷод кунед.',
+      hy: 'Ստեղծեք կինեմատոգրաֆիական AI տեսանյութեր և 3D բովանդակություն տեքստից և նկարահանումից։',
+      ro: 'Creați videoclipuri AI cinematice și conținut 3D din text și imagini.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://lumalabs.ai',
+    tags: ['video', '3d', 'generation']
   },
 
   // --- Audio ---
@@ -653,6 +1133,106 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://cursor.sh',
     tags: ['editor', 'ide', 'coding']
+  },
+  {
+    id: 'excalidraw',
+    name: 'Excalidraw',
+    description: 'Free open-source whiteboard for diagrams, brainstorming, and collaboration.',
+    descriptions: {
+      en: 'Free open-source whiteboard for diagrams, brainstorming, and collaboration.',
+      zh: '免费开源白板，用于流程图、脑暴与协作。',
+      ja: '無料オープンソースのホワイトボード。図解、ブレインストーム、共同作業に最適。',
+      es: 'Pizarra open-source gratuita para diagramas, lluvia de ideas y colaboración.',
+      tk: 'Diagrammalar, pikir alyşmak we hyzmatdaşlyk üçin mugt açyk çeşme ak tagta.',
+      uz: 'Diagramlar, brainstorming va hamkorlik uchun bepul ochiq manbali whiteboard.',
+      tg: 'Лавҳаи сафеди кушодаасос ва ройгон барои диаграмма, фикрпурсӣ ва ҳамкорӣ.',
+      hy: 'Անվճար բաց կոդովไวթբորդ՝ դիագրամների, բրեינסטորմի և համագործակցության համար։',
+      ro: 'Whiteboard open-source gratuit pentru diagrame, brainstorming și colaborare.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREE,
+    url: 'https://excalidraw.com',
+    tags: ['whiteboard', 'diagram', 'collaboration']
+  },
+  {
+    id: 'tldraw',
+    name: 'tldraw',
+    description: 'Free collaborative whiteboard with shapes, sticky notes, and drawing.',
+    descriptions: {
+      en: 'Free collaborative whiteboard with shapes, sticky notes, and drawing.',
+      zh: '免费协作白板，支持形状、便签与手绘。',
+      ja: '無料のコラボ白板。図形、付箋、手描きに対応。',
+      es: 'Pizarra colaborativa gratuita con formas, notas adhesivas y dibujo.',
+      tk: 'Şekiller, bellikler we çyzgy bilen mugt hyzmatdaşlyk ak tagtasy.',
+      uz: 'Shakllar, stikernotlar va chizish bilan bepul hamkorlik whiteboard.',
+      tg: 'Лавҳаи сафеди ҳамкорӣ бо шаклҳо, ёддоштҳо ва расмкашӣ, ройгон.',
+      hy: 'Անվճար համագործակցայինไวթբորդ՝ ձևերով, սթիքերներով և նկարողների համար։',
+      ro: 'Whiteboard colaborativ gratuit cu forme, notițe lipicioase și desen.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREE,
+    url: 'https://tldraw.com',
+    tags: ['whiteboard', 'collaboration', 'drawing']
+  },
+  {
+    id: 'lm-studio',
+    name: 'LM Studio',
+    description: 'Run and chat with local LLMs on your desktop, free and offline.',
+    descriptions: {
+      en: 'Run and chat with local LLMs on your desktop, free and offline.',
+      zh: '在桌面上运行并对话本地 LLM，免费且可离线。',
+      ja: 'ローカルLLMをデスクトップで実行し、オフラインで無料でチャット。',
+      es: 'Ejecuta y chatea con LLMs locales en tu escritorio, gratis y sin conexión.',
+      tk: 'Stolüstünde ýerli LLM-lary işlediň we oflaýn mugt gürleşiň.',
+      uz: 'Mahalliy LLMlarni kompyuteringizda ishga tushiring va oflayn bepul chat qiling.',
+      tg: 'LLM-ҳои маҳаллиро дар мизи корӣ иҷро кунед ва офлайн ройгон сӯҳбат кунед.',
+      hy: 'Գործարկեք և զրուցեք տեղային LLM-ների հետ ձեր համակարգչում՝ անվճար և օֆլայն։',
+      ro: 'Rulează și discută cu LLM-uri locale pe desktop, gratuit și offline.'
+    },
+    category: ToolCategory.CODING,
+    pricing: PricingModel.FREE,
+    url: 'https://lmstudio.ai',
+    tags: ['local-llm', 'offline', 'desktop']
+  },
+  {
+    id: 'ollama',
+    name: 'Ollama',
+    description: 'Download and run open-source LLMs locally with a simple CLI.',
+    descriptions: {
+      en: 'Download and run open-source LLMs locally with a simple CLI.',
+      zh: '使用简单的 CLI 本地下载并运行开源 LLM 模型。',
+      ja: 'シンプルなCLIでオープンソースLLMをローカルでダウンロード・実行。',
+      es: 'Descarga y ejecuta LLMs de código abierto localmente con una CLI simple.',
+      tk: 'Ýönekeý CLI bilen açyk çeşme LLM-lary ýerli göçüriň we işlediň.',
+      uz: 'Oddiy CLI yordamida ochiq manbali LLMlarni lokal o‘rnating va ishlating.',
+      tg: 'LLM-ҳои кушодаасосро бо CLI сода дар маҳал боргирӣ ва иҷро кунед.',
+      hy: 'Ներբեռնեք և գործարկեք բաց կոդով LLM-ներ տեղային՝ պարզ CLI-ով։',
+      ro: 'Descarcă și rulează local LLM-uri open-source cu un CLI simplu.'
+    },
+    category: ToolCategory.CODING,
+    pricing: PricingModel.FREE,
+    url: 'https://ollama.com',
+    tags: ['local-llm', 'models', 'cli']
+  },
+  {
+    id: 'colab',
+    name: 'Google Colab',
+    description: 'Free cloud notebooks for Python with GPU access and seamless sharing.',
+    descriptions: {
+      en: 'Free cloud notebooks for Python with GPU access and seamless sharing.',
+      zh: '免费的云端 Python 笔记本，支持 GPU 与便捷分享。',
+      ja: 'GPU対応の無料クラウドPythonノートブック。共有も簡単。',
+      es: 'Cuadernos en la nube gratuitos para Python, con acceso a GPU y fácil compartición.',
+      tk: 'GPU bilen giriş we ýeňillik bilen paýlaşmak üçin mugt bulutly Python depderçeleri.',
+      uz: 'GPU kirish va oson ulashish imkoniga ega bepul bulutli Python daftarlari.',
+      tg: 'Дафтари абрии ройгони Python бо дастрасии GPU ва мубодилаи осон.',
+      hy: 'Անվճար ամպային Python նոթատետրեր՝ GPU հասանելիությամբ և հեշտ կիսումով։',
+      ro: 'Caiete Python în cloud gratuite, cu acces GPU și partajare ușoară.'
+    },
+    category: ToolCategory.CODING,
+    pricing: PricingModel.FREE,
+    url: 'https://colab.research.google.com',
+    tags: ['notebook', 'python', 'google']
   },
   {
     id: 'replit',
@@ -808,6 +1388,12 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'We couldn\'t find any tools matching your query.',
     clickToSearch: 'Try clicking AI Find to search the web.',
     footer: 'Powered by Gemini Flash & Pro.',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
+    sort: {
+      default: 'Default',
+      newest: 'Newest',
+      recent: 'Recently added'
+    },
     categories: {
       [ToolCategory.ALL]: 'All Tools',
       [ToolCategory.TEXT]: 'Text & Writing',
@@ -839,9 +1425,15 @@ export const TRANSLATIONS: Record<Language, any> = {
     searchPlaceholder: '筛选工具或让 AI 发现新工具...',
     aiFind: 'AI 搜索',
     noTools: '未找到工具',
-    noToolsDesc: '未找到匹配您查询的工具。',
+    noToolsDesc: '未找到匹配结果，请尝试其他关键词',
     clickToSearch: '尝试点击 AI 搜索以在网络上查找。',
     footer: '由 Gemini Flash & Pro 提供支持。',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
+    sort: {
+      default: '默认',
+      newest: '最新发布',
+      recent: '最近添加'
+    },
     categories: {
       [ToolCategory.ALL]: '全部工具',
       [ToolCategory.TEXT]: '文本与写作',
@@ -876,6 +1468,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'クエリに一致するツールが見つかりませんでした。',
     clickToSearch: '「AI 検索」をクリックしてWebを検索してください。',
     footer: 'Gemini Flash & Pro を搭載。',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'すべてのツール',
       [ToolCategory.TEXT]: 'テキストと執筆',
@@ -910,6 +1503,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'No pudimos encontrar herramientas que coincidan.',
     clickToSearch: 'Intenta hacer clic en Búsqueda IA.',
     footer: 'Impulsado por Gemini Flash & Pro.',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'Todas',
       [ToolCategory.TEXT]: 'Texto y Escritura',
@@ -944,6 +1538,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Siziň soragyňyza gabat gelýän gural tapyp bilmedik.',
     clickToSearch: 'Webde gözlemek üçin AI Gözleg düwmesine basyň.',
     footer: 'Gemini Flash & Pro tarapyndan goldanylýar.',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'Ähli gurallar',
       [ToolCategory.TEXT]: 'Tekst we Ýazuw',
@@ -978,6 +1573,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'So\'rovingizga mos keladigan vositalarni topa olmadik.',
     clickToSearch: 'Webda qidirish uchun AI Qidiruv tugmasini bosing.',
     footer: 'Gemini Flash & Pro tomonidan quvvatlanadi.',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'Barcha vositalar',
       [ToolCategory.TEXT]: 'Matn va Yozish',
@@ -1012,6 +1608,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Мо ягон асбоберо, ки ба дархости шумо мувофиқат кунад, пайдо карда натавонистем.',
     clickToSearch: 'Барои ҷустуҷӯ дар веб тугмаи Ҷустуҷӯи AI-ро пахш кунед.',
     footer: 'Бо дастгирии Gemini Flash & Pro.',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'Ҳама асбобҳо',
       [ToolCategory.TEXT]: 'Матн ва Навиштан',
@@ -1046,6 +1643,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Մենք չկարողացանք գտնել ձեր հարցմանը համապատասխանող գործիքներ:',
     clickToSearch: 'Փորձեք սեղմել AI Որոնում կոճակը վեբում փնտրելու համար:',
     footer: 'Ապահովված է Gemini Flash & Pro-ով:',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'Բոլոր գործիքները',
       [ToolCategory.TEXT]: 'Տեքստ և Գրառում',
@@ -1080,6 +1678,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Nu am putut găsi unelte care să corespundă interogării tale.',
     clickToSearch: 'Încearcă să apeși Căutare AI pentru a căuta pe web.',
     footer: 'Produs de Gemini Flash & Pro.',
+    tagline: '我是NavAI，为构建者精选的AI工具集',
     categories: {
       [ToolCategory.ALL]: 'Toate uneltele',
       [ToolCategory.TEXT]: 'Text și Scriere',

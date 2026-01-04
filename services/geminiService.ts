@@ -64,7 +64,12 @@ export const findNewTools = async (query: string, language: string = 'en'): Prom
         pricing: t.pricing,
         url: t.url,
         tags: t.tags || [],
-        isAiDiscovered: true
+        isAiDiscovered: true,
+        createdAt: Date.now(),
+        scenarios: t.scenarios || [],
+        apiDocUrl: t.apiDocsUrl || t.apiDocUrl,
+        hasStableApi: t.stableApi ?? undefined,
+        developerDocsUrl: t.developerDocsUrl || undefined
       }));
     }
     return [];
@@ -86,7 +91,10 @@ export const findNewTools = async (query: string, language: string = 'en'): Prom
           "category": "One of: Text & Writing, Image Generation, Video Creation, Audio & Music, Programming, Productivity, Business",
           "pricing": "Free, Freemium, or Paid",
           "url": "The official website URL (must be accurate)",
-          "tags": ["tag1", "tag2"]
+          "tags": ["tag1", "tag2"],
+          "scenarios": ["common use case 1", "common use case 2"],
+          "apiDocsUrl": "Direct link to official API documentation (if available)",
+          "stableApi": true
         }
       ]
     }
@@ -131,7 +139,12 @@ export const findNewTools = async (query: string, language: string = 'en'): Prom
         pricing: t.pricing,
         url: t.url,
         tags: t.tags || [],
-        isAiDiscovered: true
+        isAiDiscovered: true,
+        createdAt: Date.now(),
+        scenarios: t.scenarios || [],
+        apiDocUrl: t.apiDocsUrl || t.apiDocUrl,
+        hasStableApi: t.stableApi ?? undefined,
+        developerDocsUrl: t.developerDocsUrl || undefined
       }));
     }
     return [];

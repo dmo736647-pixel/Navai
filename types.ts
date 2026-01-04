@@ -28,6 +28,14 @@ export interface Tool {
   url: string;
   tags: string[];
   isAiDiscovered?: boolean; // To highlight tools found via dynamic search
+  createdAt?: number; // Unix epoch ms, used for sorting Newest/Recently added
+  scenarios?: string[]; 
+  apiDocUrl?: string; 
+  hasStableApi?: boolean; 
+  developerDocsUrl?: string; 
+  integrationStatus?: 'planned' | 'candidate' | 'integrated' | 'testing';
+  responseTimeMsAvg?: number; 
+  errorHandlingNotes?: string; 
 }
 
 export interface ChatMessage {
