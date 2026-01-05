@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { ToolCard } from './components/ToolCard';
-import { ChatBot } from './components/ChatBot';
 import { Tool, ToolCategory, Language } from './types';
 import { INITIAL_TOOLS, TRANSLATIONS } from './constants';
 import { findNewTools } from './services/geminiService';
@@ -106,14 +105,21 @@ const App: React.FC = () => {
       });
     }
     
-    // Apply sort mode
     if (sortMode !== 'default') {
       setIsSorting(true);
-      filtered.sort((a, b) => {
-        const at = a.createdAt ?? (a.isAiDiscovered ? 0 : -Infinity);
-        const bt = b.createdAt ?? (b.isAiDiscovered ? 0 : -Infinity);
-        return (bt as number) - (at as number);
-      });
+      if (sortMode === 'newest') {
+        filtered.sort((a, b) => {
+          const at = (a.releasedAt ?? a.createdAt ?? (a.isAiDiscovered ? 0 : -Infinity)) as number;
+          const bt = (b.releasedAt ?? b.createdAt ?? (b.isAiDiscovered ? 0 : -Infinity)) as number;
+          return bt - at;
+        });
+      } else if (sortMode === 'recent') {
+        filtered.sort((a, b) => {
+          const at = (a.createdAt ?? (a.isAiDiscovered ? 0 : -Infinity)) as number;
+          const bt = (b.createdAt ?? (b.isAiDiscovered ? 0 : -Infinity)) as number;
+          return bt - at;
+        });
+      }
       setTimeout(() => setIsSorting(false), 150);
     }
 
@@ -127,7 +133,7 @@ const App: React.FC = () => {
     const uniqueFiltered = Array.from(uniqueMap.values());
 
     setDisplayedTools(uniqueFiltered);
-  }, [selectedCategory, searchQuery, staticTools, discoveredTools]);
+  }, [selectedCategory, searchQuery, staticTools, discoveredTools, sortMode]);
 
   // Removed auto-AI search effect to respect user's request for local-first search
   
@@ -171,6 +177,7 @@ const App: React.FC = () => {
   return (
     <div className="flex h-screen bg-[#0B0F17] text-slate-100 font-sans selection:bg-indigo-500/30">
       <Sidebar 
+        key={currentLanguage}
         selectedCategory={selectedCategory} 
         onSelectCategory={setSelectedCategory}
         isOpen={isSidebarOpen}
@@ -353,8 +360,6 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Floating Chat Bot */}
-        <ChatBot currentLanguage={currentLanguage} />
       </main>
     </div>
   );

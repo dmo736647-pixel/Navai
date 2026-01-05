@@ -36,6 +36,7 @@ export interface Tool {
   integrationStatus?: 'planned' | 'candidate' | 'integrated' | 'testing';
   responseTimeMsAvg?: number; 
   errorHandlingNotes?: string; 
+  releasedAt?: number;
 }
 
 export interface ChatMessage {

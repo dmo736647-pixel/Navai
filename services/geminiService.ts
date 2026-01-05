@@ -1,5 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Tool, ToolCategory, PricingModel } from '../types';
+import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
 
 const readApiKey = (): string => {
   try {
@@ -183,6 +184,37 @@ export const chatWithBot = async (history: { role: string; parts: { text: string
 
   const response = await chat.sendMessage({ message: newMessage });
   return response.text;
+};
+
+const pickDesc = (tool: Tool, lang: string) => tool.descriptions?.[lang] || tool.description;
+const norm = (s: string) => s.toLowerCase();
+const scoreTool = (tool: Tool, q: string) => {
+  const nq = norm(q);
+  const name = norm(tool.name);
+  const desc = norm(tool.description);
+  let score = 0;
+  if (name === nq) score += 8;
+  if (name.includes(nq)) score += 5;
+  if (tool.tags.some(t => norm(t).includes(nq))) score += 4;
+  if (desc.includes(nq)) score += 2;
+  return score;
+};
+
+export const localToolRecommendations = (query: string, language: string): string => {
+  const pool = [...INITIAL_TOOLS];
+  const scored = pool
+    .map(t => ({ t, s: scoreTool(t, query) }))
+    .filter(x => x.s > 0)
+    .sort((a, b) => b.s - a.s)
+    .slice(0, 4)
+    .map(x => x.t);
+  if (scored.length === 0) return '';
+  const catLabels = TRANSLATIONS[language]?.categories || TRANSLATIONS.en.categories;
+  const lines = scored.map(tool => {
+    const cat = typeof tool.category === 'string' ? tool.category : catLabels[tool.category as any];
+    return `• ${tool.name}（${cat}）— ${pickDesc(tool, language)} ；${tool.url}`;
+  });
+  return lines.join('\n');
 };
 
 /**

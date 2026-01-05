@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
-import { chatWithBot } from '../services/geminiService';
+import { chatWithBot, localToolRecommendations } from '../services/geminiService';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../constants';
 
@@ -64,7 +64,8 @@ export const ChatBot: React.FC<ChatBotProps> = ({ currentLanguage }) => {
          setMessages(prev => [...prev, { role: 'model', text: responseText }]);
       }
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'model', text: t.error }]);
+      const offline = localToolRecommendations(userMsg, currentLanguage);
+      setMessages(prev => [...prev, { role: 'model', text: offline || t.error }]);
     } finally {
       setIsLoading(false);
     }

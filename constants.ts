@@ -1376,6 +1376,139 @@ export const INITIAL_TOOLS: Tool[] = [
     url: 'https://gamma.app',
     tags: ['presentations', 'slides', 'design']
   }
+  ,
+  {
+    id: 'imagen3d',
+    name: 'Imagen3D',
+    description: 'AI-powered tool to convert images to high-quality 3D models.',
+    descriptions: {
+      en: 'AI-powered tool to convert images to high-quality 3D models.',
+      zh: 'AI 图像转高质量 3D 模型工具。',
+      ja: '画像を高品質な3Dモデルへ変换するAIツール。',
+      es: 'Herramienta IA que convierte imágenes en modelos 3D de alta calidad.',
+      tk: 'Suratlary ýokary hilli 3D modellere öwürýän AI guraly.',
+      uz: 'Tasvirlarni yuqori sifatli 3D modellarga aylantiruvchi AI vosita.',
+      tg: 'Абзори AI барои табдили тасвирҳо ба моделҳои 3D босифат.',
+      hy: 'AI գործիք՝ պատկերները վերածելու բարձրորակ 3D մոդելների։',
+      ro: 'Instrument AI care convertește imagini în modele 3D de înaltă calitate.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.toolify.ai/tool/imagen3d',
+    tags: ['image-to-3d', '3d', 'modeling'],
+    createdAt: Date.now(),
+    releasedAt: Date.now()
+  },
+  {
+    id: 'qwen-image',
+    name: 'Qwen-Image',
+    description: 'Open-source image generator and editor with strong text rendering.',
+    descriptions: {
+      en: 'Open-source image generator and editor with strong text rendering.',
+      zh: '开源图像生成与编辑，文字渲染能力强。',
+      ja: '高精度文字描画に強い画像生成・编辑のオープンソース。',
+      es: 'Generador y editor de imágenes open-source con excelente renderizado de texto.',
+      tk: 'Güçli teksti görkezýän açyk çeşmeli şekil döretmek/rediaktirlemek.',
+      uz: 'Kuchli matn chizish bilan ochiq manbali tasvir generatori va muharriri.',
+      tg: 'Тавлид ва таҳрири тасвирҳои open-source бо рендери қавии матн.',
+      hy: 'Բաց աղբյուրի պատկերների ստեղծում և խմբագրում՝ որակյալ տեքստային արտապատկերմամբ։',
+      ro: 'Generator și editor de imagini open-source cu randare text excelentă.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://qwen-image.ai/',
+    tags: ['image', 'editing', 'open-source', 'text-rendering'],
+    createdAt: Date.now(),
+    releasedAt: Date.now()
+  },
+  {
+    id: 'stakly',
+    name: 'Stakly.dev',
+    description: 'AI platform to build production-ready web apps from plain text.',
+    descriptions: {
+      en: 'AI platform to build production-ready web apps from plain text.',
+      zh: 'AI 平台，基于文本描述生成可上线的网页应用。',
+      ja: 'テキスト指示から本番レディなWebアプリを作るAIプラットフォーム。',
+      es: 'Plataforma IA para crear apps web listas para producción desde texto.',
+      tk: 'Tekstden önümçilik derejeli web programmalary döredýän AI platforma.',
+      uz: 'Matndan ishlab chiqarishga tayyor veb-ilovalar yaratadigan AI platforma.',
+      tg: 'Платформаи AI барои сохтани барномаҳои веб омода ба истеҳсол аз матн.',
+      hy: 'AI հարթակ՝ տեքստից արտադրական պատրաստ վեբ հավելվածներ ստեղծելու համար։',
+      ro: 'Platformă AI pentru aplicații web gata de producție din text.'
+    },
+    category: ToolCategory.CODING,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://stakly.dev/',
+    tags: ['app-builder', 'no-code', 'ai-agents', 'webapps'],
+    createdAt: Date.now(),
+    releasedAt: Date.now()
+  },
+  {
+    id: 'kael',
+    name: 'Kael',
+    description: 'AI assistant for understanding documents and producing structured outputs.',
+    descriptions: {
+      en: 'AI assistant for understanding documents and producing structured outputs.',
+      zh: '理解文档并生成结构化产出的一体化 AI 助手。',
+      ja: '文書理解と構造化アウトプットを行うAIアシスタント。',
+      es: 'Asistente IA para comprender documentos y producir resultados estructurados.',
+      tk: 'Resminamalary düşünmek we düzülen çykaryş döretmek üçin AI kömekçi.',
+      uz: 'Hujjatlarni tushunish va tuzilgan natijalar yaratish uchun AI yordamchi.',
+      tg: 'Ёрдамчии AI барои фаҳмиши ҳуҷҷатҳо ва тавлиди натиҷаҳои сохторӣ.',
+      hy: 'Փաստաթղթերի ըմբռնման և կառուցվածքային արդյունքների ստեղծման AI օգնական։',
+      ro: 'Asistent IA pentru înțelegerea documentelor și rezultate structurate.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.toolify.ai/tool/kael',
+    tags: ['documents', 'assistant', 'notes', 'reports'],
+    createdAt: Date.now(),
+    releasedAt: Date.now()
+  },
+  {
+    id: 'qwen-image-edit',
+    name: 'Qwen-Image-Edit',
+    description: 'Semantic image editing with precise control via text prompts.',
+    descriptions: {
+      en: 'Semantic image editing with precise control via text prompts.',
+      zh: '语义级图像编辑，可通过文本精细控制。',
+      ja: 'テキストプロンプトで精密に制御できるセマンティック画像編集。',
+      es: 'Edición semántica de imágenes con control preciso mediante texto.',
+      tk: 'Tekst arkaly takyk dolandyryş bilen semantik şekil redaktirleme.',
+      uz: 'Matn orqali aniq boshqariladigan semantik tasvir tahriri.',
+      tg: 'Таҳрири семантикии тасвирҳо бо назорати дақиқ тавассути матн.',
+      hy: 'Սեմանտիկ պատկերների խմբագրում՝ ճշգրիտ վերահսկմամբ տեքստով։',
+      ro: 'Editare semantică a imaginilor cu control precis prin text.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.toolify.ai/tool/qwen-image-edit',
+    tags: ['image-editing', 'semantic', 'open-source'],
+    createdAt: Date.now(),
+    releasedAt: Date.now()
+  },
+  {
+    id: 'stack-ai',
+    name: 'Stack AI',
+    description: 'Low/no-code platform to build and deploy AI agents and workflows.',
+    descriptions: {
+      en: 'Low/no-code platform to build and deploy AI agents and workflows.',
+      zh: '低/无代码平台，用于构建与部署 AI 代理与流程。',
+      ja: 'AIエージェントやワークフローを構築・展開するノーコード/ローコード基盤。',
+      es: 'Plataforma low/no-code para crear y desplegar agentes y flujos IA.',
+      tk: 'AI agentleri we akymlary döretmek/ýaýratmak üçin pes/ýok koda platforma.',
+      uz: 'AI agentlari va ish jarayonlarini yaratish/joylash uchun low/no-code platforma.',
+      tg: 'Платформаи low/no-code барои сохтани агентҳои AI ва ҷараёнҳо.',
+      hy: 'Low/no-code հարթակ՝ AI գործակալներ և աշխատանքային հոսքեր կառուցելու/տեղակայելու համար։',
+      ro: 'Platformă low/no-code pentru a construi și lansa agenți și fluxuri AI.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.stack-ai.com/',
+    tags: ['agents', 'no-code', 'workflows', 'enterprise'],
+    createdAt: Date.now(),
+    releasedAt: Date.now()
+  }
 ];
 
 export const TRANSLATIONS: Record<Language, any> = {
