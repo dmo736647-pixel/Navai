@@ -1508,6 +1508,246 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['agents', 'no-code', 'workflows', 'enterprise'],
     createdAt: Date.now(),
     releasedAt: Date.now()
+  },
+  {
+    id: 'stackie-ai',
+    name: 'Stackie.AI',
+    description: 'An AI-powered life-logger for journaling, habit tracking, and information management.',
+    descriptions: {
+      en: 'An AI-powered life-logger for journaling, habit tracking, and information management.',
+      zh: '一个用于日记、习惯跟踪和信息管理的 AI 生活记录器。',
+      ja: 'ジャーナリング、習慣追跡、情報管理のためのAI搭載ライフブロガー。',
+      es: 'Un registrador de vida impulsado por IA para llevar un diario, seguir hábitos y gestionar información.',
+      tk: 'Günlük, endik yzarlamak we maglumat dolandyryşy üçin AI bilen işleýän durmuş ýazgysy.',
+      uz: 'Jurnal yuritish, odatlarni kuzatish va axborotni boshqarish uchun sun\'iy intellektga asoslangan hayot qaydnomasi.',
+      tg: 'Як сабткунандаи ҳаёт бо нерӯи зеҳни сунъӣ барои маҷалла, пайгирии одатҳо ва идоракунии иттилоот.',
+      hy: 'AI-ով աշխատող կյանքի գրանցիչ՝ օրագրերի, սովորությունների հետևման և տեղեկատվության կառավարման համար։',
+      ro: 'Un înregistrator de viață bazat pe inteligență artificială pentru jurnal, urmărirea obiceiurilor și gestionarea informațiilor.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://stackie.ai/',
+    tags: ['journaling', 'habit-tracking', 'information-management']
+  },
+  {
+    id: 'vidthis-ai',
+    name: 'Vidthis AI',
+    description: 'An open-source, uncensored AI platform for generating 4K videos with synchronized audio.',
+    descriptions: {
+      en: 'An open-source, uncensored AI platform for generating 4K videos with synchronized audio.',
+      zh: '一个用于从文本或图像生成 4K 视频的开源 AI 平台。',
+      ja: '同期された音声付きの4Kビデオを生成するための、オープンソースで無修正のAIプラットフォーム。',
+      es: 'Una plataforma de IA de código abierto y sin censura para generar videos 4K con audio sincronizado.',
+      tk: 'Sinhronlaşdyrylan sesli 4K wideo döretmek üçin açyk çeşmeli, senzura edilmedik AI platformasy.',
+      uz: 'Sinxronlashtirilgan audio bilan 4K videolar yaratish uchun ochiq manbali, senzurasiz AI platformasi.',
+      tg: 'Платформаи AI-и кушодаасос ва бидуни сензура барои тавлиди видеоҳои 4K бо аудиои ҳамоҳангшуда.',
+      hy: 'Բաց կոդով, առանց գրաքննության AI հարթակ՝ համաժամեցված աուդիոյով 4K տեսանյութեր ստեղծելու համար։',
+      ro: 'O platformă AI open-source, necenzurată, pentru generarea de videoclipuri 4K cu audio sincronizat.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://vidthis.ai/',
+    tags: ['video-generation', 'open-source', 'uncensored']
+  },
+  {
+    id: 'free-ai-background-remover',
+    name: 'Free AI Background Remover',
+    description: 'A free AI tool to remove backgrounds from images.',
+    descriptions: {
+      en: 'A free AI tool to remove backgrounds from images.',
+      zh: '一个用于从图像中移除背景的免费 AI 工具。',
+      ja: '画像から背景を削除するための無料のAIツール。',
+      es: 'Una herramienta de IA gratuita para eliminar fondos de imágenes.',
+      tk: 'Suratlardan fonlary aýyrmak üçin mugt AI guraly.',
+      uz: 'Rasmlardan fonni olib tashlash uchun bepul AI vositasi.',
+      tg: 'Асбоби ройгони AI барои нест кардани замина аз тасвирҳо.',
+      hy: 'Անվճար AI գործիք՝ նկարներից ֆոնը հեռացնելու համար։',
+      ro: 'Un instrument AI gratuit pentru a elimina fundalurile din imagini.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREE,
+    url: 'https://removal.ai/',
+    tags: ['background-remover', 'image-editing', 'free']
+  },
+  {
+    id: 'miro',
+    name: 'Miro',
+    description: 'An online collaborative whiteboard platform for team collaboration and project management.',
+    descriptions: {
+      en: 'An online collaborative whiteboard platform for team collaboration and project management.',
+      zh: '一个用于团队协作和项目管理的在线协作白板平台。',
+      ja: 'チームのコラボレーションとプロジェクト管理のためのオンライン共同ホワイトボードプラットフォーム。',
+      es: 'Una plataforma de pizarra colaborativa en línea para la colaboración en equipo y la gestión de proyectos.',
+      tk: 'Topar hyzmatdaşlygy we taslama dolandyryşy üçin onlaýn hyzmatdaşlyk tagtasy platformasy.',
+      uz: 'Jamoaviy hamkorlik va loyihalarni boshqarish uchun onlayn hamkorlik doskasi platformasi.',
+      tg: 'Платформаи тахтаи сафеди муштараки онлайн барои ҳамкории гурӯҳӣ ва идоракунии лоиҳа.',
+      hy: 'Առցանց համագործակցային գրատախտակի հարթակ՝ թիմային համագործակցության և նախագծերի կառավարման համար։',
+      ro: 'O platformă online de tablă colaborativă pentru colaborarea în echipă și managementul proiectelor.'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://miro.com/',
+    tags: ['whiteboard', 'collaboration', 'project-management']
+  },
+  {
+    id: 'pixlio-ai',
+    name: 'Pixlio AI',
+    description: 'A professional-quality AI image editor for image creation, editing, and optimization.',
+    descriptions: {
+      en: 'A professional-quality AI image editor for image creation, editing, and optimization.',
+      zh: '一个专业的 AI 图像编辑器，用于图像创作、编辑和优化。',
+      ja: '画像作成、編集、最適化のためのプロ品質のAI画像エディタ。',
+      es: 'Un editor de imágenes de IA de calidad profesional para la creación, edición y optimización de imágenes.',
+      tk: 'Surat döretmek, redaktirlemek we optimizirlemek üçin professional hilli AI surat redaktory.',
+      uz: 'Tasvirlarni yaratish, tahrirlash va optimallashtirish uchun professional sifatli AI tasvir muharriri.',
+      tg: 'Муҳаррири тасвири AI-и сифати касбӣ барои эҷод, таҳрир ва оптимизатсияи тасвир.',
+      hy: 'Պրոֆեսիոնալ որակի AI պատկերների խմբագրիչ՝ պատկերների ստեղծման, խմբագրման և օպտիմալացման համար։',
+      ro: 'Un editor de imagini AI de calitate profesională pentru crearea, editarea și optimizarea imaginilor.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://pixlio.net/',
+    tags: ['image-editor', 'image-creation', 'optimization']
+  },
+  {
+    id: 'ai-angels',
+    name: 'AI Angels',
+    description: 'A platform to chat with beautiful, smart, and intelligent AI companions.',
+    descriptions: {
+      en: 'A platform to chat with beautiful, smart, and intelligent AI companions.',
+      zh: '一个与美丽、聪明的 AI 伴侣聊天的平台。',
+      ja: '美しく、賢く、知的なAIコンパニオンとチャットするためのプラットフォーム。',
+      es: 'Una plataforma para chatear con compañeros de IA hermosos, inteligentes e inteligentes.',
+      tk: 'Owadan, akylly we akylly AI ýoldaşlary bilen söhbetdeşlik üçin platforma.',
+      uz: 'Go\'zal, aqlli va aqlli AI hamrohlari bilan suhbatlashish uchun platforma.',
+      tg: 'Платформа барои сӯҳбат бо ҳамроҳони зебо, доно ва боақли AI.',
+      hy: 'Հարթակ՝ գեղեցիկ, խելացի և խելացի AI ուղեկիցների հետ զրուցելու համար։',
+      ro: 'O platformă pentru a discuta cu însoțitori AI frumoși, deștepți și inteligenți.'
+    },
+    category: ToolCategory.TEXT,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://angel.ai/',
+    tags: ['chatbot', 'companion', 'ai-friend']
+  },
+  {
+    id: 'sniffsub',
+    name: 'Sniffsub',
+    description: 'A tool for analyzing and tracking audiences on Reddit.',
+    descriptions: {
+      en: 'A tool for analyzing and tracking audiences on Reddit.',
+      zh: '一个用于在 Reddit 上分析和跟踪受众的工具。',
+      ja: 'Redditのオーディエンスを分析および追跡するためのツール。',
+      es: 'Una herramienta para analizar y rastrear audiencias en Reddit.',
+      tk: 'Reddit-de tomaşaçylary seljermek we yzarlamak üçin gural.',
+      uz: 'Reddit\'dagi auditoriyani tahlil qilish va kuzatish uchun vosita.',
+      tg: 'Асбоб барои таҳлил ва пайгирии аудитория дар Reddit.',
+      hy: 'Գործիք՝ Reddit-ում լսարանները վերլուծելու և հետևելու համար։',
+      ro: 'Un instrument pentru analizarea și urmărirea audiențelor pe Reddit.'
+    },
+    category: ToolCategory.BUSINESS,
+    pricing: PricingModel.PAID,
+    url: 'https://sniffsub.com/',
+    tags: ['reddit', 'analytics', 'marketing']
+  },
+  {
+    id: 'deepfake-maker',
+    name: 'Deepfake Maker',
+    description: 'An all-in-one AI tool with face-swapping, image editing, and image-to-video features.',
+    descriptions: {
+      en: 'An all-in-one AI tool with face-swapping, image editing, and image-to-video features.',
+      zh: '一个集换脸、图片编辑和图转视频功能于一体的 AI 工具。',
+      ja: '顔交換、画像編集、画像から動画への変換機能を備えたオールインワンAIツール。',
+      es: 'Una herramienta de IA todo en uno con funciones de intercambio de caras, edición de imágenes y de imagen a video.',
+      tk: 'Ýüz çalşyrmak, surat redaktirlemek we suratdan wideo aýratynlyklary bolan hemmesi bir AI guraly.',
+      uz: 'Yuzni almashtirish, tasvirni tahrirlash va tasvirdan videoga o\'tkazish xususiyatlariga ega bo\'lgan yagona AI vositasi.',
+      tg: 'Асбоби ҳамаҷонибаи AI бо хусусиятҳои ивазкунии чеҳра, таҳрири тасвир ва тасвир ба видео.',
+      hy: 'Բոլորը մեկում AI գործիք՝ դեմքի փոխանակման, պատկերների խմբագրման և պատկերից վիդեոյի հնարավորություններով։',
+      ro: 'Un instrument AI all-in-one cu funcții de schimbare a feței, editare de imagini și imagine în video.'
+    },
+    category: ToolCategory.VIDEO,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.heygen.com/tool/deepfake-maker',
+    tags: ['deepfake', 'face-swap', 'video-editing']
+  },
+  {
+    id: 'image-creator-ai',
+    name: 'IMAGE CREATOR AI',
+    description: 'A free AI image generator and editor powered by Gemini.',
+    descriptions: {
+      en: 'A free AI image generator and editor powered by Gemini.',
+      zh: '一个由 Gemini 驱动的免费 AI 图像生成器和编辑器。',
+      ja: 'Geminiを搭載した無料のAI画像ジェネレーターおよびエディター。',
+      es: 'Un generador y editor de imágenes de IA gratuito impulsado por Gemini.',
+      tk: 'Gemini tarapyndan dolandyrylýan mugt AI surat generatory we redaktory.',
+      uz: 'Gemini tomonidan quvvatlanadigan bepul AI tasvir generatori va muharriri.',
+      tg: 'Генератор ва муҳаррири ройгони тасвири AI, ки аз ҷониби Gemini таъмин карда шудааст.',
+      hy: 'Gemini-ով աշխատող անվճար AI պատկերների գեներատոր և խմբագրիչ։',
+      ro: 'Un generator și editor de imagini AI gratuit, alimentat de Gemini.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREE,
+    url: 'https://nanobanana.pro/',
+    tags: ['image-generator', 'gemini', 'free']
+  },
+  {
+    id: 'gurully',
+    name: 'Gurully',
+    description: 'A practice platform for English proficiency tests (PTE, IELTS, etc.).',
+    descriptions: {
+      en: 'A practice platform for English proficiency tests (PTE, IELTS, etc.).',
+      zh: '一个用于英语能力测试（PTE、IELTS 等）的练习平台。',
+      ja: '英語能力試験（PTE、IELTSなど）の練習プラットフォーム。',
+      es: 'Una plataforma de práctica para exámenes de dominio del inglés (PTE, IELTS, etc.).',
+      tk: 'Iňlis dili başarnygy synaglary (PTE, IELTS we ş.m.) üçin tejribe platformasy.',
+      uz: 'Ingliz tilini bilish testlari (PTE, IELTS va boshqalar) uchun amaliyot platformasi.',
+      tg: 'Платформаи амалӣ барои санҷишҳои донистани забони англисӣ (PTE, IELTS ва ғайра).',
+      hy: 'Անգլերենի իմացության թեստերի (PTE, IELTS և այլն) պրակտիկայի հարթակ։',
+      ro: 'O platformă de practică pentru testele de competență în limba engleză (PTE, IELTS etc.).'
+    },
+    category: ToolCategory.PRODUCTIVITY,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://www.gurully.com/',
+    tags: ['english-learning', 'pte', 'ielts']
+  },
+  {
+    id: 'swiftproxy',
+    name: 'Swiftproxy',
+    description: 'A platform providing residential proxies for web scraping and data collection.',
+    descriptions: {
+      en: 'A platform providing residential proxies for web scraping and data collection.',
+      zh: '一个提供住宅代理服务的平台，用于网络抓取和数据收集。',
+      ja: 'ウェブスクレイピングとデータ収集のための住宅用プロキシを提供するプラットフォーム。',
+      es: 'Una plataforma que proporciona proxies residenciales para web scraping y recopilación de datos.',
+      tk: 'Web scraping we maglumat ýygnamak üçin ýaşaýyş proksi üpjün edýän platforma.',
+      uz: 'Veb-skreyner va ma\'lumotlarni yig\'ish uchun turar-joy proksilarini taqdim etadigan platforma.',
+      tg: 'Платформае, ки проксиҳои истиқоматиро барои ҷамъоварии веб ва ҷамъоварии маълумот таъмин мекунад.',
+      hy: 'Հարթակ, որը տրամադրում է բնակելի պրոքսիներ վեբ քերծման և տվյալների հավաքագրման համար։',
+      ro: 'O platformă care oferă proxy-uri rezidențiale pentru web scraping și colectarea de date.'
+    },
+    category: ToolCategory.BUSINESS,
+    pricing: PricingModel.PAID,
+    url: 'https://www.swiftproxy.net/',
+    tags: ['proxy', 'web-scraping', 'data-collection']
+  },
+  {
+    id: 'nano-banana-pro',
+    name: 'Nano Banana Pro',
+    description: 'A professional AI image generator and editor powered by Gemini Pro.',
+    descriptions: {
+      en: 'A professional AI image generator and editor powered by Gemini Pro.',
+      zh: '一款由 Gemini Pro 驱动的专业 AI 图像生成器和编辑器。',
+      ja: 'Gemini Proを搭載したプロフェッショナルなAI画像ジェネレーターおよびエディター。',
+      es: 'Un generador y editor de imágenes de IA profesional impulsado por Gemini Pro.',
+      tk: 'Gemini Pro tarapyndan dolandyrylýan professional AI surat generatory we redaktory.',
+      uz: 'Gemini Pro tomonidan quvvatlanadigan professional AI tasvir generatori va muharriri.',
+      tg: 'Генератор ва муҳаррири касбии тасвири AI, ки аз ҷониби Gemini Pro таъмин карда шудааст.',
+      hy: 'Gemini Pro-ով աշխատող պրոֆեսիոնալ AI պատկերների գեներատոր և խմբագրիչ։',
+      ro: 'Un generator și editor de imagini AI profesional, alimentat de Gemini Pro.'
+    },
+    category: ToolCategory.IMAGE,
+    pricing: PricingModel.FREEMIUM,
+    url: 'https://nanobanana.pro/',
+    tags: ['image-generator', 'gemini-pro', 'professional']
   }
 ];
 
@@ -1521,7 +1761,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'We couldn\'t find any tools matching your query.',
     clickToSearch: 'Try clicking AI Find to search the web.',
     footer: 'Powered by Gemini Flash & Pro.',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI: A curated collection of AI tools for builders.',
     sort: {
       default: 'Default',
       newest: 'Newest',
@@ -1601,7 +1841,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'クエリに一致するツールが見つかりませんでした。',
     clickToSearch: '「AI 検索」をクリックしてWebを検索してください。',
     footer: 'Gemini Flash & Pro を搭載。',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI：ビルダーのために厳選されたAIツール集',
     categories: {
       [ToolCategory.ALL]: 'すべてのツール',
       [ToolCategory.TEXT]: 'テキストと執筆',
@@ -1636,7 +1876,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'No pudimos encontrar herramientas que coincidan.',
     clickToSearch: 'Intenta hacer clic en Búsqueda IA.',
     footer: 'Impulsado por Gemini Flash & Pro.',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI: Una colección curada de herramientas de IA para constructores.',
     categories: {
       [ToolCategory.ALL]: 'Todas',
       [ToolCategory.TEXT]: 'Texto y Escritura',
@@ -1671,7 +1911,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Siziň soragyňyza gabat gelýän gural tapyp bilmedik.',
     clickToSearch: 'Webde gözlemek üçin AI Gözleg düwmesine basyň.',
     footer: 'Gemini Flash & Pro tarapyndan goldanylýar.',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI: Gurluşykçylar üçin AI gurallarynyň saýlanan ýygyndysy.',
     categories: {
       [ToolCategory.ALL]: 'Ähli gurallar',
       [ToolCategory.TEXT]: 'Tekst we Ýazuw',
@@ -1706,7 +1946,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'So\'rovingizga mos keladigan vositalarni topa olmadik.',
     clickToSearch: 'Webda qidirish uchun AI Qidiruv tugmasini bosing.',
     footer: 'Gemini Flash & Pro tomonidan quvvatlanadi.',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI: Quruvchilar uchun tanlangan AI vositalari to\'plami.',
     categories: {
       [ToolCategory.ALL]: 'Barcha vositalar',
       [ToolCategory.TEXT]: 'Matn va Yozish',
@@ -1741,7 +1981,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Мо ягон асбоберо, ки ба дархости шумо мувофиқат кунад, пайдо карда натавонистем.',
     clickToSearch: 'Барои ҷустуҷӯ дар веб тугмаи Ҷустуҷӯи AI-ро пахш кунед.',
     footer: 'Бо дастгирии Gemini Flash & Pro.',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI: Маҷмӯаи интихобшудаи асбобҳои AI барои созандагон.',
     categories: {
       [ToolCategory.ALL]: 'Ҳама асбобҳо',
       [ToolCategory.TEXT]: 'Матн ва Навиштан',
@@ -1776,7 +2016,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Մենք չկարողացանք գտնել ձեր հարցմանը համապատասխանող գործիքներ:',
     clickToSearch: 'Փորձեք սեղմել AI Որոնում կոճակը վեբում փնտրելու համար:',
     footer: 'Ապահովված է Gemini Flash & Pro-ով:',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI. Շինարարների համար նախատեսված AI գործիքների ընտրանի:',
     categories: {
       [ToolCategory.ALL]: 'Բոլոր գործիքները',
       [ToolCategory.TEXT]: 'Տեքստ և Գրառում',
@@ -1811,7 +2051,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     noToolsDesc: 'Nu am putut găsi unelte care să corespundă interogării tale.',
     clickToSearch: 'Încearcă să apeși Căutare AI pentru a căuta pe web.',
     footer: 'Produs de Gemini Flash & Pro.',
-    tagline: '我是NavAI，为构建者精选的AI工具集',
+    tagline: 'NavAI: O colecție curatoriată de instrumente AI pentru constructori.',
     categories: {
       [ToolCategory.ALL]: 'Toate uneltele',
       [ToolCategory.TEXT]: 'Text și Scriere',
