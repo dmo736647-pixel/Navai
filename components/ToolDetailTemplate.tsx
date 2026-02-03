@@ -47,6 +47,26 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
 
   return (
     <>
+      {/* Sticky Bottom CTA for Mobile/Desktop */}
+      {tool.featured && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 md:hidden animate-fade-in-up">
+          <div className="flex items-center justify-between gap-4 max-w-7xl mx-auto">
+            <div className="flex flex-col">
+              <span className="text-xs text-slate-400">Recommended Tool</span>
+              <span className="font-bold text-white">{tool.name}</span>
+            </div>
+            <a 
+              href={tool.affiliateUrl || tool.url} 
+              target="_blank" 
+              rel={`noopener noreferrer ${tool.affiliateUrl ? 'nofollow sponsored' : ''}`}
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-950 font-bold px-6 py-2.5 rounded-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all text-sm whitespace-nowrap"
+            >
+              Try for Free
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Hero / CTA Section */}
       <div className="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-8 md:p-12 mb-12 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/10 to-transparent pointer-events-none" />
@@ -176,6 +196,30 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
           </div>
         </div>
       </section>
+
+      {/* Final Bottom CTA */}
+      <div className="text-center py-12 px-4 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 mb-8">
+        <h2 className="text-3xl font-bold text-white mb-4">
+          Ready to try {tool.name}?
+        </h2>
+        <p className="text-slate-400 mb-8 max-w-xl mx-auto">
+          Join thousands of creators and businesses using {tool.name} to transform their workflow.
+        </p>
+        <a 
+          href={tool.affiliateUrl || tool.url} 
+          target="_blank" 
+          rel={`noopener noreferrer ${tool.affiliateUrl ? 'nofollow sponsored' : ''}`}
+          className={`
+            inline-flex items-center gap-2 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 hover:shadow-2xl
+            ${tool.featured 
+              ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-950 hover:from-yellow-300 hover:to-orange-400 shadow-lg shadow-orange-500/20' 
+              : 'bg-indigo-600 text-white hover:bg-indigo-500 shadow-lg shadow-indigo-500/25'
+            }
+          `}
+        >
+          Get Started for Free <ExternalLink size={20} />
+        </a>
+      </div>
     </>
   );
 };

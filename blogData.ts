@@ -108,7 +108,12 @@ export const BLOG_POSTS: BlogPost[] = [
         <li>Speeding up content production for teams</li>
       </ul>
       
-      <p><strong>Power Combo:</strong> Many marketing teams combine Jasper for text generation with <a href="/tool/synthesia" class="text-blue-400 hover:text-blue-300">Synthesia</a> for video content to create a complete multimedia content engine.</p>
+      <div class="bg-indigo-900/20 border border-indigo-500/20 rounded-lg p-4 my-6">
+        <p class="mb-0 font-medium">
+          <span class="text-yellow-400 mr-2">⚡</span>
+          <strong>Power Combo:</strong> Many marketing teams combine Jasper for text generation with <a href="/tool/synthesia" class="text-blue-400 hover:text-blue-300 underline">Synthesia</a> for video content to create a complete multimedia content engine.
+        </p>
+      </div>
 
       <p>For solo creators, Jasper can feel powerful—but its true value shows up when content volume and consistency matter.</p>
 
@@ -256,8 +261,19 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>Excellent for animation and styling. Pika operates through Discord and web, offering fun and creative video generations.</p>
 
       <h2>5. Synthesia</h2>
-      <p>Similar to HeyGen, <a href="https://www.synthesia.io/?via=f46539" target="_blank" rel="nofollow sponsored" class="text-indigo-400 hover:text-indigo-300">Synthesia</a> focuses on AI avatars. It supports over 120 languages, making it perfect for global teams.</p>
-      <p><a href="https://www.synthesia.io/?via=f46539" target="_blank" rel="nofollow sponsored" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors mt-2">Try Synthesia for Free</a></p>
+      <p>Similar to HeyGen, <a href="/tool/synthesia" class="text-indigo-400 hover:text-indigo-300">Synthesia</a> focuses on AI avatars. It supports over 120 languages, making it perfect for global teams.</p>
+      
+      <div class="bg-gradient-to-r from-slate-900 to-slate-800 border border-slate-700 rounded-xl p-6 my-6">
+        <div class="flex flex-col sm:flex-row items-center gap-6">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-white mb-2">Why we recommend Synthesia</h3>
+            <p class="text-gray-300 mb-0">It's the most professional AI avatar platform we've tested. Perfect for creating training videos, marketing content, and YouTube videos without a camera.</p>
+          </div>
+          <a href="/tool/synthesia" class="whitespace-nowrap bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-lg shadow-indigo-500/20">
+            Read Full Review
+          </a>
+        </div>
+      </div>
     `,
     author: 'NavAI Team',
     date: '2024-03-12',

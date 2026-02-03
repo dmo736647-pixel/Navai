@@ -18,11 +18,12 @@ export const Home: React.FC = () => {
   // Listen for navigation state changes (e.g. returning from Blog page)
   useEffect(() => {
     const state = location.state as { category?: ToolCategory };
-    if (state?.category && state.category !== selectedCategory) {
+    if (state?.category) {
       setSelectedCategory(state.category);
     }
+    // Only run when location key changes (actual navigation)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+  }, [location.key]);
 
   const [searchQuery, setSearchQuery] = useState('');
   const { currentLanguage } = useLanguage();
