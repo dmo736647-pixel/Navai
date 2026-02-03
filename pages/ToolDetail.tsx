@@ -7,6 +7,7 @@ import { ToolCard } from '../components/ToolCard';
 import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
 import { Tool, ToolCategory } from '../types';
 import { ArrowLeft, ExternalLink, Tag, Globe, Clock, Shield } from 'lucide-react';
+import { ToolDetailTemplate } from '../components/ToolDetailTemplate';
 
 export const ToolDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -45,13 +46,31 @@ export const ToolDetail: React.FC = () => {
       <Helmet>
         <title>{tool.name} - NavAI Review & Details</title>
         <meta name="description" content={`Discover ${tool.name}: ${description.substring(0, 150)}...`} />
+        <link rel="canonical" href={`https://navai.space/tool/${tool.id}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: tool.name,
+            applicationCategory: String(tool.category),
+            offers: { '@type': 'Offer', price: String(tool.pricing) },
+            url: tool.affiliateUrl || tool.url,
+            description: description
+          })}
+        </script>
       </Helmet>
       
       <div className="max-w-7xl mx-auto p-6 lg:p-8">
-        <Link to="/" className="inline-flex items-center text-gray-400 hover:text-white mb-6 transition-colors">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Directory
-        </Link>
+        {/* Breadcrumbs */}
+        <nav className="text-sm text-gray-400 mb-6">
+          <Link to="/" className="hover:text-white">Home</Link>
+          <span className="mx-2">/</span>
+          <Link to="/" state={{ category: tool.category }} className="hover:text-white">
+            {String(tool.category)}
+          </Link>
+          <span className="mx-2">/</span>
+          <span className="text-white">{tool.name}</span>
+        </nav>
 
         <div className="bg-gray-800 rounded-xl p-8 border border-gray-700 shadow-xl mb-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
@@ -77,12 +96,8 @@ export const ToolDetail: React.FC = () => {
             </a>
           </div>
 
-          <div className="prose prose-invert max-w-none mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              {description}
-            </p>
-          </div>
+          {/* Template sections */}
+          <ToolDetailTemplate tool={tool} description={description} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-700">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Sidebar } from './Sidebar';
 import { Menu, Globe } from 'lucide-react';
 import { ToolCategory } from '../types';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { TRANSLATIONS } from '../constants';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -22,6 +22,19 @@ export const Layout: React.FC<LayoutProps> = ({
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { currentLanguage, setLanguage } = useLanguage();
   const t = TRANSLATIONS[currentLanguage];
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleCategorySelect = (category: ToolCategory) => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { category } });
+    } else {
+      if (onSelectCategory) {
+        onSelectCategory(category);
+      }
+    }
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div className="flex h-screen bg-[#0B0F17] text-slate-100 font-sans selection:bg-indigo-500/30">
@@ -29,7 +42,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <Sidebar 
           key={currentLanguage}
           selectedCategory={selectedCategory} 
-          onSelectCategory={onSelectCategory || (() => {})}
+          onSelectCategory={handleCategorySelect}
           isOpen={isSidebarOpen}
           setIsOpen={setIsSidebarOpen}
           currentLanguage={currentLanguage}
@@ -82,11 +95,35 @@ export const Layout: React.FC<LayoutProps> = ({
 
           {/* Footer */}
           <footer className="max-w-7xl mx-auto mt-20 pt-8 pb-8 border-t border-slate-800/50 text-center text-slate-500 text-xs">
+            {/* Newsletter Section */}
+            <div className="mb-12 max-w-xl mx-auto px-4">
+              <h3 className="text-lg font-semibold text-slate-200 mb-2">Subscribe to our Newsletter</h3>
+              <p className="text-slate-400 mb-4">Get the latest AI tools and trends delivered to your inbox.</p>
+              <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="flex-1 bg-slate-800/50 border border-slate-700 text-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-500"
+                />
+                <button type="submit" className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+
+            <div className="mb-8 px-4">
+              <p className="max-w-2xl mx-auto text-slate-500 italic">
+                Disclosure: NavAI is reader-supported. When you buy through links on our site, we may earn an affiliate commission. 
+                <Link to="/affiliate-disclosure" className="text-indigo-400 hover:text-indigo-300 ml-1">Learn more</Link>
+              </p>
+            </div>
+
             <p>© {new Date().getFullYear()} {t?.title || 'NavAI'}. {t?.footer || 'All rights reserved.'}</p>
-            <div className="mt-4 flex justify-center gap-4">
+            <div className="mt-4 flex justify-center gap-4 flex-wrap">
               <Link to="/about" className="hover:text-slate-300 transition-colors">About Us</Link>
               <Link to="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+              <Link to="/affiliate-disclosure" className="hover:text-slate-300 transition-colors">Affiliate Disclosure</Link>
             </div>
           </footer>
         </div>

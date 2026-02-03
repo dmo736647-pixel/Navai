@@ -10,8 +10,11 @@ import {
   Code2, 
   Briefcase, 
   Zap,
-  Menu
+  Menu,
+  Send,
+  BookOpen
 } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
   selectedCategory: ToolCategory;
@@ -39,6 +42,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   setIsOpen,
   currentLanguage 
 }) => {
+  const location = useLocation();
   const t = TRANSLATIONS[currentLanguage];
 
   return (
@@ -79,25 +83,82 @@ export const Sidebar: React.FC<SidebarProps> = ({
             {t.directory}
           </div>
           {Object.values(ToolCategory).map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                onSelectCategory(category);
-                if (window.innerWidth < 768) setIsOpen(false);
-              }}
-              className={`
-                w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all text-left
-                ${selectedCategory === category 
-                  ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-sm' 
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30 border border-transparent'}
-              `}
-            >
-              <span className={selectedCategory === category ? 'text-indigo-400' : 'text-slate-500 group-hover:text-slate-300'}>
-                {CATEGORY_ICONS[category]}
-              </span>
-              {t.categories[category]}
-            </button>
+            location.pathname === '/' ? (
+              <button
+                key={category}
+                onClick={() => {
+                  onSelectCategory(category);
+                  if (window.innerWidth < 768) setIsOpen(false);
+                }}
+                className={`
+                  w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all text-left
+                  ${selectedCategory === category 
+                    ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-sm' 
+                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30 border border-transparent'}
+                `}
+              >
+                <span className={selectedCategory === category ? 'text-indigo-400' : 'text-slate-500 group-hover:text-slate-300'}>
+                  {CATEGORY_ICONS[category]}
+                </span>
+                {t.categories[category]}
+              </button>
+            ) : (
+              <Link
+                key={category}
+                to="/"
+                state={{ category }}
+                onClick={() => {
+                  onSelectCategory(category);
+                  if (window.innerWidth < 768) setIsOpen(false);
+                }}
+                className={`
+                  w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all text-left
+                  ${selectedCategory === category 
+                    ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-sm' 
+                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30 border border-transparent'}
+                `}
+              >
+                <span className={selectedCategory === category ? 'text-indigo-400' : 'text-slate-500 group-hover:text-slate-300'}>
+                  {CATEGORY_ICONS[category]}
+                </span>
+                {t.categories[category]}
+              </Link>
+            )
           ))}
+
+          <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4 px-3 mt-8">
+            Community
+          </div>
+          <Link
+            to="/blog"
+            className={`
+              w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all mb-1
+              ${location.pathname === '/blog' 
+                ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-sm' 
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30 border border-transparent'}
+            `}
+            onClick={() => {
+              if (window.innerWidth < 768) setIsOpen(false);
+            }}
+          >
+            <BookOpen size={20} className={location.pathname === '/blog' ? 'text-indigo-400' : 'text-slate-500'} />
+            Blog
+          </Link>
+          <Link
+            to="/submit"
+            className={`
+              w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all
+              ${location.pathname === '/submit' 
+                ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-sm' 
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30 border border-transparent'}
+            `}
+            onClick={() => {
+              if (window.innerWidth < 768) setIsOpen(false);
+            }}
+          >
+            <Send size={20} className={location.pathname === '/submit' ? 'text-indigo-400' : 'text-slate-500'} />
+            Submit Tool
+          </Link>
         </nav>
       </aside>
     </>

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { ToolCard } from '../components/ToolCard';
 import { Tool, ToolCategory } from '../types';
 import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
 import { findNewTools } from '../services/geminiService';
-import { Search, Sparkles, AlertCircle, Loader2 } from 'lucide-react';
+import { Search, Sparkles, AlertCircle, Loader2, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { Layout } from '../components/Layout';
@@ -14,6 +14,16 @@ export const Home: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ToolCategory>(() => {
     return (location.state as any)?.category || ToolCategory.ALL;
   });
+
+  // Listen for navigation state changes (e.g. returning from Blog page)
+  useEffect(() => {
+    const state = location.state as { category?: ToolCategory };
+    if (state?.category && state.category !== selectedCategory) {
+      setSelectedCategory(state.category);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
+
   const [searchQuery, setSearchQuery] = useState('');
   const { currentLanguage } = useLanguage();
   const [sortMode, setSortMode] = useState<'default' | 'newest' | 'recent'>('default');
@@ -36,6 +46,10 @@ export const Home: React.FC = () => {
 
   // Translations
   const t = TRANSLATIONS[currentLanguage];
+
+  const featuredTools = useMemo(() => 
+    INITIAL_TOOLS.filter(t => t.featured), 
+  []);
 
   // Sort helpers
   const getRelevanceScore = (tool: Tool, query: string): number => {
@@ -171,7 +185,7 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <Layout selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory}>
+    <Layout onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory}>
       <Helmet>
         <title>{t.title} - {TRANSLATIONS[currentLanguage]?.tagline}</title>
         <meta name="description" content="Discover the best AI tools for builders, creators, and professionals. Curated and categorized for your needs." />
@@ -232,6 +246,21 @@ export const Home: React.FC = () => {
 
       <div className="px-4 md:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
+          
+          {/* Featured Tools */}
+          {selectedCategory === ToolCategory.ALL && !searchQuery && featuredTools.length > 0 && (
+            <div className="mb-12">
+            <h2 className="text-xl font-semibold flex items-center gap-2 mb-6 text-yellow-400">
+              <Star size={20} fill="currentColor" />
+              {t.featuredTools}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {featuredTools.map((tool) => (
+                  <ToolCard key={`featured-${tool.url}`} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
+                ))}
+              </div>
+            </div>
+          )}
           
           {/* Section Title */}
           <div className="flex items-center justify-between mb-8">

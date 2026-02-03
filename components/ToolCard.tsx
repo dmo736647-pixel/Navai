@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Tool, PricingModel, Language } from '../types';
 import { ExternalLink, Tag, Sparkles, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { getFastToolSummary } from '../services/geminiService';
 import { TRANSLATIONS } from '../constants';
 
@@ -78,9 +79,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage, searc
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1 pr-2">
              <div className="flex items-center gap-2 mb-2">
-               <h3 className="text-xl font-bold text-slate-100 group-hover:text-indigo-400 transition-colors line-clamp-1">
+               <Link to={`/tool/${tool.id}`} className="text-xl font-bold text-slate-100 group-hover:text-indigo-400 transition-colors line-clamp-1">
                  {highlightText(tool.name, searchQuery)}
-               </h3>
+               </Link>
              </div>
              <p className="text-xs text-indigo-400/80 font-semibold uppercase tracking-wider">
                {tool.isAiDiscovered ? tool.category : TRANSLATIONS[currentLanguage].categories[tool.category as any]}
@@ -130,6 +131,12 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage, searc
         >
           {t.visitSite} <ExternalLink size={12} />
         </a>
+        <Link 
+          to={`/tool/${tool.id}`}
+          className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 group-hover:text-white bg-slate-800 hover:bg-indigo-600 px-3 py-1.5 rounded-lg transition-all"
+        >
+          Details
+        </Link>
       </div>
     </div>
   );

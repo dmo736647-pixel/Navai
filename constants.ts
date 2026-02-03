@@ -1008,7 +1008,38 @@ export const INITIAL_TOOLS: Tool[] = [
     category: ToolCategory.VIDEO,
     pricing: PricingModel.PAID,
     url: 'https://www.synthesia.io',
-    tags: ['avatar', 'presentation', 'business']
+    affiliateUrl: 'https://www.synthesia.io/?via=f46539',
+    tags: ['avatar', 'presentation', 'business'],
+    featured: true,
+    features: [
+      '120+ languages supported',
+      'AI avatars for video creation',
+      'Professional video templates',
+      'Easy text-to-video conversion'
+    ],
+    tutorials: [
+      {
+        title: 'How to create your first video',
+        steps: [
+          'Sign up for a Synthesia account',
+          'Create a new video project',
+          'Enter your script text',
+          'Choose an AI avatar',
+          'Select a voice and language',
+          'Generate and download your video'
+        ]
+      }
+    ],
+    technicalSpecs: {
+      'Video Resolution': '1080p',
+      'Avatars': '1000+',
+      'Languages': '120+',
+      'Voice Options': '500+'
+    },
+    userReviews: [
+      { author: 'Marketing Manager', rating: 5, text: 'Synthesia has transformed our video creation process. We can now create professional videos in minutes instead of hours.' },
+      { author: 'Content Creator', rating: 4.5, text: 'The AI avatars are very realistic, and the text-to-video conversion is seamless. Highly recommended!' }
+    ]
   },
   {
     id: 'kapwing',
@@ -1762,6 +1793,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Try clicking AI Find to search the web.',
     footer: 'Powered by Gemini Flash & Pro.',
     tagline: 'NavAI: A curated collection of AI tools for builders.',
+    featuredTools: 'Featured Tools',
     sort: {
       default: 'Default',
       newest: 'Newest',
@@ -1802,6 +1834,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: '尝试点击 AI 搜索以在网络上查找。',
     footer: '由 Gemini Flash & Pro 提供支持。',
     tagline: '我是NavAI，为构建者精选的AI工具集',
+    featuredTools: '精选工具',
     sort: {
       default: '默认',
       newest: '最新发布',
@@ -1842,6 +1875,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: '「AI 検索」をクリックしてWebを検索してください。',
     footer: 'Gemini Flash & Pro を搭載。',
     tagline: 'NavAI：ビルダーのために厳選されたAIツール集',
+    featuredTools: '注目のツール',
     categories: {
       [ToolCategory.ALL]: 'すべてのツール',
       [ToolCategory.TEXT]: 'テキストと執筆',
@@ -1877,6 +1911,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Intenta hacer clic en Búsqueda IA.',
     footer: 'Impulsado por Gemini Flash & Pro.',
     tagline: 'NavAI: Una colección curada de herramientas de IA para constructores.',
+    featuredTools: 'Herramientas Destacadas',
     categories: {
       [ToolCategory.ALL]: 'Todas',
       [ToolCategory.TEXT]: 'Texto y Escritura',
@@ -1912,6 +1947,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Webde gözlemek üçin AI Gözleg düwmesine basyň.',
     footer: 'Gemini Flash & Pro tarapyndan goldanylýar.',
     tagline: 'NavAI: Gurluşykçylar üçin AI gurallarynyň saýlanan ýygyndysy.',
+    featuredTools: 'Saýlanan Gurallar',
     categories: {
       [ToolCategory.ALL]: 'Ähli gurallar',
       [ToolCategory.TEXT]: 'Tekst we Ýazuw',
@@ -1947,6 +1983,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Webda qidirish uchun AI Qidiruv tugmasini bosing.',
     footer: 'Gemini Flash & Pro tomonidan quvvatlanadi.',
     tagline: 'NavAI: Quruvchilar uchun tanlangan AI vositalari to\'plami.',
+    featuredTools: 'Tanlangan Vositalar',
     categories: {
       [ToolCategory.ALL]: 'Barcha vositalar',
       [ToolCategory.TEXT]: 'Matn va Yozish',
@@ -1982,6 +2019,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Барои ҷустуҷӯ дар веб тугмаи Ҷустуҷӯи AI-ро пахш кунед.',
     footer: 'Бо дастгирии Gemini Flash & Pro.',
     tagline: 'NavAI: Маҷмӯаи интихобшудаи асбобҳои AI барои созандагон.',
+    featuredTools: 'Асбобҳои Мунтахаб',
     categories: {
       [ToolCategory.ALL]: 'Ҳама асбобҳо',
       [ToolCategory.TEXT]: 'Матн ва Навиштан',
@@ -2017,6 +2055,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Փորձեք սեղմել AI Որոնում կոճակը վեբում փնտրելու համար:',
     footer: 'Ապահովված է Gemini Flash & Pro-ով:',
     tagline: 'NavAI. Շինարարների համար նախատեսված AI գործիքների ընտրանի:',
+    featuredTools: 'Ընտրված Գործիքներ',
     categories: {
       [ToolCategory.ALL]: 'Բոլոր գործիքները',
       [ToolCategory.TEXT]: 'Տեքստ և Գրառում',
@@ -2052,6 +2091,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Încearcă să apeși Căutare AI pentru a căuta pe web.',
     footer: 'Produs de Gemini Flash & Pro.',
     tagline: 'NavAI: O colecție curatoriată de instrumente AI pentru constructori.',
+    featuredTools: 'Instrumente Recomandate',
     categories: {
       [ToolCategory.ALL]: 'Toate uneltele',
       [ToolCategory.TEXT]: 'Text și Scriere',
