@@ -12,7 +12,23 @@ import {
   Zap,
   Menu,
   Send,
-  BookOpen
+  BookOpen,
+  MessageSquare,
+  Search,
+  TrendingUp,
+  Palette,
+  GraduationCap,
+  FileText,
+  Shield,
+  User,
+  Presentation,
+  BarChart3,
+  Share2,
+  Mail,
+  Scissors,
+  Layers,
+  FileText as FileIcon,
+  Globe
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -33,6 +49,22 @@ const CATEGORY_ICONS: Record<ToolCategory, React.ReactNode> = {
   [ToolCategory.CODING]: <Code2 size={20} />,
   [ToolCategory.PRODUCTIVITY]: <Zap size={20} />,
   [ToolCategory.BUSINESS]: <Briefcase size={20} />,
+  [ToolCategory.CHATBOTS]: <MessageSquare size={20} />,
+  [ToolCategory.AI_SEARCH]: <Search size={20} />,
+  [ToolCategory.MARKETING]: <TrendingUp size={20} />,
+  [ToolCategory.DESIGN]: <Palette size={20} />,
+  [ToolCategory.EDUCATION]: <GraduationCap size={20} />,
+  [ToolCategory.CONTENT]: <FileText size={20} />,
+  [ToolCategory.DETECTORS]: <Shield size={20} />,
+  [ToolCategory.AVATARS]: <User size={20} />,
+  [ToolCategory.PRESENTATIONS]: <Presentation size={20} />,
+  [ToolCategory.DATA]: <BarChart3 size={20} />,
+  [ToolCategory.SOCIAL_MEDIA]: <Share2 size={20} />,
+  [ToolCategory.EMAIL]: <Mail size={20} />,
+  [ToolCategory.VIDEO_EDITING]: <Scissors size={20} />,
+  [ToolCategory.LOGO_BRANDING]: <Layers size={20} />,
+  [ToolCategory.RESUME_CV]: <FileIcon size={20} />,
+  [ToolCategory.TRANSLATION]: <Globe size={20} />,
 };
 
 export const Sidebar: React.FC<SidebarProps> = ({ 

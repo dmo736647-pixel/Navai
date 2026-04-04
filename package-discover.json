@@ -1,0 +1,16 @@
+{
+  "name": "navai-auto-discover",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "自动化发现和添加 AI 工具到 NavAI 平台",
+  "scripts": {
+    "discover": "node scripts/auto-discover-tools.mjs",
+    "discover:toolify": "node scripts/auto-discover-tools.mjs toolify new",
+    "discover:all": "node scripts/auto-discover-tools.mjs all"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.0.0"
+  }
+}

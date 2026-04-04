@@ -10,7 +10,10 @@
     "dev": "vite",
     "build": "vite build --outDir docs",
     "preview": "vite preview",
-    "ssg": "node scripts/generate-static.mjs"
+    "ssg": "node scripts/generate-static.mjs",
+    "discover": "node scripts/discover-tools.js",
+    "discover:dry": "node scripts/discover-tools.js --dry-run",
+    "discover:all": "node scripts/discover-tools.js --all"
   },
   "dependencies": {
     "@google/genai": "^1.34.0",

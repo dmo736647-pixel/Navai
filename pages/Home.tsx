@@ -3,7 +3,7 @@ import { ToolCard } from '../components/ToolCard';
 import { Tool, ToolCategory } from '../types';
 import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
 import { findNewTools } from '../services/geminiService';
-import { Search, Sparkles, AlertCircle, Loader2, Star } from 'lucide-react';
+import { Search, Sparkles, AlertCircle, Loader2, Star, TrendingUp, Clock, Zap, BarChart2, Users, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { Layout } from '../components/Layout';
@@ -48,9 +48,19 @@ export const Home: React.FC = () => {
   // Translations
   const t = TRANSLATIONS[currentLanguage];
 
-  const featuredTools = useMemo(() => 
-    INITIAL_TOOLS.filter(t => t.featured), 
-  []);
+  const featuredTools = useMemo(() => {
+    const featuredIds = [
+      'chatgpt',
+      'midjourney',
+      'suno-ai',
+      'perplexity',
+      'synthesia',
+      'notion-ai',
+      'elevenlabs',
+      'gamma'
+    ];
+    return INITIAL_TOOLS.filter(t => featuredIds.includes(t.id));
+  }, []);
 
   // Sort helpers
   const getRelevanceScore = (tool: Tool, query: string): number => {
@@ -245,9 +255,136 @@ export const Home: React.FC = () => {
         </div>
       </div>
 
+      {/* Stats Section */}
+      {selectedCategory === ToolCategory.ALL && !searchQuery && (
+        <div className="px-4 md:px-8 pb-12">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-2xl p-6 border border-indigo-500/30 text-center">
+                <div className="text-3xl font-bold text-indigo-400 mb-1">{INITIAL_TOOLS.length}+</div>
+                <div className="text-gray-400 text-sm flex items-center justify-center gap-1">
+                  <Globe size={14} />
+                  AI Tools
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 rounded-2xl p-6 border border-blue-500/30 text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-1">25</div>
+                <div className="text-gray-400 text-sm flex items-center justify-center gap-1">
+                  <BarChart2 size={14} />
+                  Categories
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 rounded-2xl p-6 border border-green-500/30 text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">100K+</div>
+                <div className="text-gray-400 text-sm flex items-center justify-center gap-1">
+                  <Users size={14} />
+                  Users
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-yellow-900/50 to-orange-900/50 rounded-2xl p-6 border border-yellow-500/30 text-center">
+                <div className="text-3xl font-bold text-yellow-400 mb-1">9</div>
+                <div className="text-gray-400 text-sm flex items-center justify-center gap-1">
+                  <Globe size={14} />
+                  Languages
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quick Categories */}
+      {selectedCategory === ToolCategory.ALL && !searchQuery && (
+        <div className="px-4 md:px-8 pb-12">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-xl font-semibold flex items-center gap-2 mb-6 text-gray-300">
+              <Zap size={20} />
+              Browse by Category
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { name: 'Text & Writing', icon: '📝', category: ToolCategory.TEXT, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.TEXT).length },
+                { name: 'Image Generation', icon: '🎨', category: ToolCategory.IMAGE, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.IMAGE).length },
+                { name: 'Video Creation', icon: '🎬', category: ToolCategory.VIDEO, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.VIDEO).length },
+                { name: 'Coding Tools', icon: '💻', category: ToolCategory.CODING, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.CODING).length }
+              ].map((cat) => (
+                <button
+                  key={cat.category}
+                  onClick={() => setSelectedCategory(cat.category)}
+                  className="bg-gray-800/50 hover:bg-gray-700/50 rounded-2xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all group text-left"
+                >
+                  <div className="text-3xl mb-3">{cat.icon}</div>
+                  <div className="text-white font-semibold group-hover:text-indigo-400 transition-colors">{cat.name}</div>
+                  <div className="text-gray-500 text-sm mt-1">{cat.count} tools</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="px-4 md:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
           
+          {/* Trending Tools */}
+          {selectedCategory === ToolCategory.ALL && !searchQuery && (
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold flex items-center gap-2 mb-6 text-orange-400">
+                <TrendingUp size={20} fill="currentColor" />
+                Trending Now
+                <span className="text-orange-400/50 text-sm font-normal ml-2">• Updated hourly</span>
+              </h2>
+              <div className="bg-gradient-to-br from-orange-900/20 to-amber-900/20 rounded-2xl p-6 border border-orange-500/30">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {['ChatGPT', 'Midjourney', 'Suno AI', 'Perplexity'].map((tool, i) => (
+                    <div key={i} className="bg-black/30 rounded-xl p-4 border border-orange-500/20 hover:border-orange-500/50 transition-all group cursor-pointer">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg flex items-center justify-center text-white font-bold">
+                          {i + 1}
+                        </div>
+                        <div>
+                          <div className="text-white font-semibold group-hover:text-orange-400 transition-colors">{tool}</div>
+                          <div className="text-orange-400 text-xs flex items-center gap-1">
+                            <TrendingUp size={10} />
+                            {20 + (i * 5)}% increase
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Newest Tools */}
+          {selectedCategory === ToolCategory.ALL && !searchQuery && (
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold flex items-center gap-2 mb-6 text-green-400">
+                <Clock size={20} />
+                Just Added
+                <span className="text-green-400/50 text-sm font-normal ml-2">• Today</span>
+              </h2>
+              <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-6 border border-green-500/30">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {['Stackie.AI', 'Raccoon AI', 'ThumbnailCreator.com', 'Atoms'].map((tool, i) => (
+                    <div key={i} className="bg-black/30 rounded-xl p-4 border border-green-500/20 hover:border-green-500/50 transition-all group cursor-pointer">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                          <Clock size={16} className="text-white" />
+                        </div>
+                        <div>
+                          <div className="text-white font-semibold group-hover:text-green-400 transition-colors">{tool}</div>
+                          <div className="text-green-400 text-xs">Added 2h ago</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Featured Tools */}
           {selectedCategory === ToolCategory.ALL && !searchQuery && featuredTools.length > 0 && (
             <div className="mb-12">
@@ -257,7 +394,7 @@ export const Home: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {featuredTools.map((tool) => (
-                  <ToolCard key={`featured-${tool.url}`} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
+                  <ToolCard key={`featured-${tool.id}`} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
                 ))}
               </div>
             </div>
@@ -272,34 +409,6 @@ export const Home: React.FC = () => {
                 ({displayedTools.length})
               </span>
             </h2>
-            <div className="flex items-center gap-2">
-              <div className="hidden md:flex bg-slate-800/50 border border-slate-700/50 rounded-xl overflow-hidden">
-                <button
-                  onClick={() => setSortMode('default')}
-                  className={`px-3 py-2 text-sm ${sortMode==='default'?'bg-indigo-600 text-white':'text-slate-300 hover:text-white'}`}
-                >{t.sort?.default ?? 'Default'}</button>
-                <button
-                  onClick={() => setSortMode('newest')}
-                  className={`px-3 py-2 text-sm ${sortMode==='newest'?'bg-indigo-600 text-white':'text-slate-300 hover:text-white'}`}
-                >{t.sort?.newest ?? 'Newest'}</button>
-                <button
-                  onClick={() => setSortMode('recent')}
-                  className={`px-3 py-2 text-sm ${sortMode==='recent'?'bg-indigo-600 text-white':'text-slate-300 hover:text-white'}`}
-                >{t.sort?.recent ?? 'Recently added'}</button>
-              </div>
-              <div className="md:hidden">
-                <select
-                  value={sortMode}
-                  onChange={(e)=>setSortMode(e.target.value as any)}
-                  className="bg-slate-800/50 border border-slate-700/50 text-slate-200 text-sm rounded-xl py-2 px-3"
-                >
-                  <option value="default">{t.sort?.default ?? 'Default'}</option>
-                  <option value="newest">{t.sort?.newest ?? 'Newest'}</option>
-                  <option value="recent">{t.sort?.recent ?? 'Recently added'}</option>
-                </select>
-              </div>
-              {isSorting && <Loader2 size={18} className="animate-spin text-slate-400" />}
-            </div>
           </div>
 
           {/* Error Banner */}

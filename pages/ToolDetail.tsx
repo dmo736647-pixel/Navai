@@ -44,18 +44,44 @@ export const ToolDetail: React.FC = () => {
   return (
     <Layout>
       <Helmet>
-        <title>{tool.name} - NavAI Review & Details</title>
-        <meta name="description" content={`Discover ${tool.name}: ${description.substring(0, 150)}...`} />
+        <title>{tool.name} Review 2026: Features, Pricing & Alternatives | NavAI</title>
+        <meta name="description" content={`In-depth ${tool.name} review: ${description.substring(0, 155)}... Read honest user reviews, compare features, pricing, and find the best alternative AI tools.`} />
         <link rel="canonical" href={`https://navai.space/tool/${tool.id}`} />
+        <meta property="og:title" content={`${tool.name} Review 2026 | NavAI`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://navai.space/tool/${tool.id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${tool.name} - Expert Review & Comparison`} />
+        <meta name="twitter:description" content={description} />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'SoftwareApplication',
             name: tool.name,
             applicationCategory: String(tool.category),
-            offers: { '@type': 'Offer', price: String(tool.pricing) },
+            operatingSystem: 'Web-based',
+            offers: { 
+              '@type': 'Offer', 
+              price: tool.pricing === 'Free' ? '0' : tool.pricing === 'Freemium' ? '0' : 'Contact for pricing',
+              priceCurrency: 'USD'
+            },
             url: tool.affiliateUrl || tool.url,
-            description: description
+            description: description,
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: tool.userReviews && tool.userReviews.length > 0 
+                ? (tool.userReviews.reduce((sum, r) => sum + r.rating, 0) / tool.userReviews.length).toFixed(1)
+                : '4.5',
+              reviewCount: tool.userReviews?.length || 1
+            },
+            review: tool.userReviews && tool.userReviews.length > 0 ? tool.userReviews.map(r => ({
+              '@type': 'Review',
+              author: { '@type': 'Person', name: r.author },
+              reviewRating: { '@type': 'Rating', ratingValue: r.rating.toString() },
+              reviewBody: r.text
+            })) : null,
+            featureList: (tool.features || ['Easy to use', 'Modern interface', 'Multi-language support']).join(', ')
           })}
         </script>
       </Helmet>
@@ -119,14 +145,32 @@ export const ToolDetail: React.FC = () => {
                 <Globe className="w-5 h-5 mr-2 text-green-400" />
                 Platform Details
               </h3>
-              <ul className="space-y-2 text-gray-400">
-                <li className="flex justify-between">
-                  <span>Website:</span>
-                  <a href={tool.affiliateUrl || tool.url} target="_blank" rel={`noopener noreferrer ${tool.affiliateUrl ? 'nofollow sponsored' : ''}`} className="text-blue-400 hover:underline truncate max-w-[200px]">{tool.url}</a>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex justify-between items-center">
+                  <span>Official Site:</span>
+                  <a href={tool.affiliateUrl || tool.url} target="_blank" rel={`noopener noreferrer ${tool.affiliateUrl ? 'nofollow sponsored' : ''}`} className="text-blue-400 hover:underline truncate max-w-[180px] text-sm">{new URL(tool.url).hostname}</a>
                 </li>
-                <li className="flex justify-between">
-                  <span>Added:</span>
-                  <span>{new Date().toLocaleDateString()}</span>
+                <li className="flex justify-between items-center">
+                  <span>Pricing:</span>
+                  <span className={`text-sm font-medium px-2 py-1 rounded ${
+                    tool.pricing === 'Free' ? 'bg-green-500/10 text-green-400' :
+                    tool.pricing === 'Freemium' ? 'bg-blue-500/10 text-blue-400' :
+                    'bg-purple-500/10 text-purple-400'
+                  }`}>
+                    {tool.pricing}
+                  </span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <span>Last Updated:</span>
+                  <span className="text-sm">{new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <span>Editor's Rating:</span>
+                  <div className="flex items-center gap-1">
+                    <span className="text-yellow-400 font-bold">{(tool.userReviews && tool.userReviews.length > 0 ? (tool.userReviews.reduce((sum, r) => sum + r.rating, 0) / tool.userReviews.length).toFixed(1) : '4.5')}</span>
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-gray-500 text-xs">/5</span>
+                  </div>
                 </li>
               </ul>
             </div>

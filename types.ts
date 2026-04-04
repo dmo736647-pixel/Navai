@@ -6,7 +6,23 @@ export enum ToolCategory {
   AUDIO = 'Audio & Music',
   CODING = 'Programming',
   PRODUCTIVITY = 'Productivity',
-  BUSINESS = 'Business & Marketing'
+  BUSINESS = 'Business & Marketing',
+  CHATBOTS = 'Chatbots & Assistants',
+  AI_SEARCH = 'AI Search',
+  MARKETING = 'Marketing & SEO',
+  DESIGN = 'Design & UI/UX',
+  EDUCATION = 'Education & Learning',
+  CONTENT = 'Content Creation',
+  DETECTORS = 'AI Detectors',
+  AVATARS = 'Avatars & Characters',
+  PRESENTATIONS = 'Presentations',
+  DATA = 'Data & Analytics',
+  SOCIAL_MEDIA = 'Social Media',
+  EMAIL = 'Email & Communication',
+  VIDEO_EDITING = 'Video Editing',
+  LOGO_BRANDING = 'Logo & Branding',
+  RESUME_CV = 'Resume & CV',
+  TRANSLATION = 'Translation'
 }
 
 export enum PricingModel {
