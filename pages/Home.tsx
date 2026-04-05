@@ -261,7 +261,7 @@ export const Home: React.FC = () => {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-2xl p-6 border border-indigo-500/30 text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-1">{INITIAL_TOOLS.length}+</div>
+                <div className="text-3xl font-bold text-indigo-400 mb-1">{displayedTools.length}+</div>
                 <div className="text-gray-400 text-sm flex items-center justify-center gap-1">
                   <Globe size={14} />
                   AI Tools
