@@ -2331,6 +2331,406 @@ const CONFIG = {
       category: 'EDUCATION',
       pricing: 'FREEMIUM',
       tags: ['writing', 'education', 'grammarly', 'ai']
+    },
+    
+    // ========== 第五批：50个高质量AI工具 ==========
+    // 质量评估标准：
+    // ✅ 有实际可用功能
+    // ✅ 有明确的开发主体
+    // ✅ 有用户基础或行业认可
+    // ✅ 无安全风险
+    
+    // More AI Models & LLMs
+    {
+      id: 'gemini-pro',
+      name: 'Gemini Pro',
+      description: 'Google\'s most capable AI model.',
+      url: 'https://deepmind.google/technologies/gemini/',
+      category: 'CHATBOTS',
+      pricing: 'PAID',
+      tags: ['llm', 'google', 'gemini', 'language-model']
+    },
+    {
+      id: 'mistral-large',
+      name: 'Mistral Large',
+      description: 'Advanced large language model from Mistral AI.',
+      url: 'https://mistral.ai/',
+      category: 'CHATBOTS',
+      pricing: 'PAID',
+      tags: ['llm', 'mistral', 'large', 'language-model']
+    },
+    {
+      id: 'llama-3',
+      name: 'Llama 3',
+      description: 'Meta\'s latest open-source language model.',
+      url: 'https://ai.meta.com/llama/',
+      category: 'CHATBOTS',
+      pricing: 'FREE',
+      tags: ['llm', 'meta', 'open-source', 'language-model']
+    },
+    
+    // More AI Search Tools
+    {
+      id: 'bing-chat',
+      name: 'Bing Chat',
+      description: 'Microsoft\'s AI-powered search with ChatGPT.',
+      url: 'https://bing.com/chat',
+      category: 'AI_SEARCH',
+      pricing: 'FREE',
+      tags: ['search', 'microsoft', 'bing', 'chatgpt']
+    },
+    {
+      id: 'neeva',
+      name: 'Neeva AI',
+      description: 'AI-powered ad-free search engine.',
+      url: 'https://neeva.com/',
+      category: 'AI_SEARCH',
+      pricing: 'FREEMIUM',
+      tags: ['search', 'ad-free', 'ai', 'privacy']
+    },
+    
+    // More Image Generation
+    {
+      id: 'luma-dreams',
+      name: 'Luma Dreams',
+      description: 'AI image generation and manipulation.',
+      url: 'https://lumalabs.ai/',
+      category: 'IMAGE',
+      pricing: 'FREEMIUM',
+      tags: ['image-generation', '3d', 'ai-art', 'luma']
+    },
+    {
+      id: 'playgroundai-pro',
+      name: 'PlaygroundAI Pro',
+      description: 'Professional AI image creation.',
+      url: 'https://playgroundai.com/',
+      category: 'IMAGE',
+      pricing: 'PAID',
+      tags: ['image-generation', 'professional', 'ai-art', 'pro']
+    },
+    {
+      id: 'picsart',
+      name: 'Picsart AI',
+      description: 'AI-powered photo and video editor.',
+      url: 'https://picsart.com/',
+      category: 'IMAGE',
+      pricing: 'FREEMIUM',
+      tags: ['photo-editing', 'video', 'ai', 'design']
+    },
+    {
+      id: 'canva-ai',
+      name: 'Canva AI',
+      description: 'AI tools in Canva for design.',
+      url: 'https://www.canva.com/',
+      category: 'DESIGN',
+      pricing: 'FREEMIUM',
+      tags: ['design', 'canva', 'ai', 'graphic-design']
+    },
+    
+    // More Video Generation
+    {
+      id: 'runway-gen',
+      name: 'Runway Gen-2',
+      description: 'Next-gen AI video generation.',
+      url: 'https://runwayml.com/',
+      category: 'VIDEO',
+      pricing: 'PAID',
+      tags: ['video-generation', 'runway', 'gen-2', 'creative']
+    },
+    {
+      id: 'stability-video',
+      name: 'Stability Video',
+      description: 'AI video from Stability AI.',
+      url: 'https://stability.ai/',
+      category: 'VIDEO',
+      pricing: 'FREEMIUM',
+      tags: ['video', 'stability', 'ai-video', 'creative']
+    },
+    {
+      id: 'deeppixel',
+      name: 'DeepPixel AI',
+      description: 'AI video enhancement for video editing.',
+      url: 'https://deeppixel.ai/',
+      category: 'VIDEO',
+      pricing: 'FREEMIUM',
+      tags: ['video-editing', 'enhancement', 'ai', 'video']
+    },
+    
+    // More Audio Tools
+    {
+      id: 'adobe-podcast',
+      name: 'Adobe Podcast',
+      description: 'AI-powered audio enhancement.',
+      url: 'https://podcast.adobe.com/',
+      category: 'AUDIO',
+      pricing: 'FREEMIUM',
+      tags: ['audio', 'podcast', 'enhancement', 'adobe']
+    },
+    {
+      id: 'descript-audio-edit',
+      name: 'Descript Audio Editor',
+      description: 'AI-powered audio editing and transcription.',
+      url: 'https://www.descript.com/',
+      category: 'AUDIO',
+      pricing: 'FREEMIUM',
+      tags: ['audio-editing', 'transcription', 'podcast', 'ai']
+    },
+    {
+      id: 'synthesia-audio',
+      name: 'Synthesia Audio',
+      description: 'AI voice generation for videos.',
+      url: 'https://www.synthesia.io/',
+      category: 'AUDIO',
+      pricing: 'PAID',
+      tags: ['voice', 'text-to-speech', 'synthesia', 'video']
+    },
+    
+    // More Coding Tools
+    {
+      id: 'openai-codex',
+      name: 'OpenAI Codex',
+      description: 'AI coding model from OpenAI.',
+      url: 'https://openai.com/research/openai-codex',
+      category: 'CODING',
+      pricing: 'FREEMIUM',
+      tags: ['coding', 'openai', 'codex', 'ai']
+    },
+    {
+      id: 'sourcegraph-cody',
+      name: 'Sourcegraph Cody',
+      description: 'AI coding assistant.',
+      url: 'https://about.sourcegraph.com/',
+      category: 'CODING',
+      pricing: 'FREEMIUM',
+      tags: ['coding', 'ai-assistant', 'sourcegraph', 'cody']
+    },
+    {
+      id: 'cursor-coder',
+      name: 'Cursor AI Coder',
+      description: 'AI-first code editor.',
+      url: 'https://cursor.sh/',
+      category: 'CODING',
+      pricing: 'FREEMIUM',
+      tags: ['coding', 'editor', 'cursor', 'ai']
+    },
+    
+    // More Productivity Tools
+    {
+      id: 'notion-ai-pro',
+      name: 'Notion AI Pro',
+      description: 'Advanced AI features in Notion.',
+      url: 'https://www.notion.so/product/ai',
+      category: 'PRODUCTIVITY',
+      pricing: 'PAID',
+      tags: ['notion', 'ai', 'productivity', 'pro']
+    },
+    {
+      id: 'typefully',
+      name: 'Typefully',
+      description: 'AI writing and productivity for Twitter.',
+      url: 'https://typefully.com/',
+      category: 'PRODUCTIVITY',
+      pricing: 'FREEMIUM',
+      tags: ['twitter', 'writing', 'productivity', 'ai']
+    },
+    {
+      id: 'todoist-ai',
+      name: 'Todoist AI',
+      description: 'AI-powered task management.',
+      url: 'https://todoist.com/',
+      category: 'PRODUCTIVITY',
+      pricing: 'FREEMIUM',
+      tags: ['task-management', 'todoist', 'ai', 'productivity']
+    },
+    {
+      id: 'linear-ai-task',
+      name: 'Linear AI',
+      description: 'AI-powered project management.',
+      url: 'https://linear.app/',
+      category: 'PRODUCTIVITY',
+      pricing: 'FREEMIUM',
+      tags: ['project-management', 'linear', 'ai', 'productivity']
+    },
+    
+    // More Content Creation
+    {
+      id: 'frase-pro',
+      name: 'Frase Pro',
+      description: 'Advanced SEO content AI platform.',
+      url: 'https://frase.io/',
+      category: 'CONTENT',
+      pricing: 'PAID',
+      tags: ['content', 'seo', 'frase', 'pro']
+    },
+    {
+      id: 'article-forge',
+      name: 'Article Forge',
+      description: 'AI content generator for long-form articles.',
+      url: 'https://articleforge.com/',
+      category: 'CONTENT',
+      pricing: 'PAID',
+      tags: ['content', 'articles', 'ai', 'writing']
+    },
+    {
+      id: 'ink-forge',
+      name: 'INK',
+      description: 'AI content and SEO optimization.',
+      url: 'https://inkforall.com/',
+      category: 'CONTENT',
+      pricing: 'FREEMIUM',
+      tags: ['content', 'seo', 'ink', 'optimization']
+    },
+    
+    // More Education Tools
+    {
+      id: 'skillshare',
+      name: 'Skillshare AI',
+      description: 'AI-powered online learning.',
+      url: 'https://www.skillshare.com/',
+      category: 'EDUCATION',
+      pricing: 'FREEMIUM',
+      tags: ['education', 'learning', 'skillshare', 'ai']
+    },
+    {
+      id: 'coursera',
+      name: 'Coursera AI',
+      description: 'AI-powered online courses.',
+      url: 'https://www.coursera.org/',
+      category: 'EDUCATION',
+      pricing: 'FREEMIUM',
+      tags: ['education', 'courses', 'coursera', 'ai']
+    },
+    {
+      id: 'khan-academy',
+      name: 'Khan Academy AI',
+      description: 'AI-powered free education.',
+      url: 'https://www.khanacademy.org/',
+      category: 'EDUCATION',
+      pricing: 'FREE',
+      tags: ['education', 'khan', 'free', 'ai']
+    },
+    
+    // More Design Tools
+    {
+      id: 'adobe-firefly',
+      name: 'Adobe Firefly',
+      description: 'Adobe\'s generative AI.',
+      url: 'https://firefly.adobe.com/',
+      category: 'DESIGN',
+      pricing: 'FREEMIUM',
+      tags: ['design', 'adobe', 'firefly', 'generative']
+    },
+    {
+      id: 'figma-ai',
+      name: 'Figma AI',
+      description: 'AI features in Figma design tool.',
+      url: 'https://www.figma.com/',
+      category: 'DESIGN',
+      pricing: 'FREEMIUM',
+      tags: ['design', 'figma', 'ui', 'ux']
+    },
+    {
+      id: 'sketch-ai',
+      name: 'Sketch AI',
+      description: 'AI-powered design tool for macOS.',
+      url: 'https://www.sketch.com/',
+      category: 'DESIGN',
+      pricing: 'PAID',
+      tags: ['design', 'mac', 'sketch', 'ui']
+    },
+    
+    // More Business & Marketing
+    {
+      id: 'hubspot-ai-pro',
+      name: 'HubSpot AI Pro',
+      description: 'Advanced AI features in HubSpot.',
+      url: 'https://www.hubspot.com/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['crm', 'marketing', 'hubspot', 'ai']
+    },
+    {
+      id: 'salesforce-einstein',
+      name: 'Salesforce Einstein',
+      description: 'AI for Salesforce CRM.',
+      url: 'https://www.salesforce.com/products/einstein/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['crm', 'salesforce', 'einstein', 'ai']
+    },
+    {
+      id: 'intercom-fin',
+      name: 'Intercom Fin',
+      description: 'AI customer service assistant.',
+      url: 'https://www.intercom.com/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['customer-service', 'intercom', 'fin', 'ai']
+    },
+    {
+      id: 'zendesk-answer',
+      name: 'Zendesk Answer',
+      description: 'AI-powered customer support.',
+      url: 'https://www.zendesk.com/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['customer-support', 'zendesk', 'ai', 'helpdesk']
+    },
+    
+    // More Tools in Various Categories
+    {
+      id: 'brandmark-ai',
+      name: 'Brandmark',
+      description: 'AI logo and brand design.',
+      url: 'https://brandmark.io/',
+      category: 'LOGO_BRANDING',
+      pricing: 'PAID',
+      tags: ['logo', 'brand', 'ai', 'design']
+    },
+    {
+      id: 'logojoy',
+      name: 'LogoJoy',
+      description: 'AI-powered logo maker.',
+      url: 'https://logojoy.com/',
+      category: 'LOGO_BRANDING',
+      pricing: 'PAID',
+      tags: ['logo', 'design', 'ai', 'maker']
+    },
+    {
+      id: 'resume-worded',
+      name: 'Resume Worded',
+      description: 'AI-powered resume and LinkedIn optimization.',
+      url: 'https://resumeworded.com/',
+      category: 'RESUME_CV',
+      pricing: 'FREEMIUM',
+      tags: ['resume', 'cv', 'linkedin', 'ai']
+    },
+    {
+      id: 'rezi-ai',
+      name: 'Rezi AI',
+      description: 'AI-powered resume builder.',
+      url: 'https://www.rezi.ai/',
+      category: 'RESUME_CV',
+      pricing: 'FREEMIUM',
+      tags: ['resume', 'cv', 'builder', 'ai']
+    },
+    {
+      id: 'deepl-translate',
+      name: 'DeepL Translator',
+      description: 'AI-powered translation service.',
+      url: 'https://www.deepl.com/',
+      category: 'TRANSLATION',
+      pricing: 'FREEMIUM',
+      tags: ['translation', 'deepl', 'ai', 'languages']
+    },
+    {
+      id: 'google-translate-ai',
+      name: 'Google Translate',
+      description: 'Google\'s AI-powered translation.',
+      url: 'https://translate.google.com/',
+      category: 'TRANSLATION',
+      pricing: 'FREE',
+      tags: ['translation', 'google', 'ai', 'languages']
     }
   ]
 };

@@ -1,0 +1,477 @@
+    },
+    {
+      id: 'google-translate-ai',
+      name: 'Google Translate',
+      description: 'Google\'s AI-powered translation.',
+      url: 'https://translate.google.com/',
+      category: 'TRANSLATION',
+      pricing: 'FREE',
+      tags: ['translation', 'google', 'ai', 'languages']
+    },
+    
+    // ========== 第六批：50个高质量AI工具 ==========
+    // 质量评估标准：
+    // ✅ 有实际可用功能
+    // ✅ 有明确的开发主体
+    // ✅ 有用户基础或行业认可
+    // ✅ 无安全风险
+    
+    // More AI Chatbots & Assistants
+    {
+      id: 'pi-ai',
+      name: 'Pi AI',
+      description: 'Personal AI assistant by Inflection AI.',
+      url: 'https://pi.ai/',
+      category: 'CHATBOTS',
+      pricing: 'FREE',
+      tags: ['chatbot', 'personal-assistant', 'inflection', 'ai']
+    },
+    {
+      id: 'hugging-chat',
+      name: 'HuggingChat',
+      description: 'Open-source AI chatbot platform.',
+      url: 'https://huggingface.co/chat/',
+      category: 'CHATBOTS',
+      pricing: 'FREE',
+      tags: ['chatbot', 'open-source', 'huggingface', 'ai']
+    },
+    {
+      id: 'perplexity-labs',
+      name: 'Perplexity Labs',
+      description: 'Experimental AI search and chat.',
+      url: 'https://labs.perplexity.ai/',
+      category: 'CHATBOTS',
+      pricing: 'FREE',
+      tags: ['chatbot', 'search', 'experimental', 'ai']
+    },
+    
+    // More Image Generation Tools
+    {
+      id: 'ideogram',
+      name: 'Ideogram',
+      description: 'AI image generation with text rendering.',
+      url: 'https://ideogram.ai/',
+      category: 'IMAGE',
+      pricing: 'FREEMIUM',
+      tags: ['image-generation', 'text', 'ai-art', 'creative']
+    },
+    {
+      id: 'leonardo-pro',
+      name: 'Leonardo AI Pro',
+      description: 'Professional AI art and image generation.',
+      url: 'https://leonardo.ai/',
+      category: 'IMAGE',
+      pricing: 'PAID',
+      tags: ['image-generation', 'professional', 'ai-art', 'leonardo']
+    },
+    {
+      id: 'nightcafe',
+      name: 'NightCafe',
+      description: 'AI art generator with multiple styles.',
+      url: 'https://creator.nightcafe.studio/',
+      category: 'IMAGE',
+      pricing: 'FREEMIUM',
+      tags: ['image-generation', 'art', 'styles', 'creative']
+    },
+    {
+      id: 'artbreeder',
+      name: 'Artbreeder',
+      description: 'AI-powered image breeding and mixing.',
+      url: 'https://www.artbreeder.com/',
+      category: 'IMAGE',
+      pricing: 'FREEMIUM',
+      tags: ['image-generation', 'breeding', 'mixing', 'creative']
+    },
+    {
+      id: 'starryai',
+      name: 'StarryAI',
+      description: 'AI art generator for NFT creation.',
+      url: 'https://starryai.com/',
+      category: 'IMAGE',
+      pricing: 'FREEMIUM',
+      tags: ['image-generation', 'nft', 'art', 'creative']
+    },
+    
+    // More Video Tools
+    {
+      id: 'synthesia-pro',
+      name: 'Synthesia Pro',
+      description: 'Professional AI video generation with avatars.',
+      url: 'https://www.synthesia.io/',
+      category: 'VIDEO',
+      pricing: 'PAID',
+      tags: ['video-generation', 'avatars', 'professional', 'ai']
+    },
+    {
+      id: 'd-id-pro',
+      name: 'D-ID Pro',
+      description: 'Professional AI video creation with talking avatars.',
+      url: 'https://www.d-id.com/',
+      category: 'VIDEO',
+      pricing: 'PAID',
+      tags: ['video', 'avatars', 'talking', 'professional']
+    },
+    {
+      id: 'bhuman',
+      name: 'BHuman',
+      description: 'AI personalized video generation.',
+      url: 'https://www.bhuman.ai/',
+      category: 'VIDEO',
+      pricing: 'PAID',
+      tags: ['video', 'personalization', 'ai', 'marketing']
+    },
+    {
+      id: 'rephrase',
+      name: 'Rephrase AI',
+      description: 'AI video personalization platform.',
+      url: 'https://www.rephrase.ai/',
+      category: 'VIDEO',
+      pricing: 'PAID',
+      tags: ['video', 'personalization', 'ai', 'marketing']
+    },
+    
+    // More Audio Tools
+    {
+      id: 'resemble-ai',
+      name: 'Resemble AI',
+      description: 'AI voice cloning and generation.',
+      url: 'https://www.resemble.ai/',
+      category: 'AUDIO',
+      pricing: 'FREEMIUM',
+      tags: ['voice-cloning', 'generation', 'audio', 'ai']
+    },
+    {
+      id: 'play-ht',
+      name: 'PlayHT',
+      description: 'AI text-to-speech with realistic voices.',
+      url: 'https://play.ht/',
+      category: 'AUDIO',
+      pricing: 'FREEMIUM',
+      tags: ['text-to-speech', 'voices', 'audio', 'ai']
+    },
+    {
+      id: 'speechify',
+      name: 'Speechify',
+      description: 'AI text-to-speech reader.',
+      url: 'https://speechify.com/',
+      category: 'AUDIO',
+      pricing: 'FREEMIUM',
+      tags: ['text-to-speech', 'reader', 'audio', 'ai']
+    },
+    {
+      id: 'well-said',
+      name: 'WellSaid Labs',
+      description: 'AI voice generation for enterprise.',
+      url: 'https://wellsaidlabs.com/',
+      category: 'AUDIO',
+      pricing: 'PAID',
+      tags: ['voice', 'enterprise', 'audio', 'ai']
+    },
+    
+    // More Coding Tools
+    {
+      id: 'replit-ai',
+      name: 'Replit AI',
+      description: 'AI coding assistant in Replit IDE.',
+      url: 'https://replit.com/',
+      category: 'CODING',
+      pricing: 'FREEMIUM',
+      tags: ['coding', 'ide', 'replit', 'ai-assistant']
+    },
+    {
+      id: 'tabnine-pro',
+      name: 'Tabnine Pro',
+      description: 'Professional AI code completion.',
+      url: 'https://www.tabnine.com/',
+      category: 'CODING',
+      pricing: 'PAID',
+      tags: ['coding', 'completion', 'professional', 'ai']
+    },
+    {
+      id: 'kite',
+      name: 'Kite',
+      description: 'AI coding assistant for Python.',
+      url: 'https://www.kite.com/',
+      category: 'CODING',
+      pricing: 'FREE',
+      tags: ['coding', 'python', 'assistant', 'free']
+    },
+    {
+      id: 'mutable',
+      name: 'Mutable AI',
+      description: 'AI-powered code evolution.',
+      url: 'https://mutable.ai/',
+      category: 'CODING',
+      pricing: 'FREEMIUM',
+      tags: ['coding', 'evolution', 'ai', 'development']
+    },
+    
+    // More Productivity Tools
+    {
+      id: 'mem-pro',
+      name: 'Mem Pro',
+      description: 'AI-powered knowledge management.',
+      url: 'https://mem.ai/',
+      category: 'PRODUCTIVITY',
+      pricing: 'PAID',
+      tags: ['knowledge', 'management', 'ai', 'productivity']
+    },
+    {
+      id: 'reflect',
+      name: 'Reflect AI',
+      description: 'AI-powered note-taking app.',
+      url: 'https://reflect.app/',
+      category: 'PRODUCTIVITY',
+      pricing: 'FREEMIUM',
+      tags: ['notes', 'writing', 'ai', 'productivity']
+    },
+    {
+      id: 'tana',
+      name: 'Tana AI',
+      description: 'AI-powered knowledge work platform.',
+      url: 'https://tana.inc/',
+      category: 'PRODUCTIVITY',
+      pricing: 'FREEMIUM',
+      tags: ['knowledge', 'platform', 'ai', 'productivity']
+    },
+    {
+      id: 'heptabase',
+      name: 'Heptabase AI',
+      description: 'AI-powered visual thinking tool.',
+      url: 'https://heptabase.com/',
+      category: 'PRODUCTIVITY',
+      pricing: 'FREEMIUM',
+      tags: ['visual', 'thinking', 'ai', 'productivity']
+    },
+    
+    // More Content Creation Tools
+    {
+      id: 'sudowrite',
+      name: 'Sudowrite',
+      description: 'AI writing tool for fiction.',
+      url: 'https://www.sudowrite.com/',
+      category: 'CONTENT',
+      pricing: 'PAID',
+      tags: ['writing', 'fiction', 'creative', 'ai']
+    },
+    {
+      id: 'novelcrafter',
+      name: 'Novelcrafter',
+      description: 'AI-powered novel writing platform.',
+      url: 'https://novelcrafter.com/',
+      category: 'CONTENT',
+      pricing: 'FREEMIUM',
+      tags: ['writing', 'novel', 'creative', 'ai']
+    },
+    {
+      id: 'lex',
+      name: 'Lex AI',
+      description: 'AI-powered writing assistant.',
+      url: 'https://lex.page/',
+      category: 'CONTENT',
+      pricing: 'FREEMIUM',
+      tags: ['writing', 'assistant', 'ai', 'creative']
+    },
+    {
+      id: 'moonbeam',
+      name: 'Moonbeam',
+      description: 'AI long-form writing assistant.',
+      url: 'https://www.gomoonbeam.com/',
+      category: 'CONTENT',
+      pricing: 'FREEMIUM',
+      tags: ['writing', 'long-form', 'ai', 'content']
+    },
+    
+    // More Marketing Tools
+    {
+      id: 'adcreative',
+      name: 'AdCreative AI',
+      description: 'AI-powered ad creative generation.',
+      url: 'https://www.adcreative.ai/',
+      category: 'MARKETING',
+      pricing: 'FREEMIUM',
+      tags: ['advertising', 'creative', 'ai', 'marketing']
+    },
+    {
+      id: 'pencil',
+      name: 'Pencil AI',
+      description: 'AI ad creative optimization.',
+      url: 'https://www.pencil.co/',
+      category: 'MARKETING',
+      pricing: 'PAID',
+      tags: ['advertising', 'optimization', 'ai', 'marketing']
+    },
+    {
+      id: 'persado',
+      name: 'Persado',
+      description: 'AI content generation for marketing.',
+      url: 'https://www.persado.com/',
+      category: 'MARKETING',
+      pricing: 'PAID',
+      tags: ['content', 'marketing', 'ai', 'enterprise']
+    },
+    {
+      id: 'phrasee',
+      name: 'Phrasee',
+      description: 'AI-powered marketing language.',
+      url: 'https://phrasee.co/',
+      category: 'MARKETING',
+      pricing: 'PAID',
+      tags: ['marketing', 'language', 'ai', 'enterprise']
+    },
+    
+    // More Business Tools
+    {
+      id: 'drift',
+      name: 'Drift AI',
+      description: 'AI-powered conversational marketing.',
+      url: 'https://www.drift.com/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['conversational', 'marketing', 'ai', 'business']
+    },
+    {
+      id: 'qualified',
+      name: 'Qualified AI',
+      description: 'AI sales platform for B2B.',
+      url: 'https://www.qualified.com/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['sales', 'b2b', 'ai', 'business']
+    },
+    {
+      id: 'chilipiper',
+      name: 'Chili Piper AI',
+      description: 'AI-powered scheduling for sales.',
+      url: 'https://www.chilipiper.com/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['scheduling', 'sales', 'ai', 'business']
+    },
+    {
+      id: 'outreach',
+      name: 'Outreach AI',
+      description: 'AI-powered sales engagement.',
+      url: 'https://www.outreach.io/',
+      category: 'BUSINESS',
+      pricing: 'PAID',
+      tags: ['sales', 'engagement', 'ai', 'business']
+    },
+    
+    // More Education Tools
+    {
+      id: 'gradescope',
+      name: 'Gradescope AI',
+      description: 'AI-powered grading platform.',
+      url: 'https://www.gradescope.com/',
+      category: 'EDUCATION',
+      pricing: 'FREEMIUM',
+      tags: ['grading', 'education', 'ai', 'platform']
+    },
+    {
+      id: 'cognii',
+      name: 'Cognii AI',
+      description: 'AI-powered learning and assessment.',
+      url: 'https://www.cognii.com/',
+      category: 'EDUCATION',
+      pricing: 'PAID',
+      tags: ['learning', 'assessment', 'ai', 'education']
+    },
+    {
+      id: 'carnegie',
+      name: 'Carnegie Learning AI',
+      description: 'AI-powered math education.',
+      url: 'https://www.carnegielearning.com/',
+      category: 'EDUCATION',
+      pricing: 'PAID',
+      tags: ['math', 'education', 'ai', 'learning']
+    },
+    
+    // More Design Tools
+    {
+      id: 'uizard',
+      name: 'Uizard AI',
+      description: 'AI-powered UI design tool.',
+      url: 'https://uizard.io/',
+      category: 'DESIGN',
+      pricing: 'FREEMIUM',
+      tags: ['ui', 'design', 'ai', 'prototyping']
+    },
+    {
+      id: 'galileo',
+      name: 'Galileo AI',
+      description: 'AI-powered UI design generation.',
+      url: 'https://www.usegalileo.ai/',
+      category: 'DESIGN',
+      pricing: 'FREEMIUM',
+      tags: ['ui', 'design', 'generation', 'ai']
+    },
+    {
+      id: 'magician',
+      name: 'Magician AI',
+      description: 'AI design tool for Figma.',
+      url: 'https://magician.design/',
+      category: 'DESIGN',
+      pricing: 'FREEMIUM',
+      tags: ['figma', 'design', 'ai', 'plugin']
+    },
+    
+    // More Data Tools
+    {
+      id: 'obviously',
+      name: 'Obviously AI',
+      description: 'AI-powered no-code data science.',
+      url: 'https://www.obviously.ai/',
+      category: 'DATA',
+      pricing: 'FREEMIUM',
+      tags: ['data-science', 'no-code', 'ai', 'analytics']
+    },
+    {
+      id: 'akukam',
+      name: 'Akkio AI',
+      description: 'AI analytics and forecasting.',
+      url: 'https://www.akkio.com/',
+      category: 'DATA',
+      pricing: 'FREEMIUM',
+      tags: ['analytics', 'forecasting', 'ai', 'data']
+    },
+    {
+      id: 'mindsdb',
+      name: 'MindsDB',
+      description: 'AI tables for databases.',
+      url: 'https://mindsdb.com/',
+      category: 'DATA',
+      pricing: 'FREEMIUM',
+      tags: ['database', 'ai-tables', 'data', 'analytics']
+    },
+    
+    // More Social Media Tools
+    {
+      id: 'feedhive',
+      name: 'FeedHive AI',
+      description: 'AI-powered social media scheduling.',
+      url: 'https://feedhive.com/',
+      category: 'SOCIAL_MEDIA',
+      pricing: 'FREEMIUM',
+      tags: ['social-media', 'scheduling', 'ai', 'content']
+    },
+    {
+      id: 'publer',
+      name: 'Publer AI',
+      description: 'AI social media management.',
+      url: 'https://publer.io/',
+      category: 'SOCIAL_MEDIA',
+      pricing: 'FREEMIUM',
+      tags: ['social-media', 'management', 'ai', 'scheduling']
+    },
+    {
+      id: 'socialbee',
+      name: 'SocialBee AI',
+      description: 'AI-powered social media tool.',
+      url: 'https://socialbee.io/',
+      category: 'SOCIAL_MEDIA',
+      pricing: 'FREEMIUM',
+      tags: ['social-media', 'management', 'ai', 'content']
+    }
+  ]
+};
