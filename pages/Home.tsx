@@ -33,13 +33,7 @@ export const Home: React.FC = () => {
   // Tools state
   const [staticTools] = useState<Tool[]>(INITIAL_TOOLS);
   const [discoveredTools, setDiscoveredTools] = useState<Tool[]>([]);
-  const [displayedTools, setDisplayedTools] = useState<Tool[]>(() => {
-    const m = new Map<string, Tool>();
-    INITIAL_TOOLS.forEach(t => {
-      if (!m.has(t.url)) m.set(t.url, t);
-    });
-    return Array.from(m.values());
-  });
+  const [displayedTools, setDisplayedTools] = useState<Tool[]>([...INITIAL_TOOLS]);
   
   // Search State
   const [isAiSearching, setIsAiSearching] = useState(false);
@@ -151,16 +145,7 @@ export const Home: React.FC = () => {
       setTimeout(() => setIsSorting(false), 150);
     }
 
-    // De-duplicate final displayed tools by URL to match the count
-    const uniqueMap = new Map();
-    filtered.forEach(tool => {
-        if (!uniqueMap.has(tool.url)) {
-            uniqueMap.set(tool.url, tool);
-        }
-    });
-    const uniqueFiltered = Array.from(uniqueMap.values());
-
-    setDisplayedTools(uniqueFiltered);
+    setDisplayedTools(filtered);
   }, [selectedCategory, searchQuery, staticTools, discoveredTools, sortMode]);
 
   const handleAiSearch = async (e: React.FormEvent) => {
@@ -393,8 +378,8 @@ export const Home: React.FC = () => {
               {t.featuredTools}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {featuredTools.map((tool) => (
-                  <ToolCard key={`featured-${tool.id}`} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
+                {featuredTools.map((tool, index) => (
+                  <ToolCard key={`featured-${tool.id}-${index}`} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
                 ))}
               </div>
             </div>
@@ -430,8 +415,8 @@ export const Home: React.FC = () => {
           {/* Grid */}
           {displayedTools.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {displayedTools.map((tool) => (
-                <ToolCard key={tool.url} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
+              {displayedTools.map((tool, index) => (
+                <ToolCard key={`${tool.id}-${index}`} tool={tool} currentLanguage={currentLanguage} searchQuery={searchQuery} />
               ))}
             </div>
           ) : (
