@@ -14982,7 +14982,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '適切なシーン遷移と物語のペースで一貫性のあるストーリー主導動画を生成。',
       es: 'Genera videos coherentes basados en historias con transiciones de escena apropiadas y ritmo narrativo.',
       tk: 'Dogry geçişleri we hekaý tempamy bilen birlikde hekaýatly wideolary dörediň.',
-      uzbek: 'To\'gri o\'tishlar va hikoyaviy sur'at bilan izchil hikoya asoslangan videolar yaratish.',
+      uzbek: 'To\'gri o\'tishlar va hikoyaviy sur\'at bilan izchil hikoya asoslangan videolar yaratish.',
       tagalog: 'Gumawa ng coherent story-driven videos na may proper scene transitions at narrative pacing.',
       armenian: 'Ստեղծեք համականություն պատկերներ հեքական տեսանյություններ համականություն տեղադրումներ և պատկերի փոխարականության:',
       ro: 'Generează clipuri video coerente bazate pe povești cu tranziții de scenă adecvate și ritm narativ.'
