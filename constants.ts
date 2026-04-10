@@ -2,66 +2,6 @@ import { Tool, ToolCategory, PricingModel, Language } from './types';
 
 export const INITIAL_TOOLS: Tool[] = [
   {
-    id: 'chatgpt',
-    name: 'ChatGPT',
-    description: 'Advanced conversational AI by OpenAI capable of text generation, coding, and analysis.',
-    descriptions: {
-      en: 'Advanced conversational AI by OpenAI capable of text generation, coding, and analysis.',
-      zh: 'OpenAI 开发的高级对话 AI，能够生成文本、编写代码和进行分析。',
-      ja: 'OpenAIによる高度な対話型AI。テキスト生成、コーディング、分析が可能。',
-      es: 'IA conversacional avanzada de OpenAI capaz de generar texto, código y análisis.',
-      tk: 'OpenAI tarapyndan tekst döretmek, kodlamak we derňew etmek üçin ösen gepleşik AI.',
-      uz: 'OpenAI tomonidan matn yaratish, kodlash va tahlil qilish imkoniyatiga ega ilg\'or suhbatdosh AI.',
-      tg: 'AI-и пешрафтаи гуфтугӯӣ аз ҷониби OpenAI, ки қодир ба эҷоди матн, рамзгузорӣ ва таҳлил аст.',
-      hy: 'OpenAI-ի կողմից մշակված առաջադեմ խոսակցական AI, որն ունակ է տեքստ ստեղծել, կոդավորել և վերլուծել:',
-      ro: 'AI conversațional avansat de la OpenAI capabil de generare de text, codare și analiză.'
-    },
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://chat.openai.com',
-    tags: ['chatbot', 'llm', 'writing']
-  },
-  {
-    id: 'claude',
-    name: 'Claude',
-    description: 'Anthropic\'s AI assistant known for high reliability, nuanced understanding, and large context window.',
-    descriptions: {
-      en: 'Anthropic\'s AI assistant known for high reliability, nuanced understanding, and large context window.',
-      zh: 'Anthropic 的 AI 助手，以高可靠性、细腻的理解能力和大上下文窗口著称。',
-      ja: 'AnthropicのAIアシスタント。高い信頼性、繊細な理解、大きなコンテキストウィンドウで知られる。',
-      es: 'Asistente de IA de Anthropic conocido por su alta confiabilidad, comprensión matizada y gran ventana de contexto.',
-      tk: 'Ýokary ygtybarlylygy, inçe düşünişi we uly kontekst penjiresi bilen tanalýan Anthropic-iň AI kömekçisi.',
-      uz: 'Yuqori ishonchliligi, nozik tushunchasi va katta kontekst oynasi bilan tanilgan Anthropic AI yordamchisi.',
-      tg: 'Ёрдамчии AI-и Anthropic, ки бо эътимоднокии баланд, фаҳмиши нозук ва равзанаи калони контекст маълум аст.',
-      hy: 'Anthropic-ի AI օգնականը, որը հայտնի է բարձր հուսալիությամբ, նրբերանգային ընկալմամբ և մեծ կոնտեքստային պատուհանով:',
-      ro: 'Asistentul AI de la Anthropic, cunoscut pentru fiabilitate ridicată, înțelegere nuanțată și fereastră mare de context.'
-    },
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://claude.ai',
-    tags: ['chatbot', 'safe', 'writing']
-  },
-  {
-    id: 'gemini',
-    name: 'Google Gemini',
-    description: 'Google\'s multimodal AI model for text, code, image, and video understanding.',
-    descriptions: {
-      en: 'Google\'s multimodal AI model for text, code, image, and video understanding.',
-      zh: 'Google 的多模态 AI 模型，用于理解文本、代码、图像和视频。',
-      ja: 'GoogleのマルチモーダルAIモデル。テキスト、コード、画像、動画の理解が可能。',
-      es: 'Modelo de IA multimodal de Google para la comprensión de texto, código, imagen y video.',
-      tk: 'Tekste, koda, surata we wideo düşünmek üçin Google-yň multimodal AI modeli.',
-      uz: 'Google-ning matn, kod, tasvir va videoni tushunish uchun multimodal AI modeli.',
-      tg: 'Модели мултимодали AI-и Google барои фаҳмидани матн, код, тасвир ва видео.',
-      hy: 'Google-ի բազմամոդալ AI մոդել՝ տեքստի, կոդի, պատկերի և տեսանյութի ընկալման համար:',
-      ro: 'Modelul AI multimodal Google pentru înțelegerea textului, codului, imaginilor și videoclipurilor.'
-    },
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://gemini.google.com',
-    tags: ['multimodal', 'google', 'assistant']
-  },
-  {
     id: 'microsoft-copilot',
     name: 'Microsoft Copilot',
     description: 'Your everyday AI companion integrating GPT-4 into Bing and Microsoft 365.',
@@ -166,26 +106,6 @@ export const INITIAL_TOOLS: Tool[] = [
     featured: true,
     createdAt: Date.now(),
     releasedAt: Date.now() - 86400000 * 180
-  },
-  {
-    id: 'huggingchat',
-    name: 'HuggingChat',
-    description: 'An open-source interface to chat with the best open AI models available.',
-    descriptions: {
-      en: 'An open-source interface to chat with the best open AI models available.',
-      zh: '一个开源接口，用于与可用的最佳开源 AI 模型进行聊天。',
-      ja: '利用可能な最高のオープンAIモデルとチャットするためのオープンソースインターフェース。',
-      es: 'Una interfaz de código abierto para chatear con los mejores modelos de IA abiertos disponibles.',
-      tk: 'Iň gowy açyk AI modelleri bilen gürleşmek üçin açyk çeşme interfeýsi.',
-      uz: 'Mavjud eng yaxshi ochiq AI modellari bilan suhbatlashish uchun ochiq manbali interfeys.',
-      tg: 'Интерфейси кушодаасос барои сӯҳбат бо беҳтарин моделҳои AI-и кушода дастрас.',
-      hy: 'Բաց կոդով ինտերֆեյս՝ լավագույն հասանելի բաց AI մոդելների հետ զրուցելու համար:',
-      ro: 'O interfață open-source pentru a discuta cu cele mai bune modele AI deschise disponibile.'
-    },
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.FREE,
-    url: 'https://huggingface.co/chat',
-    tags: ['open-source', 'llama', 'mistral']
   },
   {
     id: 'deepseek',
@@ -296,86 +216,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['art', 'image-generation', 'creative']
   },
   {
-    id: 'stable-diffusion',
-    name: 'Stable Diffusion',
-    description: 'State-of-the-art open source image generation model by Stability AI.',
-    descriptions: {
-      en: 'State-of-the-art open source image generation model by Stability AI.',
-      zh: 'Stability AI 推出的最先进的开源图像生成模型。',
-      ja: 'Stability AIによる最先端のオープンソース画像生成モデル。',
-      es: 'Modelo de generación de imágenes de código abierto de última generación de Stability AI.',
-      tk: 'Stability AI tarapyndan iň döwrebap açyk çeşme şekil döretmek modeli.',
-      uz: 'Stability AI tomonidan eng zamonaviy ochiq manbali tasvir yaratish modeli.',
-      tg: 'Модели муосири тавлиди тасвирҳои кушодаасос аз ҷониби Stability AI.',
-      hy: 'Stability AI-ի կողմից ամենաժամանակակից բաց կոդով պատկերների ստեղծման մոդել:',
-      ro: 'Model de generare de imagini open-source de ultimă generație de la Stability AI.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREE,
-    url: 'https://stability.ai',
-    tags: ['open-source', 'art', 'local']
-  },
-  {
-    id: 'leonardo',
-    name: 'Leonardo.ai',
-    description: 'Create production-quality visual assets for your projects with unprecedented quality.',
-    descriptions: {
-      en: 'Create production-quality visual assets for your projects with unprecedented quality.',
-      zh: '以前所未有的质量为您的项目创建生产级视觉资产。',
-      ja: 'かつてない品質でプロジェクト向けの制作レベルのビジュアルアセットを作成。',
-      es: 'Crea activos visuales de calidad de producción para tus proyectos con una calidad sin precedentes.',
-      tk: 'Taslamalaryňyz üçin görlüp-eşidilmedik hil bilen önümçilik hilli wizual serişdeleri dörediň.',
-      uz: 'Loyihalaringiz uchun misli ko\'rilmagan sifat bilan ishlab chiqarish darajasidagi vizual aktivlarni yarating.',
-      tg: 'Барои лоиҳаҳои худ бо сифати бесобиқа дороиҳои визуалии сифати истеҳсолӣ эҷод кунед.',
-      hy: 'Ստեղծեք արտադրական որակի վիզուալ ակտիվներ ձեր նախագծերի համար աննախադեպ որակով:',
-      ro: 'Creați active vizuale de calitate de producție pentru proiectele dvs. cu o calitate fără precedent.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://leonardo.ai',
-    tags: ['game-assets', 'art', 'design']
-  },
-  {
-    id: 'canva',
-    name: 'Canva Magic Studio',
-    description: 'All-in-one design tool now featuring powerful AI image generation and editing tools.',
-    descriptions: {
-      en: 'All-in-one design tool now featuring powerful AI image generation and editing tools.',
-      zh: '集成了强大 AI 图像生成和编辑工具的一体化设计平台。',
-      ja: '強力なAI画像生成・編集機能を備えたオールインワンデザインツール。',
-      es: 'Herramienta de diseño todo en uno que ahora cuenta con potentes herramientas de generación y edición de imágenes con IA.',
-      tk: 'Güýçli AI şekil döretmek we redaktirlemek gurallaryny öz içine alýan ähli-bir-ýerde dizaýn guraly.',
-      uz: 'Endi kuchli AI tasvir yaratish va tahrirlash vositalariga ega bo\'lgan barchasi birda dizayn vositasi.',
-      tg: 'Воситаи тарроҳии ҳама дар як ҳоло дорои абзорҳои тавонои тавлиди тасвир ва таҳрири AI мебошад.',
-      hy: 'Բոլորը մեկում դիզայնի գործիք, որն այժմ ներկայացնում է հզոր AI պատկերների ստեղծման և խմբագրման գործիքներ:',
-      ro: 'Instrument de design all-in-one care oferă acum instrumente puternice de generare și editare a imaginilor AI.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com',
-    tags: ['design', 'social-media', 'editor']
-  },
-  {
-    id: 'krea',
-    name: 'Krea AI',
-    description: 'Real-time AI image generation and enhancement canvas.',
-    descriptions: {
-      en: 'Real-time AI image generation and enhancement canvas.',
-      zh: '实时 AI 图像生成和增强画布。',
-      ja: 'リアルタイムAI画像生成および強化キャンバス。',
-      es: 'Lienzo de generación y mejora de imágenes con IA en tiempo real.',
-      tk: 'Hakyky wagtly AI şekil döretmek we gowulandyrmak meýdançasy.',
-      uz: 'Real vaqtda AI tasvir yaratish va yaxshilash kanvasi.',
-      tg: 'Канваси тавлид ва такмилдиҳии тасвири AI дар вақти воқеӣ.',
-      hy: 'Իրական ժամանակի AI պատկերների ստեղծման և բարելավման կտավ:',
-      ro: 'Canvas de generare și îmbunătățire a imaginilor AI în timp real.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://krea.ai',
-    tags: ['real-time', 'canvas', 'design']
-  },
-  {
     id: 'runway',
     name: 'Runway ML',
     description: 'Professional AI video editing and generation platform with powerful tools.',
@@ -420,26 +260,6 @@ export const INITIAL_TOOLS: Tool[] = [
     featured: true,
     createdAt: Date.now(),
     releasedAt: Date.now() - 86400000 * 65
-  },
-  {
-    id: 'sora',
-    name: 'Sora',
-    description: 'OpenAI\'s text-to-video model capable of creating realistic and imaginative scenes.',
-    descriptions: {
-      en: 'OpenAI\'s text-to-video model capable of creating realistic and imaginative scenes.',
-      zh: 'OpenAI 的文本转视频模型，能够创建逼真且富有想象力的场景。',
-      ja: 'OpenAIのテキストから動画を生成するモデル。リアルで想像力豊かなシーンを作成可能。',
-      es: 'Modelo de texto a video de OpenAI capaz de crear escenas realistas e imaginativas.',
-      tk: 'OpenAI-nyň hakyky we hyýaly sahnalary döretmäge ukyply tekst-wideo modeli.',
-      uz: 'OpenAI-ning matndan videoga modeli, real va xayoliy sahnalarni yaratishga qodir.',
-      tg: 'Модели матн ба видеои OpenAI, ки қодир аст саҳнаҳои воқеӣ ва хаёлиро эҷод кунад.',
-      hy: 'OpenAI-ի տեքստից տեսանյութ մոդել, որն ունակ է ստեղծել իրատեսական և երևակայական տեսարաններ:',
-      ro: 'Modelul text-to-video al OpenAI capabil să creeze scene realiste și imaginative.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://openai.com/sora',
-    tags: ['video', 'openai', 'realistic']
   },
   {
     id: 'heygen',
@@ -506,26 +326,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://notebooklm.google.com',
     tags: ['research', 'notes', 'insights']
-  },
-  {
-    id: 'hf-spaces',
-    name: 'Hugging Face Spaces',
-    description: 'Free hosted apps for AI demos and community projects.',
-    descriptions: {
-      en: 'Free hosted apps for AI demos and community projects.',
-      zh: '面向 AI 演示与社区项目的免费托管应用。',
-      ja: 'AIデモやコミュニティプロジェクト向けの無料ホスト型アプリ。',
-      es: 'Aplicaciones alojadas gratuitas para demos de IA y proyectos comunitarios.',
-      tk: 'AI demo we jemgyýetçilik taslamalary üçin mugt ýerleşdirilen programmalar.',
-      uz: 'AI demo va jamoa loyihalari uchun bepul xost qilingan ilovalar.',
-      tg: 'Барномаҳои ройгони мизбон барои намоишҳои AI ва лоиҳаҳои ҷомеа.',
-      hy: 'Անվճար հոսթինգով հավելվածներ՝ AI ցուցադրությունների և համայնքային նախագծերի համար։',
-      ro: 'Aplicații găzduite gratuite pentru demo-uri AI și proiecte comunitare.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREE,
-    url: 'https://huggingface.co/spaces',
-    tags: ['community', 'apps', 'models']
   },
   {
     id: 'writesonic',
@@ -660,26 +460,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'playht',
-    name: 'Play.ht',
-    description: 'High quality AI text-to-speech with natural voices.',
-    descriptions: {
-      en: 'High quality AI text-to-speech with natural voices.',
-      zh: '高质量AI文本转语音，声音自然。',
-      ja: '高品質なAIテキスト読み上げ。自然な音声。',
-      es: 'TTS con IA de alta calidad con voces naturales.',
-      tk: 'Naturaly sesler bilen ýokary hilli AI tekstden sese.',
-      uz: 'Yuksak sifatli AI matndan ovoz, tabiiy tovushlar bilan.',
-      tg: 'TTS-и AI бо сифати баланд ва садоҳои табиӣ.',
-      hy: 'Բարձրորակ AI տեքստից-խոսք՝ բնական ձայներով։',
-      ro: 'TTS AI de înaltă calitate, voci naturale.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.PAID,
-    url: 'https://play.ht',
-    tags: ['tts', 'voice', 'audio']
-  },
-  {
     id: 'resemble',
     name: 'Resemble AI',
     description: 'AI voice cloning and generation with emotion control.',
@@ -698,46 +478,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://www.resemble.ai',
     tags: ['voice', 'tts', 'cloning']
-  },
-  {
-    id: 'did',
-    name: 'D-ID',
-    description: 'Create talking avatars and digital humans from images and text.',
-    descriptions: {
-      en: 'Create talking avatars and digital humans from images and text.',
-      zh: '将图像与文本生成会说话的数字人。',
-      ja: '画像とテキストから話すアバター・デジタルヒューマンを生成。',
-      es: 'Crea avatares parlantes y humanos digitales desde imágenes y texto.',
-      tk: 'Suratlar we tekstden gürleýän awatarlar we sanly adamlar dörediň.',
-      uz: 'Tasvir va matndan gapiradigan avatarlar va raqamli odamlar yarating.',
-      tg: 'Аз тасвир ва матн аватарҳои гӯё ва инсонҳои рақамӣ эҷод кунед.',
-      hy: 'Ստեղծեք խոսող ավատարներ և թվային մարդիկ պատկերներից ու տեքստից։',
-      ro: 'Creează avatare vorbitoare și oameni digitali din imagini și text.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://www.d-id.com',
-    tags: ['avatar', 'talking-head', 'video']
-  },
-  {
-    id: 'pika',
-    name: 'Pika',
-    description: 'AI video generation and editing platform for creators.',
-    descriptions: {
-      en: 'AI video generation and editing platform for creators.',
-      zh: '创作者用的AI视频生成与编辑平台。',
-      ja: 'クリエイター向けのAI動画生成・編集プラットフォーム。',
-      es: 'Plataforma de generación y edición de video con IA para creadores.',
-      tk: 'Döredijiler üçin AI wideo dörediş we redaktirleme platformasy.',
-      uz: 'Yaratuvchilar uchun AI video yaratish va tahrirlash platformasi.',
-      tg: 'Платформаи тавлид ва таҳрири видео бо AI барои эҷодкорон.',
-      hy: 'AI տեսանյութերի ստեղծման և խմբագրման հարթակ՝ ստեղծողների համար։',
-      ro: 'Platformă AI de generare și editare video pentru creatori.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pika.art',
-    tags: ['video', 'generation', 'editing']
   },
   {
     id: 'ideogram',
@@ -802,26 +542,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['photo-editor', 'online', 'editing', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
-  },
-  {
-    id: 'removebg',
-    name: 'Remove.bg',
-    description: 'Remove image backgrounds automatically with AI.',
-    descriptions: {
-      en: 'Remove image backgrounds automatically with AI.',
-      zh: 'AI自动移除图像背景。',
-      ja: 'AIで画像の背景を自動削除。',
-      es: 'Elimina fondos de imágenes automáticamente con IA.',
-      tk: 'Suratlaryň fonuny AI bilen awtomatik aýyryň.',
-      uz: 'Tasvir fonini AI yordamida avtomatik olib tashlash.',
-      tg: 'Бо AI заминаи тасвирҳоро худкор ҳазф кунед.',
-      hy: 'AI-ով ինքն动 կերպով հեռացրեք պատկերի ֆոնը։',
-      ro: 'Elimină automat fundalul imaginilor cu AI.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.PAID,
-    url: 'https://www.remove.bg',
-    tags: ['image', 'background', 'editor']
   },
   {
     id: 'clipdrop',
@@ -942,48 +662,6 @@ export const INITIAL_TOOLS: Tool[] = [
     ]
   },
   {
-    id: 'kapwing',
-    name: 'Kapwing',
-    description: 'Online video editor for creators. Edit, resize, and more.',
-    descriptions: {
-      en: 'Online video editor for creators. Edit, resize, and add AI tools.',
-      zh: '面向创作者的在线视频编辑器。编辑、调整大小并添加AI工具。',
-      ja: 'クリエイター向けのオンラインビデオエディタ。編集、サイズ変更、AIツールの追加。',
-      es: 'Editor de videos en línea para creadores. Edita, cambia el tamaño y agrega herramientas de IA.',
-      tk: 'Ýaradyşylar üçin onlaýn wideo redaktory. Redaktir, ölçegini üýtget we AI guraly goş.',
-      uz: 'Yaratuvchilar uchun onlayn video tahrirchisi. Tahrirlang, o\'lchamini o\'zgartiring va AI vositalarini qo\'shing.',
-      tg: 'Муҳаррири видео онлайн барои созандаҳо. Таҳрир, тағйири андоза ва иловаи асбобҳои AI.',
-      hy: 'Ցանցային տեսանյութի խմբագրիչ ստեղծողների համար։ Խմբագրեք, փոխեք չափսը և ավելացրեք AI գործիքներ։',
-      ro: 'Editor video online pentru creatori. Editați, redimensionați și adăugați instrumente AI.'
-    },
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.kapwing.com/',
-    tags: ['video', 'editing', 'creators', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'github-copilot',
-    name: 'GitHub Copilot',
-    description: 'AI pair programmer that helps you write code faster with less work.',
-    descriptions: {
-      en: 'AI pair programmer that helps you write code faster with less work.',
-      zh: 'AI 结对程序员，帮助您以更少的工作量更快地编写代码。',
-      ja: '少ない作業でより速くコードを書くのを助けるAIペアプログラマー。',
-      es: 'Programador de pares con IA que te ayuda a escribir código más rápido con menos trabajo.',
-      tk: 'Az iş bilen kody çalt ýazmaga kömek edýän AI jübüt programmist.',
-      uz: 'Kamroq ish bilan kodni tezroq yozishga yordam beradigan AI juft dasturchi.',
-      tg: 'Барномасози ҷуфти AI, ки ба шумо барои зудтар навиштани код бо кори камтар кӯмак мекунад.',
-      hy: 'AI զույգ ծրագրավորող, որն օգնում է ձեզ ավելի արագ կոդ գրել ավելի քիչ աշխատանքով:',
-      ro: 'Programator pereche AI care te ajută să scrii cod mai rapid cu mai puțin efort.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.PAID,
-    url: 'https://github.com/features/copilot',
-    tags: ['coding', 'autocomplete', 'developer']
-  },
-  {
     id: 'cursor',
     name: 'Cursor',
     description: 'AI-first code editor.',
@@ -1024,26 +702,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://excalidraw.com',
     tags: ['whiteboard', 'diagram', 'collaboration']
-  },
-  {
-    id: 'tldraw',
-    name: 'tldraw',
-    description: 'Free collaborative whiteboard with shapes, sticky notes, and drawing.',
-    descriptions: {
-      en: 'Free collaborative whiteboard with shapes, sticky notes, and drawing.',
-      zh: '免费协作白板，支持形状、便签与手绘。',
-      ja: '無料のコラボ白板。図形、付箋、手描きに対応。',
-      es: 'Pizarra colaborativa gratuita con formas, notas adhesivas y dibujo.',
-      tk: 'Şekiller, bellikler we çyzgy bilen mugt hyzmatdaşlyk ak tagtasy.',
-      uz: 'Shakllar, stikernotlar va chizish bilan bepul hamkorlik whiteboard.',
-      tg: 'Лавҳаи сафеди ҳамкорӣ бо шаклҳо, ёддоштҳо ва расмкашӣ, ройгон.',
-      hy: 'Անվճար համագործակցայինไวթբորդ՝ ձևերով, սթիքերներով և նկարողների համար։',
-      ro: 'Whiteboard colaborativ gratuit cu forme, notițe lipicioase și desen.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREE,
-    url: 'https://tldraw.com',
-    tags: ['whiteboard', 'collaboration', 'drawing']
   },
   {
     id: 'lm-studio',
@@ -1104,26 +762,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://colab.research.google.com',
     tags: ['notebook', 'python', 'google']
-  },
-  {
-    id: 'replit',
-    name: 'Replit AI',
-    description: 'Build software collaboratively with the power of AI in an online IDE.',
-    descriptions: {
-      en: 'Build software collaboratively with the power of AI in an online IDE.',
-      zh: '在在线 IDE 中借助 AI 的力量协同构建软件。',
-      ja: 'オンラインIDEでAIの力を借りて共同でソフトウェアを構築。',
-      es: 'Crea software de forma colaborativa con el poder de la IA en un IDE en línea.',
-      tk: 'Onlaýn IDE-de AI-nyň güýji bilen programma üpjünçiligini bilelikde guruň.',
-      uz: 'Onlayn IDE-da AI kuchi bilan hamkorlikda dasturiy ta\'minot yarating.',
-      tg: 'Бо қудрати AI дар IDE онлайн нармафзорро якҷоя созед.',
-      hy: 'Կառուցեք ծրագրակազմ համատեղ AI-ի ուժով առցանց IDE-ում:',
-      ro: 'Construiți software în colaborare cu puterea AI într-un IDE online.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://replit.com/ai',
-    tags: ['ide', 'cloud', 'coding']
   },
   {
     id: 'huggingface',
@@ -1214,50 +852,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'kael',
-    name: 'Kael',
-    description: 'AI assistant for understanding documents and producing structured outputs.',
-    descriptions: {
-      en: 'AI assistant for understanding documents and producing structured outputs.',
-      zh: '理解文档并生成结构化产出的一体化 AI 助手。',
-      ja: '文書理解と構造化アウトプットを行うAIアシスタント。',
-      es: 'Asistente IA para comprender documentos y producir resultados estructurados.',
-      tk: 'Resminamalary düşünmek we düzülen çykaryş döretmek üçin AI kömekçi.',
-      uz: 'Hujjatlarni tushunish va tuzilgan natijalar yaratish uchun AI yordamchi.',
-      tg: 'Ёрдамчии AI барои фаҳмиши ҳуҷҷатҳо ва тавлиди натиҷаҳои сохторӣ.',
-      hy: 'Փաստաթղթերի ըմբռնման և կառուցվածքային արդյունքների ստեղծման AI օգնական։',
-      ro: 'Asistent IA pentru înțelegerea documentelor și rezultate structurate.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.toolify.ai/tool/kael',
-    tags: ['documents', 'assistant', 'notes', 'reports'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'qwen-image-edit',
-    name: 'Qwen-Image-Edit',
-    description: 'Semantic image editing with precise control via text prompts.',
-    descriptions: {
-      en: 'Semantic image editing with precise control via text prompts.',
-      zh: '语义级图像编辑，可通过文本精细控制。',
-      ja: 'テキストプロンプトで精密に制御できるセマンティック画像編集。',
-      es: 'Edición semántica de imágenes con control preciso mediante texto.',
-      tk: 'Tekst arkaly takyk dolandyryş bilen semantik şekil redaktirleme.',
-      uz: 'Matn orqali aniq boshqariladigan semantik tasvir tahriri.',
-      tg: 'Таҳрири семантикии тасвирҳо бо назорати дақиқ тавассути матн.',
-      hy: 'Սեմանտիկ պատկերների խմբագրում՝ ճշգրիտ վերահսկմամբ տեքստով։',
-      ro: 'Editare semantică a imaginilor cu control precis prin text.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.toolify.ai/tool/qwen-image-edit',
-    tags: ['image-editing', 'semantic', 'open-source'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'stack-ai',
     name: 'Stack AI',
     description: 'Low/no-code platform to build and deploy AI agents and workflows.',
@@ -1342,26 +936,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['background-remover', 'image-editing', 'free']
   },
   {
-    id: 'miro',
-    name: 'Miro',
-    description: 'An online collaborative whiteboard platform for team collaboration and project management.',
-    descriptions: {
-      en: 'An online collaborative whiteboard platform for team collaboration and project management.',
-      zh: '一个用于团队协作和项目管理的在线协作白板平台。',
-      ja: 'チームのコラボレーションとプロジェクト管理のためのオンライン共同ホワイトボードプラットフォーム。',
-      es: 'Una plataforma de pizarra colaborativa en línea para la colaboración en equipo y la gestión de proyectos.',
-      tk: 'Topar hyzmatdaşlygy we taslama dolandyryşy üçin onlaýn hyzmatdaşlyk tagtasy platformasy.',
-      uz: 'Jamoaviy hamkorlik va loyihalarni boshqarish uchun onlayn hamkorlik doskasi platformasi.',
-      tg: 'Платформаи тахтаи сафеди муштараки онлайн барои ҳамкории гурӯҳӣ ва идоракунии лоиҳа.',
-      hy: 'Առցանց համագործակցային գրատախտակի հարթակ՝ թիմային համագործակցության և նախագծերի կառավարման համար։',
-      ro: 'O platformă online de tablă colaborativă pentru colaborarea în echipă și managementul proiectelor.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://miro.com/',
-    tags: ['whiteboard', 'collaboration', 'project-management']
-  },
-  {
     id: 'pixlio-ai',
     name: 'Pixlio AI',
     description: 'A professional-quality AI image editor for image creation, editing, and optimization.',
@@ -1422,26 +996,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['reddit', 'analytics', 'marketing']
   },
   {
-    id: 'deepfake-maker',
-    name: 'Deepfake Maker',
-    description: 'An all-in-one AI tool with face-swapping, image editing, and image-to-video features.',
-    descriptions: {
-      en: 'An all-in-one AI tool with face-swapping, image editing, and image-to-video features.',
-      zh: '一个集换脸、图片编辑和图转视频功能于一体的 AI 工具。',
-      ja: '顔交換、画像編集、画像から動画への変換機能を備えたオールインワンAIツール。',
-      es: 'Una herramienta de IA todo en uno con funciones de intercambio de caras, edición de imágenes y de imagen a video.',
-      tk: 'Ýüz çalşyrmak, surat redaktirlemek we suratdan wideo aýratynlyklary bolan hemmesi bir AI guraly.',
-      uz: 'Yuzni almashtirish, tasvirni tahrirlash va tasvirdan videoga o\'tkazish xususiyatlariga ega bo\'lgan yagona AI vositasi.',
-      tg: 'Асбоби ҳамаҷонибаи AI бо хусусиятҳои ивазкунии чеҳра, таҳрири тасвир ва тасвир ба видео.',
-      hy: 'Բոլորը մեկում AI գործիք՝ դեմքի փոխանակման, պատկերների խմբագրման և պատկերից վիդեոյի հնարավորություններով։',
-      ro: 'Un instrument AI all-in-one cu funcții de schimbare a feței, editare de imagini și imagine în video.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.heygen.com/tool/deepfake-maker',
-    tags: ['deepfake', 'face-swap', 'video-editing']
-  },
-  {
     id: 'image-creator-ai',
     name: 'IMAGE CREATOR AI',
     description: 'A free AI image generator and editor powered by Gemini.',
@@ -1500,26 +1054,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://www.swiftproxy.net/',
     tags: ['proxy', 'web-scraping', 'data-collection']
-  },
-  {
-    id: 'nano-banana-pro',
-    name: 'Nano Banana Pro',
-    description: 'A professional AI image generator and editor powered by Gemini Pro.',
-    descriptions: {
-      en: 'A professional AI image generator and editor powered by Gemini Pro.',
-      zh: '一款由 Gemini Pro 驱动的专业 AI 图像生成器和编辑器。',
-      ja: 'Gemini Proを搭載したプロフェッショナルなAI画像ジェネレーターおよびエディター。',
-      es: 'Un generador y editor de imágenes de IA profesional impulsado por Gemini Pro.',
-      tk: 'Gemini Pro tarapyndan dolandyrylýan professional AI surat generatory we redaktory.',
-      uz: 'Gemini Pro tomonidan quvvatlanadigan professional AI tasvir generatori va muharriri.',
-      tg: 'Генератор ва муҳаррири касбии тасвири AI, ки аз ҷониби Gemini Pro таъмин карда шудааст.',
-      hy: 'Gemini Pro-ով աշխատող պրոֆեսիոնալ AI պատկերների գեներատոր և խմբագրիչ։',
-      ro: 'Un generator și editor de imagini AI profesional, alimentat de Gemini Pro.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://nanobanana.pro/',
-    tags: ['image-generator', 'gemini-pro', 'professional']
   },
   {
     id: 'raccoon-ai',
@@ -1674,29 +1208,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['email-marketing', 'automation', 'ai-agents', 'business'],
     createdAt: Date.now(),
     releasedAt: Date.now()
-  },
-  {
-    id: 'perplexity',
-    name: 'Perplexity',
-    description: 'AI-powered search engine that answers questions with citations from the web.',
-    descriptions: {
-      en: 'AI-powered search engine that answers questions with citations from the web.',
-      zh: 'AI 驱动的搜索引擎，通过网络引用回答问题。',
-      ja: 'ウェブからの引用で質問に答える AI 搭載検索エンジン。',
-      es: 'Motor de búsqueda impulsado por IA que responde preguntas con citas de la web.',
-      tk: 'Webden sitatlar bilen soraglara jogap berýän AI bilen işleýän gözleg motor.',
-      uz: 'Vebdan iqtiboslar bilan savollarga javob beruvchi AI quvvatli qidiruv dvigateli.',
-      tg: 'Дӯхтаки ҷустуҷӯ бо нерӯи AI, ки бо истинодҳо аз шабака саволҳо ба ҷавоб меорад.',
-      hy: 'AI-ով աշխատող որոնման շարժիչ, որը պատասխանում է հարցերին web-ից մեջբերումներով:',
-      ro: 'Motor de căutare alimentat de AI care răspunde la întrebări cu citări de pe web.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.perplexity.ai/',
-    tags: ['search-engine', 'ai-search', 'research', 'productivity'],
-    featured: true,
-    createdAt: Date.now(),
-    releasedAt: Date.now() - 86400000 * 30
   },
   {
     id: 'elevenlabs',
@@ -2366,28 +1877,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now() - 86400000 * 600
   },
   {
-    id: 'consensus-app',
-    name: 'Consensus',
-    description: 'Search engine for research papers - find answers in scientific literature.',
-    descriptions: {
-      en: 'Search engine for research papers - find answers in scientific literature.',
-      zh: 'Search engine for research papers - find answers in scientific literature.',
-      ja: 'Search engine for research papers - find answers in scientific literature.',
-      es: 'Search engine for research papers - find answers in scientific literature.',
-      tk: 'Search engine for research papers - find answers in scientific literature.',
-      uz: 'Search engine for research papers - find answers in scientific literature.',
-      tg: 'Search engine for research papers - find answers in scientific literature.',
-      hy: 'Search engine for research papers - find answers in scientific literature.',
-      ro: 'Search engine for research papers - find answers in scientific literature.'
-    },
-    category: ToolCategory.AI_SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://consensus.app/',
-    tags: ['research', 'papers', 'science', 'academic'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'surfer-seo',
     name: 'Surfer SEO',
     description: 'AI SEO tool to optimize content and rank higher on Google.',
@@ -2410,50 +1899,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'adobe-firefly',
-    name: 'Adobe Firefly',
-    description: 'Adobe\'s generative AI for creative design and image editing.',
-    descriptions: {
-      en: 'Adobe\'s generative AI for creative design and image editing.',
-      zh: 'Adobe\'s generative AI for creative design and image editing.',
-      ja: 'Adobe\'s generative AI for creative design and image editing.',
-      es: 'Adobe\'s generative AI for creative design and image editing.',
-      tk: 'Adobe\'s generative AI for creative design and image editing.',
-      uz: 'Adobe\'s generative AI for creative design and image editing.',
-      tg: 'Adobe\'s generative AI for creative design and image editing.',
-      hy: 'Adobe\'s generative AI for creative design and image editing.',
-      ro: 'Adobe\'s generative AI for creative design and image editing.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://firefly.adobe.com/',
-    tags: ['adobe', 'design', 'image-generation', 'creative'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'quizlet-plus',
-    name: 'Quizlet Plus',
-    description: 'AI-enhanced flashcards and study tools for better learning.',
-    descriptions: {
-      en: 'AI-enhanced flashcards and study tools for better learning.',
-      zh: 'AI-enhanced flashcards and study tools for better learning.',
-      ja: 'AI-enhanced flashcards and study tools for better learning.',
-      es: 'AI-enhanced flashcards and study tools for better learning.',
-      tk: 'AI-enhanced flashcards and study tools for better learning.',
-      uz: 'AI-enhanced flashcards and study tools for better learning.',
-      tg: 'AI-enhanced flashcards and study tools for better learning.',
-      hy: 'AI-enhanced flashcards and study tools for better learning.',
-      ro: 'AI-enhanced flashcards and study tools for better learning.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://quizlet.com/',
-    tags: ['flashcards', 'study', 'education', 'learning'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'frase-io',
     name: 'Frase',
     description: 'AI content and SEO platform for research, writing, and optimization.',
@@ -2472,50 +1917,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://www.frase.io/',
     tags: ['content', 'seo', 'research', 'writing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'mistral-ai',
-    name: 'Mistral AI',
-    description: 'Fast and efficient AI models for chat and reasoning.',
-    descriptions: {
-      en: 'Fast and efficient AI models for chat and reasoning.',
-      zh: 'Fast and efficient AI models for chat and reasoning.',
-      ja: 'Fast and efficient AI models for chat and reasoning.',
-      es: 'Fast and efficient AI models for chat and reasoning.',
-      tk: 'Fast and efficient AI models for chat and reasoning.',
-      uz: 'Fast and efficient AI models for chat and reasoning.',
-      tg: 'Fast and efficient AI models for chat and reasoning.',
-      hy: 'Fast and efficient AI models for chat and reasoning.',
-      ro: 'Fast and efficient AI models for chat and reasoning.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://mistral.ai/',
-    tags: ['chatbot', 'ai-model', 'mistral', 'fast'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'cohere-ai',
-    name: 'Cohere',
-    description: 'Enterprise AI platform for text generation and understanding.',
-    descriptions: {
-      en: 'Enterprise AI platform for text generation and understanding.',
-      zh: 'Enterprise AI platform for text generation and understanding.',
-      ja: 'Enterprise AI platform for text generation and understanding.',
-      es: 'Enterprise AI platform for text generation and understanding.',
-      tk: 'Enterprise AI platform for text generation and understanding.',
-      uz: 'Enterprise AI platform for text generation and understanding.',
-      tg: 'Enterprise AI platform for text generation and understanding.',
-      hy: 'Enterprise AI platform for text generation and understanding.',
-      ro: 'Enterprise AI platform for text generation and understanding.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://cohere.com/',
-    tags: ['chatbot', 'enterprise', 'text-generation', 'cohere'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -2608,116 +2009,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'trello-ai',
-    name: 'Trello AI',
-    description: 'AI features in Trello for project management.',
-    descriptions: {
-      en: 'AI features in Trello for project management.',
-      zh: 'AI features in Trello for project management.',
-      ja: 'AI features in Trello for project management.',
-      es: 'AI features in Trello for project management.',
-      tk: 'AI features in Trello for project management.',
-      uz: 'AI features in Trello for project management.',
-      tg: 'AI features in Trello for project management.',
-      hy: 'AI features in Trello for project management.',
-      ro: 'AI features in Trello for project management.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://trello.com/',
-    tags: ['project-management', 'trello', 'productivity', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'monday-ai',
-    name: 'Monday.com AI',
-    description: 'AI-powered work management platform.',
-    descriptions: {
-      en: 'AI-powered work management platform.',
-      zh: 'AI-powered work management platform.',
-      ja: 'AI-powered work management platform.',
-      es: 'AI-powered work management platform.',
-      tk: 'AI-powered work management platform.',
-      uz: 'AI-powered work management platform.',
-      tg: 'AI-powered work management platform.',
-      hy: 'AI-powered work management platform.',
-      ro: 'AI-powered work management platform.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.PAID,
-    url: 'https://monday.com/',
-    tags: ['project-management', 'monday', 'productivity', 'work-management'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'clickup-ai',
-    name: 'ClickUp AI',
-    description: 'AI features in ClickUp for productivity.',
-    descriptions: {
-      en: 'AI features in ClickUp for productivity.',
-      zh: 'AI features in ClickUp for productivity.',
-      ja: 'AI features in ClickUp for productivity.',
-      es: 'AI features in ClickUp for productivity.',
-      tk: 'AI features in ClickUp for productivity.',
-      uz: 'AI features in ClickUp for productivity.',
-      tg: 'AI features in ClickUp for productivity.',
-      hy: 'AI features in ClickUp for productivity.',
-      ro: 'AI features in ClickUp for productivity.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://clickup.com/',
-    tags: ['project-management', 'clickup', 'productivity'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'hubspot-ai',
-    name: 'HubSpot AI',
-    description: 'AI-powered CRM and marketing platform.',
-    descriptions: {
-      en: 'AI-powered CRM and marketing platform.',
-      zh: 'AI-powered CRM and marketing platform.',
-      ja: 'AI-powered CRM and marketing platform.',
-      es: 'AI-powered CRM and marketing platform.',
-      tk: 'AI-powered CRM and marketing platform.',
-      uz: 'AI-powered CRM and marketing platform.',
-      tg: 'AI-powered CRM and marketing platform.',
-      hy: 'AI-powered CRM and marketing platform.',
-      ro: 'AI-powered CRM and marketing platform.'
-    },
-    category: ToolCategory.BUSINESS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.hubspot.com/',
-    tags: ['crm', 'marketing', 'hubspot', 'business'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'salesforce-einstein',
-    name: 'Salesforce Einstein',
-    description: 'AI features in Salesforce CRM.',
-    descriptions: {
-      en: 'AI features in Salesforce CRM.',
-      zh: 'AI features in Salesforce CRM.',
-      ja: 'AI features in Salesforce CRM.',
-      es: 'AI features in Salesforce CRM.',
-      tk: 'AI features in Salesforce CRM.',
-      uz: 'AI features in Salesforce CRM.',
-      tg: 'AI features in Salesforce CRM.',
-      hy: 'AI features in Salesforce CRM.',
-      ro: 'AI features in Salesforce CRM.'
-    },
-    category: ToolCategory.BUSINESS,
-    pricing: PricingModel.PAID,
-    url: 'https://www.salesforce.com/products/einstein/overview/',
-    tags: ['crm', 'salesforce', 'business', 'einstein'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'brandmark',
     name: 'Brandmark',
     description: 'AI logo maker and brand design.',
@@ -2740,50 +2031,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'grok',
-    name: 'Grok',
-    description: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-    descriptions: {
-      en: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      zh: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      ja: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      es: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      tk: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      uz: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      tg: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      hy: 'X (Twitter)\'s AI chatbot with real-time knowledge.',
-      ro: 'X (Twitter)\'s AI chatbot with real-time knowledge.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.PAID,
-    url: 'https://grok.x.com/',
-    tags: ['chatbot', 'x', 'twitter', 'real-time', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'llama',
-    name: 'Llama',
-    description: 'Meta\'s open-source AI models for developers.',
-    descriptions: {
-      en: 'Meta\'s open-source AI models for developers.',
-      zh: 'Meta\'s open-source AI models for developers.',
-      ja: 'Meta\'s open-source AI models for developers.',
-      es: 'Meta\'s open-source AI models for developers.',
-      tk: 'Meta\'s open-source AI models for developers.',
-      uz: 'Meta\'s open-source AI models for developers.',
-      tg: 'Meta\'s open-source AI models for developers.',
-      hy: 'Meta\'s open-source AI models for developers.',
-      ro: 'Meta\'s open-source AI models for developers.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREE,
-    url: 'https://ai.meta.com/llama/',
-    tags: ['llm', 'open-source', 'meta', 'developer', 'ai-model'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'leap-ai',
     name: 'Leap AI',
     description: 'AI image generation and editing with templates.',
@@ -2802,94 +2049,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://tryleap.ai/',
     tags: ['image-generation', 'templates', 'ai-art', 'editing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'recraft',
-    name: 'Recraft AI',
-    description: 'AI tool for vector graphics and illustrations.',
-    descriptions: {
-      en: 'AI tool for vector graphics and illustrations.',
-      zh: 'AI tool for vector graphics and illustrations.',
-      ja: 'AI tool for vector graphics and illustrations.',
-      es: 'AI tool for vector graphics and illustrations.',
-      tk: 'AI tool for vector graphics and illustrations.',
-      uz: 'AI tool for vector graphics and illustrations.',
-      tg: 'AI tool for vector graphics and illustrations.',
-      hy: 'AI tool for vector graphics and illustrations.',
-      ro: 'AI tool for vector graphics and illustrations.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.recraft.ai/',
-    tags: ['vector', 'illustration', 'design', 'graphics'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'designer',
-    name: 'Microsoft Designer',
-    description: 'Microsoft\'s AI design tool for graphics and social media.',
-    descriptions: {
-      en: 'Microsoft\'s AI design tool for graphics and social media.',
-      zh: 'Microsoft\'s AI design tool for graphics and social media.',
-      ja: 'Microsoft\'s AI design tool for graphics and social media.',
-      es: 'Microsoft\'s AI design tool for graphics and social media.',
-      tk: 'Microsoft\'s AI design tool for graphics and social media.',
-      uz: 'Microsoft\'s AI design tool for graphics and social media.',
-      tg: 'Microsoft\'s AI design tool for graphics and social media.',
-      hy: 'Microsoft\'s AI design tool for graphics and social media.',
-      ro: 'Microsoft\'s AI design tool for graphics and social media.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://designer.microsoft.com/',
-    tags: ['microsoft', 'design', 'graphics', 'social-media'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'invideo',
-    name: 'InVideo',
-    description: 'AI video creation platform for marketers and creators.',
-    descriptions: {
-      en: 'AI video creation platform for marketers and creators.',
-      zh: 'AI video creation platform for marketers and creators.',
-      ja: 'AI video creation platform for marketers and creators.',
-      es: 'AI video creation platform for marketers and creators.',
-      tk: 'AI video creation platform for marketers and creators.',
-      uz: 'AI video creation platform for marketers and creators.',
-      tg: 'AI video creation platform for marketers and creators.',
-      hy: 'AI video creation platform for marketers and creators.',
-      ro: 'AI video creation platform for marketers and creators.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://invideo.io/',
-    tags: ['video', 'marketing', 'creators', 'editing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'veo',
-    name: 'Veo',
-    description: 'Google DeepMind\'s video generation model.',
-    descriptions: {
-      en: 'Google DeepMind\'s video generation model.',
-      zh: 'Google DeepMind\'s video generation model.',
-      ja: 'Google DeepMind\'s video generation model.',
-      es: 'Google DeepMind\'s video generation model.',
-      tk: 'Google DeepMind\'s video generation model.',
-      uz: 'Google DeepMind\'s video generation model.',
-      tg: 'Google DeepMind\'s video generation model.',
-      hy: 'Google DeepMind\'s video generation model.',
-      ro: 'Google DeepMind\'s video generation model.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://deepmind.google/discover/veo/',
-    tags: ['video-generation', 'google', 'deepmind', 'ai-video'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -2934,28 +2093,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.beatoven.ai/',
     tags: ['music', 'composition', 'audio', 'ai-music'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'murf',
-    name: 'Murf AI',
-    description: 'AI voice generator and text-to-speech platform.',
-    descriptions: {
-      en: 'AI voice generator and text-to-speech platform.',
-      zh: 'AI voice generator and text-to-speech platform.',
-      ja: 'AI voice generator and text-to-speech platform.',
-      es: 'AI voice generator and text-to-speech platform.',
-      tk: 'AI voice generator and text-to-speech platform.',
-      uz: 'AI voice generator and text-to-speech platform.',
-      tg: 'AI voice generator and text-to-speech platform.',
-      hy: 'AI voice generator and text-to-speech platform.',
-      ro: 'AI voice generator and text-to-speech platform.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://murf.ai/',
-    tags: ['voice', 'text-to-speech', 'audio', 'narration'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -3048,28 +2185,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'mem',
-    name: 'Mem.ai',
-    description: 'AI-powered workspace for notes and collaboration.',
-    descriptions: {
-      en: 'AI-powered workspace for notes and collaboration.',
-      zh: 'AI-powered workspace for notes and collaboration.',
-      ja: 'AI-powered workspace for notes and collaboration.',
-      es: 'AI-powered workspace for notes and collaboration.',
-      tk: 'AI-powered workspace for notes and collaboration.',
-      uz: 'AI-powered workspace for notes and collaboration.',
-      tg: 'AI-powered workspace for notes and collaboration.',
-      hy: 'AI-powered workspace for notes and collaboration.',
-      ro: 'AI-powered workspace for notes and collaboration.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://mem.ai/',
-    tags: ['productivity', 'notes', 'collaboration', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'asana',
     name: 'Asana AI',
     description: 'AI-powered work and project management.',
@@ -3088,94 +2203,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://asana.com/',
     tags: ['project-management', 'asana', 'productivity', 'work-management'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'semrush',
-    name: 'Semrush AI',
-    description: 'AI-powered marketing platform for SEO and content.',
-    descriptions: {
-      en: 'AI-powered marketing platform for SEO and content.',
-      zh: 'AI-powered marketing platform for SEO and content.',
-      ja: 'AI-powered marketing platform for SEO and content.',
-      es: 'AI-powered marketing platform for SEO and content.',
-      tk: 'AI-powered marketing platform for SEO and content.',
-      uz: 'AI-powered marketing platform for SEO and content.',
-      tg: 'AI-powered marketing platform for SEO and content.',
-      hy: 'AI-powered marketing platform for SEO and content.',
-      ro: 'AI-powered marketing platform for SEO and content.'
-    },
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.PAID,
-    url: 'https://www.semrush.com/',
-    tags: ['seo', 'marketing', 'analytics', 'content'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'zendesk-ai',
-    name: 'Zendesk AI',
-    description: 'AI-powered customer service and support platform.',
-    descriptions: {
-      en: 'AI-powered customer service and support platform.',
-      zh: 'AI-powered customer service and support platform.',
-      ja: 'AI-powered customer service and support platform.',
-      es: 'AI-powered customer service and support platform.',
-      tk: 'AI-powered customer service and support platform.',
-      uz: 'AI-powered customer service and support platform.',
-      tg: 'AI-powered customer service and support platform.',
-      hy: 'AI-powered customer service and support platform.',
-      ro: 'AI-powered customer service and support platform.'
-    },
-    category: ToolCategory.BUSINESS,
-    pricing: PricingModel.PAID,
-    url: 'https://www.zendesk.com/',
-    tags: ['customer-service', 'support', 'zendesk', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'intercom-ai',
-    name: 'Intercom AI',
-    description: 'AI-powered customer messaging platform.',
-    descriptions: {
-      en: 'AI-powered customer messaging platform.',
-      zh: 'AI-powered customer messaging platform.',
-      ja: 'AI-powered customer messaging platform.',
-      es: 'AI-powered customer messaging platform.',
-      tk: 'AI-powered customer messaging platform.',
-      uz: 'AI-powered customer messaging platform.',
-      tg: 'AI-powered customer messaging platform.',
-      hy: 'AI-powered customer messaging platform.',
-      ro: 'AI-powered customer messaging platform.'
-    },
-    category: ToolCategory.BUSINESS,
-    pricing: PricingModel.PAID,
-    url: 'https://www.intercom.com/',
-    tags: ['customer-service', 'messaging', 'intercom', 'chatbot'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'freshdesk-ai',
-    name: 'Freshdesk AI',
-    description: 'AI-powered customer support software.',
-    descriptions: {
-      en: 'AI-powered customer support software.',
-      zh: 'AI-powered customer support software.',
-      ja: 'AI-powered customer support software.',
-      es: 'AI-powered customer support software.',
-      tk: 'AI-powered customer support software.',
-      uz: 'AI-powered customer support software.',
-      tg: 'AI-powered customer support software.',
-      hy: 'AI-powered customer support software.',
-      ro: 'AI-powered customer support software.'
-    },
-    category: ToolCategory.BUSINESS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.freshworks.com/freshdesk/',
-    tags: ['customer-service', 'support', 'freshdesk', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -3246,50 +2273,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'adobe-creative',
-    name: 'Adobe Creative Cloud',
-    description: 'Adobe\'s suite of creative tools with AI features.',
-    descriptions: {
-      en: 'Adobe\'s suite of creative tools with AI features.',
-      zh: 'Adobe\'s suite of creative tools with AI features.',
-      ja: 'Adobe\'s suite of creative tools with AI features.',
-      es: 'Adobe\'s suite of creative tools with AI features.',
-      tk: 'Adobe\'s suite of creative tools with AI features.',
-      uz: 'Adobe\'s suite of creative tools with AI features.',
-      tg: 'Adobe\'s suite of creative tools with AI features.',
-      hy: 'Adobe\'s suite of creative tools with AI features.',
-      ro: 'Adobe\'s suite of creative tools with AI features.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.PAID,
-    url: 'https://www.adobe.com/',
-    tags: ['adobe', 'design', 'creative', 'photoshop'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'sketch-app',
-    name: 'Sketch',
-    description: 'Mac app for design with AI plugins.',
-    descriptions: {
-      en: 'Mac app for design with AI plugins.',
-      zh: 'Mac app for design with AI plugins.',
-      ja: 'Mac app for design with AI plugins.',
-      es: 'Mac app for design with AI plugins.',
-      tk: 'Mac app for design with AI plugins.',
-      uz: 'Mac app for design with AI plugins.',
-      tg: 'Mac app for design with AI plugins.',
-      hy: 'Mac app for design with AI plugins.',
-      ro: 'Mac app for design with AI plugins.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.PAID,
-    url: 'https://www.sketch.com/',
-    tags: ['design', 'ui', 'ux', 'sketch', 'mac'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'framer-ai',
     name: 'Framer',
     description: 'AI-powered website builder for designers.',
@@ -3356,28 +2339,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'hootsuite-ai',
-    name: 'Hootsuite AI',
-    description: 'AI-powered social media management platform.',
-    descriptions: {
-      en: 'AI-powered social media management platform.',
-      zh: 'AI-powered social media management platform.',
-      ja: 'AI-powered social media management platform.',
-      es: 'AI-powered social media management platform.',
-      tk: 'AI-powered social media management platform.',
-      uz: 'AI-powered social media management platform.',
-      tg: 'AI-powered social media management platform.',
-      hy: 'AI-powered social media management platform.',
-      ro: 'AI-powered social media management platform.'
-    },
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.PAID,
-    url: 'https://www.hootsuite.com/',
-    tags: ['social-media', 'management', 'hootsuite', 'marketing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'sproutsocial-ai',
     name: 'Sprout Social AI',
     description: 'AI-powered social media management and analytics.',
@@ -3396,28 +2357,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://sproutsocial.com/',
     tags: ['social-media', 'analytics', 'sproutsocial', 'management'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'later-ai',
-    name: 'Later AI',
-    description: 'AI-powered social media scheduling and analytics.',
-    descriptions: {
-      en: 'AI-powered social media scheduling and analytics.',
-      zh: 'AI-powered social media scheduling and analytics.',
-      ja: 'AI-powered social media scheduling and analytics.',
-      es: 'AI-powered social media scheduling and analytics.',
-      tk: 'AI-powered social media scheduling and analytics.',
-      uz: 'AI-powered social media scheduling and analytics.',
-      tg: 'AI-powered social media scheduling and analytics.',
-      hy: 'AI-powered social media scheduling and analytics.',
-      ro: 'AI-powered social media scheduling and analytics.'
-    },
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://later.com/',
-    tags: ['social-media', 'scheduling', 'instagram', 'marketing'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -3664,28 +2603,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'linear-ai',
-    name: 'Linear AI',
-    description: 'AI-powered project management for software teams.',
-    descriptions: {
-      en: 'AI-powered project management for software teams.',
-      zh: 'AI-powered project management for software teams.',
-      ja: 'AI-powered project management for software teams.',
-      es: 'AI-powered project management for software teams.',
-      tk: 'AI-powered project management for software teams.',
-      uz: 'AI-powered project management for software teams.',
-      tg: 'AI-powered project management for software teams.',
-      hy: 'AI-powered project management for software teams.',
-      ro: 'AI-powered project management for software teams.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://linear.app/',
-    tags: ['project-management', 'linear', 'software', 'teams'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'notable-ai',
     name: 'Notable AI',
     description: 'AI-powered note-taking and knowledge management.',
@@ -3726,94 +2643,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.craft.do/',
     tags: ['documents', 'notes', 'ai', 'creation'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'zapier-ai',
-    name: 'Zapier AI',
-    description: 'AI-powered workflow automation platform.',
-    descriptions: {
-      en: 'AI-powered workflow automation platform.',
-      zh: 'AI-powered workflow automation platform.',
-      ja: 'AI-powered workflow automation platform.',
-      es: 'AI-powered workflow automation platform.',
-      tk: 'AI-powered workflow automation platform.',
-      uz: 'AI-powered workflow automation platform.',
-      tg: 'AI-powered workflow automation platform.',
-      hy: 'AI-powered workflow automation platform.',
-      ro: 'AI-powered workflow automation platform.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://zapier.com/',
-    tags: ['automation', 'workflow', 'zapier', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'make-ai',
-    name: 'Make AI',
-    description: 'Visual automation platform with AI capabilities.',
-    descriptions: {
-      en: 'Visual automation platform with AI capabilities.',
-      zh: 'Visual automation platform with AI capabilities.',
-      ja: 'Visual automation platform with AI capabilities.',
-      es: 'Visual automation platform with AI capabilities.',
-      tk: 'Visual automation platform with AI capabilities.',
-      uz: 'Visual automation platform with AI capabilities.',
-      tg: 'Visual automation platform with AI capabilities.',
-      hy: 'Visual automation platform with AI capabilities.',
-      ro: 'Visual automation platform with AI capabilities.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.make.com/',
-    tags: ['automation', 'workflow', 'make', 'visual'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'n8n-ai',
-    name: 'n8n AI',
-    description: 'Workflow automation tool with AI integrations.',
-    descriptions: {
-      en: 'Workflow automation tool with AI integrations.',
-      zh: 'Workflow automation tool with AI integrations.',
-      ja: 'Workflow automation tool with AI integrations.',
-      es: 'Workflow automation tool with AI integrations.',
-      tk: 'Workflow automation tool with AI integrations.',
-      uz: 'Workflow automation tool with AI integrations.',
-      tg: 'Workflow automation tool with AI integrations.',
-      hy: 'Workflow automation tool with AI integrations.',
-      ro: 'Workflow automation tool with AI integrations.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://n8n.io/',
-    tags: ['automation', 'workflow', 'n8n', 'open-source'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'langchain',
-    name: 'LangChain',
-    description: 'Framework for developing AI applications.',
-    descriptions: {
-      en: 'Framework for developing AI applications.',
-      zh: 'Framework for developing AI applications.',
-      ja: 'Framework for developing AI applications.',
-      es: 'Framework for developing AI applications.',
-      tk: 'Framework for developing AI applications.',
-      uz: 'Framework for developing AI applications.',
-      tg: 'Framework for developing AI applications.',
-      hy: 'Framework for developing AI applications.',
-      ro: 'Framework for developing AI applications.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://www.langchain.com/',
-    tags: ['development', 'framework', 'ai', 'langchain'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -3928,28 +2757,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'pebblely',
-    name: 'Pebblely',
-    description: 'AI tool for creating product images.',
-    descriptions: {
-      en: 'AI tool for creating product images.',
-      zh: 'AI tool for creating product images.',
-      ja: 'AI tool for creating product images.',
-      es: 'AI tool for creating product images.',
-      tk: 'AI tool for creating product images.',
-      uz: 'AI tool for creating product images.',
-      tg: 'AI tool for creating product images.',
-      hy: 'AI tool for creating product images.',
-      ro: 'AI tool for creating product images.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pebblely.com/',
-    tags: ['product-images', 'e-commerce', 'ai', 'marketing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'fliki',
     name: 'Fliki',
     description: 'AI video generator with voiceover.',
@@ -4038,28 +2845,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'mediaio',
-    name: 'Media.io',
-    description: 'AI-powered media creation and editing platform.',
-    descriptions: {
-      en: 'AI-powered media creation and editing platform.',
-      zh: 'AI-powered media creation and editing platform.',
-      ja: 'AI-powered media creation and editing platform.',
-      es: 'AI-powered media creation and editing platform.',
-      tk: 'AI-powered media creation and editing platform.',
-      uz: 'AI-powered media creation and editing platform.',
-      tg: 'AI-powered media creation and editing platform.',
-      hy: 'AI-powered media creation and editing platform.',
-      ro: 'AI-powered media creation and editing platform.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.media.io/',
-    tags: ['media', 'editing', 'video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'podcastle',
     name: 'Podcastle',
     description: 'AI-powered podcast creation platform.',
@@ -4078,28 +2863,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://podcastle.ai/',
     tags: ['podcast', 'audio', 'creation', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'riverside',
-    name: 'Riverside',
-    description: 'AI-powered podcast and video recording platform.',
-    descriptions: {
-      en: 'AI-powered podcast and video recording platform.',
-      zh: 'AI-powered podcast and video recording platform.',
-      ja: 'AI-powered podcast and video recording platform.',
-      es: 'AI-powered podcast and video recording platform.',
-      tk: 'AI-powered podcast and video recording platform.',
-      uz: 'AI-powered podcast and video recording platform.',
-      tg: 'AI-powered podcast and video recording platform.',
-      hy: 'AI-powered podcast and video recording platform.',
-      ro: 'AI-powered podcast and video recording platform.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.PAID,
-    url: 'https://riverside.fm/',
-    tags: ['podcast', 'video', 'recording', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -4412,28 +3175,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'gong-ai',
-    name: 'Gong AI',
-    description: 'AI platform for revenue intelligence.',
-    descriptions: {
-      en: 'AI platform for revenue intelligence.',
-      zh: 'AI platform for revenue intelligence.',
-      ja: 'AI platform for revenue intelligence.',
-      es: 'AI platform for revenue intelligence.',
-      tk: 'AI platform for revenue intelligence.',
-      uz: 'AI platform for revenue intelligence.',
-      tg: 'AI platform for revenue intelligence.',
-      hy: 'AI platform for revenue intelligence.',
-      ro: 'AI platform for revenue intelligence.'
-    },
-    category: ToolCategory.BUSINESS,
-    pricing: PricingModel.PAID,
-    url: 'https://www.gong.io/',
-    tags: ['revenue', 'intelligence', 'sales', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'exceed',
     name: 'Exceed AI',
     description: 'AI-powered sales lead engagement.',
@@ -4654,28 +3395,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'pitch',
-    name: 'Pitch AI',
-    description: 'AI-powered presentation software for teams.',
-    descriptions: {
-      en: 'AI-powered presentation software for teams.',
-      zh: 'AI-powered presentation software for teams.',
-      ja: 'AI-powered presentation software for teams.',
-      es: 'AI-powered presentation software for teams.',
-      tk: 'AI-powered presentation software for teams.',
-      uz: 'AI-powered presentation software for teams.',
-      tg: 'AI-powered presentation software for teams.',
-      hy: 'AI-powered presentation software for teams.',
-      ro: 'AI-powered presentation software for teams.'
-    },
-    category: ToolCategory.PRESENTATIONS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pitch.com/',
-    tags: ['presentations', 'teams', 'collaboration', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'palm-2',
     name: 'PaLM 2',
     description: 'Google\'s advanced language model.',
@@ -4830,28 +3549,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'opus',
-    name: 'Opus',
-    description: 'AI video generation from text prompts.',
-    descriptions: {
-      en: 'AI video generation from text prompts.',
-      zh: 'AI video generation from text prompts.',
-      ja: 'AI video generation from text prompts.',
-      es: 'AI video generation from text prompts.',
-      tk: 'AI video generation from text prompts.',
-      uz: 'AI video generation from text prompts.',
-      tg: 'AI video generation from text prompts.',
-      hy: 'AI video generation from text prompts.',
-      ro: 'AI video generation from text prompts.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://opus.ai/',
-    tags: ['video-generation', 'text-to-video', 'ai-video', 'creators'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'repika',
     name: 'Repika',
     description: 'AI video creation and editing platform.',
@@ -4892,28 +3589,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.steve.ai/',
     tags: ['video-generation', 'content-creators', 'ai-video', 'marketing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'elai',
-    name: 'Elai.io',
-    description: 'AI video platform with avatars.',
-    descriptions: {
-      en: 'AI video platform with avatars.',
-      zh: 'AI video platform with avatars.',
-      ja: 'AI video platform with avatars.',
-      es: 'AI video platform with avatars.',
-      tk: 'AI video platform with avatars.',
-      uz: 'AI video platform with avatars.',
-      tg: 'AI video platform with avatars.',
-      hy: 'AI video platform with avatars.',
-      ro: 'AI video platform with avatars.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://elai.io/',
-    tags: ['video', 'avatars', 'ai-video', 'professional'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -5002,28 +3677,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://lovo.ai/',
     tags: ['voice', 'text-to-speech', 'multi-voice', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'jetbrains-ai',
-    name: 'JetBrains AI',
-    description: 'AI assistant for JetBrains IDEs.',
-    descriptions: {
-      en: 'AI assistant for JetBrains IDEs.',
-      zh: 'AI assistant for JetBrains IDEs.',
-      ja: 'AI assistant for JetBrains IDEs.',
-      es: 'AI assistant for JetBrains IDEs.',
-      tk: 'AI assistant for JetBrains IDEs.',
-      uz: 'AI assistant for JetBrains IDEs.',
-      tg: 'AI assistant for JetBrains IDEs.',
-      hy: 'AI assistant for JetBrains IDEs.',
-      ro: 'AI assistant for JetBrains IDEs.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.jetbrains.com/ai/',
-    tags: ['coding', 'jetbrains', 'ide', 'ai-assistant'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -5314,28 +3967,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'grammarly-edu',
-    name: 'Grammarly for Education',
-    description: 'AI writing assistant for students and educators.',
-    descriptions: {
-      en: 'AI writing assistant for students and educators.',
-      zh: 'AI writing assistant for students and educators.',
-      ja: 'AI writing assistant for students and educators.',
-      es: 'AI writing assistant for students and educators.',
-      tk: 'AI writing assistant for students and educators.',
-      uz: 'AI writing assistant for students and educators.',
-      tg: 'AI writing assistant for students and educators.',
-      hy: 'AI writing assistant for students and educators.',
-      ro: 'AI writing assistant for students and educators.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://grammarly.com/edu',
-    tags: ['writing', 'education', 'grammarly', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'neeva',
     name: 'Neeva AI',
     description: 'AI-powered ad-free search engine.',
@@ -5468,50 +4099,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'frase-pro',
-    name: 'Frase Pro',
-    description: 'Advanced SEO content AI platform.',
-    descriptions: {
-      en: 'Advanced SEO content AI platform.',
-      zh: 'Advanced SEO content AI platform.',
-      ja: 'Advanced SEO content AI platform.',
-      es: 'Advanced SEO content AI platform.',
-      tk: 'Advanced SEO content AI platform.',
-      uz: 'Advanced SEO content AI platform.',
-      tg: 'Advanced SEO content AI platform.',
-      hy: 'Advanced SEO content AI platform.',
-      ro: 'Advanced SEO content AI platform.'
-    },
-    category: ToolCategory.CONTENT,
-    pricing: PricingModel.PAID,
-    url: 'https://frase.io/',
-    tags: ['content', 'seo', 'frase', 'pro'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'article-forge',
-    name: 'Article Forge',
-    description: 'AI content generator for long-form articles.',
-    descriptions: {
-      en: 'AI content generator for long-form articles.',
-      zh: 'AI content generator for long-form articles.',
-      ja: 'AI content generator for long-form articles.',
-      es: 'AI content generator for long-form articles.',
-      tk: 'AI content generator for long-form articles.',
-      uz: 'AI content generator for long-form articles.',
-      tg: 'AI content generator for long-form articles.',
-      hy: 'AI content generator for long-form articles.',
-      ro: 'AI content generator for long-form articles.'
-    },
-    category: ToolCategory.CONTENT,
-    pricing: PricingModel.PAID,
-    url: 'https://articleforge.com/',
-    tags: ['content', 'articles', 'ai', 'writing'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'skillshare',
     name: 'Skillshare AI',
     description: 'AI-powered online learning.',
@@ -5596,28 +4183,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.rezi.ai/',
     tags: ['resume', 'cv', 'builder', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'perplexity-pro',
-    name: 'Perplexity Pro',
-    description: 'Advanced AI search engine with real-time information.',
-    descriptions: {
-      en: 'Advanced AI search engine with real-time information.',
-      zh: '高级AI搜索引擎，提供实时信息。',
-      ja: 'リアルタイム情報を提供する高度なAI検索エンジン。',
-      es: 'Motor de búsqueda de IA avanzado con información en tiempo real.',
-      tk: 'Real wagtda maglumat bilen ösen AI gözleg motory.',
-      uz: 'Real vaqt ma\'lumotlari bilan ilg\'or AI qidiruv tizimi.',
-      tg: 'Муҳаррики ҷустуҷӯи AI-и пешрафта бо иттилооти воқеӣ.',
-      hy: 'Իրական ժամանակի տեղեկատվությամբ առաջադեմ AI որոնման համակարգ:',
-      ro: 'Motor de căutare AI avansat cu informații în timp real.'
-    },
-    category: ToolCategory.AI_SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.perplexity.ai/',
-    tags: ['search', 'ai', 'real-time', 'pro'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -5732,28 +4297,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'runway-ml',
-    name: 'Runway ML',
-    description: 'AI-powered creative tools for video editing.',
-    descriptions: {
-      en: 'AI-powered creative tools for video editing.',
-      zh: 'AI驱动的视频编辑创意工具。',
-      ja: '動画編集のためのAI搭載クリエイティブツール。',
-      es: 'Herramientas creativas de IA para edición de video.',
-      tk: 'Wideo redaktirlemek üçin AI bilen işleýän dörediji gurallar.',
-      uz: 'Video tahrirlash uchun AI bilan ishlaydigan ijodiy vositalar.',
-      tg: 'Асбобҳои эҷодии AI барои таҳрири видео.',
-      hy: 'Տեսանյութի խմբագրման համար AI ստեղծագործական գործիքներ:',
-      ro: 'Instrumente creative AI pentru editare video.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://runwayml.com/',
-    tags: ['video', 'editing', 'ai', 'creative'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'murf-ai',
     name: 'Murf AI',
     description: 'AI voice generator for professional content.',
@@ -5772,50 +4315,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://murf.ai/',
     tags: ['audio', 'voice', 'generation', 'professional'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'suno-ai',
-    name: 'Suno AI',
-    description: 'AI music generation from text prompts.',
-    descriptions: {
-      en: 'AI music generation from text prompts.',
-      zh: '从文本提示生成AI音乐。',
-      ja: 'テキストプロンプトからAI音楽を生成。',
-      es: 'Generación de música de IA a partir de indicaciones de texto.',
-      tk: 'Tekst görkezmelerinden AI saz döretmek.',
-      uz: 'Matn ko\'rsatmalaridan AI musiqa yaratish.',
-      tg: 'Эҷоди мусиқии AI аз матн.',
-      hy: 'Տեքստային հրահանգներից AI երաժշտության ստեղծում:',
-      ro: 'Generare muzică AI din prompturi text.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://suno.ai/',
-    tags: ['audio', 'music', 'generation', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'cursor-ai',
-    name: 'Cursor AI',
-    description: 'AI-powered code editor for developers.',
-    descriptions: {
-      en: 'AI-powered code editor for developers.',
-      zh: '面向开发者的AI代码编辑器。',
-      ja: '開発者向けAIコードエディタ。',
-      es: 'Editor de código de IA para desarrolladores.',
-      tk: 'Döredijiler üçin AI kod redaktory.',
-      uz: 'Dasturchilar uchun AI kod tahrirlovchi.',
-      tg: 'Муҳаррири коди AI барои таҳиягарон.',
-      hy: 'Ծրագրավորողների համար AI կոդի խմբագրիչ:',
-      ro: 'Editor de cod AI pentru dezvoltatori.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://cursor.sh/',
-    tags: ['coding', 'editor', 'ai', 'developer'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -5904,28 +4403,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://fireflies.ai/',
     tags: ['productivity', 'transcription', 'meetings', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'jasper-ai',
-    name: 'Jasper AI',
-    description: 'AI content generation for marketing teams.',
-    descriptions: {
-      en: 'AI content generation for marketing teams.',
-      zh: '面向营销团队的AI内容生成。',
-      ja: 'マーケティングチーム向けAIコンテンツ生成。',
-      es: 'Generación de contenido de IA para equipos de marketing.',
-      tk: 'Marketing toparlary üçin AI mazmun döretmek.',
-      uz: 'Marketing jamoalari uchun AI kontent yaratish.',
-      tg: 'Эҷоди контенти AI барои дастаҳои маркетинг.',
-      hy: 'Մարքեթինգային թիմերի համար AI բովանդակության ստեղծում:',
-      ro: 'Generare conținut AI pentru echipe de marketing.'
-    },
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.PAID,
-    url: 'https://www.jasper.ai/',
-    tags: ['marketing', 'content', 'ai', 'generation'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -6524,28 +5001,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'quizlet-ai',
-    name: 'Quizlet AI',
-    description: 'AI-powered learning and flashcard tool.',
-    descriptions: {
-      en: 'AI-powered learning and flashcard tool.',
-      zh: 'AI驱动的学习和闪卡工具。',
-      ja: 'AI搭載の学習・フラッシュカードツール。',
-      es: 'Herramienta de aprendizaje y tarjetas con IA.',
-      tk: 'AI bilen öwrenmek we flashcard guraly.',
-      uz: 'AI bilan o\'rganish va flashcard vositasi.',
-      tg: 'Асбоби хондан ва flashcards бо AI.',
-      hy: 'AI-ով ուսումնառության և ֆլեշ-քարտերի գործիք:',
-      ro: 'Instrument de învățare și flashcards AI.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://quizlet.com/',
-    tags: ['education', 'flashcards', 'ai', 'learning'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'conker-ai',
     name: 'Conker',
     description: 'AI quiz generator for educators.',
@@ -6564,28 +5019,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://conker.ai/',
     tags: ['education', 'quiz', 'ai', 'educators'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'tome-ai',
-    name: 'Tome',
-    description: 'AI-powered storytelling and presentation tool.',
-    descriptions: {
-      en: 'AI-powered storytelling and presentation tool.',
-      zh: 'AI驱动的故事讲述和演示工具。',
-      ja: 'AI搭載のストーリーテリング・プレゼンテーションツール。',
-      es: 'Herramienta de narración e IA para presentaciones.',
-      tk: 'AI bilen hekaýat we prezentasiýa guraly.',
-      uz: 'AI bilan hikoya qilish va taqdimot vositasi.',
-      tg: 'Асбоби ҳикоягӣ ва презентатсия бо AI.',
-      hy: 'AI-ով պատմություն և ներկայացման գործիք:',
-      ro: 'Instrument de storytelling și prezentare AI.'
-    },
-    category: ToolCategory.PRESENTATIONS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://tome.app/',
-    tags: ['presentation', 'storytelling', 'ai', 'slides'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -6718,50 +5151,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://mutiny.ai/',
     tags: ['marketing', 'personalization', 'b2b', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'jasper-ai-marketing',
-    name: 'Jasper',
-    description: 'AI marketing content generator.',
-    descriptions: {
-      en: 'AI marketing content generator.',
-      zh: 'AI营销内容生成器。',
-      ja: 'AIマーケティングコンテンツ生成ツール。',
-      es: 'Generador de contenido de marketing de IA.',
-      tk: 'AI marketing mazmun generator.',
-      uz: 'AI marketing kontent generatori.',
-      tg: 'Генератори контенти маркетингии AI.',
-      hy: 'AI մարքեթինգային բովանդակության գեներատոր:',
-      ro: 'Generator de conținut de marketing AI.'
-    },
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.PAID,
-    url: 'https://jasper.ai/',
-    tags: ['marketing', 'content', 'generation', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'writesonic-marketing',
-    name: 'Writesonic',
-    description: 'AI writer for marketing and content.',
-    descriptions: {
-      en: 'AI writer for marketing and content.',
-      zh: '面向营销和内容的AI写作工具。',
-      ja: 'マーケティング・コンテンツ向けAIライター。',
-      es: 'Escritor de IA para marketing y contenido.',
-      tk: 'Marketing we mazmun üçin AI ýazyjy.',
-      uz: 'Marketing va kontent uchun AI yozuvchi.',
-      tg: 'Нависандаи AI барои маркетинг ва контент.',
-      hy: 'AI գրող մարքեթինգի և բովանդակության համար:',
-      ro: 'Scriitor AI pentru marketing și conținut.'
-    },
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://writesonic.com/',
-    tags: ['marketing', 'writing', 'ai', 'content'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -7048,28 +5437,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://rask.ai/',
     tags: ['translation', 'localization', 'video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'elevenlabs-translation',
-    name: 'ElevenLabs',
-    description: 'AI voice synthesis and translation platform.',
-    descriptions: {
-      en: 'AI voice synthesis and translation platform.',
-      zh: 'AI语音合成和翻译平台。',
-      ja: 'AI音声合成・翻訳プラットフォーム。',
-      es: 'Plataforma de síntesis y traducción de voz de IA.',
-      tk: 'AI ses sintezi we terjime platformasy.',
-      uz: 'AI ovoz sintezi va tarjima platformasi.',
-      tg: 'Платформаи синтез ва тарҷумаи овози AI.',
-      hy: 'AI ձայնի սինթեզի և թարգմանության հարթակ:',
-      ro: 'Platformă de sinteză și traducere vocală AI.'
-    },
-    category: ToolCategory.TRANSLATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://elevenlabs.io/',
-    tags: ['translation', 'voice', 'synthesis', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -7426,28 +5793,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'remove-bg-ai',
-    name: 'Remove.bg',
-    description: 'AI background removal tool.',
-    descriptions: {
-      en: 'AI background removal tool.',
-      zh: 'AI背景移除工具。',
-      ja: 'AI背景除去ツール。',
-      es: 'Herramienta de eliminación de fondo con IA.',
-      tk: 'AI fon aýyrmak guraly.',
-      uz: 'AI fon olib tashlash vositasi.',
-      tg: 'Асбоби хориҷкунии пасманзар бо AI.',
-      hy: 'AI ֆոնի հեռացման գործիք:',
-      ro: 'Instrument de eliminare fundal AI.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.remove.bg/',
-    tags: ['image', 'background', 'removal', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'slazzer-ai',
     name: 'Slazzer',
     description: 'AI-powered background remover.',
@@ -7576,94 +5921,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://madgicx.com/',
     tags: ['marketing', 'facebook', 'ads', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'replika-pro',
-    name: 'Replika Pro',
-    description: 'AI companion for emotional support.',
-    descriptions: {
-      en: 'AI companion for emotional support.',
-      zh: '用于情感支持的AI伴侣。',
-      ja: '感情的サポートのためのAIコンパニオン。',
-      es: 'Compañero de IA para apoyo emocional.',
-      tk: 'Duygy goldawy üçin AI ýoldaş.',
-      uz: 'Emotsional yordam uchun AI hamroh.',
-      tg: 'Ҳамсафари AI барои дастгирии эҳсосотӣ.',
-      hy: 'AI ուղեկից էմոցիոնալ աջակցության համար:',
-      ro: 'Însoțitor AI pentru suport emoțional.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.PAID,
-    url: 'https://replika.com/',
-    tags: ['chatbot', 'companion', 'emotional', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'character-ai-pro',
-    name: 'Character.ai',
-    description: 'AI chat platform with custom characters.',
-    descriptions: {
-      en: 'AI chat platform with custom characters.',
-      zh: '具有自定义角色的AI聊天平台。',
-      ja: 'カスタムキャラクターとのAIチャットプラットフォーム。',
-      es: 'Plataforma de chat de IA con personajes personalizados.',
-      tk: 'Özboluşly harakterler bilen AI chat platformasy.',
-      uz: 'Maxsus belgilar bilan AI chat platformasi.',
-      tg: 'Платформаи чати AI бо персонажҳои фармоишӣ.',
-      hy: 'AI չատի հարթակ անհատականացված կերպարներով:',
-      ro: 'Platformă de chat AI cu personaje personalizate.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://character.ai/',
-    tags: ['chatbot', 'character', 'custom', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'poe-pro',
-    name: 'Poe',
-    description: 'AI chat platform with multiple models.',
-    descriptions: {
-      en: 'AI chat platform with multiple models.',
-      zh: '具有多个模型的AI聊天平台。',
-      ja: '複数のモデルを持つAIチャットプラットフォーム。',
-      es: 'Plataforma de chat de IA con múltiples modelos.',
-      tk: 'Köp dürli modeller bilen AI chat platformasy.',
-      uz: 'Ko\'p modellar bilan AI chat platformasi.',
-      tg: 'Платформаи чати AI бо моделҳои гуногун.',
-      hy: 'AI չատի հարթակ բազմաթիվ մոդելներով:',
-      ro: 'Platformă de chat AI cu modele multiple.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://poe.com/',
-    tags: ['chatbot', 'multi-model', 'platform', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'huggingchat-pro',
-    name: 'HuggingChat',
-    description: 'Open-source AI chat platform.',
-    descriptions: {
-      en: 'Open-source AI chat platform.',
-      zh: '开源AI聊天平台。',
-      ja: 'オープンソースのAIチャットプラットフォーム。',
-      es: 'Plataforma de chat de IA de código abierto.',
-      tk: 'Açyk çeşmeli AI chat platformasy.',
-      uz: 'Ochiq kodli AI chat platformasi.',
-      tg: 'Платформаи чати AI-и кушодасос.',
-      hy: 'Բաց կոդով AI չատի հարթակ:',
-      ro: 'Platformă de chat AI open-source.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREE,
-    url: 'https://huggingface.co/chat/',
-    tags: ['chatbot', 'open-source', 'platform', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -7976,28 +6233,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'notion-ai-pro',
-    name: 'Notion AI',
-    description: 'AI writing and productivity assistant.',
-    descriptions: {
-      en: 'AI writing and productivity assistant.',
-      zh: 'AI写作和生产力助手。',
-      ja: 'AIライティング・生産性アシスタント。',
-      es: 'Asistente de escritura y productividad con IA.',
-      tk: 'AI ýazuw we öndürijilik kömekçisi.',
-      uz: 'AI yozish va mahsuldorlik yordamchisi.',
-      tg: 'Ёрдамчии навиштан ва маҳсулнокӣ бо AI.',
-      hy: 'AI գրման և արտադրողականության օգնական:',
-      ro: 'Asistent de scriere și productivitate AI.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.PAID,
-    url: 'https://notion.so/',
-    tags: ['productivity', 'writing', 'assistant', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'evernote-ai',
     name: 'Evernote AI',
     description: 'AI-powered note-taking and organization.',
@@ -8064,28 +6299,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'logseq-ai',
-    name: 'Logseq',
-    description: 'AI-powered open-source knowledge base.',
-    descriptions: {
-      en: 'AI-powered open-source knowledge base.',
-      zh: 'AI驱动的开源知识库。',
-      ja: 'AI搭載のオープンソース知識ベース。',
-      es: 'Base de conocimiento de código abierto con IA.',
-      tk: 'AI bilen açyk çeşmeli bilim bazasy.',
-      uz: 'AI bilan ochiq kodli bilim bazasi.',
-      tg: 'Пойгоҳи дониши кушодасос бо AI.',
-      hy: 'AI բաց կոդով գիտելիքների բազա:',
-      ro: 'Bază de cunoștințe open-source AI.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREE,
-    url: 'https://logseq.com/',
-    tags: ['productivity', 'knowledge', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'tana-ai',
     name: 'Tana',
     description: 'AI-powered thinking and note-taking tool.',
@@ -8148,28 +6361,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://capacities.io/',
     tags: ['productivity', 'notes', 'object-based', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'milanote-ai',
-    name: 'Milanote',
-    description: 'AI-powered visual note-taking tool.',
-    descriptions: {
-      en: 'AI-powered visual note-taking tool.',
-      zh: 'AI驱动的可视化笔记工具。',
-      ja: 'AI搭載のビジュアルメモツール。',
-      es: 'Herramienta de toma de notas visuales con IA.',
-      tk: 'AI bilen wizual bellik guraly.',
-      uz: 'AI bilan vizual eslatma vositasi.',
-      tg: 'Асбоби қайдҳои визуалӣ бо AI.',
-      hy: 'AI տեսողական նոթագրման գործիք:',
-      ro: 'Instrument de luare notițe vizuale AI.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://milanote.com/',
-    tags: ['productivity', 'notes', 'visual', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -9413,28 +7604,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'adscreator',
-    name: 'AdsCreator',
-    description: 'AI ad creation tool - paste website URL for professional ads.',
-    descriptions: {
-      en: 'AI ad creation tool - paste website URL for professional ads.',
-      zh: 'AI广告创作工具 - 只需粘贴网站URL，即可获得专业的AI广告',
-      ja: 'AI広告作成ツール - WebサイトURLを貼り付けるだけでプロフェッショナルなAI広告を作成',
-      es: 'Herramienta de creación de anuncios con IA - pegue la URL del sitio web para obtener anuncios profesionales.',
-      tk: 'AI reklama döretmek guraly - web sahypa URL-ni yapıştırıň',
-      uz: 'AI reklama yaratish vositasi - professional reklama olish uchun veb-sayt URL-ni qo\'yuing',
-      tg: 'Асбоби эҷоди эълонии AI - барои гирифтани эълоноҳои касбӣ URL-и вебсайтро часбонед',
-      hy: 'AI գովազդի ստեղծման գործիք - կայքի URL-ը տեղադրեք մասնագիտացված գովազդ ստանալու համար:',
-      ro: 'Instrument de creare anunțuri AI - lipiți URL-ul site-ului pentru anunțuri profesionale.'
-    },
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.FREE,
-    url: 'https://adscreator.com/',
-    tags: ['marketing', 'ads', 'ai', 'professional'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'i10x',
     name: 'i10X',
     description: 'Integrated AI platform with 500+ AI tools and top models.',
@@ -10491,28 +8660,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'sora-ai',
-    name: 'Sora',
-    description: 'OpenAI text-to-video AI model for creating videos from text.',
-    descriptions: {
-      en: 'OpenAI text-to-video AI model for creating videos from text.',
-      zh: 'OpenAI文本转视频AI模型，从文本创建视频。',
-      ja: 'テキストから動画を生成するOpenAIのテキストトゥビデオAIモデル。',
-      es: 'Modelo de IA de texto a video de OpenAI para crear videos a partir de texto.',
-      tk: 'Tekstlerden wideolar döretmek üçin OpenAI-niň tekst-wideo AI modeli.',
-      uz: 'Matndan videolar yaratish uchun OpenAI matn-video AI modeli.',
-      tg: 'Модели AI-и матн ба видео аз OpenAI барои эҷоди видео аз матн.',
-      hy: 'OpenAI-ի տեքստ-տեսանյութ  AI մոդել` տեքստից տեսանյութեր ստեղծելու համար:',
-      ro: 'Model AI text-to-video de la OpenAI pentru crearea de videoclipuri din text.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://openai.com/sora/',
-    tags: ['video', 'text-to-video', 'openai', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'zapier',
     name: 'Zapier',
     description: 'AI-powered workflow automation connecting apps and services.',
@@ -10861,50 +9008,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://jimdo.com/',
     tags: ['website', 'builder', 'reputation', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'webflow-ai-builder',
-    name: 'Webflow',
-    description: 'AI-enhanced visual web development and design platform.',
-    descriptions: {
-      en: 'AI-enhanced visual web development and design platform.',
-      zh: 'AI增强的可视化网页开发和设计平台。',
-      ja: 'AI拡張のビジュアルWeb開発・設計プラットフォーム。',
-      es: 'Plataforma de desarrollo web visual y diseño con IA.',
-      tk: 'AI bilen güýçlendirilen wizual web ösüş we dizaýn platformasy.',
-      uz: 'AI bilan kuchaytirilgan vizual veb-ishlab chiqish va dizayn platformasi.',
-      tg: 'Платформаи таҳияи веб ва дизайни визуалӣ бо AI.',
-      hy: 'AI-ով ուժեղացված տեսողական վեբ մշակման և դիզայնի հարթակ:',
-      ro: 'Platformă de dezvoltare web vizuală și design cu AI îmbunătățit.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://webflow.com/',
-    tags: ['website', 'design', 'visual', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'shopify-magic',
-    name: 'Shopify Magic',
-    description: 'AI-powered e-commerce platform for online stores.',
-    descriptions: {
-      en: 'AI-powered e-commerce platform for online stores.',
-      zh: '面向网店的AI电商平台。',
-      ja: 'オンラインストア向けAI eコマースプラットフォーム。',
-      es: 'Plataforma de comercio electrónico con IA para tiendas en línea.',
-      tk: 'Onlaýn dükänlar üçin AI e-ticaret platformasy.',
-      uz: 'Onlayn do\'konlar uchun AI e-tijorat platformasi.',
-      tg: 'Платформаи e-commerce бо AI барои д�конҳои онлайн.',
-      hy: 'AI էլեկտրոնային առևտրի հարթակ առցանց խանութների համար:',
-      ro: 'Platformă e-commerce AI pentru magazine online.'
-    },
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.PAID,
-    url: 'https://shopify.com/',
-    tags: ['e-commerce', 'shopify', 'online-store', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -11261,28 +9364,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'instantly-ai-sales',
-    name: 'Instantly.ai',
-    description: 'AI-powered cold email platform for scaling outreach.',
-    descriptions: {
-      en: 'AI-powered cold email platform for scaling outreach.',
-      zh: '用于规模化推广的AI冷邮件平台。',
-      ja: 'アウトリーチ规模化向けAI驅動コールドメールプラットフォーム。',
-      es: 'Plataforma de correo frío con IA para escalar el alcance.',
-      tk: 'AI bilen ölçeglemek üçin sowuk email platformasy.',
-      uz: 'AI bilan kengaytirish uchun sovuq email platformasi.',
-      tg: 'Платформаи email-и яхи бо AI барои афзоиши outreach.',
-      hy: 'AI սառը էլ. փոստի հարթակ մասշտաբավորելու համար:',
-      ro: 'Platformă email rece AI pentru scalarea outreach-ului.'
-    },
-    category: ToolCategory.EMAIL,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://instantly.ai/',
-    tags: ['email', 'cold-email', 'outreach', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'lemwarm',
     name: 'Lemwarm',
     description: 'AI-powered email warming and deliverability tool.',
@@ -11327,50 +9408,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'smartlead-email',
-    name: 'Smartlead',
-    description: 'AI-powered email campaigns and multichannel outreach.',
-    descriptions: {
-      en: 'AI-powered email campaigns and multichannel outreach.',
-      zh: 'AI驱动的邮件活动和多渠道推广。',
-      ja: 'AI搭載のメールキャンペーン・マルチチャネルアウトリーチ。',
-      es: 'Campañas de correo electrónico y alcance multicanal con IA.',
-      tk: 'AI bilen email kampaniýalary we köp kanally outreach.',
-      uz: 'AI bilan email kampaniyalari va ko\'p kanalli outreach.',
-      tg: 'Кампанияҳои email ва outreach-и бисёрканали бо AI.',
-      hy: 'AI էլ. փոստի � камպանիաներ և բազմալիք հասանելիություն:',
-      ro: 'Campanii email și outreach multicanal AI.'
-    },
-    category: ToolCategory.EMAIL,
-    pricing: PricingModel.PAID,
-    url: 'https://smartlead.ai/',
-    tags: ['email', 'campaigns', 'multichannel', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'perplexity-ai',
-    name: 'Perplexity AI',
-    description: 'AI-powered search engine with real-time information and cited sources.',
-    descriptions: {
-      en: 'AI-powered search engine with real-time information and cited sources.',
-      zh: 'AI驱动的搜索引擎，提供实时信息和引用来源。',
-      ja: 'リアルタイム情報と引用ソースを備えたAI検索エンジン。',
-      es: 'Motor de búsqueda con IA con información en tiempo real y fuentes citadas.',
-      tk: 'Häzirki wagtda maglumat we salt-goýarlar bilen AI-gözleg motory.',
-      uz: 'Real vaqt ma\'lumotlari va isbotlangan manbalar bilan AI qidiruv tizimi.',
-      tg: 'Motori qidirii AI бо информатсияи realtimer ва манбаҳои истинодшуда.',
-      hy: 'AI որոնման համակարգ իրական ժամանակի տեղեկություններով և մեջբերված աղբյուրներով:',
-      ro: 'Motor de căutare AI cu informații în timp real și surse citate.'
-    },
-    category: ToolCategory.AI_SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://perplexity.ai/',
-    tags: ['search', 'ai', 'research', 'information'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'grok-ai',
     name: 'Grok',
     description: 'xAI\'s conversational AI with real-time knowledge and witty personality.',
@@ -11393,72 +9430,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'inflection-pi',
-    name: 'Inflection AI',
-    description: 'Personal AI company creating respectful and helpful AI assistants.',
-    descriptions: {
-      en: 'Personal AI company creating respectful and helpful AI assistants.',
-      zh: '创造尊重性和有帮助性AI助手的个人AI公司。',
-      ja: '尊重的で помощなAIアシスタントを作成するパーソナルAI企業。',
-      es: 'Empresa de IA personal que crea asistentes de IA respetuosos y útiles.',
-      tk: 'Hormatly we peýdaly AI kömekçilerini döredýän şahsy AI kompaniýasy.',
-      uz: 'Hurmatli va foydali AI yordamchilarini yaratuvchi shaxsiy AI kompaniyasi.',
-      tg: 'Компанияи AI-и шахсӣ ки асистоҳои AI-ро эҷод мекунад.',
-      hy: 'Personnal AI ընկերություն, որը ստեղծում է հարգալից և օգտակար AI օգնականներ:',
-      ro: 'Companie AI personală care creează asistenți AI respectuoși și utili.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://inflection.ai/',
-    tags: ['personal', 'ai', 'assistant', 'respectful'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'runway-ai',
-    name: 'Runway',
-    description: 'AI-powered video generation and editing platform for creative professionals.',
-    descriptions: {
-      en: 'AI-powered video generation and editing platform for creative professionals.',
-      zh: '为创意专业人士提供AI驱动的视频生成和编辑平台。',
-      ja: 'クリエイティブプロフェッショナル向けAI驅動動画生成・編集プラットフォーム。',
-      es: 'Plataforma de generación y edición de video con IA para profesionales creativos.',
-      tk: 'Ýaradyşyşy professionallar üçin AI bilen wideo döretmek we redaktirlemek platformasy.',
-      uz: 'Ijodiy mutaxassislar uchun AI bilan video yaratish va tahrirlash platformasi.',
-      tg: 'Платформаи эҷоди видео ва таҳрир бо AI барои mutaxassislari ijodкор.',
-      hy: 'AI-ով տեսանյութերի ստեղծման և խմբագրման հարթակ ստեղծագործ մասնագետների համար:',
-      ro: 'Platformă de generare și editare video AI pentru profesioniști creativi.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://runwayml.com/',
-    tags: ['video', 'generation', 'editing', 'creative'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'heygen-ai',
-    name: 'HeyGen',
-    description: 'AI video platform for creating engaging videos with AI avatars.',
-    descriptions: {
-      en: 'AI video platform for creating engaging videos with AI avatars.',
-      zh: 'AI视频平台，使用AI虚拟形象创建引人入胜的视频。',
-      ja: 'AIアバターで魅力的な動画を作成するためのAI動画プラットフォーム。',
-      es: 'Plataforma de video con IA para crear videos atractivos con avatares de IA.',
-      tk: 'AI awatarlary bilen gyzykly wideo döretmek üçin AI wideo platformasy.',
-      uz: 'AI avatarlari bilan qiziqarli videolar yaratish uchun AI video platformasi.',
-      tg: 'Платформаи видео AI барои эҷоди видеоҳои ҷалбкунанда бо аватари AI.',
-      hy: 'AI տեսանյութերի հարթակ գրավիչ տեսանյութեր ստեղծելու համար AI ավատարներով:',
-      ro: 'Platformă video AI pentru crearea videoclipurilor atractive cu avatare AI.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://heygen.com/',
-    tags: ['video', 'avatars', 'marketing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'play-ht',
     name: 'Play.ht',
     description: 'AI voice generator with realistic text-to-speech in multiple languages.',
@@ -11477,28 +9448,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://play.ht/',
     tags: ['voice', 'tts', 'multilingual', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'rytr-ai',
-    name: 'Rytr',
-    description: 'AI writing assistant for creating quality content quickly.',
-    descriptions: {
-      en: 'AI writing assistant for creating quality content quickly.',
-      zh: 'AI写作助手，快速创建高质量内容。',
-      ja: '高品質なコンテンツを素早く作成するAI執筆アシスタント。',
-      es: 'Asistente de escritura con IA para crear contenido de calidad rápidamente.',
-      tk: 'Sifarky mazmuny çalt döretmek üçin AI ýazgy kömekçisi.',
-      uz: 'Sifatli kontentni tez yaratish uchun AI yozuv yordamchisi.',
-      tg: 'Ассистенти навиштани AI барои тез эҷоди мундариҷаи сифатнок.',
-      hy: 'AI գրելու օգնական արագ որակյալ բովանդակություն ստեղծելու համար:',
-      ro: 'Asistent de scriere AI pentru crearea rapidă de conținut de calitate.'
-    },
-    category: ToolCategory.CONTENT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://rytr.me/',
-    tags: ['writing', 'content', 'ai', 'productivity'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -11543,28 +9492,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://movio.la/',
     tags: ['video', 'spokesperson', 'marketing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'did-ai',
-    name: 'D-ID',
-    description: 'AI video platform for creating digital personas and talking avatars.',
-    descriptions: {
-      en: 'AI video platform for creating digital personas and talking avatars.',
-      zh: 'AI视频平台，用于创建数字人物和会说话的虚拟形象。',
-      ja: 'デジタルペルソなと対話型アバターを作成するためのAI動画プラットフォーム。',
-      es: 'Plataforma de video con IA para crear personas digitales y avatares parlantes.',
-      tk: 'Digital personalar we gepleýän awatarlar döretmek üçin AI wideo platformasy.',
-      uz: 'Raqamli shaxslar va gaplashuvchi avatarlar yaratish uchun AI video platformasi.',
-      tg: 'Платформаи видео AI барои эҷоди шахсони рақамӣ ва аватараҳо.',
-      hy: 'AI տեսանյութերի հարթակ թվային անձանց և խոսող ավատարներ ստեղծելու համար:',
-      ro: 'Platformă video AI pentru crearea personajelor digitale și avatarelor care vorbesc.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://d-id.com/',
-    tags: ['video', 'avatars', 'digital', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -11657,72 +9584,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'ideogram-ai',
-    name: 'Ideogram',
-    description: 'AI image generator specializing in realistic text rendering.',
-    descriptions: {
-      en: 'AI image generator specializing in realistic text rendering.',
-      zh: '专注于逼真文本渲染的AI图像生成器。',
-      ja: 'リアルなテキストレンダリングに特化したAI画像生成。',
-      es: 'Generador de imágenes con IA especializado en representación de texto realista.',
-      tk: 'Realistik tekst renderleşdirmek üçin üns berýän AI sura dörediji.',
-      uz: 'Realistik matnni tasvirlash bilan shug\'ullanuvchi AI tasvir generatori.',
-      tg: 'Генератори тасвири AI бо ихтисос дар render кардани матн.',
-      hy: 'AI պատկերի գեներատոր, որը մասնագիտանում է իրական տեքստի մատուցմամբ:',
-      ro: 'Generator de imagini AI specializat în redarea realistă a textului.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://ideogram.ai/',
-    tags: ['image', 'generation', 'text', 'realistic'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'remove-bg',
-    name: 'Remove.bg',
-    description: 'AI-powered background removal tool for images.',
-    descriptions: {
-      en: 'AI-powered background removal tool for images.',
-      zh: 'AI驱动的图像背景去除工具。',
-      ja: 'AI驅動の画像背景削除ツール。',
-      es: 'Herramienta de eliminación de fondo de imagen con IA.',
-      tk: 'Suratlar üçin arka plan çykarmak AI guraly.',
-      uz: 'Rasmlar uchun orqa fonni olib tashlash vositasi AI.',
-      tg: 'Асбоби аз байн бурдани фони тасвир бо AI.',
-      hy: 'AI-ով պատկերի ֆոնը հեռացնելու գործիք:',
-      ro: 'Instrument de eliminare a fundalului imaginii AI.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://remove.bg/',
-    tags: ['background', 'removal', 'photo', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'gamma-ai',
-    name: 'Gamma',
-    description: 'AI tool for creating presentations, websites, and documents.',
-    descriptions: {
-      en: 'AI tool for creating presentations, websites, and documents.',
-      zh: '用于创建演示文稿、网站和文档的AI工具。',
-      ja: 'プレゼンテーション、ウェブサイト、ドキュメントの作成のためのAIツール。',
-      es: 'Herramienta de IA para crear presentaciones, sitios web y documentos.',
-      tk: 'Prezentasiýalar, web sahypalar we resminamalar döretmek üçin AI guraly.',
-      uz: 'Taqdimotlar, veb-saytlar va hujjatlar yaratish uchun AI vositasi.',
-      tg: 'Асбори AI барои эҷоди презентатсияҳо, вебсайтҳо ва ҳуҷҷатҳо.',
-      hy: 'AI գործիք ներկայացումներ, վեբկայքներ և փաստաթղթեր ստեղծելու համար:',
-      ro: 'Instrument AI pentru crearea de prezentări, site-uri web și documente.'
-    },
-    category: ToolCategory.PRESENTATIONS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://gamma.app/',
-    tags: ['presentations', 'websites', 'documents', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'slidesgo',
     name: 'Slidesgo',
     description: 'AI-powered presentation templates for Google Slides and PowerPoint.',
@@ -11763,28 +9624,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://coda.io/',
     tags: ['productivity', 'docs', 'workspace', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'replicate-ai',
-    name: 'Replicate',
-    description: 'Platform for running open-source AI models in the cloud.',
-    descriptions: {
-      en: 'Platform for running open-source AI models in the cloud.',
-      zh: '在云中运行开源AI模型的平台。',
-      ja: 'クラウドでオープンソースAIモデルを実行するためのプラットフォーム.',
-      es: 'Plataforma para ejecutar modelos de IA de código abierto en la nube.',
-      tk: 'Bulutda ačyk kodly AI modellerini işletmek üçin platforma.',
-      uz: 'Bulutda ochiq kodli AI modellarini ishga tushirish uchun platforma.',
-      tg: 'Платформа барои иҷрои моделҳои AI дар абр.',
-      hy: 'Ամպում բաց կոդով AI մdelունdel的操作平台:',
-      ro: 'Platformă pentru rularea modelelor AI open-source în cloud.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.PAY_AS_YOU_GO,
-    url: 'https://replicate.com/',
-    tags: ['cloud', 'ml', 'models', 'open-source'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -11899,28 +9738,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'botpress-ai',
-    name: 'Botpress',
-    description: 'Open-source conversational AI platform for building chatbots.',
-    descriptions: {
-      en: 'Open-source conversational AI platform for building chatbots.',
-      zh: '用于构建聊天机器人的开源对话AI平台。',
-      ja: 'チャットボット構築のためのオープンソース会話型AIプラットフォーム.',
-      es: 'Plataforma de IA conversacional de código abierto para construir chatbots.',
-      tk: 'Chatbotlar döretmek üçin açyk kodly gepleşik AI platformasy.',
-      uz: 'Chatbotlar yaratish uchun ochiq kodli suhbat AI platformasi.',
-      tg: 'Платформаи AI барои сохтани чатботҳо.',
-      hy: 'Բpлутрон կոdel-del խdel-del-del-del-del հpлумdel հpлумdel չdel-del-del-del:',
-      ro: 'Platformă AI conversațională open-source pentru construirea chatbotilor.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREE,
-    url: 'https://botpress.com/',
-    tags: ['chatbot', 'open-source', 'conversational', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'coffeebook-ai',
     name: 'CoPilot',
     description: 'AI pair programmer for enhanced coding productivity.',
@@ -11943,28 +9760,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'tabnine-ai',
-    name: 'Tabnine',
-    description: 'AI code completion assistant for software developers.',
-    descriptions: {
-      en: 'AI code completion assistant for software developers.',
-      zh: '面向软件开发者的AI代码补全助手。',
-      ja: 'ソフトウェア開発者向けAIコード補完アシスタント.',
-      es: 'Asistente de completado de código con IA para desarrolladores de software.',
-      tk: 'Programma üpjünçileri üçin AI kod dolandyrma kömekçisi.',
-      uz: 'Dasturiy ta\'minot ishlab chiquvchilar uchun AI kod to\'ldirish yordamchisi.',
-      tg: 'Ассистенти пур кардани код AI.',
-      hy: 'AI կdel-del-del-del-del-del-del-del-del-del-del-del-del-del-del-del-del-del-del-del-del:',
-      ro: 'Asistent de completare cod AI pentru dezvoltatori de software.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://tabnine.com/',
-    tags: ['coding', 'completion', 'autocomplete', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'firefly-adobe',
     name: 'Adobe Firefly',
     description: 'Adobe\'s generative AI for creative design and image editing.',
@@ -11983,28 +9778,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://firefly.adobe.com/',
     tags: ['adobe', 'design', 'image-generation', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'buffer-ai',
-    name: 'Buffer',
-    description: 'AI social media assistant to create and schedule posts across platforms.',
-    descriptions: {
-      en: 'AI social media assistant to create and schedule posts across platforms.',
-      zh: 'AI社交媒体助手，在各平台创建和安排帖子。',
-      ja: 'プラットフォーム全体で投稿を作成およびスケジュールするためのAIソーシャルメディアアシスタント。',
-      es: 'Asistente de redes sociales con IA para crear y programar publicaciones en todas las plataformas.',
-      tk: 'Platformalar boýyuncha postlary döretmek we planlamak üçin AI sosial media kömekçisi.',
-      uz: 'Platformalar bo\'ylab postlar yaratish va rejalashtirish uchun AI ijtimoiy tarmoq yordamchisi.',
-      tg: 'Ассистенти иҷтимоӣ бо AI барои сохтан ва назорат кардани постҳо дар тамоми платформаҳо.',
-      hy: 'AI սոցիալական մեդիա օգնական, որը ստեղծում և ժամանակացնում է գրառումներ բոլոր հարթակներում։',
-      ro: 'Asistent AI de rețele sociale pentru a crea și programa posturi pe toate platformele.'
-    },
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://buffer.com/',
-    tags: ['social-media', 'scheduling', 'content-creation', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -12075,28 +9848,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'canva-magic',
-    name: 'Canva Magic',
-    description: 'AI features in Canva - generate designs, images, text, and more.',
-    descriptions: {
-      en: 'AI features in Canva - generate designs, images, text, and more.',
-      zh: 'Canva中的AI功能 - 生成设计、图像、文本等。',
-      ja: 'CanvaのAI機能 - デザイン、画像、テキストなどを生成します。',
-      es: 'Funciones de IA en Canva: genera diseños, imágenes, texto y más.',
-      tk: 'Canva-da AI funksiyalary - dizaýnlary, suratlary, teksti we beýlekileri döret.',
-      uz: 'Canvadagi AI funksiyalari - dizaynlarni, rasmlarni, matnni va boshqalarni yaratish.',
-      tg: 'Функсияҳои AI дар Canva - сохтан дизайнерҳои, тасвирҳо, матнҳо ва бештар.',
-      hy: 'AI-ի հնարավորությունները Canva-ում - ստեղծեք դիզայներ, պատկերներ, տեքստ և այլն:',
-      ro: 'Funcții AI în Canva - generează designuri, imagini, text și multe altele.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/magic/',
-    tags: ['design', 'canva', 'ai-design', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'adobe-express',
     name: 'Adobe Express',
     description: 'All-in-one AI design tool for social media graphics, videos, and more.',
@@ -12163,138 +9914,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'notion-ai-2',
-    name: 'Notion AI',
-    description: 'AI assistant built into Notion. Write, summarize, and brainstorm.',
-    descriptions: {
-      en: 'AI assistant built into Notion. Write, summarize, and brainstorm with AI.',
-      zh: '内置在Notion中的AI助手。使用AI进行写作、总结和头脑风暴。',
-      ja: 'Notionに組み込まれたAIアシスタント。AIで書く、要約する、ブレインストーミングする。',
-      es: 'Asistente de IA integrado en Notion. Escribe, resume y haz brainstorming con IA.',
-      tk: 'Notion-yň içinde gurlan AI kömekçisi. AI bilen ýaz, jemle, beýleki fikirler işjeňleşdir.',
-      uz: 'Notion-ning ichiga o\'rnatilgan AI yordamchisi. AI bilan yozing, xulosa qiling, fikr almashing.',
-      tg: 'Ассистенти AI, ки ба Notion дохил карда шудааст. Бо AI навистан, хулоса кардан ва фикрҳо.',
-      hy: 'AI օգնական, որը ներկայացված է Notion-ում։ Գրիր, ամփոփիր և մտածողության անցկացրու AI-ով։',
-      ro: 'Asistent AI integrat în Notion. Scrie, rezumă și brainstorming cu AI.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.PAID,
-    url: 'https://www.notion.so/',
-    tags: ['productivity', 'writing', 'ai-assistant', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'gamma-ai-2',
-    name: 'Gamma',
-    description: 'Create beautiful presentations, documents, and webpages in seconds.',
-    descriptions: {
-      en: 'Create beautiful presentations, documents, and webpages in seconds with AI.',
-      zh: '使用AI在几秒钟内创建美观的演示文稿、文档和网页。',
-      ja: 'AIで数秒で美しいプレゼンテーション、ドキュメント、ウェブページを作成します。',
-      es: 'Crea presentaciones, documentos y páginas web hermosas en segundos con IA.',
-      tk: 'AI bilen birnäçe minutda güýçli prezentasiýalar, resminamalar we web sahypalar döret.',
-      uz: 'AI bilan bir necha soniyada chiroyli taqdimotlar, hujjatlar va veb-sahifalar yaratish.',
-      tg: 'Эҷоди презентатсияҳо, ҳуҷҷатҳо ва вебсайтҳо дар чанд сония бо AI.',
-      hy: 'Ստեղծեք գեղեցիկ ներկայացումներ, փաստաթղթեր և վեբ էջեր մի քանի վայրկյանում AI-ով։',
-      ro: 'Creează prezentări, documente și pagini web frumoase în câteva secunde cu AI.'
-    },
-    category: ToolCategory.PRESENTATIONS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://gamma.app/',
-    tags: ['presentations', 'websites', 'documents', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'slidesgo-ai',
-    name: 'Slidesgo',
-    description: 'AI-powered presentation templates for Google Slides and PowerPoint.',
-    descriptions: {
-      en: 'AI-powered presentation templates for Google Slides and PowerPoint.',
-      zh: '面向Google Slides和PowerPoint的AI驱动演示模板。',
-      ja: 'Google SlidesとPowerPoint向けのAI駆動プレゼンテーションテンプレート。',
-      es: 'Plantillas de presentación con IA para Google Slides y PowerPoint.',
-      tk: 'Google Slides we PowerPoint üçin AI prezentasiýa sözbaslary.',
-      uz: 'Google Slides va PowerPoint uchun AI taqdimot shablonlari.',
-      tg: 'Шаблонҳои презентатсияи AI барои Google Slides ва PowerPoint.',
-      hy: 'AI-ով ներկայացում կաղապարներ Google Slides-ի և PowerPoint-ի համար։',
-      ro: 'Șabloane de prezentare AI pentru Google Slides și PowerPoint.'
-    },
-    category: ToolCategory.PRESENTATIONS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://slidesgo.com/',
-    tags: ['presentations', 'templates', 'google', 'powerpoint'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'poe-ai',
-    name: 'Poe',
-    description: 'AI chatbot platform by Quora with multiple AI models.',
-    descriptions: {
-      en: 'AI chatbot platform by Quora with multiple AI models including GPT-4 and Claude.',
-      zh: 'Quora的AI聊天机器人平台，包含多个AI模型如GPT-4和Claude。',
-      ja: 'QuoraによるAIチャットボットプラットフォームで、GPT-4やClaudeなど複数のAIモデルを含みます。',
-      es: 'Plataforma de chatbot de IA de Quora con múltiples modelos de IA, incluyendo GPT-4 y Claude.',
-      tk: 'GPT-4 we Claude ýaly köp AI modellerini özünde özünden Quora tarapyndan AI chatbot platformasy.',
-      uz: 'GPT-4 va Claude kabi bir nechta AI modellarini o\'z ichiga olgan Quora tomonidan AI chatbot platformasi.',
-      tg: 'Платформаи чатботи AI аз Ҷумҳурии Quora бо моделҳои AI ба монанди GPT-4 ва Claude.',
-      hy: 'AI չdeldel-ի կdel�նdeldel վdelվdelսdelի հpլumdel ձեր փdeldel-փdel-փdeldel:',
-      ro: 'Platformă de chatbot AI de la Quora cu multiple modele AI, inclusiv GPT-4 și Claude.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://poe.com/',
-    tags: ['chatbot', 'gpt-4', 'claude', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'bing-copilot',
-    name: 'Microsoft Copilot',
-    description: 'AI-powered chat and search experience in Bing.',
-    descriptions: {
-      en: 'AI-powered chat and search experience in Bing and Microsoft 365.',
-      zh: 'Bing和Microsoft 365中的AI驱动聊天和搜索体验。',
-      ja: 'BingとMicrosoft 365でのAI駆動チャットと検索体験。',
-      es: 'Experiencia de chat y búsqueda con IA en Bing y Microsoft 365.',
-      tk: 'Bing we Microsoft 365-da AI bilen chat we gözleg teşkilat.',
-      uz: 'Bing va Microsoft 365-da AI bilan chat va qidiruv tajribasi.',
-      tg: 'Таҷрибаи чат ва гӯшт бо AI дар Bing ва Microsoft 365.',
-      hy: 'AI-ով չdel-del-ի և որոնման փորձառություն Bing-ում և Microsoft 365-ում։',
-      ro: 'Experiență de chat și căutare AI în Bing și Microsoft 365.'
-    },
-    category: ToolCategory.AI_SEARCH,
-    pricing: PricingModel.FREE,
-    url: 'https://www.bing.com/copilot',
-    tags: ['ai-search', 'bing', 'microsoft', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'anthropic-claude',
-    name: 'Claude',
-    description: 'Anthropic\'s AI assistant known for high reliability and nuanced understanding.',
-    descriptions: {
-      en: 'Anthropic\'s AI assistant known for high reliability, nuanced understanding, and large context window.',
-      zh: 'Anthropic的AI助手，以高可靠性、细致理解和大上下文窗口闻名。',
-      ja: '高い信頼性、細かい理解、大きなコンテキストウィンドウで知られるAnthropicのAIアシスタント。',
-      es: 'Asistente de IA de Anthropic conocido por su alta fiabilidad, comprensión matizada y gran ventana de contexto.',
-      tk: 'Ýokary ygtybarlylygy, inceli düşünmäge we uly kontekst penzesi bilen bellli Anthropic AI kömekçisi.',
-      uz: 'Yuqori ishonchliligi, nozik tushunishi va katta kontekst oynasi bilan mashhur Anthropic AI yordamchisi.',
-      tg: 'Ассистенти AI-и Anthropic, ки бо таъмири баланд, фаҳми нозуки ва дарозӣ маълум аст.',
-      hy: 'Anthropic-ի AI օգնական, որը հայտնի է բարձր հավաստիությամբ, նուրբ ըմբռնմամբ և մեծ համատեքստի պատուհանով։',
-      ro: 'Asistent AI de la Anthropic cunoscut pentru încrederea ridicată, înțelegerea nuanțată și fereastra mare de context.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://claude.ai/',
-    tags: ['chatbot', 'safe', 'writing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'gemini-google',
     name: 'Gemini',
     description: 'Google\'s multimodal AI model for text, code, image, and video understanding.',
@@ -12313,292 +9932,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://gemini.google.com/',
     tags: ['multimodal', 'google', 'assistant', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'perplexity-ai-2',
-    name: 'Perplexity',
-    description: 'AI-powered search engine with real-time information and cited sources.',
-    descriptions: {
-      en: 'AI-powered search engine with real-time information and cited sources.',
-      zh: 'AI驱动的搜索引擎，提供实时信息和引用来源。',
-      ja: 'リアルタイム情報と引用ソースを備えたAI検索エンジン。',
-      es: 'Motor de búsqueda con IA con información en tiempo real y fuentes citadas.',
-      tk: 'Häzirki wagtda maglumat we salt-goýarlar bilen AI-gözleg motory.',
-      uz: 'Real vaqt ma\'lumotlari va isbotlangan manbalar bilan AI qidiruv tizimi.',
-      tg: 'Мотори гӯшт бо информатсияи realtimer ва манбаҳои истинодшуда.',
-      hy: 'AI որոնման համակարգ իրական ժամանակի տեղեկություններով և մեջբերված աղբյուրներով։',
-      ro: 'Motor de căutare AI cu informații în timp real și surse citate.'
-    },
-    category: ToolCategory.AI_SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.perplexity.ai/',
-    tags: ['search', 'ai', 'research', 'information'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'character-ai-2',
-    name: 'Character.AI',
-    description: 'Chat with AI characters with unique personalities or create your own.',
-    descriptions: {
-      en: 'Chat with AI characters with unique personalities or create your own.',
-      zh: '与具有独特个性的AI角色聊天，或创建自己的角色。',
-      ja: '独自の個性を持つAIキャラクターとチャットするか、自分のキャラクターを作成します。',
-      es: 'Chatea con personajes de IA con personalidades únicas o crea los tuyos propios.',
-      tk: 'Özüne aýratyn şahsyýetleri bilen AI karakterler bilen chat et ýa-da özüňiz döret.',
-      uz: 'O\'ziga xos shaxsiyatlar bilan AI personajlari bilan chat qiling yoki o\'zingiz yarating.',
-      tg: 'Чат бо шахсиятҳои беназири AI ё сохтани шахсиятҳои худ.',
-      hy: 'Ստեղծեք AI կերպարներունիկ անհատականությամբ կամ ստեղծեք ձեր սեփականը։',
-      ro: 'Discută cu personaje AI cu personalități unice sau creează-le pe ale tale.'
-    },
-    category: ToolCategory.CHATBOTS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://character.ai/',
-    tags: ['characters', 'chatbot', 'roleplay', 'entertainment'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'replicate-ai-2',
-    name: 'Replicate',
-    description: 'Run AI models with an easy-to-use API and cloud hosting.',
-    descriptions: {
-      en: 'Run AI models with an easy-to-use API and cloud hosting.',
-      zh: '使用易于使用的API和云托管运行AI模型。',
-      ja: '使いやすいAPIとクラウドホスティングでAIモデルを実行します。',
-      es: 'Ejecuta modelos de IA con una API fácil de usar y alojamiento en la nube.',
-      tk: 'Ýeňişleýin ulanylýan API we bulut hosting bilen AI modellerini işlet.',
-      uz: 'Oson foydalaniladigan API va bulut hosting bilan AI modellarini ishga tushiring.',
-      tg: 'Иҷрои моделҳои AI бо API-и осон истифода ва хостинги абр.',
-      hy: 'Գործարկեք AI մոդելները հեշտ օգտագործվող API-ով և ամպային հոստինգով։',
-      ro: 'Rulează modele AI cu o API ușor de utilizat și găzduire în cloud.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.PAY_AS_YOU_GO,
-    url: 'https://replicate.com/',
-    tags: ['models', 'api', 'cloud', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'hugging-face',
-    name: 'Hugging Face',
-    description: 'The AI community building the future of machine learning.',
-    descriptions: {
-      en: 'The AI community building the future of machine learning.',
-      zh: '构建机器学习未来的AI社区。',
-      ja: '機械学習の未来を構築するAIコミュニティ。',
-      es: 'La comunidad de IA que construye el futuro del aprendizaje automático.',
-      tk: 'Maşyn öwrenmeginiň geljegigini gurlan AI jemgyýeti.',
-      uz: 'Mashina o\'rganishining kelajagini quruvchi AI jamiyati.',
-      tg: 'Ҷомеаи AI, ки ояндаи омӯзиши мошиниро сохта мешавад.',
-      hy: 'AI համայնք, որը կառուցում է մեքենայական ուսուցման ապագան։',
-      ro: 'Comunitatea AI care construiește viitorul învățării automate.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://huggingface.co/',
-    tags: ['models', 'community', 'ml', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'gradio',
-    name: 'Gradio',
-    description: 'Build machine learning apps in minutes with a simple web interface.',
-    descriptions: {
-      en: 'Build machine learning apps in minutes with a simple web interface.',
-      zh: '使用简单的Web界面在几分钟内构建机器学习应用。',
-      ja: 'シンプルなWebインターフェースで数分で機械学習アプリを構築します。',
-      es: 'Crea aplicaciones de aprendizaje automático en minutos con una interfaz web simple.',
-      tk: 'Ýönekeý web interfeýsi bilen birnäçe minutda maşyn öwrenmek programmalaryny gur.',
-      uz: 'Oddiy veb interfeysi bilan bir necha daqiqada mashina o\'rganish dasturlarini yarating.',
-      tg: 'Эҷоди барномаҳои омӯзиши мошини дар чанд сония бо интерфейси web-и оддӣ.',
-      hy: 'Ստեղծեք մեքենայական ուսուցման ծրագրեր մի քանի րոպեում պարզ վեբ ինտերֆեյսով։',
-      ro: 'Construiește aplicații de învățare automată în câteva minute cu o interfață web simplă.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://www.gradio.app/',
-    tags: ['ui', 'ml', 'demo', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'streamlit',
-    name: 'Streamlit',
-    description: 'The fastest way to build and share data apps.',
-    descriptions: {
-      en: 'The fastest way to build and share data apps.',
-      zh: '构建和共享数据应用的最快方式。',
-      ja: 'データアプリを構築して共有する最速の方法。',
-      es: 'La forma más rápida de construir y compartir aplicaciones de datos.',
-      tk: 'Maglumat programmalaryny gurmak we paýlaşmak üçin iň çalt ýol.',
-      uz: 'Ma\'lumot dasturlarini yaratish va ulashish uchun eng tez usul.',
-      tg: 'Роҳи аз ҳад тез барои сохтан ва мубодилаи барномаҳои маълумотӣ.',
-      hy: 'Ամենաարագ եղանակը տվյալների ծրագրերը կառուցելու և կիսելու համար։',
-      ro: 'Cel mai rapid mod de a construi și partaja aplicații de date.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://streamlit.io/',
-    tags: ['data-apps', 'python', 'ui', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'deepai',
-    name: 'DeepAI',
-    description: 'AI tools for developers. Text generation, image editing, and more.',
-    descriptions: {
-      en: 'AI tools for developers. Text generation, image editing, and more.',
-      zh: '面向开发者的AI工具。文本生成、图像编辑等。',
-      ja: '開発者向けのAIツール。テキスト生成、画像編集など。',
-      es: 'Herramientas de IA para desarrolladores. Generación de texto, edición de imágenes y más.',
-      tk: 'Programmaçylar üçin AI guraly. Teksti döretmek, sura redaktirlemek we beýlekiler.',
-      uz: 'Dasturchilar uchun AI vositalari. Matn yaratish, rasm tahrirlash va boshqalar.',
-      tg: 'Асбобҳои AI барои барноманависӣ. Генератсияи матн, таҳрири тасвир ва бештар.',
-      hy: 'AI գործիքներ ծրագրավորողների համար։ Տեքստի ստեղծում, պատկերների խմբագրում և այլն։',
-      ro: 'Instrumente AI pentru dezvoltatori. Generare de text, editare de imagini și multe altele.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://deepai.org/',
-    tags: ['image', 'text', 'api', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'photoroom',
-    name: 'PhotoRoom',
-    description: 'AI-powered photo editor for product photography and backgrounds.',
-    descriptions: {
-      en: 'AI-powered photo editor for product photography and backgrounds.',
-      zh: '用于产品摄影和背景的AI照片编辑器。',
-      ja: '製品写真撮影と背景のためのAIフォトエディタ。',
-      es: 'Editor de fotos con IA para fotografía de productos y fondos.',
-      tk: 'Önüm fotoğraflar we fonlar üçin AI bilen işleýän foto redaktory.',
-      uz: 'Mahsulot fotosuratlari va fonlari uchun AI bilan ishlaydigan foto tahrirchisi.',
-      tg: 'Муҳаррири фото бо AI барои аксҳои маҳсулҳо ва фонҳо.',
-      hy: 'AI-ով լուսանկարների խմբագրիչ արտադրանքի լուսանկարչության և ֆոնների համար։',
-      ro: 'Editor de fotografii cu IA pentru fotografie de produs și fundaluri.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.photoroom.com/',
-    tags: ['photo-editor', 'background', 'product-photography', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'synthesia-ai',
-    name: 'Synthesia',
-    description: 'Create videos with AI avatars from text in minutes.',
-    descriptions: {
-      en: 'Create videos with AI avatars from text in minutes.',
-      zh: '使用AI头像在几分钟内从文本创建视频。',
-      ja: '数分でテキストからAIアバターで動画を作成します。',
-      es: 'Crea videos con avatares de IA a partir de texto en minutos.',
-      tk: 'Birnäçe minutda tekstden AI awatarlar bilen wideo döret.',
-      uz: 'Bir necha daqiqada matndan AI avatarlar bilan videolar yarating.',
-      tg: 'Эҷоди видеоҳо бо аватарҳои AI аз матн дар чанд дақиқа.',
-      hy: 'Ստեղծեք տեսանյութեր AI ավատարներով տեքստից մի քանի րոպեում։',
-      ro: 'Creează videoclipuri cu avatare AI din text în câteva minute.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://www.synthesia.io/',
-    tags: ['video', 'avatars', 'text-to-video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'pictory-ai',
-    name: 'Pictory',
-    description: 'Turn long videos into short, shareable clips with AI.',
-    descriptions: {
-      en: 'Turn long videos into short, shareable clips with AI.',
-      zh: '使用AI将长视频转换为简短、可分享的片段。',
-      ja: 'AIで長い動画を短く、共有可能なクリップに変換します。',
-      es: 'Convierte videos largos en clips cortos y compartibles con IA.',
-      tk: 'Uzyn wideo-laryňyzäi bilen gysga, paýlaşa bolan kliplerine çalyş.',
-      uz: 'Uzun videolarni qisqa, ulashiladigan kliplarga AI bilan aylantiring.',
-      tg: 'Табдил додани видеоҳои дароз ба клипҳои кӯтоҳ ва мубодилашаванда бо AI.',
-      hy: 'Վերածեք երկար տեսանյութերը կարճ, կիսվող կլիպերի AI-ով։',
-      ro: 'Transformați videoclipurile lungi în clipuri scurte și partajabile cu IA.'
-    },
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pictory.ai/',
-    tags: ['video', 'editing', 'short-form', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'elevenlabs-io',
-    name: 'ElevenLabs',
-    description: 'AI voice synthesis and cloning with realistic voices.',
-    descriptions: {
-      en: 'AI voice synthesis and cloning with realistic, natural voices.',
-      zh: '具有真实、自然声音的AI语音合成和克隆。',
-      ja: 'リアルで自然な声のAI音声合成とクローン。',
-      es: 'Síntesis y clonación de voz con IA con voces realistas y naturales.',
-      tk: 'Hakyky, tebigy sesler bilen AI ses sintez we klonlamak.',
-      uz: 'Haqiqiy, tabiiy ovozlar bilan AI ovoz sintezi va klonlash.',
-      tg: 'Синтез ва клони овози AI бо овози ҳақиқӣ ва табиӣ.',
-      hy: 'AI ձայնի սինթեզ և կլոնավորում իրական, բնական ձայներով։',
-      ro: 'Sinteză și clonare a voci AI cu voci realiste și naturale.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.PAID,
-    url: 'https://elevenlabs.io/',
-    tags: ['audio', 'voice', 'tts', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'jasper-ai-2',
-    name: 'Jasper',
-    description: 'AI writing platform for marketing content and copy.',
-    descriptions: {
-      en: 'AI writing platform for marketing content, social media, and ads.',
-      zh: '用于营销内容、社交媒体和广告的AI写作平台。',
-      ja: 'マーケティングコンテンツ、ソーシャルメディア、広告のためのAI執筆プラットフォーム。',
-      es: 'Plataforma de escritura con IA para contenido de marketing, redes sociales y anuncios.',
-      tk: 'Marketing mazmuny, sosial media we reklamalar üçin AI ýazgy platformasy.',
-      uz: 'Marketing kontenti, ijtimoiy tarmoqlar va reklamalar uchun AI yozuv platformasi.',
-      tg: 'Платформаи навиштани AI барои мундариҷаи маркетингӣ, иҷтимоӣ ва рекламаҳо.',
-      hy: 'AI գրելու հարթակ մարքեթինգի բովանդակության, սոցիալական մեդիայի և գովազդների համար։',
-      ro: 'Platformă de scriere AI pentru conținut de marketing, rețele sociale și anunțuri.'
-    },
-    category: ToolCategory.CONTENT,
-    pricing: PricingModel.PAID,
-    url: 'https://www.jasper.ai/',
-    tags: ['writing', 'marketing', 'copywriting', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'writesonic-2',
-    name: 'Writesonic',
-    description: 'AI writing platform for marketing copy and content.',
-    descriptions: {
-      en: 'AI writing platform for marketing copy, blog posts, and social media.',
-      zh: '用于营销文案、博客文章和社交媒体的AI写作平台。',
-      ja: 'マーケティングコピー、ブログ記事、ソーシャルメディアのためのAI執筆プラットフォーム。',
-      es: 'Plataforma de escritura con IA para textos de marketing, publicaciones de blog y redes sociales.',
-      tk: 'Marketing kopiýasy, blog postlary we sosial media üçin AI ýazgy platformasy.',
-      uz: 'Marketing nusxalari, blog postlari va ijtimoiy tarmoqlar uchun AI yozuv platformasi.',
-      tg: 'Платформаи навиштани AI барои нусхаҳои маркетингӣ, постҳои блогӣ ва иҷтимоӣ.',
-      hy: 'AI գրելու հարթակ մարքեթինգի պատճենների, բլոգի գրառումների և սոցիալական մեդիայի համար։',
-      ro: 'Platformă de scriere AI pentru texte de marketing, postări de blog și rețele sociale.'
-    },
-    category: ToolCategory.CONTENT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://writesonic.com/',
-    tags: ['content', 'writing', 'blog', 'marketing'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -12669,50 +10002,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'notion-ai-3',
-    name: 'Notion',
-    description: 'AI-powered workspace for notes, docs, and projects.',
-    descriptions: {
-      en: 'AI-powered workspace for notes, docs, projects, and databases.',
-      zh: '用于笔记、文档、项目和数据库的AI驱动工作空间。',
-      ja: 'メモ、ドキュメント、プロジェクト、データベースのためのAI駆動のワークスペース。',
-      es: 'Espacio de trabajo con IA para notas, documentos, proyectos y bases de datos.',
-      tk: 'Ýazgylar, resminamalar, proýektler we maglumat bazalary üçin AI bilen ýüklenen iş ýeri.',
-      uz: 'Yozuvlar, hujjatlar, loyihalar va ma\'lumotlar bazalari uchun AI bilan ishlaydigan ish maydoni.',
-      tg: 'Майдони корӣ бо AI барои ёддоштҳо, ҳуҷҷатҳо, лоиҳаҳо ва баҳои маълумот.',
-      hy: 'AI-ով աշխատանքային տարածք նոտների, փաստաթղթերի, ծրագրերի և տվյալների բազաների համար։',
-      ro: 'Spațiu de muncă AI pentru notițe, documente, proiecte și baze de date.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.notion.so/',
-    tags: ['productivity', 'notes', 'workspace', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'slack-ai',
-    name: 'Slack',
-    description: 'AI features in Slack for better communication and productivity.',
-    descriptions: {
-      en: 'AI features in Slack for better communication, summaries, and productivity.',
-      zh: 'Slack中的AI功能，用于更好的沟通、总结和效率提升。',
-      ja: 'より良いコミュニケーション、要約、生産性向上のためのSlackのAI機能。',
-      es: 'Funciones de IA en Slack para una mejor comunicación, resúmenes y productividad.',
-      tk: 'Has ýeňişli kommunikasiýa, jemlemler we öndürelilik üçin Slack-da AI funksiyalary.',
-      uz: 'Yaxshiroq aloqa, xulosalar va unumdorlik uchun Slack-dagi AI funksiyalari.',
-      tg: 'Функсияҳои AI дар Slack барои муошират беҳтар, хулосаҳо ва баровардӣ.',
-      hy: 'AI-ի հնարավորությունները Slack-ում ավելի լավ հաղորդակցության, ամփոփումների և արդյունավորության համար։',
-      ro: 'Funcții AI în Slack pentru o comunicare mai bună, rezumate și productivitate.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://slack.com/',
-    tags: ['productivity', 'communication', 'slack', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'zoom-ai',
     name: 'Zoom',
     description: 'AI features in Zoom for meetings, transcription, and summaries.',
@@ -12735,28 +10024,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'zapier-ai-2',
-    name: 'Zapier',
-    description: 'Connect your apps and automate workflows with AI.',
-    descriptions: {
-      en: 'Connect your apps and automate workflows with AI-powered automation.',
-      zh: '使用AI驱动的自动化连接您的应用并自动化工作流程。',
-      ja: 'AI駆動の自動化でアプリを接続し、ワークフローを自動化します。',
-      es: 'Conecta tus aplicaciones y automatiza flujos de trabajo con automatización con IA.',
-      tk: 'Programmalarňyzy birleşdir we AI bilen işleýän awtomatizasiýa bilen iş乌行きى awtomatizirle.',
-      uz: 'Ilovalaringizni bog\'lang va AI bilan ishlaydigan avtomatlashtirish bilan ish oqimlarini avtomatlashtiring.',
-      tg: 'Пайваст кардани аппҳо ва автоматизатсияи workflow бо автоматизацией бо AI.',
-      hy: 'Միացրեք ձեր ծրագրերը և ավտոմատացրեք աշխատանքային հոսքերը AI-ով ավտոմատացմամբ։',
-      ro: 'Conectați aplicațiile și automatizați fluxurile de lucru cu automatizare AI.'
-    },
-    category: ToolCategory.AUTOMATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://zapier.com/',
-    tags: ['automation', 'workflow', 'integration', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'shopify-ai',
     name: 'Shopify Magic',
     description: 'AI features for Shopify stores - product descriptions, marketing, and more.',
@@ -12775,380 +10042,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.shopify.com/',
     tags: ['ecommerce', 'shopify', 'marketing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'pipedrive-ai',
-    name: 'Pipedrive',
-    description: 'AI-powered sales CRM for pipeline management.',
-    descriptions: {
-      en: 'AI-powered sales CRM with lead scoring and pipeline management.',
-      zh: '具有潜在客户评分和销售漏斗管理的AI驱动销售CRM。',
-      ja: 'リードスコアリングとパイプライン管理を備えたAI駆動の営業CRM。',
-      es: 'CRM de ventas con IA con puntuación de clientes potenciales y gestión de canal de ventas.',
-      tk: 'Lider balans we boru dolandyryşy bilen AI bilen işleýän satyjylar CRM.',
-      uz: 'Lider bahosi va quvur boshqaruvi bilan AI bilan ishlaydigan savdolar CRM.',
-      tg: 'CRM-и фурӯш бо AI бо оценкаи сардор ба манбаъҳо ва идоракунии пайплайн.',
-      hy: 'AI-ով վաճառքի CRM ագիտության գնահատման և լարերի կառավարմամբ:',
-      ro: 'CRM de vânzări cu IA cu notarea potențialilor clienți și gestionarea canalului de vânzări.'
-    },
-    category: ToolCategory.CRM,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.pipedrive.com/',
-    tags: ['crm', 'sales', 'pipeline', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'drift-ai',
-    name: 'Drift',
-    description: 'AI-powered conversational marketing platform.',
-    descriptions: {
-      en: 'AI-powered conversational marketing with chatbots and lead capture.',
-      zh: '具有聊天机器人和潜在客户捕获的AI驱动对话式营销平台。',
-      ja: 'チャットボットとリードキャプチャを備えたAI駆動のコンバーセーショナルマーケティングプラットフォーム。',
-      es: 'Plataforma de marketing conversacional con IA con chatbots y captura de clientes potenciales.',
-      tk: 'Chatbotlar we lider tutmak bilen AI bilen işleýän gepleşik marketink platformasy.',
-      uz: 'Chatbotlar va liderni olish bilan AI bilan ishlaydigan suhbatli marketing platformasi.',
-      tg: 'Платформаи маркетинги гаплашуда бо AI бо чатботҳо ва қабули сардорҳо.',
-      hy: 'AI-ով խոսակցական մարքեթինգի հարթակ չdel-del-ներով և լիդերի գրավորությամբ:',
-      ro: 'Platformă de marketing conversațional cu IA cu chatbot-uri și captură de potențiali clienți.'
-    },
-    category: ToolCategory.CUSTOMER_SERVICE,
-    pricing: PricingModel.PAID,
-    url: 'https://www.drift.com/',
-    tags: ['conversational', 'chatbots', 'marketing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'clari-ai',
-    name: 'Clari',
-    description: 'AI-powered revenue platform for sales forecasting.',
-    descriptions: {
-      en: 'AI-powered revenue platform for sales forecasting and pipeline management.',
-      zh: '用于销售预测和销售漏斗管理的AI驱动收入平台。',
-      ja: '売上予測とパイプライン管理のためのAI駆動収益プラットフォーム。',
-      es: 'Plataforma de ingresos con IA para previsión de ventas y gestión de canal de ventas.',
-      tk: 'Satyjylar özünde özünden satyjylar prognozy we boru dolandyryşy üçin AI bilen işleýän girdeň platformasy.',
-      uz: 'Savdo bashoratlari va quvur boshqaruvi uchun AI bilan ishlaydigan daromad platformasi.',
-      tg: 'Платформаи даромад бо AI барои пешгӯии фурӯш ва идоракунии пайплайн.',
-      hy: 'AI-ով եկամտի հարթակ վաճառքի կանխատեսման և լարերի կառավարման համար։',
-      ro: 'Platformă de venituri cu IA pentru prognozarea vânzărilor și gestionarea canalului de vânzări.'
-    },
-    category: ToolCategory.SALES,
-    pricing: PricingModel.PAID,
-    url: 'https://www.clari.com/',
-    tags: ['sales', 'forecasting', 'revenue', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'salesloft-ai',
-    name: 'Salesloft',
-    description: 'AI-powered sales engagement platform.',
-    descriptions: {
-      en: 'AI-powered sales engagement with email, calls, and automation.',
-      zh: '具有电子邮件、电话和自动化的AI驱动销售参与平台。',
-      ja: '電子メール、電話、自動化を備えたAI駆動の営業エンゲージメントプラットフォーム。',
-      es: 'Participación de ventas con IA con correo electrónico, llamadas y automatización.',
-      tk: 'Email, jaňlar we awtomatizasiýasy bilen AI bilen işleýän satyjylar gatnaşygy.',
-      uz: 'Elektron pochta, qo\'ng\'iroqlar va avtomatlashtirish bilan AI bilan ishlaydigan savdo ishtiroki.',
-      tg: 'Иштироки фурӯш бо AI бо почтаи электронӣ, зангҳо ва автоматизацией.',
-      hy: 'AI-ով վաճառքի ներգրավում էլեկտրոնային փոստով, զանգերով և ավտոմատացմամբ։',
-      ro: 'Implicare în vânzări cu IA cu e-mail, apeluri și automatizare.'
-    },
-    category: ToolCategory.SALES,
-    pricing: PricingModel.PAID,
-    url: 'https://www.salesloft.com/',
-    tags: ['sales', 'engagement', 'sales-tools', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'clearbit-ai',
-    name: 'Clearbit',
-    description: 'AI-powered B2B data and lead enrichment.',
-    descriptions: {
-      en: 'AI-powered B2B data enrichment and lead intelligence.',
-      zh: 'AI驱动的B2B数据丰富和潜在客户智能。',
-      ja: 'AI駆動のB2Bデータエンリッチメントとリードインテリジェンス。',
-      es: 'Enriquecimiento de datos B2B e inteligencia de clientes potenciales con IA.',
-      tk: 'AI bilen işleýän B2B maglumatlar zenginleşdirmek we lider intellektualy.',
-      uz: 'AI bilan ishlaydigan B2B ma\'lumotlar boyitish va lider aqlidagi.',
-      tg: 'Бойгирӣ ва маълумоти B2B бо AI ва ақли сардор.',
-      hy: 'AI-ով B2B տվյալների հարստացում և լիդերի ինտելեկտուալություն։',
-      ro: 'Îmbogățirea datelor B2B și inteligența potențialilor clienți cu IA.'
-    },
-    category: ToolCategory.SALES,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://clearbit.com/',
-    tags: ['b2b', 'data', 'enrichment', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'apollo-io',
-    name: 'Apollo.io',
-    description: 'AI-powered B2B sales engagement and lead database.',
-    descriptions: {
-      en: 'AI-powered B2B sales engagement with a massive contact database.',
-      zh: '具有巨大联系数据库的AI驱动B2B销售参与平台。',
-      ja: '巨大なコンタクトデータベースを備えたAI駆動のB2B営業エンゲージメント。',
-      es: 'Participación de ventas B2B con IA con una base de datos de contactos masiva.',
-      tk: 'Ösen aragatnaşyk maglumat bazasy bilen AI bilen işleýän B2B satyjylar gatnaşygy.',
-      uz: 'Katta aloqa ma\'lumotlar bazasi bilan AI bilan ishlaydigan B2B savdo ishtiroki.',
-      tg: 'Иштироки фурӯши B2B бо AI бо базаи гигантии тамос.',
-      hy: 'AI-ով B2B վաճառքի ներգրավում հսկայական կոնտակտային տվյալների բազայով։',
-      ro: 'Implicare în vânzări B2B cu IA cu o bază de date de contacte masivă.'
-    },
-    category: ToolCategory.SALES,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.apollo.io/',
-    tags: ['b2b', 'sales', 'leads', 'database', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'synthesia-ai-2',
-    name: 'Synthesia',
-    description: 'Create professional AI video generator with avatars.',
-    descriptions: {
-      en: 'Create professional AI videos with realistic avatars in multiple languages.',
-      zh: '以多种语言创建具有真实头像的专业AI视频生成器。',
-      ja: '複数の言語でリアルなアバターを備えたプロフェッショナルAI動画生成ツール。',
-      es: 'Crea videos de IA profesionales con avatares realistas en múltiples idiomas.',
-      tk: 'Köp dillerinde hakyky awatarlar bilen professional AI wideo dörediji.',
-      uz: 'Bir nechta tillarda haqiqiy avatarlar bilan professional AI video generatori.',
-      tg: 'Эҷоди генератори видеоҳои касбӣ бо AI бо аватарҳои реалӣ дар якчанд забонҳо.',
-      hy: 'Ստեղծեք պրոֆեսիոնալ AI տեսանյութեր իրական ավատարներով բազմաթիվ լեզուներով։',
-      ro: 'Creați videoclipuri AI profesionale cu avatare realiste în mai multe limbi.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.synthesia.io/',
-    tags: ['video', 'avatars', 'text-to-video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'colossyan-ai',
-    name: 'Colossyan',
-    description: 'AI video generator with AI avatars.',
-    descriptions: {
-      en: 'AI video generator with AI avatars and text-to-video in 120+ languages.',
-      zh: '具有AI头像和文本转视频的AI视频生成器，支持120多种语言。',
-      ja: 'AIアバターとテキストからビデオへの変換を備えたAIビデオ生成ツールで、120以上の言語に対応。',
-      es: 'Generador de videos con IA con avatares de IA y texto a video en más de 120 idiomas.',
-      tk: '120+ dillerinde AI awatarlar we tekstden-wideo-ya dönüşüm bilen AI wideo dörediji.',
-      uz: '120+ tillarda AI avatarlar va matndan videoga aylantirish bilan AI video generatori.',
-      tg: 'Генератори видеоҳои AI бо аватарҳои AI ва матн-ба-видео дар 120+ забонҳо.',
-      hy: 'AI տեսանյութի գեներատոր AI ավատարներով և տեքստից տեսանյութի 120+ լեզուներով։',
-      ro: 'Generator de videoclipuri AI cu avatare AI și text la video în peste 120 de limbi.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.colossyan.com/',
-    tags: ['video', 'avatars', 'text-to-video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'pictory-ai-2',
-    name: 'Pictory',
-    description: 'AI video editor for long-form content.',
-    descriptions: {
-      en: 'AI video editor that automatically creates short videos from long videos.',
-      zh: 'AI视频编辑器，自动从长视频创建短视频。',
-      ja: '長い動画から自動的に短い動画を作成するAI動画エディタ。',
-      es: 'Editor de videos con IA que crea automáticamente videos cortos a partir de videos largos.',
-      tk: 'Uzyn wideo-lardan awtomatiki gysga wideo-lar döredýän AI wideo redaktory.',
-      uz: 'Uzun videolardan avtomatik ravishda qisqa videolar yaratadigan AI video tahrirchisi.',
-      tg: 'Муҳаррири видео бо AI, ки автоматӣ аз видеоҳои дароз видеоҳои кӯтоҳ эҷод мекунад.',
-      hy: 'AI տեսանյութի խմբագրիչ, որը ինքնաբերաբար ստեղծում է կարճ տեսանյութեր երկար տեսանյութերից։',
-      ro: 'Editor video AI care creează automat videoclipuri scurte din videoclipuri lungi.'
-    },
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pictory.ai/',
-    tags: ['video', 'editing', 'short-form', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'veed-io-2',
-    name: 'VEED',
-    description: 'Online video editor with AI tools.',
-    descriptions: {
-      en: 'Online video editor with AI for subtitles, translation, and more.',
-      zh: '在线视频编辑器，具有AI字幕、翻译等功能。',
-      ja: 'AI字幕、翻訳などの機能を備えたオンラインビデオエディタ。',
-      es: 'Editor de videos en línea con IA para subtítulos, traducción y más.',
-      tk: 'Subtitrlar, terjime we beýlekiler üçin AI bilen onlaýn wideo redaktory.',
-      uz: 'Subtitrlar, tarjima va boshqalar uchun AI bilan onlayn video tahrirchisi.',
-      tg: 'Муҳаррири видео онлайн бо AI барои субтитрҳо, тарҷума ва бештар.',
-      hy: 'Ցանցային տեսանյութի խմբագրիչ AI-ով ենթագրերի, թարգմանության և այլնի համար։',
-      ro: 'Editor video online cu IA pentru subtitrare, traducere și multe altele.'
-    },
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.veed.io/',
-    tags: ['video', 'editing', 'subtitles', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'runway-ml-2',
-    name: 'Runway',
-    description: 'Professional AI video tools for creators.',
-    descriptions: {
-      en: 'Professional AI video tools for editing and generation for creators.',
-      zh: '面向创作者的专业AI视频编辑和生成工具。',
-      ja: 'クリエイター向けのプロフェッショナルAI動画編集と生成ツール。',
-      es: 'Herramientas profesionales de video con IA para edición y generación para creadores.',
-      tk: 'Ýaradyşylar üçin professional AI wideo guraly redaktirlemek we döretmek.',
-      uz: 'Yaratuvchilar uchun professional AI video vositalari tahrirlash va yaratish.',
-      tg: 'Асбобҳои касбии видео бо AI барои созандаҳо барои таҳрир ва эҷод.',
-      hy: 'Պրոֆեսիոնալ AI տեսանյութի գործիքներ խմբագրում և ստեղծում ստեղծողների համար։',
-      ro: 'Instrumente video AI profesionale pentru editare și generare pentru creatori.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://runwayml.com/',
-    tags: ['video', 'editing', 'generation', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'pika-labs-2',
-    name: 'Pika',
-    description: 'AI video generator from text and images.',
-    descriptions: {
-      en: 'AI video generator that creates videos from text and images with AI.',
-      zh: '使用AI从文本和图像创建视频的AI视频生成器。',
-      ja: 'AIでテキストと画像から動画を作成するAI動画生成ツール。',
-      es: 'Generador de videos con IA que crea videos a partir de texto e imágenes con IA.',
-      tk: 'Tekst we suratlardan AI bilen wideo-lar döredýän AI wideo dörediji.',
-      uz: 'Matn va rasmlardan AI bilan videolar yaratadigan AI video generatori.',
-      tg: 'Генератори видеоҳои AI, ки аз матн ва тасвирҳо бо AI эҷод мекунад.',
-      hy: 'AI տեսանյութի գեներատոր, որը տեքստից և պատկերերից ստեղծում է տեսանյութեր AI-ով։',
-      ro: 'Generator de videoclipuri AI care creează videoclipuri din text și imagini cu IA.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pika.art/',
-    tags: ['video', 'text-to-video', 'image-to-video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'sora-openai',
-    name: 'Sora',
-    description: 'OpenAI\'s advanced AI video generation model.',
-    descriptions: {
-      en: 'OpenAI\'s advanced AI video generation model from text prompts.',
-      zh: 'OpenAI的高级AI视频生成模型，从文本提示生成。',
-      ja: 'テキストプロンプトからOpenAIの高度なAI動画生成モデル。',
-      es: 'Modelo avanzado de generación de videos con IA de OpenAI a partir de indicaciones de texto.',
-      tk: 'Tekst önergilerinden OpenAI-nyň ösen AI wideo döretmek modeli.',
-      uz: 'Matn ilovalaridan OpenAI ning yuqori darajadagi AI video generatsiya modeli.',
-      tg: 'Модели генератсияи видеоҳои AI-и пешқадам аз OpenAI аз пешниҳодҳои матн.',
-      hy: 'OpenAI-ի բարձրակարգ AI տեսանյութի ստեղծման մոդել տեքստային հուշումներից։',
-      ro: 'Model avansat de generare video AI de la OpenAI din indicații de text.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.PAID,
-    url: 'https://openai.com/sora',
-    tags: ['video', 'openai', 'text-to-video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'lumen5-2',
-    name: 'Lumen5',
-    description: 'AI video creator for marketing.',
-    descriptions: {
-      en: 'AI video creator that turns blog posts and text into videos.',
-      zh: '将博客文章和文本转换为视频的AI视频创建工具。',
-      ja: 'ブログ記事とテキストを動画に変換するAI動画作成ツール。',
-      es: 'Creador de videos con IA que convierte publicaciones de blog y texto en videos.',
-      tk: 'Blog postlary we teksti wideo-lara çalyşýan AI wideo edişçisi.',
-      uz: 'Blog postlari va matnni videolarga aylantiradigan AI video yaratuvchisi.',
-      tg: 'Созандаи видео бо AI, ки постҳои блогӣ ва матнро ба видео табдил медиҳад.',
-      hy: 'AI տեսանյութի ստեղծիչ, որը վերածում է բլոգի գրառումներ և տեքստեր տեսանյութերի։',
-      ro: 'Creator de videoclipuri AI care transformă postările de blog și textul în videoclipuri.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://lumen5.com/',
-    tags: ['video', 'marketing', 'creators', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'mistral-ai-2',
-    name: 'Mistral AI',
-    description: 'Leading open-source AI model developer.',
-    descriptions: {
-      en: 'European AI company developing powerful, efficient open-source models.',
-      zh: '欧洲AI公司，开发强大高效的开源模型。',
-      ja: '強力で効率的なオープンソースモデルを開発するヨーロッパのAI企業。',
-      es: 'Empresa europea de IA que desarrolla modelos potentes y eficientes de código abierto.',
-      tk: 'Güýçli we hasaply açyk çeşme modellerini işläp çykaran Awrupa AI kompaniýasy.',
-      uz: 'Kuchli va samarali ochiq manba modellarini ishlab chiqaruvchi Yevropa AI kompaniyasi.',
-      tg: 'Ширкати аврупоии AI, ки моделҳои қувват ва самараноки бозӣ истеҳсол мекунад.',
-      hy: 'Եվրոպական AI ընկերություն, որը մշակում է հզոր և արդյունավետ բաց կոդի մոդելներ։',
-      ro: 'Companie europeană de AI care dezvoltă modele puternice și eficiente open source.'
-    },
-    category: ToolCategory.CHATBOT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://mistral.ai/',
-    tags: ['mistral', 'llm', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'consensus',
-    name: 'Consensus',
-    description: 'AI-powered search engine for scientific research.',
-    descriptions: {
-      en: 'Search engine that finds answers in peer-reviewed scientific papers.',
-      zh: '在同行评审的科学论文中寻找答案的搜索引擎。',
-      ja: '査読済みの科学論文で答えを見つける検索エンジン。',
-      es: 'Motor de búsqueda que encuentra respuestas en artículos científicos revisados por pares.',
-      tk: 'Jemgyýetçe gözden geçirilen ylmy ýazgylarda jogaplar tapýan gözleg motor.',
-      uz: 'Hamdastalar tomonidan ko\'rib chiqilgan ilmiy maqolalarda javoblarni topadigan qidiruv tizimi.',
-      tg: 'Муҳаррири ҷустуҷӯ, ки ҷавобҳо дар мақолаҳои илмӣ тавассути ҳамкарьони таъсисӣ пайдо мекунад.',
-      hy: 'Որոնման շարժիչ, որը գտնում է պատասխանները գիտական աշխատություններում, որոնք ստուգվել են համագործակիցների կողմից։',
-      ro: 'Motor de căutare care găsește răspunsuri în articole științifice revizuite de colegi.'
-    },
-    category: ToolCategory.SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://consensus.app/',
-    tags: ['research', 'science', 'papers', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'grammarly-ai-2',
-    name: 'Grammarly',
-    description: 'AI-powered writing assistant for grammar and tone.',
-    descriptions: {
-      en: 'Comprehensive AI writing assistant for grammar, tone, and clarity.',
-      zh: '全面的AI写作助手，用于语法、语气和清晰度。',
-      ja: '文法、トーン、明瞭さのための包括的なAIライティングアシスタント。',
-      es: 'Asistente de escritura de IA completo para gramática, tono y claridad.',
-      tk: 'Grammatika, ton we aýdyklyk üçin giňişleýän AI ýazuw kömekçisi.',
-      uz: 'Grammatika, ohang va ravshanlik uchun keng qamrovli AI yozuv yordamchisi.',
-      tg: 'Ассистенти навиштан бо AI барои грамматика, тон ва равшанӣ.',
-      hy: 'Ամբողջական AI գրելու օգնական քերականության, տոնի և պարզության համար։',
-      ro: 'Asistent complet de scriere AI pentru gramatică, ton și claritate.'
-    },
-    category: ToolCategory.WRITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.grammarly.com/',
-    tags: ['writing', 'grammar', 'spelling', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13197,94 +10090,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'canva-ai-2',
-    name: 'Canva',
-    description: 'AI-powered design tool for everyone.',
-    descriptions: {
-      en: 'AI-powered design platform with thousands of templates and tools.',
-      zh: 'AI驱动的设计平台，具有数千个模板和工具。',
-      ja: '数千のテンプレートとツールを備えたAI駆動のデザインプラットフォーム。',
-      es: 'Plataforma de diseño con IA con miles de plantillas y herramientas.',
-      tk: 'Müňlerçe şablon we gural bilen AI bilen işleýän dizayn platformasy.',
-      uz: 'Minglab shablonlar va vositalar bilan AI bilan ishlaydigan dizayn platformasi.',
-      tg: 'Платформаи дизайн бо AI бо ҳазорҳо шаблон ва асбоб.',
-      hy: 'Դիզայնի հարթակ AI-ով հազարավոր ձևերով և գործիքներով։',
-      ro: 'Platformă de design cu IA cu mii de șabloane și instrumente.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/',
-    tags: ['design', 'templates', 'graphic-design', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'adobe-firefly-2',
-    name: 'Adobe Firefly',
-    description: 'Adobe\'s generative AI for creative design.',
-    descriptions: {
-      en: 'Adobe\'s generative AI for creating images, text, and creative assets.',
-      zh: 'Adobe的生成式AI，用于创建图像、文本和创意资产。',
-      ja: '画像、テキスト、クリエイティブアセットを作成するAdobeの生成AI。',
-      es: 'IA generativa de Adobe para crear imágenes, texto y activos creativos.',
-      tk: 'Suratlary, teksti we ýaratjy aktivleri döretmek üçin Adobe-nyň ýasalan AI.',
-      uz: 'Adobe ning generativ AI rasm, matn va ijodiy aktivlar yaratish uchun.',
-      tg: 'AI-и тавлидӣ аз Adobe барои эҷоди тасвирҳо, матн ва активҳои эҷодӣ.',
-      hy: 'Adobe-ի գեներատիվ AI պատկերներ, տեքստեր և ստեղծագործական ակտիվներ ստեղծելու համար։',
-      ro: 'IA generativă Adobe pentru crearea imaginilor, textului și activelor creative.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://firefly.adobe.com/',
-    tags: ['adobe', 'generative', 'image', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'leonardo-ai-2',
-    name: 'Leonardo AI',
-    description: 'AI image generation platform for creative professionals.',
-    descriptions: {
-      en: 'AI image generation platform with fine-tuning and control.',
-      zh: '具有微调功能和控制的AI图像生成平台。',
-      ja: '微調整と制御を備えたAI画像生成プラットフォーム。',
-      es: 'Plataforma de generación de imágenes con IA con ajuste fino y control.',
-      tk: 'Ince sazlamak we dolandyryş bilen AI surat döretmek platformasy.',
-      uz: 'Nozik sozlash va boshqarish bilan AI rasm generatsiya platformasi.',
-      tg: 'Платформаи генератсияи тасвир бо AI бо танзими нозук ва назорат.',
-      hy: 'AI պատկերի ստեղծման հարթակ լաւ ճշգրիտացմամբ և վերահսկողությամբ։',
-      ro: 'Platformă de generare de imagini cu IA cu ajustare fină și control.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://leonardo.ai/',
-    tags: ['image', 'generation', 'creativity', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'bing-image-creator',
-    name: 'Bing Image Creator',
-    description: 'Microsoft\'s AI image generator powered by DALL-E.',
-    descriptions: {
-      en: 'Microsoft\'s AI image generator powered by DALL-E technology.',
-      zh: '微软的AI图像生成器，由DALL-E技术驱动。',
-      ja: 'DALL-E技術を搭載したMicrosoftのAI画像生成ツール。',
-      es: 'Generador de imágenes de IA de Microsoft con tecnología DALL-E.',
-      tk: 'DALL-E tehnologiýasy bilen işleýän Microsoft-nyň AI surat dörediji.',
-      uz: 'DALL-E texnologiyasi bilan ishlaydigan Microsoft ning AI rasm generatori.',
-      tg: 'Генератори тасвири AI-и Microsoft бо технологияи DALL-E.',
-      hy: 'Microsoft-ի AI պատկերի գեներատոր DALL-E տեխնոլոգիայով։',
-      ro: 'Generator de imagini AI de la Microsoft, cu tehnologie DALL-E.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREE,
-    url: 'https://www.bing.com/create',
-    tags: ['bing', 'microsoft', 'image', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'fotor-ai',
     name: 'Fotor',
     description: 'AI photo editor and design platform.',
@@ -13307,28 +10112,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'canva-magic-edit',
-    name: 'Canva Magic Edit',
-    description: 'AI-powered image editing in Canva.',
-    descriptions: {
-      en: 'AI-powered image editing and generation in Canva.',
-      zh: 'Canva中的AI驱动图像编辑和生成功能。',
-      ja: 'CanvaのAI駆動の画像編集と生成機能。',
-      es: 'Edición y generación de imágenes con IA en Canva.',
-      tk: 'Canva-da AI bilen işleýän surat redaktirlemek we döretmek.',
-      uz: 'Canva da AI bilan ishlaydigan rasm tahrirlash va generatsiya.',
-      tg: 'Таҳрир ва эҷоди тасвир бо AI дар Canva.',
-      hy: 'Canva-ում AI-ով պատկերի խմբագրում և ստեղծում:',
-      ro: 'Editare și generare de imagini cu IA în Canva.'
-    },
-    category: ToolCategory.IMAGE_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/magic-edit/',
-    tags: ['canva', 'editing', 'magic-edit', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'lensa',
     name: 'Lensa',
     description: 'AI avatar generator and photo editor.',
@@ -13347,28 +10130,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://prisma-ai.com/lensa',
     tags: ['avatar', 'photo-editor', 'selfie', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'prisma',
-    name: 'Prisma',
-    description: 'AI photo editor with artistic filters.',
-    descriptions: {
-      en: 'AI photo editor that turns photos into artwork.',
-      zh: '将照片变成艺术品的AI照片编辑器。',
-      ja: '写真をアートに変えるAIフォトエディタ。',
-      es: 'Editor de fotos con IA que transforma fotos en obras de arte.',
-      tk: 'Fotolary sungat işlerine çalyşýan AI foto redaktory.',
-      uz: 'Fotosuratlardan san\'at asarlariga aylantiradigan AI foto tahrirchisi.',
-      tg: 'Муҳаррири акс бо AI, ки аксҳоро ба асари санъат табдил медиҳад.',
-      hy: 'AI լուսանկարի խմբագրիչ, որը վերածում է լուսանկարները արվեստի գործերի:',
-      ro: 'Editor de fotografii cu IA care transformă fotografiile în opere de artă.'
-    },
-    category: ToolCategory.IMAGE_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://prisma-ai.com/',
-    tags: ['photo-editor', 'filters', 'art', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13439,28 +10200,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'whisper-openai',
-    name: 'Whisper',
-    description: 'OpenAI\'s speech recognition system.',
-    descriptions: {
-      en: 'OpenAI\'s versatile speech recognition system for transcription.',
-      zh: 'OpenAI的多功能语音识别系统，用于转录。',
-      ja: '文字起こしのためのOpenAIの汎用音声認識システム。',
-      es: 'Sistema versátil de reconocimiento de voz de OpenAI para transcripción.',
-      tk: 'Transkripsiýa üçin OpenAI-nyň köpugurly ses tanamak ulgamy.',
-      uz: 'Transkripsiya uchun OpenAI ning ko\'p qirrali ovozni tanish tizimi.',
-      tg: 'Системаи танзими овозии универсалӣ аз OpenAI барои транскрипсия.',
-      hy: 'OpenAI-ի բազմակողմանի խոսքի ճանաչման համակարգ տրանսկրիպցիայի համար:',
-      ro: 'Sistem versatil de recunoaștere vocală de la OpenAI pentru transcriere.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREE,
-    url: 'https://openai.com/research/whisper',
-    tags: ['openai', 'speech-recognition', 'transcription', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'riverpod',
     name: 'Riverpod',
     description: 'State management library for Flutter applications.',
@@ -13501,28 +10240,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://code.visualstudio.com/',
     tags: ['code-editor', 'vscode', 'ai-extensions', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'github-copilot-2',
-    name: 'GitHub Copilot',
-    description: 'AI pair programmer that helps you write code.',
-    descriptions: {
-      en: 'AI pair programmer that suggests code as you type.',
-      zh: 'AI结对程序员，在您键入时建议代码。',
-      ja: '入力中にコードを提案するAIペアプログラマー。',
-      es: 'Programador en pareja con IA que sugiere código mientras escribes.',
-      tk: 'Ýazanda kody teklip edýän AI gijeler programmist.',
-      uz: 'Yozayotganda kodni taklif qiladigan AI juft dasturchi.',
-      tg: 'Программаи дӯсти AI, ки ҳангоми навиштан код пешниҳод мекунад.',
-      hy: 'AI զույգ ծրագրավորող, որը առաջարկում է կոդը, երբ դուք գրում եք:',
-      ro: 'Programator în pereche cu IA care sugerează cod în timp ce tastați.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.PAID,
-    url: 'https://github.com/copilot',
-    tags: ['coding', 'github', 'ai-coder', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13593,28 +10310,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'microsoft-teams',
-    name: 'Microsoft Teams',
-    description: 'Unified communication and collaboration platform.',
-    descriptions: {
-      en: 'Unified communication and collaboration platform with chat, meetings, and calls.',
-      zh: '统一的沟通和协作平台，具有聊天、会议和通话功能。',
-      ja: 'チャット、ミーティング、通話機能を備えた統合されたコミュニケーションとコラボレーションプラットフォーム。',
-      es: 'Plataforma unificada de comunicación y colaboración con chat, reuniones y llamadas.',
-      tk: 'Chat, ýygnagysy we jaňlar bilen birleşdirilen aragatnaşyk we hemkarlaşyk platformasy.',
-      uz: 'Suhbat, yig\'ilishlar va qo\'ng\'iroqlar bilan birlashtirilgan aloqa va hamkorlik platformasi.',
-      tg: 'Платформаи алоқа ва ҳамкории якҷоя бо чат, жаласаҳо ва зангҳо.',
-      hy: 'Միավորված հաղորդակցության և համագործակցության հարթակ չատով, հանդիպումներով և զանգերով:',
-      ro: 'Platformă unificată de comunicare și colaborare cu chat, întâlniri și apeluri.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.microsoft.com/en-us/microsoft-teams/group-chat-software',
-    tags: ['communication', 'meetings', 'microsoft', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'google-workspace',
     name: 'Google Workspace',
     description: 'Cloud-based productivity and collaboration tools.',
@@ -13633,28 +10328,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://workspace.google.com/',
     tags: ['productivity', 'google', 'cloud', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'microsoft-365',
-    name: 'Microsoft 365',
-    description: 'Productivity cloud with Office apps and AI.',
-    descriptions: {
-      en: 'Productivity cloud with Office apps, cloud storage, and AI features.',
-      zh: '生产力云，包含Office应用、云存储和AI功能。',
-      ja: 'Officeアプリ、クラウドストレージ、AI機能を備えた生産性クラウド。',
-      es: 'Nube de productividad con aplicaciones de Office, almacenamiento en la nube y funciones de IA.',
-      tk: 'Ofis ulanylmazlary, bulut saklaýyş we AI aýratynlyklary bilen önümçilik buludy.',
-      uz: 'Office ilovalari, bulut saqlash va AI funksiyalari bilan samaradorlik buluti.',
-      tg: 'Абрі самарамандӣ бо барномаҳои Office, захираҳои абр ва функсияҳои AI.',
-      hy: 'Արդյունավետության ամպ Office-ի ծրագրերով, ամպային պահեստով և AI ֆունկցիաներով:',
-      ro: 'Cloud de productivitate cu aplicații Office, stocare în cloud și funcții AI.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.microsoft.com/en-us/microsoft-365',
-    tags: ['productivity', 'microsoft', 'office', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13681,72 +10354,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'adobe-lightroom',
-    name: 'Adobe Lightroom',
-    description: 'Photo editing and organizing software.',
-    descriptions: {
-      en: 'Photo editing and organizing software with AI-powered tools.',
-      zh: '带有AI驱动工具的照片编辑和组织软件。',
-      ja: 'AI駆動のツールを備えた写真編集と整理ソフトウェア。',
-      es: 'Software de edición y organización de fotos con herramientas con IA.',
-      tk: 'AI bilen işleýän gurallar bilen foto redaktirlemek we tertiplemek programma üpjünçiligi.',
-      uz: 'AI bilan ishlaydigan vositalar bilan foto tahrirlash va tartiblash dasturi.',
-      tg: 'Нармафзори таҳрир ва тартиби аксҳо бо асбобҳои бо AI.',
-      hy: 'Լուսանկարի խմբագրման և կազմակերպման ծրագիր AI-ով գործիքներով:',
-      ro: 'Software de editare și organizare a fotografiilor cu instrumente cu IA.'
-    },
-    category: ToolCategory.IMAGE_EDITING,
-    pricing: PricingModel.PAID,
-    url: 'https://www.adobe.com/products/photoshop-lightroom.html',
-    tags: ['photo-editor', 'adobe', 'organizing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'canva-pro',
-    name: 'Canva Pro',
-    description: 'Advanced design tools for professionals.',
-    descriptions: {
-      en: 'Advanced design tools with AI features for professionals.',
-      zh: '面向专业人士的高级设计工具，带有AI功能。',
-      ja: 'プロフェッショナル向けのAI機能を備えた高度なデザインツール。',
-      es: 'Herramientas de diseño avanzadas con funciones de IA para profesionales.',
-      tk: 'Professionalar üçin AI aýratynlyklary bilen ösen dizayn gurallary.',
-      uz: 'Professionalar uchun AI funksiyalari bilan ilg\'or dizayn vositalari.',
-      tg: 'Асбобҳои дизайни пешқадам бо функсияҳои AI барои касбӣ.',
-      hy: 'Բարձրակարգ դիզայնի գործիքներ AI ֆունկցիաներով պրոֆեսիոնալների համար:',
-      ro: 'Instrumente de design avansate cu funcții AI pentru profesioniști.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.PAID,
-    url: 'https://www.canva.com/pro/',
-    tags: ['design', 'canva', 'professional', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'figma-pro',
-    name: 'Figma Pro',
-    description: 'Professional UI/UX design platform.',
-    descriptions: {
-      en: 'Professional UI/UX design platform with advanced collaboration features.',
-      zh: '专业的UI/UX设计平台，具有高级协作功能。',
-      ja: '高度なコラボレーション機能を備えたプロフェッショナルなUI/UXデザインプラットフォーム。',
-      es: 'Plataforma profesional de diseño UI/UX con funciones de colaboración avanzadas.',
-      tk: 'Ösen hemkarlaşyk aýratynlyklary bilen professional UI/UX dizayn platformasy.',
-      uz: 'Ilg\'or hamkorlik funksiyalari bilan professional UI/UX dizayn platformasi.',
-      tg: 'Платформаи дизайни UI/UX-и касбӣ бо функсияҳои ҳамкории пешқадам.',
-      hy: 'Պրոֆեսիոնալ UI/UX դիզայնի հարթակ ընդարձակ համագործակցության ֆունկցիաներով:',
-      ro: 'Platformă profesională de design UI/UX cu funcții de colaborare avansate.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.PAID,
-    url: 'https://www.figma.com/pro/',
-    tags: ['design', 'ui-ux', 'figma', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'affinity-designer',
     name: 'Affinity Designer',
     description: 'Professional graphic design software.',
@@ -13765,28 +10372,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://affinity.serif.com/en-gb/designer/',
     tags: ['design', 'graphic-design', 'vector', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'affinity-photo',
-    name: 'Affinity Photo',
-    description: 'Professional photo editing alternative.',
-    descriptions: {
-      en: 'Professional photo editing alternative to Photoshop.',
-      zh: 'Photoshop的专业照片编辑替代方案。',
-      ja: 'Photoshopのプロフェッショナルな写真編集代替ソフト。',
-      es: 'Alternativa profesional de edición de fotos a Photoshop.',
-      tk: 'Photoshop-a professional foto redaktirlemek alternatiwasy.',
-      uz: 'Photoshop-ga professional foto tahrirlash alternativa.',
-      tg: 'Ивазгузории таҳрири аксии касбӣ ба Photoshop.',
-      hy: 'Պրոֆեսիոնալ լուսանկարի խմբագրման այլընտրանք Photoshop-ի փոխարեն:',
-      ro: 'Alternativă profesională de editare a fotografiilor la Photoshop.'
-    },
-    category: ToolCategory.IMAGE_EDITING,
-    pricing: PricingModel.PAID,
-    url: 'https://affinity.serif.com/en-gb/photo/',
-    tags: ['photo-editor', 'alternative', 'affinity', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13875,28 +10460,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.blackmagicdesign.com/products/davinciresolve',
     tags: ['video-editing', 'color-grading', 'professional', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'adobe-premiere-pro',
-    name: 'Adobe Premiere Pro',
-    description: 'Professional video editing software.',
-    descriptions: {
-      en: 'Industry-standard professional video editing software.',
-      zh: '行业标准的专业视频编辑软件。',
-      ja: '業界標準のプロフェッショナルな動画編集ソフトウェア。',
-      es: 'Software profesional de edición de video estándar de la industria.',
-      tk: 'Senagat standarty professional wideo redaktirlemek programma üpjünçiligi.',
-      uz: 'Sanoat standarti professional video tahrirlash dasturi.',
-      tg: 'Нармафзори таҳрири видеои касбӣ бо стандарти саноат.',
-      hy: 'Արդյունաբերական չափանիշի պրոֆեսիոնալ տեսանյութի խմբագրման ծրագիր:',
-      ro: 'Software profesional de editare video standard din industrie.'
-    },
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.PAID,
-    url: 'https://www.adobe.com/products/premiere.html',
-    tags: ['video-editing', 'adobe', 'professional', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -14007,28 +10570,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.wevideo.com/',
     tags: ['video-editing', 'cloud', 'teams', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'canva-video',
-    name: 'Canva Video',
-    description: 'AI video editor in Canva.',
-    descriptions: {
-      en: 'AI video editor and maker in Canva with templates.',
-      zh: 'Canva中的AI视频编辑器和制作工具，带有模板。',
-      ja: 'テンプレートを備えたCanvaのAI動画エディタと制作ツール。',
-      es: 'Editor y creador de videos con IA en Canva con plantillas.',
-      tk: 'Şablonlar bilen Canva-da AI wideo redaktory we edişçisi.',
-      uz: 'Shablonlar bilan Canva da AI video tahrirchisi va yaratuvchisi.',
-      tg: 'Муҳаррир ва созандаи видео бо AI дар Canva бо шаблонҳо.',
-      hy: 'AI տեսանյութի խմբագրիչ և ստեղծիչ Canva-ում ձևերով:',
-      ro: 'Editor și creator video cu IA în Canva cu șabloane.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/video/',
-    tags: ['video', 'canva', 'templates', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -14165,28 +10706,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'elevenlabs-2',
-    name: 'ElevenLabs',
-    description: 'AI voice generator with realistic voices.',
-    descriptions: {
-      en: 'AI voice generator with realistic voices and cloning.',
-      zh: 'AI语音生成器，具有逼真的声音和克隆功能。',
-      ja: 'リアルな声とクローン機能を備えたAI音声生成器。',
-      es: 'Generador de voz con IA con voces realistas y clonación.',
-      tk: 'Hakyky sesler we klonlamak bilen AI ses dörediji.',
-      uz: 'Haqiqiy ovozlar va klonlash bilan AI ovoz generatori.',
-      tg: 'Генератори овози AI бо овозҳои воқеӣ ва клонӣ.',
-      hy: 'AI ձայնի գեներատոր իրական ձայներով և կլոնավորմամբ:',
-      ro: 'Generator de voce cu IA cu voci realiste și clonare.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://elevenlabs.io/',
-    tags: ['text-to-speech', 'voice', 'cloning', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'wellsaid-labs',
     name: 'WellSaid Labs',
     description: 'AI text-to-speech for professional voiceovers.',
@@ -14271,28 +10790,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://tldrthis.com/',
     tags: ['summarizer', 'text', 'tldr', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'quillbot-2',
-    name: 'QuillBot',
-    description: 'AI paraphrasing and writing tool.',
-    descriptions: {
-      en: 'AI paraphrasing and writing tool with multiple modes.',
-      zh: 'AI释义和写作工具，具有多种模式。',
-      ja: '複数のモードを備えたAI言い換えとライティングツール。',
-      es: 'Herramienta de parafraseo y escritura con IA con múltiples modos.',
-      tk: 'Köp görnüşler bilen AI paräfrazleme we ýazuw gurallary.',
-      uz: 'Ko\'p rejimlar bilan AI ifodani o\'zgartirish va yozuv vositasi.',
-      tg: 'Асбобҳои таҳрир ва навиштан бо AI бо режимҳои гуногун.',
-      hy: 'AI թարգմանություն և գրելու գործիք բազմակի ռեժիմներով:',
-      ro: 'Instrument de parafrazare și scriere cu IA cu multiple moduri.'
-    },
-    category: ToolCategory.WRITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://quillbot.com/',
-    tags: ['paraphrasing', 'writing', 'grammar', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -14715,50 +11212,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'canva-social',
-    name: 'Canva Social',
-    description: 'Social media design and scheduling.',
-    descriptions: {
-      en: 'Create and schedule social media content with Canva.',
-      zh: '使用Canva创建和安排社交媒体内容。',
-      ja: 'Canvaでソーシャルメディアコンテンツを作成してスケジュール。',
-      es: 'Crea y programa contenido de redes sociales con Canva.',
-      tk: 'Canva bilen sosial media mazmunyny döret we tertiple.',
-      uz: 'Canva bilan ijtimoiy tarmoq kontentini yarat va belgilang.',
-      tg: 'Эҷод ва тақвими мазмуни иҷтимоӣ бо Canva.',
-      hy: 'Ստեղծեք և ժամանակացրեք սոցիալական մեդիայի բովանդակությունը Canva-ով:',
-      ro: 'Creați și programați conținut de rețele sociale cu Canva.'
-    },
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/social-media/',
-    tags: ['social-media', 'scheduling', 'canva', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'buffer',
-    name: 'Buffer',
-    description: 'Social media scheduling and analytics.',
-    descriptions: {
-      en: 'Social media scheduling, publishing, and analytics.',
-      zh: '社交媒体排期、发布和分析。',
-      ja: 'ソーシャルメディアのスケジュール、公開、分析。',
-      es: 'Programación, publicación y análisis de redes sociales.',
-      tk: 'Sosial media tertiplemek, çap etmek we analiz.',
-      uz: 'Ijtimoiy tarmoqlarni belgilash, nashr qilish va tahlil qilish.',
-      tg: 'Тақвим, нашр ва таҳлили иҷтимоӣ.',
-      hy: 'Սոցիալական մեդիայի ժամանակացում, հրապարակում և վերլուծություն:',
-      ro: 'Programare, publicare și analiză a rețelelor sociale.'
-    },
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://buffer.com/',
-    tags: ['social-media', 'scheduling', 'analytics', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'later',
     name: 'Later',
     description: 'Visual social media scheduler.',
@@ -14865,28 +11318,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://tweetdeck.twitter.com/',
     tags: ['twitter', 'dashboard', 'management', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'canva-instagram',
-    name: 'Canva Instagram',
-    description: 'Instagram post and story creator.',
-    descriptions: {
-      en: 'Create Instagram posts, stories, and Reels with templates.',
-      zh: '使用模板创建Instagram帖子、故事和Reels。',
-      ja: 'テンプレートでInstagramの投稿、ストーリー、Reelsを作成。',
-      es: 'Crea publicaciones, historias y Reels de Instagram con plantillas.',
-      tk: 'Şablonlar bilen Instagram postlary, hekaýatlary we Reels döret.',
-      uz: 'Shablonlar bilan Instagram postlarini, hikoyalarini va Reels ni yarat.',
-      tg: 'Эҷод кардани постҳо, ҳикояҳо ва Reels-и Instagram бо шаблонҳо.',
-      hy: 'Ստեղծեք Instagram հրապարակումներ, պատմություններ և Reels ձևերով:`',
-      ro: 'Creați postări, povești și Reels de Instagram cu șabloane.'
-    },
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/instagram/',
-    tags: ['instagram', 'templates', 'posts', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -15045,28 +11476,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'lumen5-3',
-    name: 'Lumen5',
-    description: 'AI video maker for marketing.',
-    descriptions: {
-      en: 'AI video maker that turns text into videos.',
-      zh: '将文本转换为视频的AI视频制作工具。',
-      ja: 'テキストを動画に変換するAI動画制作ツール。',
-      es: 'Creador de videos con IA que convierte texto en videos.',
-      tk: 'Teksti wideo-lara çalyşýan AI wideo edişçisi.',
-      uz: 'Matnni videolarga aylantiradigan AI video yaratuvchisi.',
-      tg: 'Созандаи видео бо AI, ки матнро ба видео табдил медиҳад.',
-      hy: 'AI տեսանյութի ստեղծիչ, որը վերածում է տեքստը տեսանյութերի:`',
-      ro: 'Creator de videoclipuri cu IA care transformă textul în videoclipuri.'
-    },
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://lumen5.com/',
-    tags: ['video', 'marketing', 'text-to-video', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'river-side',
     name: 'Riverside.fm',
     description: 'Podcast and video recording studio.',
@@ -15133,72 +11542,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'monday-com',
-    name: 'Monday.com',
-    description: 'Work management and project platform.',
-    descriptions: {
-      en: 'Visual work management platform for teams.',
-      zh: '为团队提供的可视化工作管理平台。',
-      ja: 'チームのためのビジュアルなワークマネジメントプラットフォーム。',
-      es: 'Plataforma visual de gestión de trabajo para equipos.',
-      tk: 'Toparlar üçin görkeziji iş dolandyryş platformasy.',
-      uz: 'Jamoa uchun vizual ish boshqarish platformasi.',
-      tg: 'Платформаи идоракунии кори визуалӣ барои гурӯҳҳо.',
-      hy: 'Տեսական աշխատանքի կառավարման հարթակ թիմերի համար:`',
-      ro: 'Platformă vizuală de gestionare a muncii pentru echipe.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.PAID,
-    url: 'https://monday.com/',
-    tags: ['project-management', 'productivity', 'teams', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'notion-2',
-    name: 'Notion',
-    description: 'All-in-one workspace for your notes.',
-    descriptions: {
-      en: 'All-in-one workspace for notes, docs, and projects.',
-      zh: '用于笔记、文档和项目的一体化工作空间。',
-      ja: 'ノート、ドキュメント、プロジェクトのためのオールインワンワークスペース。',
-      es: 'Espacio de trabajo todo en uno para notas, documentos y proyectos.',
-      tk: 'Eslatmalar, dokumentler we projekler üçin hemmesi birýerde iş ýeri.',
-      uz: 'Eslatmalar, hujjatlar va loyihalar uchun hammasi bir joyda ish joyi.',
-      tg: 'Ҷойи кори якҷоя барои ишораҳо, ҳуҷҷатҳо ва лоиҳаҳо.',
-      hy: 'Ամեն ինչ մեկ տեղում աշխատանքային տարածք նոտերի, փաստաթղթերի և նախագծերի համար:`',
-      ro: 'Spațiu de lucru totul într-unul pentru notițe, documente și proiecte.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.notion.so/',
-    tags: ['notes', 'productivity', 'workspace', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'logseq',
-    name: 'Logseq',
-    description: 'Privacy-first knowledge management.',
-    descriptions: {
-      en: 'Privacy-first knowledge management and collaboration tool.',
-      zh: '隐私优先的知识管理和协作工具。',
-      ja: 'プライバシー優先のナレッジマネジメントとコラボレーションツール。',
-      es: 'Herramienta de gestión de conocimiento y colaboración centrada en la privacidad.',
-      tk: 'Gizlinlik ilkinji bilim dolandyryş we hyzmatdaşlyk gurallary.',
-      uz: 'Maxfiylik birinchi bo\'lgan bilimlarni boshqarish va hamkorlik qilish vositasi.',
-      tg: 'Асбоби идоракунии донишнома ва ҳамкории махфият.',
-      hy: 'Գաղտնիության առաջին գիտելիքների կառավարման և համագործակցության գործիք:`',
-      ro: 'Instrument de gestionare a cunoștințelor și colaborare cu prioritate pentru confidențialitate.'
-    },
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREE,
-    url: 'https://logseq.com/',
-    tags: ['notes', 'knowledge-base', 'privacy', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'clickup',
     name: 'ClickUp',
     description: 'All-in-one project management.',
@@ -15221,116 +11564,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'jina-ai',
-    name: 'Jina AI',
-    description: 'Neural search framework for applications.',
-    descriptions: {
-      en: 'Build multimodal AI applications with neural search.',
-      zh: '使用神经搜索构建多模态AI应用。',
-      ja: 'ニューラルサーチでマルチモーダルAIアプリケーションを構築。',
-      es: 'Crea aplicaciones de IA multimodales con búsqueda neuronal.',
-      tk: 'Nevral gözleg bilen köp modal AI uygulamalary döret.',
-      uz: 'Naytral qidiruv bilan ko\'p modali AI ilovalarini yarat.',
-      tg: 'Эҷоди барномаҳои AI-и бисёр модалӣ бо ҷустуҷӯи нейронӣ.',
-      hy: 'Կառուցեք բազմամոդալ AI ծրագրեր նյարդային որոնումով:`',
-      ro: 'Construiți aplicații AI multimodale cu căutare neuronală.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://jina.ai/',
-    tags: ['search', 'neural', 'multimodal', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'pinecone',
-    name: 'Pinecone',
-    description: 'Vector database for AI applications.',
-    descriptions: {
-      en: 'Vector database for building high-performance AI applications.',
-      zh: '用于构建高性能AI应用的向量数据库。',
-      ja: '高性能AIアプリケーションを構築するためのベクトルデータベース。',
-      es: 'Base de datos vectorial para crear aplicaciones de IA de alto rendimiento.',
-      tk: 'Üstün başlangyçly AI uygulamalary döretmek üçin wektor maglumat bazasy.',
-      uz: 'Yuqori samarali AI ilovalarini yaratish uchun vektor ma\'lumotlar bazasi.',
-      tg: 'Базаи додаҳои векторӣ барои сохтани барномаҳои AI-и баланд самаранок.',
-      hy: 'Վեկտորային տվյալների բազա բարձր կատարողականությամբ AI ծրագրեր կառուցելու համար:`',
-      ro: 'Bază de date vectorială pentru construirea de aplicații AI de înaltă performanță.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.pinecone.io/',
-    tags: ['vector-database', 'ai', 'embeddings', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'chroma',
-    name: 'Chroma',
-    description: 'Open-source vector database for AI.',
-    descriptions: {
-      en: 'Open-source embedding database for AI applications.',
-      zh: '用于AI应用的开源嵌入数据库。',
-      ja: 'AIアプリケーションのためのオープンソースの埋め込みデータベース。',
-      es: 'Base de datos de incrustaciones de código abierto para aplicaciones de IA.',
-      tk: 'AI uygulamalary üçin açyk çeşme goýulmagylar maglumat bazasy.',
-      uz: 'AI ilovalari uchun ochiq manbali joylashtirish ma\'lumotlar bazasi.',
-      tg: 'Базаи додаҳои гузоштани кодеи кушода барои барномаҳои AI.',
-      hy: 'Բաց կոդով ներդրման տվյալների բազա AI ծրագրերի համար:`',
-      ro: 'Bază de date de încorporare cu sursă deschisă pentru aplicații AI.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://www.trychroma.com/',
-    tags: ['vector-database', 'open-source', 'ai', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'weaviate',
-    name: 'Weaviate',
-    description: 'Open-source vector search engine.',
-    descriptions: {
-      en: 'Open-source vector search engine with ML capabilities.',
-      zh: '具有ML功能的开源向量搜索引擎。',
-      ja: 'ML機能を備えたオープンソースのベクトル検索エンジン。',
-      es: 'Motor de búsqueda vectorial de código abierto con capacidades de ML.',
-      tk: 'ML mümkinçikleri bilen açyk çeşme wektor gözleg motor.',
-      uz: 'ML imkoniyatlari bilan ochiq manbali vektor qidiruv dvigateli.',
-      tg: 'Мотори ҷустуҷӯи векторӣ бо кодеи кушода бо имкониятҳои ML.',
-      hy: 'Բաց կոդով վեկտորային որոնման շարժիչ ML հնարավորություններով:`',
-      ro: 'Motor de căutare vectorială cu sursă deschisă cu capabilități ML.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://weaviate.io/',
-    tags: ['vector-database', 'search-engine', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'qdrant',
-    name: 'Qdrant',
-    description: 'Vector similarity search engine.',
-    descriptions: {
-      en: 'Vector database and similarity search engine.',
-      zh: '向量数据库和相似度搜索引擎。',
-      ja: 'ベクトルデータベースと類似性検索エンジン。',
-      es: 'Base de datos vectorial y motor de búsqueda de similitud.',
-      tk: 'Wektor maglumat bazasy we deňşiklik gözleg motor.',
-      uz: 'Vektor ma\'lumotlar bazasi va o\'xshashlik qidiruv dvigateli.',
-      tg: 'Базаи додаҳои векторӣ ва мотори ҷустуҷӯи оҳанги.',
-      hy: 'Վեկտորային տվյալների բազա և նմանության որոնման շարժիչ:`',
-      ro: 'Bază de date vectorială și motor de căutare a similarității.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://qdrant.tech/',
-    tags: ['vector-database', 'search-engine', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'milvus',
     name: 'Milvus',
     description: 'Open-source vector database.',
@@ -15349,28 +11582,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://milvus.io/',
     tags: ['vector-database', 'open-source', 'scalable', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'llamaindex',
-    name: 'LlamaIndex',
-    description: 'Connect LLMs to private data.',
-    descriptions: {
-      en: 'Data framework for LLM applications.',
-      zh: '用于LLM应用的数据框架。',
-      ja: 'LLMアプリケーションのためのデータフレームワーク。',
-      es: 'Marco de datos para aplicaciones LLM.',
-      tk: 'LLM uygulamalary üçin maglumat çarçewesi.',
-      uz: 'LLM ilovalari uchun ma\'lumotlar ramkasi.',
-      tg: 'Чорчӯбаи додаҳо барои барномаҳои LLM.',
-      hy: 'Տվյալների կառուցվածք LLM ծրագրերի համար:`',
-      ro: 'Cadru de date pentru aplicații LLM.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://www.llamaindex.ai/',
-    tags: ['llm', 'data-framework', 'rag', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -15419,28 +11630,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'openai-2',
-    name: 'OpenAI',
-    description: 'Develops advanced AI models like GPT-4.',
-    descriptions: {
-      en: 'Research lab developing safe and beneficial AI.',
-      zh: '开发安全有益AI的研究实验室。',
-      ja: '安全で有益なAIを開発する研究ラボ。',
-      es: 'Laboratorio de investigación que desarrolla IA segura y beneficiosa.',
-      tk: 'Howpsyz we peýdaly AI geliştiren gözleg laboratoriýasy.',
-      uz: 'Xavfsiz va foydali AI ni ishlab chiquvchi tadqiqot laboratoriyasi.',
-      tg: 'Лабораторияи таҳқиқ, ки AI-и бехатар ва фоидаовоз таҳия мекунад.',
-      hy: 'Ուսումնասիրական լաբորատորիա, որը մշակում է անվտանգ և օգտակար AI:`',
-      ro: 'Laborator de cercetare care dezvoltă IA sigură și benefică.'
-    },
-    category: ToolCategory.CHATBOT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://openai.com/',
-    tags: ['gpt', 'chatgpt', 'research', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'anthropic',
     name: 'Anthropic',
     description: 'Builds reliable and safe AI systems.',
@@ -15481,160 +11670,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://ai.google/',
     tags: ['gemini', 'google', 'research', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'meta-ai',
-    name: 'Meta AI',
-    description: 'AI research from Meta (Facebook).',
-    descriptions: {
-      en: 'AI research and open-source models from Meta.',
-      zh: 'Meta的AI研究和开源模型。',
-      ja: 'MetaによるAI研究とオープンソースモデル。',
-      es: 'Investigación de IA y modelos de código abierto de Meta.',
-      tk: 'Meta-dan AI gözleg we açyk çeşme modeller.',
-      uz: 'Meta dan AI tadqiqoti va ochiq manbali modellar.',
-      tg: 'Таҳқиқ ва моделҳои кушодаи AI аз Meta.',
-      hy: 'Meta-ի AI հետազոտություններ և բաց կոդով մոդելներ:`',
-      ro: 'Cercetare AI și modele cu sursă deschisă de la Meta.'
-    },
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREE,
-    url: 'https://ai.meta.com/',
-    tags: ['llama', 'meta', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'cohere',
-    name: 'Cohere',
-    description: 'Language AI for business.',
-    descriptions: {
-      en: 'Language AI to add human-like text understanding.',
-      zh: '添加类似人类的文本理解的语言AI。',
-      ja: '人間のようなテキスト理解を追加する言語AI。',
-      es: 'IA de lenguaje para agregar comprensión de texto similar a la humana.',
-      tk: 'Adam ýaly tekst düşünmegini goşmak üçin dil AI.',
-      uz: 'Inson kabi matn tushunishini qo\'shish uchun til AI.',
-      tg: 'AI-и забон барои илова кардани фаҳмиши матни инсони.',
-      hy: 'Լեզվի AI՝ ավելացնելու համար մարդու նման տեքստի ըմբռնում:`',
-      ro: 'IA de limbaj pentru a adăuga înțelegere a textului similară cu cea umană.'
-    },
-    category: ToolCategory.CHATBOT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://cohere.com/',
-    tags: ['nlp', 'language-ai', 'embeddings', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'perplexity-2',
-    name: 'Perplexity',
-    description: 'Answer engine powered by AI.',
-    descriptions: {
-      en: 'AI-powered answer engine that cites sources.',
-      zh: '引用来源的AI驱动的答案引擎。',
-      ja: 'ソースを引用するAI駆動の回答エンジン。',
-      es: 'Motor de respuestas impulsado por IA que cita fuentes.',
-      tk: 'Gözlegleri aýdýan AI bilen işleýän jogap motor.',
-      uz: 'Manbalarga irodalar bildiradigan AI bilan ishlaydigan javob dvigateli.',
-      tg: 'Мотори ҷавобҳо бо қуввати AI, ки сарчашмаро ишорат мекунад.',
-      hy: 'AI-ով աշխատող պատասխանի շարժիչ, որը մեջբերում է աղբյուրներ:`',
-      ro: 'Motor de răspunsuri alimentat de IA care citește surse.'
-    },
-    category: ToolCategory.SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.perplexity.ai/',
-    tags: ['search', 'answer-engine', 'citations', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'khan-academy',
-    name: 'Khan Academy',
-    description: 'Free online education.',
-    descriptions: {
-      en: 'Free online courses, lessons, and practice.',
-      zh: '免费的在线课程、课程和练习。',
-      ja: '無料のオンラインコース、レッスン、練習。',
-      es: 'Cursos, lecciones y práctica gratuitos en línea.',
-      tk: 'Mugt onlaýn kurslar, sabaklar we taýýarlanma.',
-      uz: 'Bepul onlayn kurslar, darslar va mashg\'ulotlar.',
-      tg: 'Курсҳои ройгон онлайн, даҳҳо ва машқҳо.',
-      hy: 'Անվճար առցանց դասընթացներ, դասեր և պրակտիկա:`',
-      ro: 'Cursuri, lecții și practică gratuite online.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREE,
-    url: 'https://www.khanacademy.org/',
-    tags: ['education', 'learning', 'free', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'duolingo',
-    name: 'Duolingo',
-    description: 'Learn languages for free.',
-    descriptions: {
-      en: 'Learn a language with fun, bite-sized lessons.',
-      zh: '通过有趣的、小课程学习语言。',
-      ja: '楽しい、一口サイズのレッスンで言語を学ぶ。',
-      es: 'Aprende un idioma con lecciones divertidas y pequeñas.',
-      tk: 'Owajan, ýalňyş sabaklar bilen dili öwren.',
-      uz: 'Qiziqarli, kichik darslar bilan tilni o\'rganing.',
-      tg: 'Омӯзиши забон бо даҳҳои шод ва хурд.',
-      hy: 'Ուսուցեք լեզու զվարճալի, փոքր չափսի դասերով:`',
-      ro: 'Învățați o limbă cu lecții distractive și mici.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.duolingo.com/',
-    tags: ['language-learning', 'education', 'fun', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'quizlet',
-    name: 'Quizlet',
-    description: 'Flashcards and learning tools.',
-    descriptions: {
-      en: 'Flashcards, games, and learning tools.',
-      zh: '抽认卡、游戏和学习工具。',
-      ja: 'フラッシュカード、ゲーム、学習ツール。',
-      es: 'Tarjetas didácticas, juegos y herramientas de aprendizaje.',
-      tk: 'Fläş kartlar, oýunlar we öwreniş gurallary.',
-      uz: 'Flash-kartalar, o\'yinlar va o\'rganish vositalari.',
-      tg: 'Картҳои флеш, бозӣҳо ва асбобҳои омӯзиш.',
-      hy: 'Ֆլեշքարտեր, խաղեր և ուսումնական գործիքներ:`',
-      ro: 'Cărți de lucru, jocuri și instrumente de învățare.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://quizlet.com/',
-    tags: ['flashcards', 'learning', 'education', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'grammarly-2',
-    name: 'Grammarly',
-    description: 'Writing assistance tool.',
-    descriptions: {
-      en: 'Comprehensive writing assistance tool.',
-      zh: '全面的写作辅助工具。',
-      ja: '包括的なライティング支援ツール。',
-      es: 'Herramienta de asistencia de escritura completa.',
-      tk: 'Kapsamlý ýazýş hyzmat gurallary.',
-      uz: 'To\'liq yordam vositasi yozish uchun.',
-      tg: 'Асбоби кӯмаки навиши пурра.',
-      hy: 'Ընդարձակ գրելու օգնական գործիք:`',
-      ro: 'Instrument complet de asistență la scriere.'
-    },
-    category: ToolCategory.WRITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.grammarly.com/',
-    tags: ['writing', 'grammar', 'assistant', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -15727,72 +11762,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'milanote',
-    name: 'Milanote',
-    description: 'Organize your ideas visually.',
-    descriptions: {
-      en: 'Organize your ideas and projects visually.',
-      zh: '以可视化方式组织您的想法和项目。',
-      ja: 'アイデアとプロジェクトを視覚的に整理。',
-      es: 'Organiza tus ideas y proyectos visualmente.',
-      tk: 'Pikirlerini we projeklerini görkeziji tertiple.',
-      uz: 'Fikrlaringiz va loyihalaringizni vizual tarzda tashkil qiling.',
-      tg: 'Ташкил кардани фикрҳо ва лоиҳаҳои шумо бо тарзи визуалӣ.',
-      hy: 'Կազմակերպեք ձեր գաղափարներն ու նախագծերը տեսական կերպով:`',
-      ro: 'Organizați-vă ideile și proiectele vizual.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.milanote.com/',
-    tags: ['ideas', 'organizer', 'visual', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'figma',
-    name: 'Figma',
-    description: 'Collaborative interface design.',
-    descriptions: {
-      en: 'Collaborative interface design tool.',
-      zh: '协作式界面设计工具。',
-      ja: 'コラボレーティブなインターフェースデザインツール。',
-      es: 'Herramienta de diseño de interfaz colaborativa.',
-      tk: 'Birlikde işlemeli interfeýs dizayn gurallary.',
-      uz: 'Hamkorlik qiluvchi interfeys dizayn vositasi.',
-      tg: 'Асбобҳои таҳияи интерфейси ҳамкорӣ.',
-      hy: 'Գործակցային ինտերֆեյսի նախագծման գործիք:`',
-      ro: 'Instrument de proiectare a interfeței colaborative.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.figma.com/',
-    tags: ['design', 'collaboration', 'interface', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'adobe-xd',
-    name: 'Adobe XD',
-    description: 'UI/UX design and prototyping.',
-    descriptions: {
-      en: 'UI/UX design and prototyping tool.',
-      zh: 'UI/UX设计和原型制作工具。',
-      ja: 'UI/UXデザインとプロトタイピングツール。',
-      es: 'Herramienta de diseño y prototipado UI/UX.',
-      tk: 'UI/UX dizayn we prototip ediş gurallary.',
-      uz: 'UI/UX dizayn va prototip yaratish vositasi.',
-      tg: 'Асбобҳои таҳияи UI/UX ва прототип.',
-      hy: 'UI/UX նախագծման և պրոտոտիպի գործիք:`',
-      ro: 'Instrument de proiectare și prototipare UI/UX.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.adobe.com/products/xd.html',
-    tags: ['design', 'ui-ux', 'prototyping', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'sketch',
     name: 'Sketch',
     description: 'Digital design for Mac.',
@@ -15811,28 +11780,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://www.sketch.com/',
     tags: ['design', 'mac', 'digital-design', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'canva-2',
-    name: 'Canva',
-    description: 'Design anything easily.',
-    descriptions: {
-      en: 'Design anything with templates and drag-and-drop.',
-      zh: '使用模板和拖放设计任何内容。',
-      ja: 'テンプレートとドラッグアンドドロップで何でもデザイン。',
-      es: 'Diseña cualquier cosa con plantillas y arrastrar y soltar.',
-      tk: 'Şablonlar we sürükle-birak bilen islendik şeyi dizän.',
-      uz: 'Shablonlar va tortib qo\'yish bilan narsalarni dizayn qiling.',
-      tg: 'Таҳрир кардани ягон чиз бо шаблонҳо ва кашидан-гузоштан.',
-      hy: 'Նախագծեք ցանկացած բան ձևերով և քաշել-թողելով:`',
-      ro: 'Proiectați orice cu șabloane și trage și plasați.'
-    },
-    category: ToolCategory.DESIGN,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.canva.com/',
-    tags: ['design', 'templates', 'drag-and-drop', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -15899,50 +11846,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://www.audacityteam.org/',
     tags: ['audio', 'editor', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'adobe-audition',
-    name: 'Adobe Audition',
-    description: 'Professional audio workstation.',
-    descriptions: {
-      en: 'Professional audio workstation for mixing and editing.',
-      zh: '用于混音和编辑的专业音频工作站。',
-      ja: 'ミキシングと編集のためのプロフェッショナルなオーディオワークステーション。',
-      es: 'Estación de trabajo de audio profesional para mezclar y editar.',
-      tk: 'Birlikdirmek we redaktirläp üçin hündürli ses işleme stansiýasy.',
-      uz: 'Qo\'shish va tahrirlash uchun professional audio ish stansiyasi.',
-      tg: 'Идорагоҳи овозҳои мутахассисӣ барои гармкунӣ ва таҳрир.',
-      hy: 'Պրոֆեսիոնալ ձայնային աշխատանքային կայան խառնելու և խմբագրելու համար:`',
-      ro: 'Stație de lucru audio profesională pentru amestecare și editare.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.PAID,
-    url: 'https://www.adobe.com/products/audition.html',
-    tags: ['audio', 'professional', 'daw', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'logic-pro',
-    name: 'Logic Pro',
-    description: 'Professional music production for Mac.',
-    descriptions: {
-      en: 'Professional music production software for Mac.',
-      zh: '适用于Mac的专业音乐制作软件。',
-      ja: 'Mac用のプロフェッショナルな音楽制作ソフトウェア。',
-      es: 'Software de producción musical profesional para Mac.',
-      tk: 'Mac üçin hündürli musiqa goýum programma üpjünçiligi.',
-      uz: 'Mac uchun professional musiqali ishlab chiqarish dasturi.',
-      tg: 'Нармафзори эҷоди мусиқии мутахассисӣ барои Mac.',
-      hy: 'Պրոֆեսիոնալ երաժշտության արտադրական ծրագիր Mac-ի համար:`',
-      ro: 'Software de producție muzicală profesională pentru Mac.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.PAID,
-    url: 'https://www.apple.com/logic-pro/',
-    tags: ['music', 'daw', 'mac', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -16273,28 +12176,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://getcaption.co/',
     tags: ['podcast', 'captions', 'editing', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'Descript-2',
-    name: 'Descript',
-    description: 'All-in-one audio and video editor.',
-    descriptions: {
-      en: 'All-in-one audio and video editing like a document.',
-      zh: '一体化的音频和视频编辑，像编辑文档一样。',
-      ja: 'ドキュメントを編集するようなオールインワンのオーディオとビデオ編集。',
-      es: 'Edición de audio y video todo en uno como un documento.',
-      tk: 'Dokumenti redaktirläp ýaly hemmesi birýerde ses we wideo redaktirläp.',
-      uz: 'Hujjatni tahrirlash kabi hammasi bir joyda audio va video tahrirlash.',
-      tg: 'Таҳрири овоз ва видео якҷоя, ки як ҳуҷҷатро таҳрир кунед.',
-      hy: 'Ամեն ինչ մեկ տեղում ձայնի և տեսանյութի խմբագրում, ինչպես փաստաթուղթը խմբագրելը:`',
-      ro: 'Editare audio și video totul într-unul ca un document.'
-    },
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.descript.com/',
-    tags: ['audio', 'video', 'editor', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -16673,28 +12554,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'linkedin-learning',
-    name: 'LinkedIn Learning',
-    description: 'Online courses for professional development.',
-    descriptions: {
-      en: 'Online courses to develop professional skills.',
-      zh: '用于发展专业技能的在线课程。',
-      ja: 'プロフェッショナルスキルを開発するためのオンラインコース。',
-      es: 'Cursos en línea para desarrollar habilidades profesionales.',
-      tk: 'Hündürli hünärleri ösdürmek üçin onlaýn kurslar.',
-      uz: 'Professional ko\'nikmalarni rivojlantirish uchun onlayn kurslar.',
-      tg: 'Курсҳои онлайн барои рушди малакаҳои мутахассисӣ.',
-      hy: 'Առցանց դասընթացներ պրոֆեսիոնալ հմտություններ զարգացնելու համար:`',
-      ro: 'Cursuri online pentru a dezvolta abilități profesionale.'
-    },
-    category: ToolCategory.EDUCATION,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.linkedin.com/learning/',
-    tags: ['professional-development', 'courses', 'linkedin', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'codecademy',
     name: 'Codecademy',
     description: 'Learn to code interactively.',
@@ -16849,28 +12708,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'github-2',
-    name: 'GitHub',
-    description: 'Where the world builds software.',
-    descriptions: {
-      en: 'Host and review code, manage projects, and build software.',
-      zh: '托管和审查代码，管理项目，构建软件。',
-      ja: 'コードをホストしてレビュー、プロジェクトを管理、ソフトウェアを構築。',
-      es: 'Aloja y revisa código, gestiona proyectos y construye software.',
-      tk: 'Kody goý we gözden geçir, projekleri dolandyr we programma üpjünçiligini döret.',
-      uz: 'Kodni joylashtiring va ko\'zdan kechiring, loyihalarni boshqaring va dastur yarating.',
-      tg: 'Ҳост ва назорати код, идоракунии лоиҳаҳо ва сохтани нармафзор.',
-      hy: 'Հարթակ և վերանայում կոդ, կառավարում նախագծեր և կառուցում ծրագրակազմ:`',
-      ro: 'Găzduiește și revizuiște cod, gestionați proiecte și construiți software.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://github.com/',
-    tags: ['code', 'hosting', 'git', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'gitlab',
     name: 'GitLab',
     description: 'DevOps platform.',
@@ -16933,28 +12770,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://codeberg.org/',
     tags: ['git', 'hosting', 'open-source', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'vs-code',
-    name: 'Visual Studio Code',
-    description: 'Code editor redefined.',
-    descriptions: {
-      en: 'Free and open-source code editor.',
-      zh: '免费开源的代码编辑器。',
-      ja: '無料でオープンソースのコードエディタ。',
-      es: 'Editor de código gratuito y de código abierto.',
-      tk: 'Mugt we açyk çeşme kod redaktory.',
-      uz: 'Bepul va ochiq manbali kod tahrirchisi.',
-      tg: 'Таҳриргари коди ройгон ва кушода.',
-      hy: 'Անվճար և բաց կոդով կոդի խմբագիր:`',
-      ro: 'Editor de cod gratuit și cu sursă deschisă.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://code.visualstudio.com/',
-    tags: ['code-editor', 'open-source', 'free', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -17047,72 +12862,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    id: 'jetbrains-webstorm',
-    name: 'WebStorm',
-    description: 'JavaScript and TypeScript IDE.',
-    descriptions: {
-      en: 'Smart IDE for JavaScript and TypeScript.',
-      zh: '用于JavaScript和TypeScript的智能IDE。',
-      ja: 'JavaScriptとTypeScriptのためのスマートIDE。',
-      es: 'IDE inteligente para JavaScript y TypeScript.',
-      tk: 'JavaScript we TypeScript üçin akyly IDE.',
-      uz: 'JavaScript va TypeScript uchun aqlli IDE.',
-      tg: 'IDE-и ақлӣ барои JavaScript ва TypeScript.',
-      hy: 'Խելացի IDE JavaScript և TypeScript-ի համար:`',
-      ro: 'IDE inteligent pentru JavaScript și TypeScript.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.PAID,
-    url: 'https://www.jetbrains.com/webstorm/',
-    tags: ['ide', 'javascript', 'typescript', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'jetbrains-pycharm',
-    name: 'PyCharm',
-    description: 'Python IDE for developers.',
-    descriptions: {
-      en: 'Python IDE with smart code assistance.',
-      zh: '具有智能代码辅助的Python IDE。',
-      ja: 'スマートコードアシスト付きのPython IDE。',
-      es: 'IDE de Python con asistencia de código inteligente.',
-      tk: 'Akyly kod ýardy bilen Python IDE.',
-      uz: 'Aqlli kod yordami bilan Python IDE.',
-      tg: 'Python IDE бо кӯмаки коди ақлӣ.',
-      hy: 'Python IDE խելացի կոդի օգնությամբ:`',
-      ro: 'IDE Python cu asistență de cod inteligentă.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.jetbrains.com/pycharm/',
-    tags: ['ide', 'python', 'jetbrains', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'vscode-github-copilot',
-    name: 'GitHub Copilot',
-    description: 'AI pair programmer.',
-    descriptions: {
-      en: 'Your AI pair programmer.',
-      zh: '您的AI结对程序员。',
-      ja: 'AIペアプログラマー。',
-      es: 'Tu programador de pares de IA.',
-      tk: 'Siziň AI jübütli programmirijiňiz.',
-      uz: 'Sizning AI juft dasturchingiz.',
-      tg: 'Программистҳои ҷуфтӣ AI-и шумо.',
-      hy: 'Ձեր AI-ի զույգ ծրագրավորողը:`',
-      ro: 'Programatorul tău de pereche AI.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.PAID,
-    url: 'https://github.com/copilot',
-    tags: ['ai', 'coding-assistant', 'pair-programming', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'regex101',
     name: 'Regex101',
     description: 'Online regex tester and debugger.',
@@ -17197,28 +12946,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://coderpad.io/',
     tags: ['interview', 'live-coding', 'hiring', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'repl-it',
-    name: 'Repl.it',
-    description: 'Write and run code online.',
-    descriptions: {
-      en: 'Write and run code in your browser.',
-      zh: '在浏览器中编写和运行代码。',
-      ja: 'ブラウザでコードを書いて実行。',
-      es: 'Escribe y ejecuta código en tu navegador.',
-      tk: 'Brauzeriňizde kod ýazyň we işleň.',
-      uz: 'Brauzeringizda kod yozing va ishlating.',
-      tg: 'Навис ва иҷрои код дар браузери шумо.',
-      hy: 'Գրեք և կատարեք կոդը ձեր դիտարկիչում:`',
-      ro: 'Scrieți și rulați cod în browserul dvs.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://replit.com/',
-    tags: ['online-ide', 'coding', 'browser', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -17505,28 +13232,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://www.ansible.com/',
     tags: ['automation', 'devops', 'it', 'ai'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    id: 'github-actions',
-    name: 'GitHub Actions',
-    description: 'Automate your workflow.',
-    descriptions: {
-      en: 'Automate your workflow from idea to production.',
-      zh: '从想法到生产自动化您的工作流程。',
-      ja: 'アイデアから本番までワークフローを自動化。',
-      es: 'Automatiza tu flujo de trabajo desde la idea hasta la producción.',
-      tk: 'Pikirden çykarmak üçin iş akymlaryny awtomatlaşdyr.',
-      uz: 'Fikrdan ishlab chiqarishgacha ish jarayonlarini avtomatlashtiring.',
-      tg: 'Аз фикр то истеҳсол, автоматизатсияи ҷараёни кори шумо.',
-      hy: 'Ավտոմատացրեք ձեր աշխատանքային հոսքը գաղափարից արտադրությանը:`',
-      ro: 'Automatizați-vă fluxul de lucru de la idee la producție.'
-    },
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://github.com/features/actions',
-    tags: ['automation', 'github', 'ci-cd', 'ai'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
