@@ -14081,7 +14081,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '通話中に自動的に会議ノート、決定事項、アクションアイテムをキャプチャー。',
       es: 'Captura notas de reuniones, decisiones y elementos de acción automáticamente durante llamadas.',
       ts: 'Çagyryşlarda awtomatik notlar, kararlary we hereket elementlerini ýygnalamak.',
-      uzbek: 'Chaqirimlar davomida avtomatik ravishlar, qarorlar va amallarni olish.',
+      uzbek: 'Chaqirimlar davomida avtomatik ravishlar, qarorlar va amallarni olish.\',
       tagalog: 'Kuha ang mga tala ng pulong, desisyon at aksyon item habang tumawag.',
       armenian: 'Ավտոմատացնեք հանդրություններ, որողումներ և գործակարները ավտոմատիկ զավարումն զանգերի ժամանակ:',
       romanian: 'Capturează notițe de ședințe, decizii și elemente de acțiune automat în timpul apelurilor.'
@@ -14125,7 +14125,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'チームとAI駆動の研究コレクションを共有・整理。',
       es: 'Comparte y organiza colecciones de investigación impulsadas por IA con tu equipo.',
       ts: 'AI bilen işleýän barlagyşyk kolleksiýonlaryňyz bilen toplumyňyza paýlaşyň we düzenläň.',
-      uzbek: 'Jamoaingiz bilan AI quvvatlangan tadqiot kolleksiyalari bilan ulashing va tashkil qiling.',
+      uzbek: 'Jamoaingiz bilan AI quvvatlangan tadqiot kolleksiyalari bilan ulashing va tashkil qiling.\',
       tagalog: 'Ibahagi at magkasamang AI-powered na koleksyon ng pananalitik sa iyong kopon.',
       armenian: 'Կիսարում հետ կողմիդ AI-ով շարժակարված ուսումնները կիսարել և կազմակարումն:',
       romanian: 'Partajează și organizează colecții de cercetare bazate pe AI cu echipa ta.'
@@ -14169,7 +14169,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'ウェブを検索し、リアルタイム結果と検証済みソース引用を取得。',
       es: 'Busca en la web con resultados en tiempo real y citas de fuentes verificadas.',
       ts: 'Internetde gözlä we wagtyk netijeleri we tassyklananan derekeli sitatlar al.',
-      uzbek: 'Veb-ni qidirish, haqiqiy vaqtli natijalar va tekshirilgan manba havolalarini olish.',
+      uzbek: 'Veb-ni qidirish, haqiqiy vaqtli natijalar va tekshirilgan manba havolalarini olish.\',
       tagalog: 'Maghanap sa web gamit ang real-time na resulta at verified source citations.',
       armenian: 'Որոնացեք որունը որոնեք իրական ժամանական արդյունք և ստուգավորված աղբյուրներով:',
       romanian: 'Caută pe web cu rezultate în timp real și citări din surse verificate.'
@@ -14190,7 +14190,7 @@ export const INITIAL_TOOLS: Tool[] = [
       zh: '从开发者社区查找代码示例、文档和答案。',
       ja: '開発者コミュニティからコード例、ドキュメント、回答を見つける。',
       ts: 'Developer toplumyndan kod mysallary, dokumentasiýa we jogaplary tap.',
-      uzbek: 'Dasturchilar jamoatchiligidan kod misollari, hujjatlar va javoblar topish.',
+      uzbek: 'Dasturchilar jamoatchiligidan kod misollari, hujjatlar va javoblar topish.\',
       tagalog: 'Hanapin ang mga halimbawa ng code, dokumentasyon, at sagot mula sa developer community.',
       armenian: 'Գփրում համակացված համատներից կոդի օրինալներ, փատաթաթություն և պասակներ:',
       romanian: 'Găsește exemple de cod, documentație și răspunsuri din comunități de dezvoltatori.'
@@ -14212,7 +14212,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '学術論文、フォーラム、専門家の意見から総合的な回答を取得。',
       es: 'Obtén respuestas integrales sintetizadas de trabajos académicos, foros y opiniones expertas.',
       ts: 'Akademik makalalar, forumlar we hütärkar pikirlerden giňişdirilen jogaplar alyň.',
-      uzbek: 'Ilmiy maqolalar, forumlar va mutaxassis fikrlardan kengaytirma javoblar olish.',
+      uzbek: 'Ilmiy maqolalar, forumlar va mutaxassis fikrlardan kengaytirma javoblar olish.\',
       tagalog: 'Kumuhasahang mga sagot na pinagsama-sintesis mula sa mga papel akademiko, forum at opinyyon ng eksperto.',
       armenian: 'Առայրան պասաբներ ստարում ակարացված պատպասներ գիտացվում են ակադեմիկ աշխարներից, ֆորումների և մասնակացված տեսակարումներից:',
       romanian: 'Obține răspunsuri cuprinzătoare sintetizate din lucrări academice, forumuri și opinii experți.'
@@ -14234,7 +14234,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '数秒でAIを使って素晴らしいプレゼンテーション、ドキュメント、ウェブサイトを作成。',
       es: 'Crea presentaciones, documentos y sitios web impresionantes con IA en segundos.',
       ts: 'Saniýalar içinde AI bilen haýranyp galýan prezentasiýalar, dokumentlar we web-saýtlary dörediň.',
-      uzbek: 'Soniyalar ichida AI yordamida ajoyibdor taqdimotlar, hujjatlar ve veb-saytlarni yaratish.',
+      uzbek: 'Soniyalar ichida AI yordamida ajoyibdor taqdimotlar, hujjatlar ve veb-saytlarni yaratish.\',
       tagalog: 'Lumikha ang kahanga-hamogang mga presentasyon, dokumento, at website gamit ang AI.',
       armenian: 'Վականական վայկաներով ստեղծեք զարմացուց ներկարարական ներկարարումներ, փատաթաթություններ և կայտերներ:',
       ro: 'Creează prezentări, documente și site-uri impresionante cu AI în secunde.'
@@ -14278,7 +14278,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'Canva内でAIを使ってデザイン生成、写真編集、コンテンツ作成。',
       es: 'Genera diseños, edita fotos y crea contenido con IA dentro de Canva.',
       ts: 'Canva içinde AI bilen dizaýn döret, suratlary redaktir we mazmun dörediň.',
-      uzbek: 'Canva ichida AI yordamida dizaynlash, suratlarni tahrirlash va kontent yaratish.',
+      uzbek: 'Canva ichida AI yordamida dizaynlash, suratlarni tahrirlash va kontent yaratish.\',
       tagalog: 'Mag-generate ng disenyo, edit ng litrato, at lumikha ng content gamit ang AI loob sa Canva.',
       armenian: 'Ստեղծեք ստեղծեք դիզայներ, խմբագրում նկարներ և բովականումներ ստեղծեք Canva-ի ներում:',
       ro: 'Generează design-uri, editează foto și creează conținut cu AI în interiorul Canva.'
@@ -14300,7 +14300,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'アイデアを引き込む視覚的なストーリーに変換、AI生成アニメーションとレイアウト付き。',
       es: 'Transforma ideas en historias visuales cautivadoras con animaciones y diseños generados por IA.',
       ts: 'Fikirleri AI bilen döredilen animasiýalar we düzümler bilen göwnükli visual hekaýatlara öwürdüriň.',
-      uzbek: 'Goyalarni AI yaratilgan animatsiya va tuzilmalar bilan jalib qoldiradigan vizual hikoyalarga aylantiring.',
+      uzbek: 'Goyalarni AI yaratilgan animatsiya va tuzilmalar bilan jalib qoldiradigan vizual hikoyalarga aylantiring.\',
       tagalog: 'Mag-transform ang mga ideya sa nakakaabot na visual na may animation at layout na AI-generated.',
       armenian: 'Փարձրեք գաղածները վերարձելի տեսանյություններ վերարձելի պատկերներ և դիզայնի կառուցված AI-գեներակարգերով:',
       ro: 'Transformă ideile în povești vizuale captivante cu animații și layout-uri generate de AI.'
@@ -14322,7 +14322,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AIの提案とテンプレートで迅速に説得力のあるピッチデッキを作成。',
       es: 'Crea presentaciones de inversión convincentes rápidamente con sugerencias y plantillas de IA.',
       ts: 'AI maslahatlary we şablonlar bilen tezlikli investor presentationlary çalt dörediň.',
-      uzbek: 'AI tavsiyalari va namunalar yordamida tezkir investor taqdimotlarini tez yaratish.',
+      uzbek: 'AI tavsiyalari va namunalar yordamida tezkir investor taqdimotlarini tez yaratish.\',
       tagalog: 'Gumawa ng kumbinsadong pitch decks nang mabilis gamit ang AI suggestions at templates.',
       armenian: 'Արագարություն ստեղծեք հրացություն ներկարարականներ AI-ի առաջանձններով:',
       ro: 'Creează pitch deck-uri convingătoare rapid cu sugestii și șabloane AI.'
@@ -14344,7 +14344,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AIの支援で法律契約をレビュー、分析、理解。',
       es: 'Revisa, analiza y comprende contratos legales con asistencia de IA.',
       ts: 'AI kömegi bilen hukuky şertnamalaryna sered, analiz we düşün.',
-      uzbek: 'AI yordamida huquqiy shartnomalarni tekshirish, tahlil qilish va tushunish.',
+      uzbek: 'AI yordamida huquqiy shartnomalarni tekshirish, tahlil qilish va tushunish.\',
       tagalog: 'Suriin, analisa, at unawain ang mga kontraktang legal gamit ang AI.',
       armenian: 'Դարումն ստուգեք, վերլավորեք և համանարեն իրական համատների AI-ի օգնությամբ:',
       ro: 'Revizuiază, analizează și înțelege contracte legale cu asistență AI.'
@@ -14366,7 +14366,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '長い文書を要約し、重要ポイントを抽出し、関連情報を即座に見つける。',
       es: 'Resumir documentos largos, extrae puntos clave y encuentra información relevante al instante.',
       ts: 'Uzyn dokumentlary gysaltla, möhim nokatlaryny al we degişlik maglumat tap.',
-      uzbek: 'Uzun hujjatlarini qisqartirish, asosiy nuqtalarni olish va kerakli malumotni tez topish.',
+      uzbek: 'Uzun hujjatlarini qisqartirish, asosiy nuqtalarni olish va kerakli malumotni tez topish.\',
       tagalog: 'I-summarize ang mga mahabang dokumento, kunin ang mga punto, at hanapin ang impormasyon.',
       armenian: 'Ամփացնեք երկան փատաթությունները, առաջանջական կետներ հավաքառում տեղավորմն տեղավորմն:',
       ro: 'Rezumă documente lungi, extrage puncte cheie și găsește informația relevantă instantaneu.'
@@ -14388,7 +14388,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AIメモリーで思考を整理、アイデアをキャプチャ、情報を検索。',
       es: 'Organiza pensamientos, captura ideas y recupera información con memoria de IA.',
       ts: 'AI ýatlamasy bilen oýlarylary düzüň, ideýalary ýygnal we maglumat al.',
-      uzbek: 'AI xotira yordamida fikrlarni tashkil qilish, goyalarni olish va malumotni qidirish.',
+      uzbek: 'AI xotira yordamida fikrlarni tashkil qilish, goyalarni olish va malumotni qidirish.\',
       tagalog: 'Ayusin ang mga isip, makuha ng ideya, at kunin ng impormasyon gamit ang AI memory.',
       armenian: 'Կեղծեք միտքերը կարգավում, գաղաները գրառել և տեղավորմն տեղավորմն հիշակարումն:',
       ro: 'Organizează gândurile, captează idei și recuperează informația cu memorie AI.'
@@ -14410,7 +14410,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AIで会議をスケジュールし、カレンダーを管理し、時間を最適化。',
       es: 'Programa reuniones, gestiona calendarios y optimiza tu tiempo con IA.',
       ts: 'AI bilen duşünjükleri planlaşdyryn, kalendarlary idare ediň we wagtyňy optimize ediň.',
-      uzbek: 'AI yordamida uchrashuvlarni rejalashtiring, kalendarlarni boshqarish va vaqtni optimizatsiya qiling.',
+      uzbek: 'AI yordamida uchrashuvlarni rejalashtiring, kalendarlarni boshqarish va vaqtni optimizatsiya qiling.\',
       tagalog: 'Mag-ischedule ng mga meeting, pamahala ng kalendary, at optimize ang oras gamit ang AI.',
       armenian: 'Ապանացեք հանդիկներ, կաղանդարներ կառավարում և ժամանակարումն:',
       ro: 'Planifică reuniuni, gestionează calendare și optimizează timpul cu AI.'
@@ -14432,7 +14432,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'Figma、Sketch、静的デザインを簡単にインタラクティブなプロトタイプにアニメーション化。',
       es: 'Anima diseños de Figma, Sketch y estáticos en prototipos interactivos sin esfuerzo.',
       ts: 'Figma, Sketch we statiki dizaýnlary interaktif prototiplere animasiýa edin.',
-      uzbek: 'Figma, Sketch va statik dizaynlarni osonglik prototiplarga animatsiya qiling.',
+      uzbek: 'Figma, Sketch va statik dizaynlarni osonglik prototiplarga animatsiya qiling.\',
       tagalog: 'Mag-animate ang Figma, Sketch, at static designs patungay sa interactive prototypes.',
       armenian: 'Անիմացնեք Figma-ի, Sketch-ի և ստատիկ դիզայները ինտերացներ ինտերացներ պրոտոտիպներ:',
       ro: 'Animează design-uri Figma, Sketch și statice în prototipuri interactive fără efort.'
@@ -14476,7 +14476,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'ソフトウェアプロジェクトを自律的に計画、コーディング、テスト、反復できるオープンソースエージェント。',
       es: 'Agente de código abierto que puede planificar, codificar, probar e iterar proyectos de software autónomamente.',
       tk: 'Programma proektlaryny awtonom planlaşdyrmak, kodlamak, synamak we iterasiya edip bilen açyk-kod agenti.',
-      uzbek: 'Dasturiy loyihalarni avtonom rejalashtirish, kodlash, sinash va takrorlash qila oladigan ochiq kod agenti.',
+      uzbek: 'Dasturiy loyihalarni avtonom rejalashtirish, kodlash, sinash va takrorlash qila oladigan ochiq kod agenti.\',
       tg: 'Агенти кушода-шуда барои тартип овардан, код, санҷӣ ва такрор кардани лоиҳаҳои нармафарoor мустақил.',
       hy: 'Առաջակացված ծախագրոց, որը կարող է ավտոնոմ պլանավորել, կոդավորել, փորձարկել և կրկնական ծրագրավորման ծրագրերի:',
       ro: 'Agent open-source care poate planifica, codifica, testa și itera proiecte software autonom.'
@@ -14520,7 +14520,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'コードベース全体のコンテキストを完全理解したAI駆動のコード提案を取得。',
       es: 'Obtén sugerencias de código impulsadas por IA con comprensión completa del contexto de tu base de código.',
       tk: 'Kod bazasyňyzyň doly kontekstini doly düşünes bilen AI bilen işleýän kod maslahatlary alyň.',
-      uzbek: 'Butun kod bazangizning chuquru kontekstini tushgan holda AI quvvatlangan kod tavsiyalari oling.',
+      uzbek: 'Butun kod bazangizning chuquru kontekstini tushgan holda AI quvvatlangan kod tavsiyalari oling.\',
       tg: 'Гирифтани пешниҳоди код бо фаҳмиши пурраи контексти коди шумо.',
       hy: 'Ստացեք AI-ով շարժացված կոդի առաջանձններ ձեր ամբող կոդի հիմնականությունների լիանս համաբանությամբ:',
       ro: 'Primește sugestii de cod alimentate de AI cu înțelegere completă a contextului bazei tale de cod.'
@@ -14542,7 +14542,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'バグ修正、テスト作成、小機能実装などのルーチン開発タスクを自動化。',
       es: 'Automatiza tareas de desarrollo rutinarias como corregir errores, escribir pruebas e implementar pequeñas características.',
       tk: 'Buglary düzeltmek, synag yazmak we kiçi funksiýonalary goşmak ýaly keýpli ösümäli wezipelere awtomatlaşdyryň.',
-      uzbek: 'Rutindagi ishlab chiqarish vazifalarini avtomatlashtiring, xatolarni tuzatish, testlar yozish va kichik xususiyatlarni amalga oshirish.',
+      uzbek: 'Rutindagi ishlab chiqarish vazifalarini avtomatlashtiring, xatolarni tuzatish, testlar yozish va kichik xususiyatlarni amalga oshirish.\',
       tagalog: 'I-automate ang mga gawain sa pag-unlad tulad-tulad na pag-ayos ng bugs, pagsulat ng mga test, at pagpapatupad ng maliit na feature.',
       armenian: 'Ավտոմատացնեք սովորական զարգավորման առաջանձն խնդիրները, ինչպիսիք սխալների շտկում, փորձարկումների գրում և փոքր հատկարականությունների իրականացում:',
       ro: 'Automizează sarcinile de dezvoltare de rutină precum corectarea erorilor, scrierea testelor și implementarea funcționalităților mici.'
@@ -14564,7 +14564,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'シェルコマンドを生成、エラーを説明し、CLIワークフローを自然言語で自動化。',
       es: 'Genera comandos de shell, explica errores y automatiza flujos de trabajo de CLI con lenguaje natural.',
       tk: 'Dile komandalary döret, çakdalşyklary düşündir we CLI akymyňlaryny tebig dilde awtomatlaşdyryň.',
-      uzbek: 'Shell buyruqlarini yaratish, xatoliklarni tushuntirish va CLI ish oqimlarini tabiy til bilan avtomatlashtiring.',
+      uzbek: 'Shell buyruqlarini yaratish, xatoliklarni tushuntirish va CLI ish oqimlarini tabiy til bilan avtomatlashtiring.\',
       tagalog: 'Gumawa ng mga command ng shell, ipaliwanag ang error, at i-automate ang workflow ng CLI gamit ang natural language.',
       armenian: 'Ստեղծեք shell-ի հրամանդներ, բացատեք սխալները և ավտոմատացեք CLI աշխատակարգերները բնական լեզուով:',
       ro: 'Generează comenzi shell, explică erori și automatizează fluxuri de lucru CLI cu limbaj natural.'
@@ -14608,7 +14608,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'ビジュアルワークフローエディターとプラグインエコシステムでAIチャットボットを構築・展開・管理。',
       es: 'Construye, despliega y gestiona chatbots de IA con editor de flujo visual y ecosistema de plugins.',
       tk: 'Wizual redaktor akymy we plugin ekosistemasyny bilen AI chatbotlary gurmak, ýerleşdirmek we dolandyrmak.',
-      uzbek: 'Vizual ish oqimi muharriri va plagin ekosistemasi yordamida AI chatbotlarni qurish, joylashtirish va boshqarish.',
+      uzbek: 'Vizual ish oqimi muharriri va plagin ekosistemasi yordamida AI chatbotlarni qurish, joylashtirish va boshqarish.\',
       tagalog: 'Magtayo, mag-deploy, at pamahalaan ng AI chatbots gamit ang visual workflow editor at plugin ecosystem.',
       armenian: 'Կառուցեք, տեղադրեք և կառավարեք AI chatbot-ներ վիզուալ աշխատակարգերի խմբագրումով և պլագին էկոսիստեմայի:',
       ro: 'Construiește, implementează și gestionează chatbots AI cu editor de flux vizual și ecosistem de plugin-uri.'
@@ -14652,7 +14652,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'ビジュアルオーケストレーション、RAGパイプライン、エージェント機能でLLMアプリを構築・展開。',
       es: 'Construye y despliega aplicaciones LLM con orquestación visual, tuberías RAG y capacidades de agente.',
       tk: 'Wizual orkestrasiýa, RAG borjylyklary we agent ukyplyklary bilen LLM programmalary gurmak we ýerleşdirmek.',
-      uzbek: 'Vizual orkestratsiya, RAG quvurlari va agent imkoniyatlari bilan LLM ilovalarini qurish va joylashtirish.',
+      uzbek: 'Vizual orkestratsiya, RAG quvurlari va agent imkoniyatlari bilan LLM ilovalarini qurish va joylashtirish.\',
       tagalog: 'Magtayo at mag-deploy ng mga aplikasyon sa LLM gamit ang visual orchestration, RAG pipelines, at agent capabilities.',
       armenian: 'Կառուցեք և տեղադրեք LLM հավաքածումները վիզուալ օրկեստրացիա, RAG խողորներ և գործակացների հնարավորումներ:',
       ro: 'Construiește și implementează aplicații LLM cu orchestrare vizual, pipeline-uri RAG și capabilități de agent.'
@@ -14696,7 +14696,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '組み込みWeb検索、引用、ドキュメント基盤能力を持つ企業向けAIモデル。',
       es: 'Modelo de IA empresarial con búsqueda web integrada, citaciones y capacidades de anclaje de documentos.',
       tk: 'Içinde internet gözlegi, sitatlar we dokument esasaslama ukyplyklary bolan kärhanalyk AI modeli.',
-      uzbek: 'Ichki veb-qidirish, havolalar va hujjat asosliligi qobiliyatlariga ega korxona AI modeli.',
+      uzbek: 'Ichki veb-qidirish, havolalar va hujjat asosliligi qobiliyatlariga ega korxona AI modeli.\',
       tagalog: 'Enterprise AI model na may built-in web search, citations, at document grounding capabilities.',
       armenian: 'Կեղականան AI մոդել, որը ներառում է ներդրում վեբ-փնտարում, մեջբություններ և փատաթաթությունների հիմնականություններ:',
       ro: 'Model AI de întreprindere cu căutare web integrată, citări și capacități de ancorare documente.'
@@ -14828,7 +14828,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AI駆動テンプレート、ブランドガイドライン、バッチ処理でコンテンツ制作をスケール。',
       es: 'Escala la creación de contenido con plantillas impulsadas por IA, guías de marca y procesamiento por lotes.',
       tk: 'AI bilen işleýän şablonlar, marka görnükleri we partiýa işlenme bilen mazmun döretmegi ölçegediň.',
-      uzbek: 'AI quvvatlangan namunalar, brend qoidalar va partiyaviy ishlash yordami kontent yaratishni kengaytirish.',
+      uzbek: 'AI quvvatlangan namunalar, brend qoidalar va partiyaviy ishlash yordami kontent yaratishni kengaytirish.\',
       tagalog: 'Mag-scale ng content creation gamit ang AI-powered templates, brand guidelines, at batch processing.',
       armenian: 'Ըւտաքավեք բովականումն ստեղծման AI-ով շաբլոններ, բրենդի ուղղեցներ և խմբայի մշակարումով:',
       ro: 'Scală crearea de conținut cu șabloane alimentate de AI, ghiduri de marcă și procesare în loturi.'
@@ -14850,7 +14850,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AIツールで写真を強化、修復、編集。完全無料オンライン。',
       es: 'Mejora, restaura y edita fotos con herramientas de IA completamente gratis en línea.',
       tk: 'AI enjamlary bilen suratlary gowulaşdyryn, dikelt et we redaktirleýiň, doly mugyt onlaýn.',
-      uzbek: 'AI vositalari yordamida rasmlarni yaxshilash, tiklash va tahrirlash, butunlay bepul onlayn.',
+      uzbek: 'AI vositalari yordamida rasmlarni yaxshilash, tiklash va tahrirlash, butunlay bepul onlayn.\',
       tagalog: 'I-enhance, restore, at i-edit ng photos gamit ang AI tools na libreng online.',
       armenian: 'Բարեցրեք, վերականացրեք և խմբագրում նկարները AI գործակարներով ամբողային առցային առցային:',
       ro: 'Îmbunățește, restaurează și editează foto-uri cu instrumente AI complet gratuit online.'
@@ -14872,7 +14872,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'プロフォト編集、グラフィックデザイン、AI強化ツールが一体になったプラットフォーム。',
       es: 'Edición de fotos profesional, diseño gráfico y herramientas de mejora de IA en una plataforma.',
       tk: 'Professioanal surat redaktirligi, grafik dizaýn we AI gowulaşdyryş enjamlaryny bir platformada.',
-      uzbek: 'Professionel foto tahrirlash, grafik dizayn va AI yaxshilash vositalari bitta platformada.',
+      uzbek: 'Professionel foto tahrirlash, grafik dizayn va AI yaxshilash vositalari bitta platformada.\',
       tagalog: 'Professional photo editing, graphic design, at AI enhancement tools sa isang platforma.',
       armenian: 'Պրֆեսիոնալ լուսային խմբագրում, գրաֆիկ դիզայն և AI բարերակարանություններ մեկ հարթումում:',
       ro: 'Editare foto profesională, design grafic și instrumente de îmbunătățire AI într-o singură platformă.'
@@ -14894,7 +14894,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'リアルタイム対話型キャンバスでAIと協力して描画・画像生成。',
       es: 'Dibuja y genera imágenes colaborativamente con IA en un lienzo interactivo en tiempo real.',
       tk: 'Hakykatlykda AI bilen bilelikdäki surat çyzyp we döretmek.',
-      uzbek: 'Haqiqiy vaqt ichida AI bilan hamkorlikda rasmlar chizish va yaratish.',
+      uzbek: 'Haqiqiy vaqt ichida AI bilan hamkorlikda rasmlar chizish va yaratish.\',
       tagalog: 'Mag-draw at mag-generate ng images collaboratively gamit ang AI sa isang real-time interactive canvas.',
       armenian: 'Նկարեք և ստեղծեք պատկերներ համագորումով AI-ի հետ իրական ժամանական ինտերաքտիվ կտավրումով:',
       ro: 'Desenează și generează imagini colaborativ cu AI pe un canavas interactiv în timp real.'
@@ -14960,7 +14960,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '高度なAIモデルを使ってテキスト、画像、音声、他の動画から動画を作成。',
       es: 'Crea videos desde texto, imágenes, audio y otros videos usando modelos de IA avanzados.',
       tk: 'Tekst, surat, ses we beýleki wideolardan ösen AI modelleri bilen wideolar dörediň.',
-      uzbek: 'Taqdimotli AI modellari yordamida matn, tasvir, audio va boshqa videolardan videolar yaratish.',
+      uzbek: 'Taqdimotli AI modellari yordamida matn, tasvir, audio va boshqa videolardan videolar yaratish.\',
       tagalog: 'Gumawa ng video mula sa text, images, audio, at ibang videos gamit ang advanced AI models.',
       armenian: 'Ստեղծեք տեսանյություններ մատնից, պատկերներ, աուդիո և այլ տեսանյություններից առաջականության AI մոդելների միջոցով:',
       ro: 'Creează clipuri video din text, imagini, audio și alte clipuri video folosind modele AI avansate.'
@@ -15026,7 +15026,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '中国ソーシャルメディアプラットフォーム向けの魅力的な短い動画を迅速生成。',
       es: 'Genera rápidamente videos cortos cautivadores adaptados para plataformas de redes sociales chinas.',
       tk: 'Hytaý social media platformlary üçin gyzyklandyryjys short wideolary çalt dörediň.',
-      uzbek: 'Xitoy ijtimoiy tarmoq platformalari uchun moslashtirilgan qisqa videolar tez yaratish.',
+      uzbek: 'Xitoy ijtimoiy tarmoq platformalari uchun moslashtirilgan qisqa videolar tez yaratish.\',
       tagalog: 'Mabilis na mag-generate ng engaging short videos na tailored para Chinese social media platforms.',
       armenian: 'Արագ ստեղծեք հետնահաճող կարճատար տեսանյություններ Չինական սոցիալային հարթումների համականություն:',
       ro: 'Generează rapid clipuri video scurte captivante adaptate pentru platformele de rețele sociale chinezești.'
@@ -15048,7 +15048,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'コラボレーティブAI音楽作成、プロ級の出力とスタイル柔軟性。',
       es: 'Creación musical colaborativa con IA con salida de grado profesional y flexibilidad de estilo.',
       tk: 'Professionel dereje we stil elastikligi bilen AI bilen işleýän musika döretmek.',
-      uzbek: 'Professional sifatli natija va uslub egiluvchanlik bilan hamkorlikdagi AI musiqasi yaratish.',
+      uzbek: 'Professional sifatli natija va uslub egiluvchanlik bilan hamkorlikdagi AI musiqasi yaratish.\',
       tagalog: 'Collaborative AI music creation na may professional-grade output at style flexibility.',
       armenian: 'Համականություն երաժանություն AI ստեղծման պրոֆեսիոնալ որականություն և ոճի ճկարանություն:',
       ro: 'Creare muzicală colaborativă AI cu ieșire de calitate profesional și flexibilitate de stil.'
@@ -15092,7 +15092,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'あらゆるジャンルのオリジナル楽曲を即座に作成、音楽経験不要。',
       es: 'Crea música original en cualquier género al instante, sin experiencia musical necesaria.',
       tk: 'Hiç bir musika tejribesi gerekmeksiz islendä her janrdan original saz dörediň.',
-      uzbek: 'Hech qanday musiqa tajriba talab qilmagan holda istalgan janrda original musiqalar yaratish.',
+      uzbek: 'Hech qanday musiqa tajriba talab qilmagan holda istalgan janrda original musiqalar yaratish.\',
       tagalog: 'Gumawa ng original music sa anumang genre nang instant, walang karanasan sa music.',
       armenian: 'Ստեղծեք բնօկան երգան ժանրի մեղական երագան երագանություն առաջանձն երագանություն պահանական:',
       ro: 'Creează muzică original în orice gen instant, fără experiență muzicală necesară.'
@@ -15136,7 +15136,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'ボイスクローン、合成音声生成、感情的表現力のあるナレーション作成。',
       es: 'Clona voces, genera voz sintética y crea locuciones con expresión emocional.',
       tk: 'Sesleri klonla, sintetiki ses döret we emosional ifadeli seslendirmeler dörediň.',
-      uzbek: 'Ovozlarni klonlash, sintetik nutq yaratish va hissiy ifodalash ovozli yozuvlar yaratish.',
+      uzbek: 'Ovozlarni klonlash, sintetik nutq yaratish va hissiy ifodalash ovozli yozuvlar yaratish.\',
       tagalog: 'Gumawa ng clone ng boses, generate synthetic speech, at lumikha ng voiceovers na may emotional expression.',
       armenian: 'Կեղծացնեք ձայններ, ստեղծեք սինթետիկ ձայն և ստեղծեք ձայնավորումն համականություն արտակարումն:',
       ro: 'Clonează voci, generează voce sintetică și creează narăriuni cu expresie emoțională.'
@@ -15180,7 +15180,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'AIインサイトで数百万の研究論文を検索・分析・要約。',
       es: 'Busca, analiza y resume millones de artículos de investigación con información de IA.',
       tk: 'AI bilen maglumatlar bilen millionlar barlagyşyk makalalary gözlä, analiz we gysaltla.',
-      uzbek: 'AI tahlillari yordamida millionlabar tadqiqot ishlarini qidirish, tahlil qilish va qisqartirish.',
+      uzbek: 'AI tahlillari yordamida millionlabar tadqiqot ishlarini qidirish, tahlil qilish va qisqartirish.\',
       tagalog: 'Maghanap, analyze, at i-summarize ng milyones ng research papers gamit ang AI-powered insights.',
       armenian: 'Որումն, վերլավորեք և համափացեք միլիոններ գիտական հետազավորումն հետազավորումն AI-ով համականություն:',
       ro: 'Caută, analizează și rezumă milioane de articole de cercetare cu informații alimentate de AI.'
@@ -15202,7 +15202,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '関連論文を発見、引用を追跡、AIサポートで学術グラフを探索。',
       es: 'Descubre artículos relevantes, rastrea citas y explora gráficos académicos con asistencia de IA.',
       ts: 'Baglanşylyk barlagyşyk makalalary tap, sitatlary yzla we akademik grafikleri AI kömegi bilen barlaş.',
-      uzbek: 'Tegishli tadqiqot ishlarni topish, havolalarni kuzatish va AI yordamida akademik grafikalarni oʻrganish.',
+      uzbek: 'Tegishli tadqiqot ishlarni topish, havolalarni kuzatish va AI yordamida akademik grafikalarni oʻrganish.\',
       tagalog: 'Mula sa pagtukoy ng mga research paper, track citations, at explore academic graphs gamit ang AI assistance.',
       armenian: 'Հարումն հետազավորումն գիտական հետազավորումն, հետևավորումն հետքոներ և հետազավորումն ակադեմիկ գրաֆների AI-ի օգնությամբ:',
       ro: 'Descoperă articole relevante, urmărește citații și explorează grafice academice cu asistență AI.'
@@ -15224,7 +15224,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'システムレビューを実施、論文からデータ抽出、研究成果を効率よく統合。',
       es: 'Realiza revisiones sistemáticas, extrae datos de artículos y sintetiza hallazgos eficientemente.',
       tk: 'Sistematik seredjalar geçir, makalardan maglumat al we netijeleri effektli topla.',
-      uzbek: 'Tizimli sharhlar o'tkash, maqolardan malumot olish va tadqiqot natijalarini samarali ravish.',
+      uzbek: 'Tizimli sharhlar o\'tkazish, maqolardan malumot olish va tadqiot natijalarini samarali ravish.',
       tagalog: 'Magsagawa ng systematic reviews, extract data from papers, at synthesize findings efficiently.',
       armenian: 'Կարարեք համական հետազավորումն, հավաքողեք տվյական տվյական տվյական տվյական տվյական հետազավորումն արդյուն:',
       ro: 'Efectuează recenzii sistematice, extrage date din articole și sintetizează constatări eficient.'
@@ -15246,7 +15246,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '査証可能な出典情報を伴う、査読済み研究に裏付けられた回答を取得。',
       es: 'Obtén respaldas respaldas por investigación revisada por pares con atribución de fuente transparente.',
       tk: 'Peer-reviewed barlagyşyk bilen dollyanýan ýalanýan jogaplar alyň, şeffaf derekeli sitat bilen.',
-      uzbek: 'Peer-reviewed tadqiqotlar bilan qo'llab-quvvatlangan javoblar oling, shaffof manbali havolalar bilan.',
+      uzbek: 'Peer-reviewed tadqiqotlar bilan qo\'llab-quvvatlangan javoblar oling, shaffof manbali havolalar bilan.',
       tagalog: 'Makuha ng evidence-based answers from science backed by peer-reviewed research na may transparent source attribution.',
       armenian: 'Ստացեք պասավումն պասավումն հետազավորումն հետքոներ հիմականության գիտական հետազավորումն peer-reviewed հետազավորումն:',
       ro: 'Obține răspunsuri bazate pe dovezi științifice revizuite de colegi cu atribuire de sursă transparentă.'
@@ -15312,7 +15312,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '時間を自動追跡、活動を分類、AIで日々の生産性を最適化。',
       es: 'Rastrea tiempo automáticamente, clasifica actividades y optimiza tu productividad diaria con IA.',
       ts: 'Wagty awtomatik olçer, faaliyetleri kategorize ediň we AI bilen günlük produktivitiňizi optimizasiň.',
-      uzbek: 'Vaqtni avtomatik ravishga olish, faoliyatlarni tasniflash va AI yordamida kunlik samaradorlikni optimizatsiya qiling.',
+      uzbek: 'Vaqtni avtomatik ravishga olish, faoliyatlarni tasniflash va AI yordamida kunlik samaradorlikni optimizatsiya qiling.\',
       tagalog: 'Mag-track ng time automatically, categorize activities, at optimize daily productivity gamit ang AI.',
       armenian: 'Ավտոմատացեք ժամանական ժամանական հետքոներ, դասավարումն գորումն ակտեգրները և օրականություն առավարումն առավարումն:',
       ro: 'Urmărește timpul automat, clasifică activități și optimizează productivitatea zilnică cu AI.'
@@ -15334,7 +15334,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: '会議を録音、自動文字起こし、AIで正確に決定事項とアクションアイテムを抽出。',
       es: 'Graba reuniones, transcribe automáticamente y extrae decisiones y elementos de acción con precisión de IA.',
       ts: 'Duşünjükleri ýazdyr, awtomatik transkripsiýa et we AI dolygylygy kararlary we hereket elementlerini çykaryň.',
-      uzbek: 'Uchrashuvlarni yozib, avtomatik transkripsiya qiling va AI aniqlik bilan qarorlar va amallarni ajratish.',
+      uzbek: 'Uchrashuvlarni yozib, avtomatik transkripsiya qiling va AI aniqlik bilan qarorlar va amallarni ajratish.\',
       tagalog: 'Mag-record ng meetings, auto-transcribe, at extract decisions and action items gamit ang AI accuracy.',
       armenian: 'Գրագրեք հանդրումներ, ավտոմատացեք ավտոմատումն և AI ճշգրտությամբ որողումն և գործակարները համականություն:',
       ro: 'Înregistrează ședințe, transcrie automat și extrage decizii și elemente de acțiune cu precizie AI.'
@@ -15356,7 +15356,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'プロジェクトを整理、タスクを自動的に分割、AIインサイトで優先順位付け。',
       es: 'Organiza proyectos, descompone tareas automáticamente y prioriza con información de IA.',
       ts: 'Projektlery düzüň, wezipleri awtomatik bölüşdiriň we AI maglumatlary bilen öncelik beriň.',
-      uzbek: 'Loyalihalarni tashkil qiling, vazifalarni avtomatik parchalash va AI tahlillar yordamida ustuvorish.',
+      uzbek: 'Loyalihalarni tashkil qiling, vazifalarni avtomatik parchalash va AI tahlillar yordamida ustuvorish.\',
       tagalog: 'Mag-organize ng projects, breakdown tasks automatically, at prioritize gamit ang AI-powered insights.',
       armenian: 'Կարարավում նախարները, ավտոմատացեք առավարումն առավարումն և առավարումն AI-ով համականություն:',
       ro: 'Organizează proiecte, descompune automat sarcini și prioritează cu informații alimentate de AI.'
@@ -15400,7 +15400,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'コールドメールを大規模にパーソナライズ、フォローアアップをスケジュール、AIで返信率向上。',
       es: 'Personaliza correos fríos a escala, programa seguimientos y aumenta tasas de respuesta con IA.',
       ts: 'Soňuk poçtalary massala şahsylandyr, yzlamalary planlaşdyryň we AI bilen jogap derejesini ýokarlatdyryn.',
-      uzbek: 'Xolis sovuqnomalarni massaviy shaxsiylashtirish, keyinglarni rejalashtirish va AI yordamida javob darajasini oshirish.',
+      uzbek: 'Xolis sovuqnomalarni massaviy shaxsiylashtirish, keyinglarni rejalashtirish va AI yordamida javob darajasini oshirish.\',
       tagalog: 'Personalize cold emails at scale, schedule follow-ups, at boost reply rates gamit ang AI.',
       armenian: 'Անձականություն սառավարումն մասշալ համականություն, հետքոներ պլանավորումն և առավարումն AI-ով պասավորումն:',
       ro: 'Personalizează e-mailuri rece la scară, programează follow-up-uri și crește ratele de răspuns cu AI.'
@@ -15444,7 +15444,7 @@ export const INITIAL_TOOLS: Tool[] = [
       ja: 'メール到達率を改善、インボックスをウォームアップ、メインタブに継続的に着地。',
       es: 'Mejora la entregabilidad de correo, calienta bandejas de entrada y llega a la pestaña principal consistentemente.',
       ts: 'Email ýetiriligligini gowulaşdyryn, poçta kutularyny isyldyň we esasy taba goşmaga ünsüzinliň.',
-      uzbek: 'Email yetkazibligini yaxshilash, kiruv qutilarni isitish va doimiy tabga tushishni takomillashtirish.',
+      uzbek: 'Email yetkazibligini yaxshilash, kiruv qutilarni isitish va doimiy tabga tushishni takomillashtirish.\',
       tagalog: 'Improve email deliverability, warm up inboxes, at land in the primary tab consistently gamit ang AI.',
       armenian: 'Բարեցրեք էոլականություն համականություն, տաքարումն տարումն ջալորեր և հիմնական էապարումն:',
       ro: 'Îmbunătățește livrabilitatea email-urilor, încălzeste cutiile de intrare și ajunge constant în fila principală.'
