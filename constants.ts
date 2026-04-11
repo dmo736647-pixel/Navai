@@ -13390,14 +13390,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREE,
-    url: 'https://bolt.new/',
-    tags: ['full-stack', 'web-builder', 'ai', 'deployment'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'lovable-dev',
     name: 'Lovable',
     description: 'AI software engineer that builds apps from prompts.',
@@ -13416,14 +13408,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://lovable.dev/',
     tags: ['prompt-to-app', 'software-engineer', 'real-time', 'no-code'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://codeium.com/windsurf',
-    tags: ['ide', 'production-grade', 'ai-editor', 'code-completion'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13627,30 +13611,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.recraft.ai/',
-    tags: ['graphic-design', 'marketing', 'social-media', 'brand-kit'],
-    createdAt: Date.now() - 86400000 * 90,
-    releasedAt: Date.now() - 86400000 * 90
-  },
-  {
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://pika.art/',
-    tags: ['lip-sync', 'voiceover', 'avatar-video', 'talking-head'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.VIDEO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://haiper.ai/',
-    tags: ['short-form', 'social-media', 'quick-gen', 'engaging'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'vidu-studio',
     name: 'Vidu Studio',
     description: 'AI video studio for content creators and marketers.',
@@ -13695,14 +13655,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now() - 86400000 * 180
   },
   {
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.OPEN_SOURCE,
-    url: 'https://stability.ai/stable-audio',
-    tags: ['open-source', 'sound-design', 'audio-effects', 'samples'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'musicfy-ai',
     name: 'Musicfy',
     description: 'AI tool for stem separation and audio enhancement.',
@@ -13720,14 +13672,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://musicfy.ai/',
     tags: ['stem-separation', 'audio-enhancement', 'remix', 'isolation'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.descript.com/lyra',
-    tags: ['transcription', 'video-editing', 'content-repurposing', 'creators'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13798,14 +13742,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.phind.com/',
-    tags: ['developer-search', 'documentation', 'code-examples', 'technical'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'consensus-app-2',
     name: 'Consensus App',
     description: 'AI search engine that aggregates insights from multiple sources.',
@@ -13824,22 +13760,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://consensus.app/',
     tags: ['aggregated-search', 'academic', 'multi-source', 'synthesis'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://beautiful.ai/',
-    tags: ['graphics-design', 'templates', 'marketing-assets', 'no-design-skills'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://tome.app/',
-    tags: ['storytelling', 'animated-presentations', 'narratives', 'visual-stories'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -13998,14 +13918,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://about.sourcegraph.com/cody',
-    tags: ['codebase-understanding', 'context-aware', 'enterprise', 'security'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'shell-ai',
     name: 'Shell-AI',
     description: 'AI command-line interface helper for developers.',
@@ -14116,14 +14028,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.ENTERPRISE,
-    url: 'https://cohere.com/command-r-plus',
-    tags: ['enterprise', 'rag', 'citations', 'web-search', 'cohere'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'nvidia-nemotron',
     name: 'NVIDIA Nemotron',
     description: 'Open-weight large language model optimized for enterprise workloads.',
@@ -14142,22 +14046,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.OPEN_WEIGHT,
     url: 'https://build.nvidia.com/nemotron',
     tags: ['nvidia', 'enterprise', 'data-center', 'gpu-optimized', 'open-weight'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.OPEN_WEIGHT,
-    url: 'https://ai.google.dev/gemma',
-    tags: ['google', 'deepmind', 'lightweight', 'open-weight', 'efficient'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://playgroundai.com/',
-    tags: ['style-mixing', 'fine-control', 'artistic', 'composition', 'unique'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -14202,14 +14090,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://www.img2go.com/',
     tags: ['photo-editor', 'enhancement', 'restoration', 'free-online', 'accessible'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.krea.ai/home',
-    tags: ['real-time', 'collaborative', 'canvas', 'drawing', 'interactive'],
     createdAt: Date.now(),
     releasedAt: Date.now()
   },
@@ -14478,14 +14358,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.SEARCH,
-    pricing: PricingModel.PAID,
-    url: 'https://www.perplexity.ai/pro',
-    tags: ['deep-research', 'report-generation', 'comprehensive', 'pro-mode'],
-    createdAt: Date.now(),
-    releasedAt: Date.now()
-  },
-  {
     id: 'clockwise-ai',
     name: 'Clockwise',
     description: 'AI time tracking and productivity analytics platform.',
@@ -14596,18 +14468,6 @@ export const INITIAL_TOOLS: Tool[] = [
     releasedAt: Date.now()
   },
   {
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.grammarly.com/',
-    tags: ['grammar', 'writing', 'proofreading', 'style']
-  },
-  {
-    category: ToolCategory.TEXT,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://quillbot.com/',
-    tags: ['paraphrase', 'rewrite', 'academic', 'plagiarism-check']
-  },
-  {
     id: 'candy-ai',
     name: 'Candy AI',
     description: 'AI companion platform for creating personalized virtual characters.',
@@ -14626,18 +14486,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://candy.ai/',
     tags: ['companion', 'virtual-character', 'chat', 'personalization']
-  },
-  {
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://leonardo.ai/',
-    tags: ['image-gen', 'game-assets', 'character-design', 'production']
-  },
-  {
-    category: ToolCategory.IMAGE,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://stability.ai/',
-    tags: ['stable-diffusion', 'open-source', 'image-gen', 'custom-models']
   },
   {
     id: 'runway-gen3',
@@ -14660,30 +14508,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['text-to-video', 'image-to-video', 'gen-3', 'professional']
   },
   {
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.descript.com/',
-    tags: ['video-editing', 'podcast', 'transcription', 'text-based-editing']
-  },
-  {
-    category: ToolCategory.VIDEO_EDITING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.veed.io/',
-    tags: ['simple-editor', 'auto-subtitles', 'screen-recording', 'online']
-  },
-  {
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://play.ht/',
-    tags: ['tts', 'ultra-realistic', 'voice-over', 'podcasting']
-  },
-  {
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://lovo.ai/',
-    tags: ['voiceover', 'content-creator', 'marketing', 'podcast']
-  },
-  {
     id: 'mubert',
     name: 'Mubert',
     description: 'AI music generation for creators and developers.',
@@ -14702,12 +14526,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://mubert.com/',
     tags: ['music-generation', 'royalty-free', 'soundtrack', 'beats']
-  },
-  {
-    category: ToolCategory.AUDIO,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://boomy.com/',
-    tags: ['music-making', 'beginner-friendly', 'instant-song', 'no-experience']
   },
   {
     id: 'aiva-ai',
@@ -14747,24 +14565,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.PAID,
     url: 'https://githubnext.com/projects/copilot-workspace',
     tags: ['copilot', 'workspace', 'full-stack', 'github-integration']
-  },
-  {
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://aws.amazon.com/codewhisperer/',
-    tags: ['amazon', 'aws', 'code-suggestions', 'ide-integration']
-  },
-  {
-    category: ToolCategory.CODING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://replit.com/ghostwriter',
-    tags: ['replit', 'cloud-ide', 'pair-programming', 'browser-based']
-  },
-  {
-    category: ToolCategory.AI_SEARCH,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://consensus.app/',
-    tags: ['research', 'scientific-papers', 'academic', 'evidence-based']
   },
   {
     id: 'semantic-scholar-api',
@@ -14843,30 +14643,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['visual-discovery', 'literature-map', 'graph', 'research-tool']
   },
   {
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.clockwise.io/',
-    tags: ['calendar', 'focus-time', 'time-management', 'optimization']
-  },
-  {
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://superlist.com/',
-    tags: ['tasks', 'collaboration', 'prioritization', 'team']
-  },
-  {
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.rewind.ai/',
-    tags: ['screen-recall', 'memory', 'search', 'productivity']
-  },
-  {
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://regie.ai/',
-    tags: ['social-media', 'content-creation', 'ads', 'marketing-copy']
-  },
-  {
     id: 'warmbox-email',
     name: 'Warmbox',
     description: 'Email warm-up tool for improving deliverability.',
@@ -14907,12 +14683,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['resume-builder', 'ats-friendly', 'cv', 'job-search']
   },
   {
-    category: ToolCategory.RESUME_CV,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://resumeworded.com/',
-    tags: ['linkedin', 'bullet-points', 'profile-optimizer', 'writing-assistant']
-  },
-  {
     id: 'tealhq-ai',
     name: 'TealHQ',
     description: 'AI career platform with resume builder and job tracking.',
@@ -14932,12 +14702,6 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['career-platform', 'job-tracking', 'interview-prep', 'all-in-one']
   },
   {
-    category: ToolCategory.TRANSLATION,
-    pricing: PricingModel.FREE,
-    url: 'https://www.linguee.com/',
-    tags: ['dictionary', 'context-search', 'bilingual', 'examples']
-  },
-  {
     id: 'lovense-ai',
     name: 'Lovense',
     description: 'AI-powered real-time transcription and translation for meetings.',
@@ -14955,48 +14719,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREEMIUM,
     url: 'https://www.lovense.com/',
     tags: ['meeting-transcription', 'real-time', 'multilingual', 'business']
-  },
-  {
-    category: ToolCategory.AVATARS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.d-id.com/',
-    tags: ['talking-avatar', 'photorealistic', 'video-generation', 'expressions']
-  },
-  {
-    category: ToolCategory.AVATARS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.colossyan.com/',
-    tags: ['corporate-training', 'lms', 'e-learning', 'scalable']
-  },
-  {
-    category: ToolCategory.DETECTORS,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://originality.ai/',
-    tags: ['originality-check', 'ai-score', 'writer-tool', 'content-integrity']
-  },
-  {
-    category: ToolCategory.CONTENT,
-    pricing: PricingModel.PAID,
-    url: 'https://www.jasper.ai/',
-    tags: ['copywriting', 'enterprise', 'brand-voice', 'marketing-team']
-  },
-  {
-    category: ToolCategory.MARKETING,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://anyword.com/',
-    tags: ['predictive-scoring', 'ab-testing', 'performance-optimization', 'data-driven']
-  },
-  {
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.FREEMIUM,
-    url: 'https://www.hootsuite.com/',
-    tags: ['owlwriter', 'multi-platform', 'team-collaboration', 'enterprise']
-  },
-  {
-    category: ToolCategory.SOCIAL_MEDIA,
-    pricing: PricingModel.PAID,
-    url: 'https://sproutsocial.com/',
-    tags: ['enterprise', 'social-listening', 'crm', 'analytics-suite']
   },
   {
     id: 'julius-ai',
@@ -15035,12 +14757,6 @@ export const INITIAL_TOOLS: Tool[] = [
     pricing: PricingModel.FREE,
     url: 'https://lookerstudio.google.com/',
     tags: ['google-cloud', 'bi-tool', 'data-explorer', 'free']
-  },
-  {
-    category: ToolCategory.PRODUCTIVITY,
-    pricing: PricingModel.FREE,
-    url: 'https://obsidian.md/',
-    tags: ['knowledge-graph', 'markdown', 'plugins', 'local-first']
   },
   {
     id: 'logseq-ai',
