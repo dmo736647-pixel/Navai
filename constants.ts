@@ -16940,10 +16940,10 @@ export const INITIAL_TOOLS: Tool[] = [
       zh: '用自然语言查询搜索数据，获取自动生成的可视化和答案。',
       ja: '自然言語クエリでデータを検索し、自動生成される可視化と回答を取得。',
       tk: 'Maglumatlaryňyzy doğal dil soraglary bilen gözläň we awtomatik döredilen wizualizasiýalar we jogap alyň.',
-      uz: "Ma'lumotlaringizni tabii til so'rovlari bilan qiding va avtomat ravishda yaratilgan vizualizatsiyalar va javoblarni oling.",
-      тg: 'Ҷустуҷӯи бо саволи табиӣи ва гирифтани визуализатсия ва ҷавобҳои автоматӣ...",
-      hy: 'Որոնեք ձեր տվյականները բնական լեզվի հարցերներով և ստացեք ավտոմատ ստեղծված տեսալականացումներ և պատասխաններ:',
-      ro: 'Caută datele cu interogări în limbaj natural și obține vizualizări generate automat și răspunsuri.'
+      uz: 'Ma\'lumotlaringizni tabii til so\'rovlari bilan qiding va avtomat ravishda yaratilgan vizualizatsiyalar va javoblarni oling.',
+      tg: 'Search data with natural language queries for instant insights.',
+      hy: 'Use AI to explore data and build reports with automated insights.',
+      ro: 'Cauta datele cu interogari in limbaj natural si obtine vizualizari generate automat.',
     },
     category: ToolCategory.DATA,
     pricing: PricingModel.FREEMIUM,
@@ -16959,7 +16959,7 @@ export const INITIAL_TOOLS: Tool[] = [
       zh: '使用Google Cloud的AI建议和自动化洞察探索数据并构建报告。',
       ja: 'Google CloudのAIサジェストと自動インサイトでデータを探索し、レポートを作成。',
       tk: 'Maglumatlary öwrenip we raportlar düziň Google Cloud-yň AI maslahatlary we awtomatlaşdyrylan düşündirişleri bilen.',
-      uz: "Ma'lumotlarni o'rganing va hisobotlar yarating Google Cloud ning AI tavsiyalari va avtomatlashtirilgan tushunchalari yordamida.",
+      uz: 'Ma\'lumotlarni o\'rganing va hisobotlar yarating Google Cloud ning AI tavsiyalari va avtomatlashtirilgan tushunchalari yordamida.',
       тg: 'Талош ва созиши гузорит аз маълумот бо тавсияи AI ва оғидаи автоматӣ...',
       hy: 'Ուսումացեք տվյականները և կառուցեք զեկույաներ AI-առաջարկումներով և ավտոմատ հայտնություններից Google Cloud:',
       ro: 'Explorează datele și construiește rapoarte cu sugestii AI și insight automate din Google Cloud.'
@@ -17073,7 +17073,7 @@ export const INITIAL_TOOLS: Tool[] = [
       zh: '更智能地浏览网页，配备AI侧边栏、分屏视图、空间和内置工具。',
       ja: 'AIサイドバー、分割ビュー、スペース、組み込みツールで賢くブラウジング。',
       tk: 'Akylly seredermek üçin AI sidebarlar, bölünýän görünüşler, boşluklar we gurlan guralar bilen.',
-      uz: 'Aqilliroq brauzering qiling, AI yon panellari, bo'linish ko'rinishlar, fazalar va ichki vositalar bilan.',
+      uz: 'Aqilliroq brauzering qiling, AI yon panellari, bo\'linish ko\'rinishlar, fazalar va ichki vositalar bilan.',
       тg: 'Браузери ҳушманд бо панели AI, назари тақсим, фаза ва абзорҳои дохилӣ...',
       hy: 'Ավելի խելացեք AI կողանակներ, բաժակած տեսաններ, տարածաններ և ներկառության գործիքներով:',
       ro: 'Navighează mai inteligent cu bare laterale AI, vizualizări divizate, spații și instrumente incorporate.'
