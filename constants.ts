@@ -16530,7 +16530,7 @@ export const INITIAL_TOOLS: Tool[] = [
     category: ToolCategory.RESUME_CV,
     pricing: PricingModel.FREEMIUM,
     url: 'https://rezi.ai/',
-    keywords: ['resume-optimizer', 'ats-score', 'keyword-tailoring', 'job-match']
+    tags: ['resume-optimizer', 'ats-score', 'keyword-tailoring', 'job-match']
   },
   {
     id: 'resumeworded-ai',
