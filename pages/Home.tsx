@@ -288,10 +288,10 @@ export const Home: React.FC = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { name: 'Text & Writing', icon: '📝', category: ToolCategory.TEXT, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.TEXT).length },
-                { name: 'Image Generation', icon: '🎨', category: ToolCategory.IMAGE, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.IMAGE).length },
-                { name: 'Video Creation', icon: '🎬', category: ToolCategory.VIDEO, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.VIDEO).length },
-                { name: 'Coding Tools', icon: '💻', category: ToolCategory.CODING, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.CODING).length }
+                { name: 'Text & Writing', icon: 'T', category: ToolCategory.TEXT, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.TEXT).length },
+                { name: 'Image Generation', icon: 'I', category: ToolCategory.IMAGE, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.IMAGE).length },
+                { name: 'Video Creation', icon: 'V', category: ToolCategory.VIDEO, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.VIDEO).length },
+                { name: 'Coding Tools', icon: 'C', category: ToolCategory.CODING, count: INITIAL_TOOLS.filter(t => t.category === ToolCategory.CODING).length }
               ].map((cat) => (
                 <button
                   key={cat.category}
@@ -317,7 +317,7 @@ export const Home: React.FC = () => {
               <h2 className="text-xl font-semibold flex items-center gap-2 mb-6 text-orange-400">
                 <TrendingUp size={20} fill="currentColor" />
                 Trending Now
-                <span className="text-orange-400/50 text-sm font-normal ml-2">• Updated hourly</span>
+                <span className="text-orange-400/50 text-sm font-normal ml-2">- Updated hourly</span>
               </h2>
               <div className="bg-gradient-to-br from-orange-900/20 to-amber-900/20 rounded-2xl p-6 border border-orange-500/30">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -348,7 +348,7 @@ export const Home: React.FC = () => {
               <h2 className="text-xl font-semibold flex items-center gap-2 mb-6 text-green-400">
                 <Clock size={20} />
                 Just Added
-                <span className="text-green-400/50 text-sm font-normal ml-2">• Today</span>
+                <span className="text-green-400/50 text-sm font-normal ml-2">- Today</span>
               </h2>
               <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-6 border border-green-500/30">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

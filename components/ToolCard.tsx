@@ -4,6 +4,7 @@ import { ExternalLink, Tag, Sparkles, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getFastToolSummary } from '../services/geminiService';
 import { TRANSLATIONS } from '../constants';
+import { getSafeLocalizedDescription } from '../utils/text';
 
 interface ToolCardProps {
   tool: Tool;
@@ -62,7 +63,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, currentLanguage, searc
   // Determine the description to display
   // 1. Try to get the localized description from the 'descriptions' map
   // 2. Fallback to the default 'description' field (used for AI discovered tools or missing translations)
-  const displayDescription = tool.descriptions?.[currentLanguage] || tool.description;
+  const displayDescription = getSafeLocalizedDescription(tool, currentLanguage);
 
   return (
     <div className={`

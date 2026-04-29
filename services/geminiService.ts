@@ -1,6 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Tool, ToolCategory, PricingModel } from '../types';
 import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
+import { getSafeLocalizedDescription } from '../utils/text';
 
 const readApiKey = (): string => {
   try {
@@ -186,7 +187,7 @@ export const chatWithBot = async (history: { role: string; parts: { text: string
   return response.text;
 };
 
-const pickDesc = (tool: Tool, lang: string) => tool.descriptions?.[lang] || tool.description;
+const pickDesc = (tool: Tool, lang: string) => getSafeLocalizedDescription(tool, lang);
 const norm = (s: string) => s.toLowerCase();
 const scoreTool = (tool: Tool, q: string) => {
   const nq = norm(q);
@@ -212,7 +213,7 @@ export const localToolRecommendations = (query: string, language: string): strin
   const catLabels = TRANSLATIONS[language]?.categories || TRANSLATIONS.en.categories;
   const lines = scored.map(tool => {
     const cat = typeof tool.category === 'string' ? tool.category : catLabels[tool.category as any];
-    return `• ${tool.name}（${cat}）— ${pickDesc(tool, language)} ；${tool.url}`;
+    return `- ${tool.name} (${cat}) - ${pickDesc(tool, language)} (${tool.url})`;
   });
   return lines.join('\n');
 };

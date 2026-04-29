@@ -8,6 +8,7 @@ import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
 import { Tool, ToolCategory } from '../types';
 import { ArrowLeft, ExternalLink, Tag, Globe, Clock, Shield } from 'lucide-react';
 import { ToolDetailTemplate } from '../components/ToolDetailTemplate';
+import { getSafeLocalizedDescription } from '../utils/text';
 
 export const ToolDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -39,7 +40,7 @@ export const ToolDetail: React.FC = () => {
   }
 
   const t = TRANSLATIONS[currentLanguage];
-  const description = tool.descriptions?.[currentLanguage] || tool.description;
+  const description = getSafeLocalizedDescription(tool, currentLanguage);
 
   return (
     <Layout>
