@@ -5,7 +5,7 @@ import { INITIAL_TOOLS, TRANSLATIONS } from '../constants';
 import { findNewTools } from '../services/geminiService';
 import { Search, Sparkles, AlertCircle, Loader2, Star, TrendingUp, Clock, Zap, BarChart2, Users, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -41,6 +41,7 @@ export const Home: React.FC = () => {
 
   // Translations
   const t = TRANSLATIONS[currentLanguage];
+  const homeSeo = t.homeSeo || TRANSLATIONS.en.homeSeo;
 
   const featuredTools = useMemo(() => {
     const featuredIds = [
@@ -183,8 +184,11 @@ export const Home: React.FC = () => {
   return (
     <Layout onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory}>
       <Helmet>
-        <title>{t.title} - {TRANSLATIONS[currentLanguage]?.tagline}</title>
-        <meta name="description" content="Discover the best AI tools for builders, creators, and professionals. Curated and categorized for your needs." />
+        <title>{homeSeo.pageTitle}</title>
+        <meta name="description" content={homeSeo.metaDescription} />
+        <link rel="canonical" href="https://navai.space/" />
+        <meta property="og:title" content={homeSeo.pageTitle} />
+        <meta property="og:description" content={homeSeo.ogDescription} />
       </Helmet>
       
       {/* Hero Section */}
@@ -194,12 +198,12 @@ export const Home: React.FC = () => {
         
         <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-200">
-            {t.title}
+            {homeSeo.heroTitle}
           </span>
         </h1>
         <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-indigo-600/20 border border-indigo-500/30 text-indigo-200 text-sm">
           <Sparkles size={16} className="text-indigo-300" />
-          <span>{(TRANSLATIONS[currentLanguage]?.tagline) || 'NavAI helps you pick the right AI tools'}</span>
+          <span>{homeSeo.heroTagline}</span>
         </div>
 
         {/* Search Bar - Hero Style */}
@@ -239,6 +243,46 @@ export const Home: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {selectedCategory === ToolCategory.ALL && !searchQuery && (
+        <section className="px-4 md:px-8 pb-12">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1.4fr_0.8fr] gap-6 items-stretch">
+            <div className="bg-slate-900/45 border border-slate-800 rounded-2xl p-6 md:p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">{homeSeo.introTitle}</h2>
+              <div className="space-y-4 text-slate-300 leading-relaxed">
+                {homeSeo.introParagraphs.map((paragraph: string) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+            <div className="bg-slate-900/45 border border-slate-800 rounded-2xl p-6 md:p-8">
+              <h2 className="text-xl font-bold text-white mb-4">{homeSeo.popularTitle}</h2>
+              <div className="grid grid-cols-1 gap-3">
+                {[
+                  { label: homeSeo.popularLinks.writing, category: ToolCategory.TEXT },
+                  { label: homeSeo.popularLinks.video, category: ToolCategory.VIDEO },
+                  { label: homeSeo.popularLinks.coding, category: ToolCategory.CODING },
+                  { label: homeSeo.popularLinks.presentations, category: ToolCategory.PRESENTATIONS }
+                ].map(item => (
+                  <button
+                    key={item.label}
+                    onClick={() => setSelectedCategory(item.category)}
+                    className="text-left px-4 py-3 rounded-xl bg-slate-800/70 hover:bg-indigo-600/20 border border-slate-700 hover:border-indigo-500/40 text-slate-200 transition-colors"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+                <Link
+                  to="/submit"
+                  className="px-4 py-3 rounded-xl bg-emerald-600/15 hover:bg-emerald-600/25 border border-emerald-500/30 text-emerald-200 transition-colors"
+                >
+                  {homeSeo.popularLinks.submit}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Stats Section */}
       {selectedCategory === ToolCategory.ALL && !searchQuery && (

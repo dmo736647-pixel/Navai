@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tool } from '../types';
 import { Tag, CheckCircle, PlayCircle, ListChecks, Star, ExternalLink, Zap } from 'lucide-react';
+import { getToolSeoContent } from '../utils/toolSeo';
 
 interface Props {
   tool: Tool;
@@ -8,8 +9,11 @@ interface Props {
 }
 
 export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
+  const seo = getToolSeoContent(tool);
   const features = tool.features && tool.features.length > 0 
     ? tool.features 
+    : seo?.features && seo.features.length > 0
+    ? seo.features
     : [
         `Streamlined workflow with ${tool.name}`,
         `High reliability and modern UI`,
@@ -19,6 +23,13 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
 
   const tutorials = tool.tutorials && tool.tutorials.length > 0 
     ? tool.tutorials 
+    : seo
+    ? [
+        {
+          title: seo.tutorialTitle,
+          steps: seo.tutorialSteps
+        }
+      ]
     : [
         { 
           title: `Quick Start with ${tool.name}`, 
@@ -33,6 +44,8 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
 
   const specs = tool.technicalSpecs && Object.keys(tool.technicalSpecs).length > 0
     ? tool.technicalSpecs
+    : seo?.specs
+    ? seo.specs
     : {
         'Pricing Model': String(tool.pricing),
         'Category': String(tool.category),
@@ -78,7 +91,7 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
         )}
 
         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-          {tool.name}
+          {seo?.heroTitle || tool.name}
         </h1>
         
         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -105,13 +118,21 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
         </div>
         
         <p className="mt-6 text-sm text-slate-500">
-          {tool.pricing === 'Paid' ? 'Start your free trial today' : 'Try it out for free'} • No credit card required for sign up
+          {tool.pricing === 'Paid' ? 'Start your free trial today' : 'Try it out for free'} - check the official site for current sign-up requirements
         </p>
       </div>
 
       <section className="prose prose-invert max-w-none mb-12">
         <h2 className="text-2xl font-bold text-white mb-6">Overview</h2>
-        <p className="text-lg text-slate-300 leading-relaxed">{description}</p>
+        {seo?.overview ? (
+          <div className="space-y-4">
+            {seo.overview.map((paragraph, index) => (
+              <p key={index} className="text-lg text-slate-300 leading-relaxed">{paragraph}</p>
+            ))}
+          </div>
+        ) : (
+          <p className="text-lg text-slate-300 leading-relaxed">{description}</p>
+        )}
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -196,6 +217,20 @@ export const ToolDetailTemplate: React.FC<Props> = ({ tool, description }) => {
           </div>
         </div>
       </section>
+
+      {seo?.faq && seo.faq.length > 0 && (
+        <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 mb-12">
+          <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
+          <div className="space-y-5">
+            {seo.faq.map((item) => (
+              <div key={item.question} className="border-b border-slate-800 last:border-0 pb-5 last:pb-0">
+                <h4 className="text-white font-semibold mb-2">{item.question}</h4>
+                <p className="text-slate-300 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Final Bottom CTA */}
       <div className="text-center py-12 px-4 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 mb-8">

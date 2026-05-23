@@ -9,6 +9,7 @@ import { Tool, ToolCategory } from '../types';
 import { ArrowLeft, ExternalLink, Tag, Globe, Clock, Shield } from 'lucide-react';
 import { ToolDetailTemplate } from '../components/ToolDetailTemplate';
 import { getSafeLocalizedDescription } from '../utils/text';
+import { getToolSeoContent } from '../utils/toolSeo';
 
 export const ToolDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -39,22 +40,24 @@ export const ToolDetail: React.FC = () => {
     );
   }
 
-  const t = TRANSLATIONS[currentLanguage];
   const description = getSafeLocalizedDescription(tool, currentLanguage);
+  const seo = getToolSeoContent(tool);
+  const pageTitle = seo?.title || `${tool.name} Review 2026: Features, Pricing & Alternatives | NavAI`;
+  const pageDescription = seo?.metaDescription || `In-depth ${tool.name} review: ${description.substring(0, 155)}... Read honest user reviews, compare features, pricing, and find the best alternative AI tools.`;
 
   return (
     <Layout>
       <Helmet>
-        <title>{tool.name} Review 2026: Features, Pricing & Alternatives | NavAI</title>
-        <meta name="description" content={`In-depth ${tool.name} review: ${description.substring(0, 155)}... Read honest user reviews, compare features, pricing, and find the best alternative AI tools.`} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={`https://navai.space/tool/${tool.id}`} />
-        <meta property="og:title" content={`${tool.name} Review 2026 | NavAI`} />
-        <meta property="og:description" content={description} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://navai.space/tool/${tool.id}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${tool.name} - Expert Review & Comparison`} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -68,7 +71,7 @@ export const ToolDetail: React.FC = () => {
               priceCurrency: 'USD'
             },
             url: tool.affiliateUrl || tool.url,
-            description: description,
+            description: pageDescription,
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: tool.userReviews && tool.userReviews.length > 0 
@@ -82,7 +85,7 @@ export const ToolDetail: React.FC = () => {
               reviewRating: { '@type': 'Rating', ratingValue: r.rating.toString() },
               reviewBody: r.text
             })) : null,
-            featureList: (tool.features || ['Easy to use', 'Modern interface', 'Multi-language support']).join(', ')
+            featureList: (tool.features || seo?.features || ['Easy to use', 'Modern interface', 'Multi-language support']).join(', ')
           })}
         </script>
       </Helmet>

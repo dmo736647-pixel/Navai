@@ -18172,6 +18172,26 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: 'Try clicking AI Find to search the web.',
     footer: 'Powered by Gemini Flash & Pro.',
     tagline: 'NavAI: A curated collection of AI tools for builders.',
+    homeSeo: {
+      pageTitle: 'NavAI - Best AI Tools Directory & AI Tool Finder 2026',
+      metaDescription: 'Discover the best AI tools for writing, image generation, video, coding, marketing, productivity, and business. Compare pricing, features, and alternatives.',
+      ogDescription: 'Find, compare, and choose AI tools for writing, image generation, video, coding, marketing, productivity, and business.',
+      heroTitle: 'Best AI Tools Directory',
+      heroTagline: 'NavAI helps you find, compare, and choose the right AI tools in 2026',
+      introTitle: 'Find the best AI tools for every workflow',
+      introParagraphs: [
+        'NavAI is an AI tools directory built for creators, founders, marketers, students, and developers who need practical software recommendations. Browse tools for writing, image generation, video creation, coding, productivity, business automation, presentations, data analysis, and more.',
+        'Each listing helps you compare the tool category, pricing model, use cases, tags, official website, and related alternatives so you can choose faster without opening dozens of tabs.'
+      ],
+      popularTitle: 'Popular starting points',
+      popularLinks: {
+        writing: 'AI Writing Tools',
+        video: 'AI Video Generators',
+        coding: 'AI Coding Tools',
+        presentations: 'AI Presentation Tools',
+        submit: 'Submit your AI tool'
+      }
+    },
     featuredTools: 'Featured Tools',
     sort: {
       default: 'Default',
@@ -18217,6 +18237,57 @@ export const TRANSLATIONS: Record<Language, any> = {
       placeholder: 'Ask for a recommendation...',
       initialMessage: 'Hi! I can help you find the right AI tool. What are you looking to build or create today?',
       error: 'Sorry, I\'m having trouble connecting right now.'
+    },
+    submitPage: {
+      pageTitle: 'Submit Your AI Tool to NavAI - Free Listing, Fast Review & Sponsored Placement',
+      metaDescription: 'Submit your AI tool to NavAI for free review, faster editorial review, featured listing options, and sponsored placement opportunities.',
+      heading: 'Submit Your AI Tool',
+      subheading: 'Get your AI product reviewed for NavAI\'s directory, category pages, tool comparisons, and future sponsored placements.',
+      plans: [
+        {
+          title: 'Free submission',
+          price: '$0',
+          text: 'Join the editorial queue for a standard review when your tool is relevant and high quality.'
+        },
+        {
+          title: 'Fast review',
+          price: '$19',
+          text: 'Prioritized editorial review for founders who want a faster decision and listing feedback.'
+        },
+        {
+          title: 'Featured placement',
+          price: '$49+',
+          text: 'Optional sponsored visibility on relevant category sections, tool pages, or launch placements.'
+        }
+      ],
+      whatWeLookFor: 'What we look for',
+      whatWeLookForText: 'NavAI reviews AI tools that solve a clear problem, have a working website, explain pricing clearly, and are useful to creators, developers, businesses, students, or productivity-focused users.',
+      labels: {
+        toolName: 'Tool Name *',
+        websiteUrl: 'Website URL *',
+        shortDescription: 'Short Description *',
+        categories: 'Categories',
+        email: 'Your Email *',
+        listingInterest: 'Listing Interest'
+      },
+      placeholders: {
+        toolName: 'e.g. SuperAI',
+        websiteUrl: 'https://...',
+        shortDescription: 'Describe your tool in 1-2 sentences...',
+        email: 'founder@example.com'
+      },
+      interests: ['Free submission', 'Fast review', 'Featured listing', 'Sponsored placement', 'Claim existing listing'],
+      submitButton: 'Submit Tool for Review',
+      note: 'Standard submission is free. Sponsored options are reviewed separately and clearly labeled when published.',
+      claimTitle: 'Claim an existing listing',
+      claimText: 'If your AI tool is already listed on NavAI, you can request corrections, update pricing, add use cases, or discuss a sponsored upgrade for relevant placements.',
+      policyTitle: 'Editorial policy',
+      policies: [
+        'Sponsored listings are labeled clearly.',
+        'We may reject tools that are misleading, unsafe, or not AI-related.',
+        'Free submissions do not guarantee inclusion.',
+        'Priority review affects review speed, not editorial approval.'
+      ]
     }
   },
   zh: {
@@ -18229,6 +18300,26 @@ export const TRANSLATIONS: Record<Language, any> = {
     clickToSearch: '尝试点击 AI 搜索以在网络上查找。',
     footer: '由 Gemini Flash & Pro 提供支持。',
     tagline: '我是NavAI，为构建者精选的AI工具集',
+    homeSeo: {
+      pageTitle: 'NavAI - 2026 最佳 AI 工具导航与 AI 工具查找器',
+      metaDescription: '发现适合写作、图像生成、视频、编程、营销、生产力和商业场景的最佳 AI 工具，对比价格、功能和替代方案。',
+      ogDescription: '查找、比较并选择适合写作、图像、视频、编程、营销、生产力和商业场景的 AI 工具。',
+      heroTitle: '最佳 AI 工具导航',
+      heroTagline: 'NavAI 帮你在 2026 年更快查找、比较并选择合适的 AI 工具',
+      introTitle: '为每一种工作流找到合适的 AI 工具',
+      introParagraphs: [
+        'NavAI 是一个面向创作者、创业者、营销人员、学生和开发者的 AI 工具导航站，帮助你找到实用的软件推荐。你可以浏览写作、图像生成、视频创作、编程、生产力、商业自动化、演示文稿、数据分析等类别。',
+        '每个工具条目都会帮助你比较分类、定价模式、使用场景、标签、官方网站和相关替代品，让你不用打开几十个页面也能更快做选择。'
+      ],
+      popularTitle: '热门入口',
+      popularLinks: {
+        writing: 'AI 写作工具',
+        video: 'AI 视频生成器',
+        coding: 'AI 编程工具',
+        presentations: 'AI 演示文稿工具',
+        submit: '提交你的 AI 工具'
+      }
+    },
     featuredTools: '精选工具',
     sort: {
       default: '默认',
@@ -18274,6 +18365,57 @@ export const TRANSLATIONS: Record<Language, any> = {
       placeholder: '寻求推荐...',
       initialMessage: '你好！我可以帮你寻找合适的 AI 工具。你今天想在这个平台上创建什么？',
       error: '抱歉，我现在连接有问题。'
+    },
+    submitPage: {
+      pageTitle: '提交你的 AI 工具到 NavAI - 免费收录、快速审核与赞助展示',
+      metaDescription: '向 NavAI 提交你的 AI 工具，可申请免费审核、快速编辑审核、精选收录和赞助展示机会。',
+      heading: '提交你的 AI 工具',
+      subheading: '让你的 AI 产品进入 NavAI 的工具目录、分类页面、工具对比和未来的赞助展示位。',
+      plans: [
+        {
+          title: '免费提交',
+          price: '$0',
+          text: '如果你的工具相关且质量不错，可以进入标准编辑审核队列。'
+        },
+        {
+          title: '快速审核',
+          price: '$19',
+          text: '适合希望更快获得审核结果和收录反馈的创始人。'
+        },
+        {
+          title: '精选展示',
+          price: '$49+',
+          text: '可选的赞助曝光，展示在相关分类、工具页面或新品发布位置。'
+        }
+      ],
+      whatWeLookFor: '我们会审核什么',
+      whatWeLookForText: 'NavAI 优先审核能解决明确问题、有可访问官网、价格说明清晰，并且对创作者、开发者、企业、学生或生产力用户有价值的 AI 工具。',
+      labels: {
+        toolName: '工具名称 *',
+        websiteUrl: '官网链接 *',
+        shortDescription: '简短描述 *',
+        categories: '分类',
+        email: '你的邮箱 *',
+        listingInterest: '收录需求'
+      },
+      placeholders: {
+        toolName: '例如 SuperAI',
+        websiteUrl: 'https://...',
+        shortDescription: '用 1-2 句话描述你的工具...',
+        email: 'founder@example.com'
+      },
+      interests: ['免费提交', '快速审核', '精选收录', '赞助展示', '认领已有条目'],
+      submitButton: '提交工具审核',
+      note: '标准提交免费。赞助选项会单独审核，发布时也会清楚标注。',
+      claimTitle: '认领已有工具条目',
+      claimText: '如果你的 AI 工具已经被 NavAI 收录，你可以申请修正信息、更新价格、补充使用场景，或讨论相关页面的赞助升级。',
+      policyTitle: '编辑政策',
+      policies: [
+        '赞助收录会清楚标注。',
+        '误导性、不安全或与 AI 无关的工具可能会被拒绝。',
+        '免费提交不保证一定收录。',
+        '快速审核只影响审核速度，不影响编辑判断。'
+      ]
     }
   },
   ja: {
